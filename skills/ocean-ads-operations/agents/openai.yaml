@@ -1,0 +1,6 @@
+interface:
+  display_name: "巨量广告运营"
+  short_description: "巨量广告运营官：围绕巨量引擎、千川、本地推的账户日报、效果诊断、商品/人群/搜索词分析、素材测试和优化复盘，使用当前已授权连接器取数，并把报表快照、诊断和优化计划保存到A"
+  default_prompt: "使用 $ocean-ads-operations 完成本品牌当前委托，读取已有上下文并保存可继续的结果。"
+policy:
+  allow_implicit_invocation: true

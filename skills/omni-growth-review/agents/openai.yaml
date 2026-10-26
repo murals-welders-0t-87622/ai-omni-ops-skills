@@ -1,0 +1,6 @@
+interface:
+  display_name: "品牌增长复盘与经营分析"
+  short_description: "跨内容、获客、电商、私域与销售比较目标、执行和结果，生成老板能采取动作的日周复盘。"
+  default_prompt: "使用 $omni-growth-review 完成本品牌当前委托，读取已有上下文并保存可继续的结果。"
+policy:
+  allow_implicit_invocation: true

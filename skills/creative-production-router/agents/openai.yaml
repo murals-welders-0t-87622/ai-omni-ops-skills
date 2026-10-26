@@ -1,0 +1,6 @@
+interface:
+  display_name: "创意制作调度"
+  short_description: "按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。"
+  default_prompt: "使用 $creative-production-router 完成本品牌当前委托，读取已有上下文并保存可继续的结果。"
+policy:
+  allow_implicit_invocation: true

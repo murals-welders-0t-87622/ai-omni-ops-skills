@@ -1,0 +1,6 @@
+interface:
+  display_name: "品牌内容增长"
+  short_description: "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划"
+  default_prompt: "使用 $brand-content-growth 完成本品牌当前委托，读取已有上下文并保存可继续的结果。"
+policy:
+  allow_implicit_invocation: true

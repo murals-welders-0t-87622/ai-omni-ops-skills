@@ -1,0 +1,5 @@
+{
+  "distribution": "public-method-only",
+  "upstreamDiscovery": "registry/learning-sources.json",
+  "privateOriginalsNotRedistributed": true
+}

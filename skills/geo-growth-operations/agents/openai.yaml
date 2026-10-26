@@ -1,0 +1,6 @@
+interface:
+  display_name: "GEO获客"
+  short_description: "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  default_prompt: "使用 $geo-growth-operations 完成本品牌当前委托，读取已有上下文并保存可继续的结果。"
+policy:
+  allow_implicit_invocation: true

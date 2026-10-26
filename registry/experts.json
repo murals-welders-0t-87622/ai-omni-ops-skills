@@ -1,0 +1,2234 @@
+[
+  {
+    "id": "project-experts/ai-commerce-director/ai-commerce-director",
+    "domainSkill": "taobao-tmall-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/ai-commerce-director/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "结合当前品牌资料与千问办公淘宝天猫商家端的真实回执，完成店铺体检、市场货盘、商品内容、搜索推广、活动会员、履约服务和经营复盘，并把快照与运营方案回写AI中台。适用于淘宝/天猫店铺诊断、全流程策划、日周复盘。"
+  },
+  {
+    "id": "project-experts/brand-omni-growth-expert/brand-omni-growth-expert",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/brand-omni-growth-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "project-experts/brand-omni-growth-expert/growth-report-archivist",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/brand-omni-growth-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "project-experts/brand-omni-growth-expert/private-lifecycle-growth-strategist",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/brand-omni-growth-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "project-experts/brand-omni-growth-expert/public-geo-growth-strategist",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/brand-omni-growth-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "project-experts/brand-omni-growth-expert/revenue-roi-growth-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/brand-omni-growth-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "project-experts/chatcut-video-editor/chatcut-video-editor",
+    "domainSkill": "creative-production-router",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/chatcut-video-editor/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。"
+  },
+  {
+    "id": "project-experts/content-work-decomposition-team/image-work-analyst",
+    "domainSkill": "content-decomposition",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/content-work-decomposition-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。"
+  },
+  {
+    "id": "project-experts/content-work-decomposition-team/text-work-analyst",
+    "domainSkill": "content-decomposition",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/content-work-decomposition-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。"
+  },
+  {
+    "id": "project-experts/content-work-decomposition-team/video-work-analyst",
+    "domainSkill": "content-decomposition",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/content-work-decomposition-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。"
+  },
+  {
+    "id": "project-experts/content-work-decomposition-team/work-analysis-reviewer",
+    "domainSkill": "content-decomposition",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/content-work-decomposition-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。"
+  },
+  {
+    "id": "project-experts/content-work-decomposition-team/work-analysis-team-lead",
+    "domainSkill": "content-decomposition",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/content-work-decomposition-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。"
+  },
+  {
+    "id": "project-experts/cs-service-expert/cs-service-expert",
+    "domainSkill": "ai-sales-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/cs-service-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "结合当前品牌的产品、知识、内容与经营事实，以及3Chat私域客户运营的真实客户和沟通回执，完成需求诊断、价值匹配、商机跟进、确认后触达、成交交付、售后复购与销售复盘，并回写AI中台。适用于“今天该跟进谁”“给客户推荐合适产品”“复盘为什么没成交”“安排老客回访”等业务委托。"
+  },
+  {
+    "id": "project-experts/design-creator/design-creator",
+    "domainSkill": "creative-production-router",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/design-creator/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。"
+  },
+  {
+    "id": "project-experts/douyin-full-chain-ops/douyin-full-chain-ops",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-full-chain-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops/douyin-brand-promo-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops/douyin-copywriting-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops/douyin-creative-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops/douyin-data-review-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops/douyin-digital-human-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops/douyin-drama-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops/douyin-explainer-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops/douyin-fullflow-ops-team-lead",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops/douyin-strategy-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops/douyin-topic-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops/douyin-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-prep-2026-09-26/douyin-brand-promo-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-prep-2026-09-26/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-prep-2026-09-26/douyin-copywriting-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-prep-2026-09-26/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-prep-2026-09-26/douyin-creative-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-prep-2026-09-26/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-prep-2026-09-26/douyin-data-review-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-prep-2026-09-26/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-prep-2026-09-26/douyin-digital-human-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-prep-2026-09-26/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-prep-2026-09-26/douyin-drama-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-prep-2026-09-26/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-prep-2026-09-26/douyin-explainer-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-prep-2026-09-26/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-prep-2026-09-26/douyin-fullflow-ops-team-lead",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-prep-2026-09-26/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-prep-2026-09-26/douyin-strategy-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-prep-2026-09-26/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-prep-2026-09-26/douyin-topic-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-prep-2026-09-26/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-prep-2026-09-26/douyin-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-prep-2026-09-26/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-s302z-2026-10-04/douyin-brand-promo-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-s302z-2026-10-04/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-s302z-2026-10-04/douyin-copywriting-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-s302z-2026-10-04/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-s302z-2026-10-04/douyin-creative-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-s302z-2026-10-04/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-s302z-2026-10-04/douyin-data-review-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-s302z-2026-10-04/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-s302z-2026-10-04/douyin-digital-human-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-s302z-2026-10-04/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-s302z-2026-10-04/douyin-drama-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-s302z-2026-10-04/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-s302z-2026-10-04/douyin-explainer-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-s302z-2026-10-04/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-s302z-2026-10-04/douyin-fullflow-ops-team-lead",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-s302z-2026-10-04/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-s302z-2026-10-04/douyin-strategy-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-s302z-2026-10-04/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-s302z-2026-10-04/douyin-topic-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-s302z-2026-10-04/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-s302z-2026-10-04/douyin-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-s302z-2026-10-04/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/douyin-fullflow-ops-s302z-2026-10-04/ft-douyin-flova-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "historical",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops-s302z-2026-10-04/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/fengtian-kol-team/fengtian-kol-team-team-lead",
+    "domainSkill": "influencer-cooperation",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-kol-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "KOL、KOC、KOS筛选匹配、合作方案、共创排期与业务效果复盘。"
+  },
+  {
+    "id": "project-experts/fengtian-kol-team/ft-kol-matcher",
+    "domainSkill": "influencer-cooperation",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-kol-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "KOL、KOC、KOS筛选匹配、合作方案、共创排期与业务效果复盘。"
+  },
+  {
+    "id": "project-experts/fengtian-kol-team/ft-kol-tracker",
+    "domainSkill": "influencer-cooperation",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-kol-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "KOL、KOC、KOS筛选匹配、合作方案、共创排期与业务效果复盘。"
+  },
+  {
+    "id": "project-experts/fengtian-tannen-douyin-ops/ft-douyin-brand-promo-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-tannen-douyin-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/fengtian-tannen-douyin-ops/ft-douyin-copywriting-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-tannen-douyin-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/fengtian-tannen-douyin-ops/ft-douyin-creative-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-tannen-douyin-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/fengtian-tannen-douyin-ops/ft-douyin-data-review-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-tannen-douyin-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/fengtian-tannen-douyin-ops/ft-douyin-digital-human-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-tannen-douyin-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/fengtian-tannen-douyin-ops/ft-douyin-drama-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-tannen-douyin-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/fengtian-tannen-douyin-ops/ft-douyin-explainer-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-tannen-douyin-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/fengtian-tannen-douyin-ops/ft-douyin-flova-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-tannen-douyin-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/fengtian-tannen-douyin-ops/ft-douyin-fullflow-ops-team-lead",
+    "domainSkill": "douyin-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-tannen-douyin-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/fengtian-tannen-douyin-ops/ft-douyin-strategy-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-tannen-douyin-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/fengtian-tannen-douyin-ops/ft-douyin-topic-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-tannen-douyin-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/fengtian-tannen-douyin-ops/ft-douyin-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-tannen-douyin-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/fengtian-tannen-xiaohongshu-ops/fengtian-tannen-xiaohongshu-ops-team-lead",
+    "domainSkill": "xiaohongshu-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-tannen-xiaohongshu-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "小红书品牌策略、搜索种草、账号矩阵、选题笔记、达人和效果复盘。"
+  },
+  {
+    "id": "project-experts/fengtian-tannen-xiaohongshu-ops/ftt-xhs-creation-expert",
+    "domainSkill": "xiaohongshu-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-tannen-xiaohongshu-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "小红书品牌策略、搜索种草、账号矩阵、选题笔记、达人和效果复盘。"
+  },
+  {
+    "id": "project-experts/fengtian-tannen-xiaohongshu-ops/ftt-xhs-strategy-expert",
+    "domainSkill": "xiaohongshu-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-tannen-xiaohongshu-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "小红书品牌策略、搜索种草、账号矩阵、选题笔记、达人和效果复盘。"
+  },
+  {
+    "id": "project-experts/fengtian-tannen-xiaohongshu-ops/ftt-xhs-topic-expert",
+    "domainSkill": "xiaohongshu-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/fengtian-tannen-xiaohongshu-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "小红书品牌策略、搜索种草、账号矩阵、选题笔记、达人和效果复盘。"
+  },
+  {
+    "id": "project-experts/flova-video-expert/flova-video-expert",
+    "domainSkill": "creative-production-router",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/flova-video-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。"
+  },
+  {
+    "id": "project-experts/geo-full-funnel-optimizer/geo-full-funnel-optimizer",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/geo-full-funnel-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-experts/geo-local-business-optimizer/geo-brand-data-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-experts/geo-local-business-optimizer/geo-diagnosis-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-experts/geo-local-business-optimizer/geo-keyword-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-experts/geo-local-business-optimizer/geo-knowledge-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-experts/geo-local-business-optimizer/geo-local-business-optimizer-team-lead",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-experts/geo-local-business-optimizer/geo-proposal-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-experts/geo-local-business-optimizer/geo-publish-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-experts/geo-local-business-optimizer/geo-selfmedia-content-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-experts/geo-local-business-optimizer/geo-thirdparty-content-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-experts/geo-local-business-optimizer/geo-website-content-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-experts/geo-local-business-optimizer/geo-website-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-experts/hubei-tannen-huke-team/hubei-tannen-huke-team-lead",
+    "domainSkill": "public-lead-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/hubei-tannen-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-experts/hubei-tannen-huke-team/tannen-b2b-lead-expert",
+    "domainSkill": "public-lead-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/hubei-tannen-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-experts/hubei-tannen-huke-team/tannen-comment-lead-expert",
+    "domainSkill": "public-lead-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/hubei-tannen-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-experts/hubei-tannen-huke-team/tannen-competitor-intercept-expert",
+    "domainSkill": "public-lead-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/hubei-tannen-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-experts/hubei-tannen-huke-team/tannen-local-merchant-lead-expert",
+    "domainSkill": "public-lead-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/hubei-tannen-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-experts/hubei-tannen-huke-team/tannen-target-user-lead-expert",
+    "domainSkill": "public-lead-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/hubei-tannen-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-experts/kol-screening-team/kol-matcher",
+    "domainSkill": "influencer-cooperation",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/kol-screening-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "KOL、KOC、KOS筛选匹配、合作方案、共创排期与业务效果复盘。"
+  },
+  {
+    "id": "project-experts/kol-screening-team/kol-screening-team-team-lead",
+    "domainSkill": "influencer-cooperation",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/kol-screening-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "KOL、KOC、KOS筛选匹配、合作方案、共创排期与业务效果复盘。"
+  },
+  {
+    "id": "project-experts/kol-screening-team/kol-tracker",
+    "domainSkill": "influencer-cooperation",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/kol-screening-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "KOL、KOC、KOS筛选匹配、合作方案、共创排期与业务效果复盘。"
+  },
+  {
+    "id": "project-experts/quanyu-huke-team/b2b-lead-expert",
+    "domainSkill": "public-lead-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/quanyu-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-experts/quanyu-huke-team/comment-lead-expert",
+    "domainSkill": "public-lead-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/quanyu-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-experts/quanyu-huke-team/competitor-intercept-expert",
+    "domainSkill": "public-lead-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/quanyu-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-experts/quanyu-huke-team/local-merchant-lead-expert",
+    "domainSkill": "public-lead-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/quanyu-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-experts/quanyu-huke-team/quanyu-huke-team-lead",
+    "domainSkill": "public-lead-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/quanyu-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-experts/quanyu-huke-team/target-user-lead-expert",
+    "domainSkill": "public-lead-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/quanyu-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-experts/shiguang-douyin-ops/shiguang-douyin-ops",
+    "domainSkill": "douyin-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/shiguang-douyin-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-experts/tannen-brand-omni-growth-expert/tannen-brand-omni-growth-expert",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/tannen-brand-omni-growth-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "project-experts/tannen-brand-omni-growth-expert/tannen-growth-report-archivist",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/tannen-brand-omni-growth-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "project-experts/tannen-brand-omni-growth-expert/tannen-private-lifecycle-growth-strategist",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/tannen-brand-omni-growth-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "project-experts/tannen-brand-omni-growth-expert/tannen-public-geo-growth-strategist",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/tannen-brand-omni-growth-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "project-experts/tannen-brand-omni-growth-expert/tannen-revenue-roi-growth-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/tannen-brand-omni-growth-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "project-experts/tencent-ads/ad-campaign-manager",
+    "domainSkill": "tencent-ads-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/tencent-ads/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "腾讯广告账户诊断、素材与落地承接、优化计划及线索交接；不负责巨量账户。"
+  },
+  {
+    "id": "project-experts/tencent-ads/ad-creative-strategist",
+    "domainSkill": "tencent-ads-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/tencent-ads/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "腾讯广告账户诊断、素材与落地承接、优化计划及线索交接；不负责巨量账户。"
+  },
+  {
+    "id": "project-experts/tencent-ads/tencent-ads-team-lead",
+    "domainSkill": "tencent-ads-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/tencent-ads/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "腾讯广告账户诊断、素材与落地承接、优化计划及线索交接；不负责巨量账户。"
+  },
+  {
+    "id": "project-experts/tencent-ads-delivery-expert/tencent-ads-delivery-expert",
+    "domainSkill": "tencent-ads-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/tencent-ads-delivery-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "腾讯广告账户诊断、素材与落地承接、优化计划及线索交接；不负责巨量账户。"
+  },
+  {
+    "id": "project-experts/tennant-wechat-ops/tennant-wechat-ops",
+    "domainSkill": "wechat-content-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/tennant-wechat-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公众号、品牌长文、内容排版及私域内容复用；发布需沿用当前账号与用户授权。"
+  },
+  {
+    "id": "project-experts/video-clone-team/asset-producer",
+    "domainSkill": "content-decomposition",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/video-clone-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。"
+  },
+  {
+    "id": "project-experts/video-clone-team/publish-operator",
+    "domainSkill": "content-decomposition",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/video-clone-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。"
+  },
+  {
+    "id": "project-experts/video-clone-team/storyboard-writer",
+    "domainSkill": "content-decomposition",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/video-clone-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。"
+  },
+  {
+    "id": "project-experts/video-clone-team/trend-spotter",
+    "domainSkill": "content-decomposition",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/video-clone-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。"
+  },
+  {
+    "id": "project-experts/video-clone-team/video-clone-team-team-lead",
+    "domainSkill": "content-decomposition",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/video-clone-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。"
+  },
+  {
+    "id": "project-experts/wangxiaodong-gzh-article-expert/wangxiaodong-gzh-article-expert",
+    "domainSkill": "wechat-content-operations",
+    "scope": "brand-specific",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/wangxiaodong-gzh-article-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公众号、品牌长文、内容排版及私域内容复用；发布需沿用当前账号与用户授权。"
+  },
+  {
+    "id": "project-experts/xiaohongshu-fullflow-ops/xiaohongshu-creation-expert",
+    "domainSkill": "xiaohongshu-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/xiaohongshu-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "小红书品牌策略、搜索种草、账号矩阵、选题笔记、达人和效果复盘。"
+  },
+  {
+    "id": "project-experts/xiaohongshu-fullflow-ops/xiaohongshu-fullflow-ops-team-lead",
+    "domainSkill": "xiaohongshu-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/xiaohongshu-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "小红书品牌策略、搜索种草、账号矩阵、选题笔记、达人和效果复盘。"
+  },
+  {
+    "id": "project-experts/xiaohongshu-fullflow-ops/xiaohongshu-strategy-expert",
+    "domainSkill": "xiaohongshu-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/xiaohongshu-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "小红书品牌策略、搜索种草、账号矩阵、选题笔记、达人和效果复盘。"
+  },
+  {
+    "id": "project-experts/xiaohongshu-fullflow-ops/xiaohongshu-topic-expert",
+    "domainSkill": "xiaohongshu-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/xiaohongshu-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "小红书品牌策略、搜索种草、账号矩阵、选题笔记、达人和效果复盘。"
+  },
+  {
+    "id": "project-experts/yxer-publish-agent/yxer-publish-agent",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-experts/yxer-publish-agent/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/ad-creative-strategist/ad-creative-strategist",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/ad-creative-strategist/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/ai-content-creator-team/ai-content-creator-team-lead",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/ai-content-creator-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/ai-content-creator-team/content-adapter",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/ai-content-creator-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/ai-content-creator-team/copywriter",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/ai-content-creator-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/ai-content-creator-team/creative-strategist",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/ai-content-creator-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/ai-content-creator-team/image-creator",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/ai-content-creator-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/ai-content-creator-team/video-editor",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/ai-content-creator-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/ai-content-creator-team/video-generator",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/ai-content-creator-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/ai-image-prompt-engineer/ai-image-prompt-engineer",
+    "domainSkill": "creative-production-router",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/ai-image-prompt-engineer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。"
+  },
+  {
+    "id": "expert-marketplace/china-ecommerce-operations-expert/china-ecommerce-operations-expert",
+    "domainSkill": "taobao-tmall-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/china-ecommerce-operations-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "结合当前品牌资料与千问办公淘宝天猫商家端的真实回执，完成店铺体检、市场货盘、商品内容、搜索推广、活动会员、履约服务和经营复盘，并把快照与运营方案回写AI中台。适用于淘宝/天猫店铺诊断、全流程策划、日周复盘。"
+  },
+  {
+    "id": "expert-marketplace/content-distribution-team/content-distribution-team-lead",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/content-distribution-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/content-distribution-team/distribution-analyst",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/content-distribution-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/content-distribution-team/domestic-platform-expert",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/content-distribution-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/content-distribution-team/international-platform-expert",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/content-distribution-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/content-distribution-team/scheduling-specialist",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/content-distribution-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/corporate-training-designer/corporate-training-designer",
+    "domainSkill": "creative-production-router",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/corporate-training-designer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。"
+  },
+  {
+    "id": "expert-marketplace/crm-management-expert/crm-management-expert",
+    "domainSkill": "ai-sales-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/crm-management-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "结合当前品牌的产品、知识、内容与经营事实，以及3Chat私域客户运营的真实客户和沟通回执，完成需求诊断、价值匹配、商机跟进、确认后触达、成交交付、售后复购与销售复盘，并回写AI中台。适用于“今天该跟进谁”“给客户推荐合适产品”“复盘为什么没成交”“安排老客回访”等业务委托。"
+  },
+  {
+    "id": "expert-marketplace/data-ai-experts/data-analytics-reporter",
+    "domainSkill": "omni-growth-review",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/data-ai-experts/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "跨内容、获客、电商、私域与销售比较目标、执行和结果，生成老板能采取动作的日周复盘。"
+  },
+  {
+    "id": "expert-marketplace/data-analytics-reporter/data-analytics-reporter",
+    "domainSkill": "omni-growth-review",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/data-analytics-reporter/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "跨内容、获客、电商、私域与销售比较目标、执行和结果，生成老板能采取动作的日周复盘。"
+  },
+  {
+    "id": "expert-marketplace/deep-research/deep-research-expert",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/deep-research/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/douyin-strategist/douyin-strategist",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/douyin-strategist/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "expert-marketplace/geo-diagnosis-expert/geo-diagnosis-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/geo-diagnosis-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "expert-marketplace/graphic-design/graphic-design",
+    "domainSkill": "creative-production-router",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/graphic-design/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。"
+  },
+  {
+    "id": "expert-marketplace/humanize-ppt-team/frontend-slides-renderer",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/humanize-ppt-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/humanize-ppt-team/guizang-renderer",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/humanize-ppt-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/humanize-ppt-team/html-ppt-presenter",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/humanize-ppt-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/humanize-ppt-team/humanize-ppt-team-lead",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/humanize-ppt-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/humanize-ppt-team/outline-director",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/humanize-ppt-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/humanize-ppt-team/qa",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/humanize-ppt-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/humanize-ppt-team/video-motion-agent",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/humanize-ppt-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/infimind-ecommerce-content-expert/infimind-ecommerce-content-expert",
+    "domainSkill": "taobao-tmall-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/infimind-ecommerce-content-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "结合当前品牌资料与千问办公淘宝天猫商家端的真实回执，完成店铺体检、市场货盘、商品内容、搜索推广、活动会员、履约服务和经营复盘，并把快照与运营方案回写AI中台。适用于淘宝/天猫店铺诊断、全流程策划、日周复盘。"
+  },
+  {
+    "id": "expert-marketplace/key-account-sales/key-account-sales",
+    "domainSkill": "ai-sales-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/key-account-sales/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "结合当前品牌的产品、知识、内容与经营事实，以及3Chat私域客户运营的真实客户和沟通回执，完成需求诊断、价值匹配、商机跟进、确认后触达、成交交付、售后复购与销售复盘，并回写AI中台。适用于“今天该跟进谁”“给客户推荐合适产品”“复盘为什么没成交”“安排老客回访”等业务委托。"
+  },
+  {
+    "id": "expert-marketplace/market-researcher/market-researcher",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/market-researcher/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/marketing-campaign-team/brand-analyst",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/marketing-campaign-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/marketing-campaign-team/campaign-planner",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/marketing-campaign-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/marketing-campaign-team/content-creator",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/marketing-campaign-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/marketing-campaign-team/marketing-director",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/marketing-campaign-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/marketing-campaign-team/seo-expert",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/marketing-campaign-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/marketingskills/marketingskills",
+    "domainSkill": "brand-content-growth",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/marketingskills/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。"
+  },
+  {
+    "id": "expert-marketplace/picsetai-ecommerce-design/picset-ecommerce-design",
+    "domainSkill": "taobao-tmall-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/picsetai-ecommerce-design/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "结合当前品牌资料与千问办公淘宝天猫商家端的真实回执，完成店铺体检、市场货盘、商品内容、搜索推广、活动会员、履约服务和经营复盘，并把快照与运营方案回写AI中台。适用于淘宝/天猫店铺诊断、全流程策划、日周复盘。"
+  },
+  {
+    "id": "expert-marketplace/product-strategy-team/competitive-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/product-strategy-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/product-strategy-team/data-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/product-strategy-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/product-strategy-team/product-director",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/product-strategy-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/product-strategy-team/requirement-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/product-strategy-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/product-strategy-team/roadmap-planner",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/product-strategy-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/product-strategy-team/user-researcher",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/product-strategy-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/promo-creator-team/asset-producer",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/promo-creator-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/promo-creator-team/brief-strategist",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/promo-creator-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/promo-creator-team/music-director",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/promo-creator-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/promo-creator-team/promo-team-lead",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/promo-creator-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/promo-creator-team/storyboard-artist",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/promo-creator-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/promo-creator-team/video-editor",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/promo-creator-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/remotion-video-generator/remotion-video-expert",
+    "domainSkill": "creative-production-router",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/remotion-video-generator/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。"
+  },
+  {
+    "id": "expert-marketplace/sales-champion/sales-champion",
+    "domainSkill": "ai-sales-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/sales-champion/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "结合当前品牌的产品、知识、内容与经营事实，以及3Chat私域客户运营的真实客户和沟通回执，完成需求诊断、价值匹配、商机跟进、确认后触达、成交交付、售后复购与销售复盘，并回写AI中台。适用于“今天该跟进谁”“给客户推荐合适产品”“复盘为什么没成交”“安排老客回访”等业务委托。"
+  },
+  {
+    "id": "expert-marketplace/sales-director/sales-director",
+    "domainSkill": "ai-sales-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/sales-director/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "结合当前品牌的产品、知识、内容与经营事实，以及3Chat私域客户运营的真实客户和沟通回执，完成需求诊断、价值匹配、商机跟进、确认后触达、成交交付、售后复购与销售复盘，并回写AI中台。适用于“今天该跟进谁”“给客户推荐合适产品”“复盘为什么没成交”“安排老客回访”等业务委托。"
+  },
+  {
+    "id": "expert-marketplace/senior-developer/senior-developer",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/senior-developer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/short-video-editing-coach/short-video-editing-coach",
+    "domainSkill": "creative-production-router",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/short-video-editing-coach/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。"
+  },
+  {
+    "id": "expert-marketplace/tietu-toutiao/tietu-toutiao",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/tietu-toutiao/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/video-gen-team/ling-planner",
+    "domainSkill": "creative-production-router",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/video-gen-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。"
+  },
+  {
+    "id": "expert-marketplace/video-gen-team/ling-producer",
+    "domainSkill": "creative-production-router",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/video-gen-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。"
+  },
+  {
+    "id": "expert-marketplace/video-gen-team/ling-reader",
+    "domainSkill": "creative-production-router",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/video-gen-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。"
+  },
+  {
+    "id": "expert-marketplace/video-gen-team/video-gen-team-lead",
+    "domainSkill": "creative-production-router",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/video-gen-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。"
+  },
+  {
+    "id": "expert-marketplace/web/web",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/web/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/wechat-official-account-expert/wechat-official-account-expert",
+    "domainSkill": "wechat-content-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/wechat-official-account-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公众号、品牌长文、内容排版及私域内容复用；发布需沿用当前账号与用户授权。"
+  },
+  {
+    "id": "expert-marketplace/workbench-builder-expert/workbench-builder-expert",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/workbench-builder-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "expert-marketplace/xiaohongshu-operations-expert/xiaohongshu-operations-expert",
+    "domainSkill": "xiaohongshu-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/expert-marketplace/xiaohongshu-operations-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "小红书品牌策略、搜索种草、账号矩阵、选题笔记、达人和效果复盘。"
+  },
+  {
+    "id": "team-marketplace/a-share-analysis/a-share-advisor",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/a-share-analysis/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/a-share-analysis/morning-briefing",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/a-share-analysis/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/a-share-analysis/portfolio-diagnosis",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/a-share-analysis/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/a-share-analysis/sector-screening",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/a-share-analysis/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/a-share-analysis/smart-money-tracker",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/a-share-analysis/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/a-share-analysis/stock-research",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/a-share-analysis/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/a-share-analysis/thematic-hunter",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/a-share-analysis/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/agent-sdk-dev/agent-sdk-verifier-py",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/agent-sdk-dev/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/agent-sdk-dev/agent-sdk-verifier-ts",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/agent-sdk-dev/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/aswath-damodaran",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/ben-graham",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/bill-ackman",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/cathie-wood",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/charlie-munger",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/fundamentals-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/growth-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/michael-burry",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/mohnish-pabrai",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/nassim-taleb",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/news-sentiment-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/peter-lynch",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/phil-fisher",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/portfolio-manager",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/rakesh-jhunjhunwala",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/risk-manager",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/sentiment-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/stanley-druckenmiller",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/technicals-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/valuation-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/ai-hedge-fund/warren-buffett",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/ai-hedge-fund/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/deep-research/research-subagent",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/deep-research/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/gaokao-advisor/gaokao-advisor",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/gaokao-advisor/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/sheetagent/sheet-agent",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/sheetagent/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/trading-agent/aggressive-risk-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/trading-agent/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/trading-agent/bear-researcher",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/trading-agent/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/trading-agent/bull-researcher",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/trading-agent/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/trading-agent/conservative-risk-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/trading-agent/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/trading-agent/fundamentals-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/trading-agent/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/trading-agent/market-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/trading-agent/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/trading-agent/neutral-risk-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/trading-agent/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/trading-agent/news-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/trading-agent/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/trading-agent/research-manager",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/trading-agent/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/trading-agent/risk-manager",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/trading-agent/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/trading-agent/sentiment-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/trading-agent/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "team-marketplace/trading-agent/trader",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/team-marketplace/trading-agent/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "project-mirrors/brand-omni-growth-expert/brand-omni-growth-expert",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/brand-omni-growth-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "project-mirrors/brand-omni-growth-expert/growth-report-archivist",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/brand-omni-growth-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "project-mirrors/brand-omni-growth-expert/private-lifecycle-growth-strategist",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/brand-omni-growth-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "project-mirrors/brand-omni-growth-expert/public-geo-growth-strategist",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/brand-omni-growth-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "project-mirrors/brand-omni-growth-expert/revenue-roi-growth-analyst",
+    "domainSkill": "brand-omni-growth-expert",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/brand-omni-growth-expert/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。"
+  },
+  {
+    "id": "project-mirrors/content-work-decomposition-team/image-work-analyst",
+    "domainSkill": "content-decomposition",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/content-work-decomposition-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。"
+  },
+  {
+    "id": "project-mirrors/content-work-decomposition-team/text-work-analyst",
+    "domainSkill": "content-decomposition",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/content-work-decomposition-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。"
+  },
+  {
+    "id": "project-mirrors/content-work-decomposition-team/video-work-analyst",
+    "domainSkill": "content-decomposition",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/content-work-decomposition-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。"
+  },
+  {
+    "id": "project-mirrors/content-work-decomposition-team/work-analysis-reviewer",
+    "domainSkill": "content-decomposition",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/content-work-decomposition-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。"
+  },
+  {
+    "id": "project-mirrors/content-work-decomposition-team/work-analysis-team-lead",
+    "domainSkill": "content-decomposition",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/content-work-decomposition-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。"
+  },
+  {
+    "id": "project-mirrors/design-creator/design-creator",
+    "domainSkill": "creative-production-router",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/design-creator/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。"
+  },
+  {
+    "id": "project-mirrors/douyin-fullflow-ops/douyin-brand-promo-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-mirrors/douyin-fullflow-ops/douyin-copywriting-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-mirrors/douyin-fullflow-ops/douyin-creative-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-mirrors/douyin-fullflow-ops/douyin-data-review-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-mirrors/douyin-fullflow-ops/douyin-digital-human-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-mirrors/douyin-fullflow-ops/douyin-drama-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-mirrors/douyin-fullflow-ops/douyin-explainer-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-mirrors/douyin-fullflow-ops/douyin-fullflow-ops-team-lead",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-mirrors/douyin-fullflow-ops/douyin-strategy-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-mirrors/douyin-fullflow-ops/douyin-topic-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-mirrors/douyin-fullflow-ops/douyin-video-expert",
+    "domainSkill": "douyin-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/douyin-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  },
+  {
+    "id": "project-mirrors/geo-local-business-optimizer/geo-brand-data-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-mirrors/geo-local-business-optimizer/geo-diagnosis-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-mirrors/geo-local-business-optimizer/geo-keyword-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-mirrors/geo-local-business-optimizer/geo-knowledge-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-mirrors/geo-local-business-optimizer/geo-local-business-optimizer-team-lead",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-mirrors/geo-local-business-optimizer/geo-proposal-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-mirrors/geo-local-business-optimizer/geo-publish-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-mirrors/geo-local-business-optimizer/geo-selfmedia-content-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-mirrors/geo-local-business-optimizer/geo-thirdparty-content-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-mirrors/geo-local-business-optimizer/geo-website-content-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-mirrors/geo-local-business-optimizer/geo-website-expert",
+    "domainSkill": "geo-growth-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/geo-local-business-optimizer/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。"
+  },
+  {
+    "id": "project-mirrors/kol-screening-team/kol-matcher",
+    "domainSkill": "influencer-cooperation",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/kol-screening-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "KOL、KOC、KOS筛选匹配、合作方案、共创排期与业务效果复盘。"
+  },
+  {
+    "id": "project-mirrors/kol-screening-team/kol-screening-team-team-lead",
+    "domainSkill": "influencer-cooperation",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/kol-screening-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "KOL、KOC、KOS筛选匹配、合作方案、共创排期与业务效果复盘。"
+  },
+  {
+    "id": "project-mirrors/kol-screening-team/kol-tracker",
+    "domainSkill": "influencer-cooperation",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/kol-screening-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "KOL、KOC、KOS筛选匹配、合作方案、共创排期与业务效果复盘。"
+  },
+  {
+    "id": "project-mirrors/quanyu-huke-team/b2b-lead-expert",
+    "domainSkill": "public-lead-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/quanyu-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-mirrors/quanyu-huke-team/comment-lead-expert",
+    "domainSkill": "public-lead-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/quanyu-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-mirrors/quanyu-huke-team/competitor-intercept-expert",
+    "domainSkill": "public-lead-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/quanyu-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-mirrors/quanyu-huke-team/local-merchant-lead-expert",
+    "domainSkill": "public-lead-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/quanyu-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-mirrors/quanyu-huke-team/quanyu-huke-team-lead",
+    "domainSkill": "public-lead-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/quanyu-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-mirrors/quanyu-huke-team/target-user-lead-expert",
+    "domainSkill": "public-lead-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/quanyu-huke-team/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  },
+  {
+    "id": "project-mirrors/tencent-ads/ad-campaign-manager",
+    "domainSkill": "tencent-ads-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/tencent-ads/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "腾讯广告账户诊断、素材与落地承接、优化计划及线索交接；不负责巨量账户。"
+  },
+  {
+    "id": "project-mirrors/tencent-ads/ad-creative-strategist",
+    "domainSkill": "tencent-ads-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/tencent-ads/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "腾讯广告账户诊断、素材与落地承接、优化计划及线索交接；不负责巨量账户。"
+  },
+  {
+    "id": "project-mirrors/tencent-ads/tencent-ads-team-lead",
+    "domainSkill": "tencent-ads-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/tencent-ads/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "腾讯广告账户诊断、素材与落地承接、优化计划及线索交接；不负责巨量账户。"
+  },
+  {
+    "id": "project-mirrors/xiaohongshu-fullflow-ops/xiaohongshu-creation-expert",
+    "domainSkill": "xiaohongshu-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/xiaohongshu-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "小红书品牌策略、搜索种草、账号矩阵、选题笔记、达人和效果复盘。"
+  },
+  {
+    "id": "project-mirrors/xiaohongshu-fullflow-ops/xiaohongshu-fullflow-ops-team-lead",
+    "domainSkill": "xiaohongshu-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/xiaohongshu-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "小红书品牌策略、搜索种草、账号矩阵、选题笔记、达人和效果复盘。"
+  },
+  {
+    "id": "project-mirrors/xiaohongshu-fullflow-ops/xiaohongshu-strategy-expert",
+    "domainSkill": "xiaohongshu-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/xiaohongshu-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "小红书品牌策略、搜索种草、账号矩阵、选题笔记、达人和效果复盘。"
+  },
+  {
+    "id": "project-mirrors/xiaohongshu-fullflow-ops/xiaohongshu-topic-expert",
+    "domainSkill": "xiaohongshu-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/project-mirrors/xiaohongshu-fullflow-ops/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "小红书品牌策略、搜索种草、账号矩阵、选题笔记、达人和效果复盘。"
+  },
+  {
+    "id": "workbuddy-skills/wechat-content-expert__skillhub/wechat-content-expert",
+    "domainSkill": "wechat-content-operations",
+    "scope": "general-reference",
+    "sourceCard": "skills/brand-omni-growth-expert/references/knowledge/workbuddy-skills/wechat-content-expert__skillhub/README.md",
+    "distribution": "catalog-only-original-not-public",
+    "responsibility": "公众号、品牌长文、内容排版及私域内容复用；发布需沿用当前账号与用户授权。"
+  }
+]

@@ -1,0 +1,6 @@
+interface:
+  display_name: "作品拆解与复用"
+  short_description: "对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。"
+  default_prompt: "使用 $content-decomposition 完成本品牌当前委托，读取已有上下文并保存可继续的结果。"
+policy:
+  allow_implicit_invocation: true

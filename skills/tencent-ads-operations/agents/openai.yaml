@@ -1,0 +1,6 @@
+interface:
+  display_name: "腾讯广告"
+  short_description: "腾讯广告账户诊断、素材与落地承接、优化计划及线索交接；不负责巨量账户。"
+  default_prompt: "使用 $tencent-ads-operations 完成本品牌当前委托，读取已有上下文并保存可继续的结果。"
+policy:
+  allow_implicit_invocation: true

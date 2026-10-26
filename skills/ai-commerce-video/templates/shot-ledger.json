@@ -1,0 +1,40 @@
+{
+
+  "sourceAssetId": null,
+
+  "sourceWorkId": null,
+
+  "fileHash": null,
+
+  "productId": null,
+
+  "skuMatch": "confirmed/pending/mismatch",
+
+  "clips": [
+
+    {
+
+      "inMs": null,
+
+      "outMs": null,
+
+      "visual": null,
+
+      "sound": null,
+
+      "surface": null,
+
+      "demonstratedClaim": null,
+
+      "watermark": null,
+
+      "rightsEvidenceRef": null,
+
+      "usedInVersions": []
+
+    }
+
+  ]
+
+}
+

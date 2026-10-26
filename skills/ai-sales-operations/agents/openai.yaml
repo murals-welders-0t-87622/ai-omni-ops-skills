@@ -1,0 +1,6 @@
+interface:
+  display_name: "AI销售"
+  short_description: "结合当前品牌的产品、知识、内容与经营事实，以及3Chat私域客户运营的真实客户和沟通回执，完成需求诊断、价值匹配、商机跟进、确认后触达、成交交付、售后复购与销售复盘，并回"
+  default_prompt: "使用 $ai-sales-operations 完成本品牌当前委托，读取已有上下文并保存可继续的结果。"
+policy:
+  allow_implicit_invocation: true

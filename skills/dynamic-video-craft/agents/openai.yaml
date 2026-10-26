@@ -1,0 +1,6 @@
+interface:
+  display_name: "动态视频导演"
+  short_description: "根据产品网址、截图、文案或配音制作 Shotcraft / Talkcraft 风格的动态视频：真实页面的 2.5D 运镜、动态文字、数据演绎、旁白对齐和镜头承接。用于产"
+  default_prompt: "使用 $dynamic-video-craft 完成本品牌当前委托，读取已有上下文并保存可继续的结果。"
+policy:
+  allow_implicit_invocation: true

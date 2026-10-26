@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.local/
+.env
+.env.*
+.omni-skills-state.json
+.omni-skills-backups/
+.DS_Store
+Thumbs.db

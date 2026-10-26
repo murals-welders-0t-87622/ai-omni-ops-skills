@@ -1,0 +1,40 @@
+{
+  "release": "1.1.0",
+  "date": "2026-10-26",
+  "scope": "public package, architecture, installer and video helper/project checks; no live business acceptance",
+  "entrySkills": 23,
+  "status": "local checks and isolated installation passed; remote verification recorded after publication",
+  "notValidated": [
+    "native new-computer discovery",
+    "all 16 tutorial video routes",
+    "complete rendered video/audio QA",
+    "supplier generation",
+    "brand business chain or growth"
+  ],
+  "skillCreatorStaticChecks": {
+    "passed": 23,
+    "failed": 0,
+    "invocation": "python -X utf8"
+  },
+  "pythonInstallerAndArchitectureTests": {
+    "passed": 18,
+    "failed": 0
+  },
+  "frameClockTests": {
+    "passed": 7,
+    "failed": 0
+  },
+  "videoProjectOfflineTests": {
+    "passed": 9,
+    "failed": 0
+  },
+  "publicSourceCards": 211,
+  "learningSources": 11,
+  "architecture": "unchanged",
+  "markdownLinks": "all checked; no broken local Markdown links",
+  "isolatedInstallation": {
+    "installed": 23,
+    "doctorCurrent": 23,
+    "hostSkillsModified": false
+  }
+}

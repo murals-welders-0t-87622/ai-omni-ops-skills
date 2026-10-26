@@ -1,0 +1,6 @@
+interface:
+  display_name: "抖音／视频号运营"
+  short_description: "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。"
+  default_prompt: "使用 $douyin-operations 完成本品牌当前委托，读取已有上下文并保存可继续的结果。"
+policy:
+  allow_implicit_invocation: true

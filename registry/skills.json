@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "version": "1.1.0",
+  "repository": "https://github.com/murals-welders-0t-87622/ai-omni-ops-skills",
+  "skills": [
+    {
+      "id": "ai-commerce-video",
+      "path": "skills/ai-commerce-video",
+      "version": "2.0.2",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "为电商商品做市场与人群研究、案例归类、选品和多结构带货短视频策划，按授权制作AI、实拍或混剪视频，支持一品多条和效果复盘。适用于商品带货及既有样片优化，不用于无商品知识讲解或单纯字幕处理。",
+      "status": "packaged-not-business-accepted",
+      "upstreamVersion": "2.0.0"
+    },
+    {
+      "id": "ai-sales-operations",
+      "path": "skills/ai-sales-operations",
+      "version": "1.0.1",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "结合当前品牌的产品、知识、内容与经营事实，以及3Chat私域客户运营的真实客户和沟通回执，完成需求诊断、价值匹配、商机跟进、确认后触达、成交交付、售后复购与销售复盘，并回写AI中台。适用于“今天该跟进谁”“给客户推荐合适产品”“复盘为什么没成交”“安排老客回访”等业务委托。",
+      "status": "packaged-not-business-accepted",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "id": "brand-content-growth",
+      "path": "skills/brand-content-growth",
+      "version": "1.0.2",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。",
+      "status": "packaged-not-business-accepted",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "id": "brand-creative-video",
+      "path": "skills/brand-creative-video",
+      "version": "1.1.0",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "为品牌制作有清楚剧情和服务价值的AI创意视频，覆盖研究、建项目、剧本、分镜、角色场景道具图片资产、图生视频提示词、生成任务、剪辑与验收。适用于品牌短剧、猫咪或古人等旅游反差创意及既有项目续做；也可只交脚本或提示词。按当前阶段取用通用方法与可核读原资料，以图片资产保持一致性，不把文字方案当成已生成的视频。",
+      "status": "packaged-not-business-accepted",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "id": "brand-omni-growth-expert",
+      "path": "skills/brand-omni-growth-expert",
+      "version": "3.0.1",
+      "dependencies": [],
+      "kind": "orchestrator",
+      "description": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
+      "id": "content-decomposition",
+      "path": "skills/content-decomposition",
+      "version": "1.0.0",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
+      "id": "content-distribution",
+      "path": "skills/content-distribution",
+      "version": "1.0.0",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "多平台草稿、封面标题适配、授权发布、回执和数据归档；制作完成不自动公开。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
+      "id": "creative-production-router",
+      "path": "skills/creative-production-router",
+      "version": "1.1.0",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
+      "id": "douyin-operations",
+      "path": "skills/douyin-operations",
+      "version": "1.0.0",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
+      "id": "dynamic-video-craft",
+      "path": "skills/dynamic-video-craft",
+      "version": "1.1.0",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "根据产品网址、截图、文案或配音制作 Shotcraft / Talkcraft 风格的动态视频：真实页面的 2.5D 运镜、动态文字、数据演绎、旁白对齐和镜头承接。用于产品宣传片、配音解说片，以及按这两个画廊的卡名复刻单镜头；默认用 Remotion 交付 MP4 和可编辑工程，不用于仅加普通字幕或生成真人数字人。",
+      "status": "packaged-not-business-accepted",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "id": "ecommerce-detail-creative",
+      "path": "skills/ecommerce-detail-creative",
+      "version": "1.0.1",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "从当前品牌产品资料提炼卖点，制作电商详情页的逐页文案、画面及可选商品创意视频，并回写AI中台电商工作区。适用于“给这个商品做一套详情页，再做产品视频”等委托。",
+      "status": "packaged-not-business-accepted",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "id": "geo-growth-operations",
+      "path": "skills/geo-growth-operations",
+      "version": "1.0.0",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
+      "id": "influencer-cooperation",
+      "path": "skills/influencer-cooperation",
+      "version": "1.0.0",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "KOL、KOC、KOS筛选匹配、合作方案、共创排期与业务效果复盘。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
+      "id": "ocean-ads-operations",
+      "path": "skills/ocean-ads-operations",
+      "version": "1.0.2",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "巨量广告运营官：围绕巨量引擎、千川、本地推的账户日报、效果诊断、商品/人群/搜索词分析、素材测试和优化复盘，使用当前已授权连接器取数，并把报表快照、诊断和优化计划保存到AI中台巨量广告工作区。用户说“看看今天投得怎么样”“为什么成本升了”“下周怎么优化”“同步到中台”时使用。",
+      "status": "packaged-not-business-accepted",
+      "upstreamVersion": "1.0.1"
+    },
+    {
+      "id": "omni-business-context",
+      "path": "skills/omni-business-context",
+      "version": "1.0.0",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "整理品牌、产品、IP、知识与素材，核来源和冲突并经本品牌MCP归档；不自行改业务事实。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
+      "id": "omni-growth-review",
+      "path": "skills/omni-growth-review",
+      "version": "1.0.0",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "跨内容、获客、电商、私域与销售比较目标、执行和结果，生成老板能采取动作的日周复盘。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
+      "id": "omni-skill-maintenance",
+      "path": "skills/omni-skill-maintenance",
+      "version": "1.1.0",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "governance",
+      "description": "运行缺口、用户反馈或新资料驱动的持续学习；查WorkBuddy/GitHub，分类适配、验证和同步，主框架变更先确认。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
+      "id": "public-lead-operations",
+      "path": "skills/public-lead-operations",
+      "version": "1.0.0",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
+      "id": "taobao-tmall-operations",
+      "path": "skills/taobao-tmall-operations",
+      "version": "1.0.1",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "结合当前品牌资料与千问办公淘宝天猫商家端的真实回执，完成店铺体检、市场货盘、商品内容、搜索推广、活动会员、履约服务和经营复盘，并把快照与运营方案回写AI中台。适用于淘宝/天猫店铺诊断、全流程策划、日周复盘。",
+      "status": "packaged-not-business-accepted",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "id": "tencent-ads-operations",
+      "path": "skills/tencent-ads-operations",
+      "version": "1.0.0",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "腾讯广告账户诊断、素材与落地承接、优化计划及线索交接；不负责巨量账户。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
+      "id": "wechat-content-operations",
+      "path": "skills/wechat-content-operations",
+      "version": "1.0.0",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "公众号、品牌长文、内容排版及私域内容复用；发布需沿用当前账号与用户授权。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
+      "id": "xiaohongshu-operations",
+      "path": "skills/xiaohongshu-operations",
+      "version": "1.0.0",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "小红书品牌策略、搜索种草、账号矩阵、选题笔记、达人和效果复盘。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
+      "id": "youzan-private-operations",
+      "path": "skills/youzan-private-operations",
+      "version": "5.0.2",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "从品牌整体生意模式、全域增长报告及有赞经营事实出发，明确私域承担的增长任务，形成整品牌战略、可执行经营策略、每日动作与数据复盘，并回写AI中台、衔接AI销售。适用于私域策划、公转私、首购、客单、会员、复购及老客经营。",
+      "status": "packaged-not-business-accepted",
+      "upstreamVersion": "5.0.0"
+    }
+  ],
+  "profiles": {
+    "all": [
+      "ai-commerce-video",
+      "ai-sales-operations",
+      "brand-content-growth",
+      "brand-creative-video",
+      "brand-omni-growth-expert",
+      "content-decomposition",
+      "content-distribution",
+      "creative-production-router",
+      "douyin-operations",
+      "dynamic-video-craft",
+      "ecommerce-detail-creative",
+      "geo-growth-operations",
+      "influencer-cooperation",
+      "ocean-ads-operations",
+      "omni-business-context",
+      "omni-growth-review",
+      "omni-skill-maintenance",
+      "public-lead-operations",
+      "taobao-tmall-operations",
+      "tencent-ads-operations",
+      "wechat-content-operations",
+      "xiaohongshu-operations",
+      "youzan-private-operations"
+    ],
+    "core": [
+      "brand-omni-growth-expert",
+      "omni-business-context",
+      "omni-growth-review",
+      "omni-skill-maintenance"
+    ]
+  },
+  "businessFramework": {
+    "layers": [
+      "orchestration",
+      "domain-and-craft",
+      "professional-knowledge"
+    ],
+    "businessFlow": [
+      "business-model",
+      "strategy",
+      "tactics",
+      "execution",
+      "measurement-and-feedback"
+    ]
+  }
+}

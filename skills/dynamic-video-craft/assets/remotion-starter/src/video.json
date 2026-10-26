@@ -1,0 +1,27 @@
+{
+  "mode": "promo",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration": 12,
+  "palette": {
+    "background": "#101510",
+    "surface": "#1C251C",
+    "text": "#F2F1DE",
+    "muted": "#ADB5A1",
+    "accent": "#D6FA63"
+  },
+  "scenes": [
+    {"id":"opening","start":0,"end":4,"type":"title","eyebrow":"MOTION / 01","headline":"让信息动起来","subline":"从一个清晰的视觉重点开始","revealEvent":"opening-reveal","camera":{"from":{"x":-14,"scale":1},"to":{"x":12,"scale":1.045}}},
+    {"id":"rhythm","start":4,"end":8,"type":"metric","eyebrow":"RHYTHM / 02","headline":"一个节拍，一个主角","metric":1,"unit":"个重点","subline":"数字是演示内容，不代表产品数据","revealEvent":"rhythm-reveal","transition":"wipe"},
+    {"id":"flow","start":8,"end":12,"type":"steps","eyebrow":"STORY / 03","headline":"镜头接力，讲清故事","labels":["建立问题","展开证据","落下结论"],"subline":"按内容设计运动，而非逐页播放文字","revealEvent":"flow-reveal","transition":"wipe"}
+  ],
+  "events": [
+    {"id":"opening-reveal","sceneId":"opening","at":0.35,"label":"开场标题显形"},
+    {"id":"rhythm-reveal","sceneId":"rhythm","at":4.4,"label":"重点数字出现"},
+    {"id":"flow-reveal","sceneId":"flow","at":8.3,"label":"流程接力开始"}
+  ],
+  "anchors": [],
+  "captions": [],
+  "audio": {}
+}

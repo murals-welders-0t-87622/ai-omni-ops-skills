@@ -1,0 +1,142 @@
+{
+  "policy": "技能源码不等于外部工具已安装。无供应商凭据，不改宿主配置，不自动安装所有社区依赖；按选用路线查官方/原来源及license后安装。",
+  "sources": [
+    {
+      "name": "embedded-captions",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "faceless-explainer",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "figma",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "flova",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "general-video",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "hyperframes",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "hyperframes-animation",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "hyperframes-cli",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "hyperframes-core",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "hyperframes-creative",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "hyperframes-keyframes",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "hyperframes-media",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "hyperframes-registry",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "media-use",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "motion-graphics",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "music-to-video",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "pr-to-video",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "product-launch-video",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "remotion-to-hyperframes",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "slideshow",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "talking-head-recut",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "website-to-video",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "workctl",
+      "kind": "existing-host-skill",
+      "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    }
+  ],
+  "required": [
+    {
+      "name": "Codex",
+      "purpose": "读取与执行技能",
+      "source": "https://learn.chatgpt.com/docs/build-skills"
+    },
+    {
+      "name": "Python 3.10+",
+      "purpose": "安装、校验和资料索引",
+      "source": "https://www.python.org/"
+    },
+    {
+      "name": "Git/GitHub access",
+      "purpose": "公开仓克隆与更新；推送仍需维护者权限",
+      "source": "https://cli.github.com/"
+    }
+  ],
+  "businessConnections": [
+    "本品牌AI中台MCP",
+    "按业务需要的WorkBuddy/豆包/千问连接器",
+    "有赞、3Chat、淘宝天猫、广告及生成服务的实际授权"
+  ]
+}

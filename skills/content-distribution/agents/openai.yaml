@@ -1,0 +1,6 @@
+interface:
+  display_name: "内容分发与发布承接"
+  short_description: "多平台草稿、封面标题适配、授权发布、回执和数据归档；制作完成不自动公开。"
+  default_prompt: "使用 $content-distribution 完成本品牌当前委托，读取已有上下文并保存可继续的结果。"
+policy:
+  allow_implicit_invocation: true

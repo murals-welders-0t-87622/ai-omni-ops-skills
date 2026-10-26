@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-26",
+  "policy": "来源是证据和方法，不是授权；文档核查、代码验证、真实渲染和业务验收分开。",
+  "sources": [
+    {
+      "id": "user-tutorial-20261020",
+      "kind": "user-material",
+      "title": "Claude Opus 5.5 做视频进阶篇，技术栈全拆解丨万字教程",
+      "author": "罗佳Rodya／风骨",
+      "url": "https://mp.weixin.qq.com/s/kaZCk5qg0bWvn31xcAb37Q",
+      "readAt": "2026-10-26",
+      "coverage": "浏览器正文15,258字符全部核读；五张技术分类表及三个代码/流程图已查看。未逐条实看16类全部样片。",
+      "distribution": "仅本仓消化后的方法与链接；原文/图片不再分发",
+      "status": "analyzed-and-adapted",
+      "adoptions": [
+        "skills/creative-production-router/references/code-video-methods.md",
+        "skills/creative-production-router/references/style-and-purpose.md",
+        "skills/dynamic-video-craft/references/remotion-and-hybrid.md"
+      ],
+      "notAdopted": [
+        "固定星级/成本/7秒48秒性能外推",
+        "每个任务强制三方案/固定镜头数或8分自动放行",
+        "固定模型能力限制或强制使用作者环境",
+        "将文档学习当成已渲染/已试听"
+      ],
+      "verification": "7项原创时间/随机/坐标辅助函数测试；原文方案尚未全部生成视频或验收经营效果"
+    },
+    {
+      "id": "github-lemomo-ai-lemo-opuscar",
+      "kind": "github",
+      "url": "https://github.com/lemomo-ai/lemo-opuscar",
+      "readAt": "2026-10-26",
+      "license": "MIT code/docs; demo films CC BY 4.0 with exclusions, third-party assets separate",
+      "coverage": "DIRECTOR/TECHNIQUE完整核读；README许可、当前59风格目录及三个STYLE文件摘要；未完整观看/重建其样片。",
+      "status": "adapted-methods",
+      "files": [
+        {
+          "path": "README.md",
+          "blob": "ba8ff031d31d92cd53146a1481b5a78a5676c3f8",
+          "characters": 33822,
+          "readState": "retrieved; README sections as described in coverage"
+        },
+        {
+          "path": "DIRECTOR.md",
+          "blob": "ab15ac9612b10299af7ddb11024e817ce5ebc21e",
+          "characters": 11322,
+          "readState": "retrieved; coverage described above"
+        },
+        {
+          "path": "TECHNIQUE.md",
+          "blob": "97326879ff86ea0daa782b73e7faa90719061f11",
+          "characters": 13156,
+          "readState": "retrieved; coverage described above"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "5ba3cce5467fd31494d7e117662de08f477e372a",
+          "characters": 1064,
+          "readState": "retrieved; coverage described above"
+        },
+        {
+          "path": "styles/README.md",
+          "blob": "45067578454962594e0a3c1400a1647d8b7ddc12",
+          "characters": 6868,
+          "readState": "retrieved; coverage described above"
+        },
+        {
+          "path": "styles/whiteboard/STYLE.md",
+          "blob": "faf164bab6fb2e9f967a9f2a8b6e56d8dd928d79",
+          "characters": 11612,
+          "readState": "retrieved; coverage described above"
+        },
+        {
+          "path": "styles/data-physical/STYLE.md",
+          "blob": "6b9aaf1537738cb841e08fbf3b4806effc5e81b9",
+          "characters": 13371,
+          "readState": "retrieved; coverage described above"
+        },
+        {
+          "path": "styles/teardown/STYLE.md",
+          "blob": "3d145b6bc44c388df2d62437bc14ffc5d16e0036",
+          "characters": 13542,
+          "readState": "retrieved; coverage described above"
+        }
+      ],
+      "adoptions": [
+        "skills/creative-production-router/references/code-video-methods.md",
+        "skills/creative-production-router/references/style-and-purpose.md",
+        "skills/dynamic-video-craft/references/remotion-and-hybrid.md"
+      ],
+      "execution": "not-installed-or-executed-this-turn"
+    },
+    {
+      "id": "github-remotion-dev-skills",
+      "kind": "github",
+      "url": "https://github.com/remotion-dev/skills",
+      "readAt": "2026-10-26",
+      "license": "Skill README与官方引擎许可分别查；未从不存在的根LICENSE推断许可",
+      "coverage": "官方README、当前官方帧/随机API、已有本地官方路由方法。根LICENSE请求404，未复制官方skill原包。",
+      "status": "official-reference",
+      "files": [
+        {
+          "path": "README.md",
+          "blob": "7718807e9e289dc95e66347fb96f11f20128508e",
+          "characters": 2805,
+          "readState": "retrieved; coverage described above"
+        }
+      ],
+      "adoptions": [
+        "skills/creative-production-router/references/code-video-methods.md"
+      ],
+      "execution": "not-installed-or-executed-this-turn"
+    },
+    {
+      "id": "github-Kianzzz-xilo-opus-video",
+      "kind": "github",
+      "url": "https://github.com/Kianzzz/xilo-opus-video",
+      "readAt": "2026-10-26",
+      "license": "MIT",
+      "coverage": "README流程/项目结构和LICENSE已核；根SKILL.md为404，正确目录由README定位，未执行其安装/渲染。",
+      "status": "candidate-reference",
+      "files": [
+        {
+          "path": "README.md",
+          "blob": "1d59979ae8676704ae2cdef9d0afd78b8a1801a0",
+          "characters": 3219,
+          "readState": "retrieved; coverage described above"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "8facde63529aa02848bef26cb0986aaf2718995d",
+          "characters": 1069,
+          "readState": "retrieved; coverage described above"
+        }
+      ],
+      "adoptions": [
+        "skills/creative-production-router/references/code-video-methods.md"
+      ],
+      "execution": "not-installed-or-executed-this-turn"
+    },
+    {
+      "id": "github-wheresryan22-anatomy",
+      "kind": "github",
+      "url": "https://github.com/wheresryan22/anatomy",
+      "readAt": "2026-10-26",
+      "license": "MIT",
+      "coverage": "README、SKILL中概念/几何/模型与读数/WebGL层次的相关段落、LICENSE；未核完所有示例源码或真实渲染。",
+      "status": "adapted-principles",
+      "files": [
+        {
+          "path": "README.md",
+          "blob": "fa98bff1a617aa8e5edf1b7b87c866815b6fa1bc",
+          "characters": 25983,
+          "readState": "retrieved; coverage described above"
+        },
+        {
+          "path": "SKILL.md",
+          "blob": "36f22e400814d84e41fa6c0568928d9d5620c47a",
+          "characters": 33523,
+          "readState": "retrieved; coverage described above"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "aa20733917ffc919b6b04834e6a6e22909df7c76",
+          "characters": 1061,
+          "readState": "retrieved; coverage described above"
+        }
+      ],
+      "adoptions": [
+        "skills/creative-production-router/references/code-video-methods.md",
+        "skills/creative-production-router/references/style-and-purpose.md",
+        "skills/dynamic-video-craft/references/remotion-and-hybrid.md"
+      ],
+      "execution": "not-installed-or-executed-this-turn"
+    },
+    {
+      "id": "github-threeaus-creator-style-kit",
+      "kind": "github",
+      "url": "https://github.com/threeaus/creator-style-kit",
+      "readAt": "2026-10-26",
+      "license": "MIT code; certain fonts may be download-only, check upstream",
+      "coverage": "README、SKILL与LICENSE；已发现作者硬盘路径等环境绑定，不照搬。未安装或渲染18套风格。",
+      "status": "candidate-reference",
+      "files": [
+        {
+          "path": "README.md",
+          "blob": "19903c4e68f059fd9de64074d4636dd95a6b61e0",
+          "characters": 1437,
+          "readState": "retrieved; coverage described above"
+        },
+        {
+          "path": "SKILL.md",
+          "blob": "9ca08f1abf04303f624e727361c2f28810e8a1bd",
+          "characters": 5289,
+          "readState": "retrieved; coverage described above"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "6ab30942b449a14eb40a9866b868284cd44ad343",
+          "characters": 1072,
+          "readState": "retrieved; coverage described above"
+        }
+      ],
+      "adoptions": [
+        "skills/creative-production-router/references/code-video-methods.md"
+      ],
+      "execution": "not-installed-or-executed-this-turn"
+    },
+    {
+      "id": "github-cclank-lanshu-create-ai-presenter-video",
+      "kind": "github",
+      "url": "https://github.com/cclank/lanshu-create-ai-presenter-video",
+      "readAt": "2026-10-26",
+      "license": "README declares MIT; separate voice/fonts/provider terms",
+      "coverage": "README所列路由、音轨锁定与作业/费用/回执相关段落；非全项目源码审计，未执行供应商调用。",
+      "status": "candidate-reference",
+      "files": [
+        {
+          "path": "README.md",
+          "blob": "3760bd81f2c7ead0781be0097da4bba8a079bfbe",
+          "characters": 20163,
+          "readState": "retrieved; coverage described above"
+        }
+      ],
+      "adoptions": [
+        "skills/creative-production-router/references/code-video-methods.md"
+      ],
+      "execution": "not-installed-or-executed-this-turn"
+    },
+    {
+      "id": "github-Azure12355-weilanx-claude-videos",
+      "kind": "github",
+      "url": "https://github.com/Azure12355/weilanx-claude-videos",
+      "readAt": "2026-10-26",
+      "license": "MIT; fonts/music and other assets separate",
+      "coverage": "README时间轴/字幕/风格机制相关段落和LICENSE；未读完全部50+案例、未渲染。",
+      "status": "candidate-reference",
+      "files": [
+        {
+          "path": "README.md",
+          "blob": "b05c51e9099857712d8b882182d0a09086f985da",
+          "characters": 22155,
+          "readState": "retrieved; coverage described above"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "c1c33eeb9973354141fb301c3657083032986b9e",
+          "characters": 1067,
+          "readState": "retrieved; coverage described above"
+        }
+      ],
+      "adoptions": [
+        "skills/creative-production-router/references/code-video-methods.md"
+      ],
+      "execution": "not-installed-or-executed-this-turn"
+    },
+    {
+      "id": "github-heygen-com-hyperframes",
+      "kind": "github",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "readAt": "2026-10-26",
+      "license": "README declares Apache-2.0; current exact dependencies/terms checked when used",
+      "coverage": "README相关框架/渲染/平台适配段落与已有本地技能；不把Claude安装命令直接用于Codex。",
+      "status": "official-reference",
+      "files": [
+        {
+          "path": "README.md",
+          "blob": "9090da4ac27bb90d21c93d2db2b95215a952619e",
+          "characters": 22944,
+          "readState": "retrieved; coverage described above"
+        }
+      ],
+      "adoptions": [
+        "skills/creative-production-router/references/code-video-methods.md"
+      ],
+      "execution": "not-installed-or-executed-this-turn"
+    },
+    {
+      "id": "workbuddy-remotion-methods",
+      "kind": "workbuddy",
+      "readAt": "2026-10-26",
+      "coverage": "本机已安装remotion-video-toolkit、remotion-windows-render、remotion-storyboard-video-rebuild、html-video-layout-probe的SKILL相关段落与真实故障建议；原文件不公开。",
+      "status": "selectively-adapted",
+      "adoptions": [
+        "skills/dynamic-video-craft/references/remotion-and-hybrid.md"
+      ],
+      "adopted": [
+        "帧/音轨/字幕对齐",
+        "按错误与资源定位Windows问题",
+        "DOM裁剪/遮挡与实际观影结合"
+      ],
+      "notAdopted": [
+        "禁用Web安全",
+        "默认禁媒体/静音",
+        "固定高并发与固定磁盘路径",
+        "用补黑画面掩盖未完成镜头"
+      ],
+      "execution": "source-read; not an end-to-end Remotion render proof"
+    },
+    {
+      "id": "official-remotion-api",
+      "kind": "official-doc",
+      "readAt": "2026-10-26",
+      "url": "https://www.remotion.dev/docs/use-current-frame",
+      "references": [
+        "https://www.remotion.dev/docs/random",
+        "https://www.remotion.dev/license"
+      ],
+      "coverage": "官方帧/局部时间、固定种子随机与许可页面已打开并核对应段落。",
+      "status": "verified-documentation",
+      "adoptions": [
+        "skills/dynamic-video-craft/references/remotion-and-hybrid.md"
+      ]
+    }
+  ]
+}

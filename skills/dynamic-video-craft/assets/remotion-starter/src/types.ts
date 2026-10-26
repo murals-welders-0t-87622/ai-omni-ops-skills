@@ -1,0 +1,30 @@
+export type CameraState = {x: number; y: number; scale: number; rotate: number};
+export type SceneSpec = {
+  id: string;
+  start: number;
+  end: number;
+  type: 'title' | 'metric' | 'steps' | 'evidence';
+  headline: string;
+  eyebrow?: string;
+  subline?: string;
+  labels?: string[];
+  metric?: number;
+  unit?: string;
+  image?: string;
+  revealEvent?: string;
+  transition?: 'cut' | 'wipe';
+  camera?: {from?: Partial<CameraState>; to?: Partial<CameraState>};
+};
+export type Timeline = {
+  mode: 'promo' | 'explainer' | 'shot';
+  width: number;
+  height: number;
+  fps: number;
+  duration: number;
+  palette: {background: string; surface: string; text: string; muted: string; accent: string};
+  scenes: SceneSpec[];
+  events: {id: string; sceneId: string; at: number; label: string; anchorId?: string; sfx?: string; volume?: number}[];
+  anchors: {id: string; text: string; start: number; end: number; source: string}[];
+  captions: {text: string; start: number; end: number}[];
+  audio: {voiceover?: {src: string; volume: number}; music?: {src: string; volume: number}};
+};

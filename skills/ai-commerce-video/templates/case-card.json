@@ -1,0 +1,56 @@
+{
+
+  "caseId": "本地稳定标识",
+
+  "platform": "即创/蝉选/抖音等",
+
+  "sourceUrl": null,
+
+  "title": null,
+
+  "collectedAt": null,
+
+  "observation": {
+
+    "status": "listing_only/observed_partial/observed_sample/hypothesis",
+
+    "visualRange": null,
+
+    "audioRange": null,
+
+    "transcriptionQuality": null,
+
+    "aiAttribution": null
+
+  },
+
+  "creativeForms": [],
+
+  "salesStructure": null,
+
+  "productionMode": null,
+
+  "firstFrame": null,
+
+  "conflictAndPayoff": null,
+
+  "timeline": [],
+
+  "nativeDialogue": null,
+
+  "productFirstVisibleAt": null,
+
+  "productBridge": null,
+
+  "metricDefinitions": {},
+
+  "transferMechanism": null,
+
+  "notTransferable": [],
+
+  "evidenceRefs": [],
+
+  "rightsState": "unknown"
+
+}
+

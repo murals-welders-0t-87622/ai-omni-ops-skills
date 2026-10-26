@@ -1,0 +1,6 @@
+interface:
+  display_name: "技能测试与版本维护"
+  short_description: "真实业务测试后修正本统一技能库、验证安装与回归并同步专用GitHub技能仓库；不开发或发布业务系统。"
+  default_prompt: "使用 $omni-skill-maintenance 完成本品牌当前委托，读取已有上下文并保存可继续的结果。"
+policy:
+  allow_implicit_invocation: true

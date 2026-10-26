@@ -1,0 +1,347 @@
+{
+  "files": [
+    {
+      "id": "DOC-6ff33cd0ad4f",
+      "path": "references/asset-consistency.md",
+      "stages": [
+        "research",
+        "story",
+        "storyboard",
+        "assets",
+        "prompt",
+        "review"
+      ],
+      "bytes": 4299,
+      "sha256": "55bdf24b58a8eb09bd95f4b927e1f3fbc193b523d366c81386c0fd33bd89f99d",
+      "lines": 43,
+      "headings": [
+        {
+          "line": 1,
+          "title": "图片资产与一致性制作"
+        },
+        {
+          "line": 5,
+          "title": "1. 先锁定设计，再做镜头"
+        },
+        {
+          "line": 13,
+          "title": "2. 资产登记"
+        },
+        {
+          "line": 19,
+          "title": "3. 做逐镜首帧"
+        },
+        {
+          "line": 27,
+          "title": "4. 多图槽位映射"
+        },
+        {
+          "line": 33,
+          "title": "5. 分身镜头的特殊规则"
+        },
+        {
+          "line": 39,
+          "title": "6. 审核与局部返修"
+        }
+      ]
+    },
+    {
+      "id": "DOC-ecec77e2eab6",
+      "path": "references/brand-story.md",
+      "stages": [
+        "research",
+        "story",
+        "storyboard",
+        "assets",
+        "prompt",
+        "review"
+      ],
+      "bytes": 3737,
+      "sha256": "49c2b702767aacfaf2a0e47cf0451370a540cde1522b0f9f3044a10d5bdcc3e1",
+      "lines": 41,
+      "headings": [
+        {
+          "line": 1,
+          "title": "从品牌解决办法到可见剧情"
+        },
+        {
+          "line": 7,
+          "title": "看对标时研究什么"
+        },
+        {
+          "line": 13,
+          "title": "短剧路线"
+        },
+        {
+          "line": 21,
+          "title": "旅游反差路线"
+        },
+        {
+          "line": 27,
+          "title": "时长与声音一起写"
+        },
+        {
+          "line": 33,
+          "title": "自检"
+        }
+      ]
+    },
+    {
+      "id": "DOC-5c06cc1d06f1",
+      "path": "references/edit-audio-qa.md",
+      "stages": [
+        "research",
+        "story",
+        "storyboard",
+        "assets",
+        "prompt",
+        "review"
+      ],
+      "bytes": 3191,
+      "sha256": "8d01ef758ac856957fd212a8c30f7850e2586818b7fef2414f13a1ee2198ac42",
+      "lines": 38,
+      "headings": [
+        {
+          "line": 1,
+          "title": "剪辑、声音与验收"
+        },
+        {
+          "line": 3,
+          "title": "剪辑工程"
+        },
+        {
+          "line": 11,
+          "title": "原生声音优先检查"
+        },
+        {
+          "line": 19,
+          "title": "审核矩阵"
+        },
+        {
+          "line": 30,
+          "title": "问题如何返修"
+        },
+        {
+          "line": 34,
+          "title": "最终交付"
+        }
+      ]
+    },
+    {
+      "id": "DOC-f794a1ed746e",
+      "path": "references/generation-adapters.md",
+      "stages": [
+        "research",
+        "story",
+        "storyboard",
+        "assets",
+        "prompt",
+        "review"
+      ],
+      "bytes": 4557,
+      "sha256": "248e02bc1852f3e45010f1a1321938f2eb2eb21508739c48fd4dfe1ae17ed7f3",
+      "lines": 55,
+      "headings": [
+        {
+          "line": 1,
+          "title": "生成接入、任务与恢复"
+        },
+        {
+          "line": 3,
+          "title": "能力发现"
+        },
+        {
+          "line": 9,
+          "title": "指定RunningHub应用的已知参数"
+        },
+        {
+          "line": 25,
+          "title": "从工程到真实调用"
+        },
+        {
+          "line": 37,
+          "title": "状态与重复费用"
+        },
+        {
+          "line": 49,
+          "title": "适配LocalMiniDrama"
+        }
+      ]
+    },
+    {
+      "id": "DOC-12acc4d6f6ae",
+      "path": "references/host-compatibility.md",
+      "stages": [
+        "research",
+        "story",
+        "storyboard",
+        "assets",
+        "prompt",
+        "review"
+      ],
+      "bytes": 1719,
+      "sha256": "5d1d2142afd50d16ccfb95fc262a533bb6ac60fc9317af52a953e1bbe6c0e173",
+      "lines": 13,
+      "headings": [
+        {
+          "line": 1,
+          "title": "Codex为主，兼容WorkBuddy"
+        }
+      ]
+    },
+    {
+      "id": "DOC-8ab9f45861c4",
+      "path": "references/library-routing.md",
+      "stages": [
+        "research",
+        "story",
+        "storyboard",
+        "assets",
+        "prompt",
+        "review"
+      ],
+      "bytes": 1993,
+      "sha256": "c359ae26919d3e4e4fa235c0b53239a55304e056efc77667b3dabd6759b24bad",
+      "lines": 19,
+      "headings": [
+        {
+          "line": 1,
+          "title": "公开方法、原始资料与阶段路由"
+        }
+      ]
+    },
+    {
+      "id": "DOC-5fe4ae8b9460",
+      "path": "references/project-engineering.md",
+      "stages": [
+        "research",
+        "story",
+        "storyboard",
+        "assets",
+        "prompt",
+        "review"
+      ],
+      "bytes": 4998,
+      "sha256": "890f3323e903c81dd91da655885dddb55cafc0f423df3feb6deccd325bb242fe",
+      "lines": 64,
+      "headings": [
+        {
+          "line": 1,
+          "title": "项目工程、版本与接续"
+        },
+        {
+          "line": 3,
+          "title": "两种项目构建能力"
+        },
+        {
+          "line": 9,
+          "title": "文件工程"
+        },
+        {
+          "line": 30,
+          "title": "数据关系"
+        },
+        {
+          "line": 38,
+          "title": "状态与授权"
+        },
+        {
+          "line": 44,
+          "title": "关键命令"
+        },
+        {
+          "line": 60,
+          "title": "改动与恢复"
+        }
+      ]
+    },
+    {
+      "id": "DOC-acd71ee7c20a",
+      "path": "references/prompt-directing.md",
+      "stages": [
+        "research",
+        "story",
+        "storyboard",
+        "assets",
+        "prompt",
+        "review"
+      ],
+      "bytes": 4787,
+      "sha256": "97f7dde8a1f9b4b1ea8a70b2493f62802f595b8652608da9b184135737160a4f",
+      "lines": 58,
+      "headings": [
+        {
+          "line": 1,
+          "title": "每个画面怎样写成图生视频提示词"
+        },
+        {
+          "line": 5,
+          "title": "一个片段的完整构成"
+        },
+        {
+          "line": 15,
+          "title": "图片提示词与视频提示词分工"
+        },
+        {
+          "line": 23,
+          "title": "可直接采用的结构"
+        },
+        {
+          "line": 37,
+          "title": "两个工程样例如何拆"
+        },
+        {
+          "line": 45,
+          "title": "短片与单次生成时长"
+        },
+        {
+          "line": 49,
+          "title": "常见失误"
+        }
+      ]
+    },
+    {
+      "id": "DOC-7a44320bf15d",
+      "path": "references/source-attribution.md",
+      "stages": [
+        "research",
+        "story",
+        "storyboard",
+        "assets",
+        "prompt",
+        "review"
+      ],
+      "bytes": 1496,
+      "sha256": "8ce5136c96125367c3466351e1c2667d7763021c7c718d344b5886c5282967e8",
+      "lines": 11,
+      "headings": [
+        {
+          "line": 1,
+          "title": "来源与公开分发"
+        }
+      ]
+    },
+    {
+      "id": "DOC-e566e3fff5c3",
+      "path": "references/source-conflicts.md",
+      "stages": [
+        "research",
+        "story",
+        "storyboard",
+        "assets",
+        "prompt",
+        "review"
+      ],
+      "bytes": 2576,
+      "sha256": "f16a113837112f08333d091882984096191de171628a26a1b269e68103b0a824",
+      "lines": 17,
+      "headings": [
+        {
+          "line": 1,
+          "title": "来源冲突与适用边界"
+        }
+      ]
+    }
+  ],
+  "distribution": "curated-public-methods; original private/third-party texts not redistributed"
+}

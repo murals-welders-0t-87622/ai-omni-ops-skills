@@ -1,0 +1,6 @@
+interface:
+  display_name: "品牌资料与业务上下文"
+  short_description: "整理品牌、产品、IP、知识与素材，核来源和冲突并经本品牌MCP归档；不自行改业务事实。"
+  default_prompt: "使用 $omni-business-context 完成本品牌当前委托，读取已有上下文并保存可继续的结果。"
+policy:
+  allow_implicit_invocation: true

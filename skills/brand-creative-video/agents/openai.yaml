@@ -1,0 +1,6 @@
+interface:
+  display_name: "品牌创意视频"
+  short_description: "为品牌制作有清楚剧情和服务价值的AI创意视频，覆盖研究、建项目、剧本、分镜、角色场景道具图片资产、图生视频提示词、生成任务、剪辑与验收。适用于品牌短剧、猫咪或古人等旅游反"
+  default_prompt: "使用 $brand-creative-video 完成本品牌当前委托，读取已有上下文并保存可继续的结果。"
+policy:
+  allow_implicit_invocation: true

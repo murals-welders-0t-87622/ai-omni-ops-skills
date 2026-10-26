@@ -1,0 +1,6 @@
+interface:
+  display_name: "全网获客"
+  short_description: "公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。"
+  default_prompt: "使用 $public-lead-operations 完成本品牌当前委托，读取已有上下文并保存可继续的结果。"
+policy:
+  allow_implicit_invocation: true

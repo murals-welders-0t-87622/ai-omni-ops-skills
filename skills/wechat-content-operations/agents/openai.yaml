@@ -1,0 +1,6 @@
+interface:
+  display_name: "公众号与信任内容"
+  short_description: "公众号、品牌长文、内容排版及私域内容复用；发布需沿用当前账号与用户授权。"
+  default_prompt: "使用 $wechat-content-operations 完成本品牌当前委托，读取已有上下文并保存可继续的结果。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,175 @@
+{
+  "fixture_only": true,
+  "episodes": [
+    {
+      "id": "A",
+      "title": "虚构教学A",
+      "duration": 8,
+      "script_status": "review",
+      "script_revision": "r1"
+    },
+    {
+      "id": "B",
+      "title": "虚构教学B",
+      "duration": 8,
+      "script_status": "review",
+      "script_revision": "r1"
+    }
+  ],
+  "assets": [
+    {
+      "id": "CH-DEMO",
+      "revision": "r1",
+      "type": "character",
+      "master_id": null,
+      "depends_on": [],
+      "status": "planned",
+      "file": null,
+      "sha256": null,
+      "appearance": "虚构蓝色方块，无品牌/人物",
+      "image_prompt": "蓝色方块教学示意"
+    },
+    {
+      "id": "KF-A01",
+      "revision": "r1",
+      "type": "keyframe",
+      "master_id": null,
+      "depends_on": [],
+      "status": "planned",
+      "file": null,
+      "sha256": null
+    },
+    {
+      "id": "KF-A02",
+      "revision": "r1",
+      "type": "keyframe",
+      "master_id": null,
+      "depends_on": [],
+      "status": "planned",
+      "file": null,
+      "sha256": null
+    },
+    {
+      "id": "KF-B01",
+      "revision": "r1",
+      "type": "keyframe",
+      "master_id": null,
+      "depends_on": [
+        "CH-DEMO"
+      ],
+      "status": "planned",
+      "file": null,
+      "sha256": null
+    },
+    {
+      "id": "KF-B02",
+      "revision": "r1",
+      "type": "keyframe",
+      "master_id": null,
+      "depends_on": [
+        "CH-DEMO"
+      ],
+      "status": "planned",
+      "file": null,
+      "sha256": null
+    }
+  ],
+  "shots": [
+    {
+      "id": "A01",
+      "episode_id": "A",
+      "start": 0,
+      "end": 4,
+      "kind": "generated",
+      "keyframe_id": "KF-A01",
+      "asset_refs": [],
+      "entry_state": "教学形状在左侧",
+      "action": "向右平移",
+      "camera": "固定",
+      "exit_state": "停在右侧",
+      "audio": "无对白，后续确认声音",
+      "prompt": "教学形状缓慢向右移动，保持身份",
+      "image_prompt": "教学形状在左侧",
+      "generation_duration": 4,
+      "trim": {
+        "in": 0,
+        "out": 4
+      },
+      "status": "planned",
+      "revision": "r1"
+    },
+    {
+      "id": "A02",
+      "episode_id": "A",
+      "start": 4,
+      "end": 8,
+      "kind": "generated",
+      "keyframe_id": "KF-A02",
+      "asset_refs": [],
+      "entry_state": "教学形状在左侧",
+      "action": "向右平移",
+      "camera": "固定",
+      "exit_state": "停在右侧",
+      "audio": "无对白，后续确认声音",
+      "prompt": "教学形状缓慢向右移动，保持身份",
+      "image_prompt": "教学形状在左侧",
+      "generation_duration": 4,
+      "trim": {
+        "in": 0,
+        "out": 4
+      },
+      "status": "planned",
+      "revision": "r1"
+    },
+    {
+      "id": "B01",
+      "episode_id": "B",
+      "start": 0,
+      "end": 4,
+      "kind": "generated",
+      "keyframe_id": "KF-B01",
+      "asset_refs": [
+        "CH-DEMO"
+      ],
+      "entry_state": "教学形状在左侧",
+      "action": "向右平移",
+      "camera": "固定",
+      "exit_state": "停在右侧",
+      "audio": "无对白，后续确认声音",
+      "prompt": "教学形状缓慢向右移动，保持身份",
+      "image_prompt": "教学形状在左侧",
+      "generation_duration": 4,
+      "trim": {
+        "in": 0,
+        "out": 4
+      },
+      "status": "planned",
+      "revision": "r1"
+    },
+    {
+      "id": "B02",
+      "episode_id": "B",
+      "start": 4,
+      "end": 8,
+      "kind": "generated",
+      "keyframe_id": "KF-B02",
+      "asset_refs": [
+        "CH-DEMO"
+      ],
+      "entry_state": "教学形状在左侧",
+      "action": "向右平移",
+      "camera": "固定",
+      "exit_state": "停在右侧",
+      "audio": "无对白，后续确认声音",
+      "prompt": "教学形状缓慢向右移动，保持身份",
+      "image_prompt": "教学形状在左侧",
+      "generation_duration": 4,
+      "trim": {
+        "in": 0,
+        "out": 4
+      },
+      "status": "planned",
+      "revision": "r1"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+
+  "brandId": null,
+
+  "taskId": null,
+
+  "stageRunId": null,
+
+  "requestedScope": "research/plan/produce/review",
+
+  "productId": null,
+
+  "skuState": "unknown",
+
+  "audience": null,
+
+  "scene": null,
+
+  "mainPurchaseReason": null,
+
+  "claimEvidence": [],
+
+  "creativeForms": [],
+
+  "salesStructure": null,
+
+  "productionMode": null,
+
+  "existingMaterialRefs": [],
+
+  "missingMaterials": [],
+
+  "voicePlan": {
+
+    "aiNative": null,
+
+    "tts": null,
+
+    "speedAppliedOnce": null
+
+  },
+
+  "estimatedCalls": {},
+
+  "authorizationScope": null,
+
+  "deliverables": [],
+
+  "previousReceipts": []
+
+}
+

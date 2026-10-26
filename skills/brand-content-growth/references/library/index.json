@@ -1,0 +1,101 @@
+[
+  {
+    "source_id": "METHOD-01",
+    "source_path": "01-business-framework.md",
+    "text_file": "references/library/texts/01-business-framework.md",
+    "text_sha256": "30de7ff9f5ae82ec36cf37f317e9a647ddb1d0a038c4c8d24ab5fd25bb29db33",
+    "chars": 2580,
+    "reading_note": "本仓通用方法整理，不是原课程全文；引用外部原文需另行取得并核读。",
+    "source_kind": "original-method-synthesis"
+  },
+  {
+    "source_id": "METHOD-02",
+    "source_path": "02-research-and-insight.md",
+    "text_file": "references/library/texts/02-research-and-insight.md",
+    "text_sha256": "7392155712a2d6b209575dde4f20e7e9161403525935b6697a432b7d14ebd4e4",
+    "chars": 2733,
+    "reading_note": "本仓通用方法整理，不是原课程全文；引用外部原文需另行取得并核读。",
+    "source_kind": "original-method-synthesis"
+  },
+  {
+    "source_id": "METHOD-03",
+    "source_path": "03-content-strategy.md",
+    "text_file": "references/library/texts/03-content-strategy.md",
+    "text_sha256": "cc83771d7455195be5cd5f5e1f365f08432d1e9ec282327c37c3f20aa7ad0612",
+    "chars": 2473,
+    "reading_note": "本仓通用方法整理，不是原课程全文；引用外部原文需另行取得并核读。",
+    "source_kind": "original-method-synthesis"
+  },
+  {
+    "source_id": "METHOD-04",
+    "source_path": "04-strategy-playbook.md",
+    "text_file": "references/library/texts/04-strategy-playbook.md",
+    "text_sha256": "98179bb95736baa0224e18c273a9de08e2344b2ffcc8c5092acaf39866fcf942",
+    "chars": 6353,
+    "reading_note": "本仓通用方法整理，不是原课程全文；引用外部原文需另行取得并核读。",
+    "source_kind": "original-method-synthesis"
+  },
+  {
+    "source_id": "METHOD-05",
+    "source_path": "05-topic-and-writing.md",
+    "text_file": "references/library/texts/05-topic-and-writing.md",
+    "text_sha256": "b181ff70bb9be9eec57ea4c959fef0f33904a606adfdabb09779a00ab3e31e08",
+    "chars": 2649,
+    "reading_note": "本仓通用方法整理，不是原课程全文；引用外部原文需另行取得并核读。",
+    "source_kind": "original-method-synthesis"
+  },
+  {
+    "source_id": "METHOD-06",
+    "source_path": "06-production-and-prompts.md",
+    "text_file": "references/library/texts/06-production-and-prompts.md",
+    "text_sha256": "1910dac38eb2451d4237ed3adfc73ae4abe3a9fa66484117e57a82636aca323e",
+    "chars": 3736,
+    "reading_note": "本仓通用方法整理，不是原课程全文；引用外部原文需另行取得并核读。",
+    "source_kind": "original-method-synthesis"
+  },
+  {
+    "source_id": "METHOD-07",
+    "source_path": "07-measurement-and-learning.md",
+    "text_file": "references/library/texts/07-measurement-and-learning.md",
+    "text_sha256": "0f9f89733eb885515ab68c21a1eeac10a759b72f96897518a7cedd899ec026ba",
+    "chars": 2581,
+    "reading_note": "本仓通用方法整理，不是原课程全文；引用外部原文需另行取得并核读。",
+    "source_kind": "original-method-synthesis"
+  },
+  {
+    "source_id": "METHOD-08",
+    "source_path": "08-system-and-handoffs.md",
+    "text_file": "references/library/texts/08-system-and-handoffs.md",
+    "text_sha256": "4d74e2adf2ce9f8763feab686660416ec79ecb08ff93fa78a0b02b62a505e3f1",
+    "chars": 4702,
+    "reading_note": "本仓通用方法整理，不是原课程全文；引用外部原文需另行取得并核读。",
+    "source_kind": "original-method-synthesis"
+  },
+  {
+    "source_id": "METHOD-09",
+    "source_path": "09-industries-and-cases.md",
+    "text_file": "references/library/texts/09-industries-and-cases.md",
+    "text_sha256": "9a38853c070b77fd446a27025d6bfe66bc30b2eb5e6e7574ec2e44429ccac7cb",
+    "chars": 3060,
+    "reading_note": "本仓通用方法整理，不是原课程全文；引用外部原文需另行取得并核读。",
+    "source_kind": "original-method-synthesis"
+  },
+  {
+    "source_id": "METHOD-10",
+    "source_path": "10-source-guide.md",
+    "text_file": "references/library/texts/10-source-guide.md",
+    "text_sha256": "01cd961e215e57e4e73177f1824d2bf5a7be0cfabc80f000d0fbc6c2ca46b770",
+    "chars": 886,
+    "reading_note": "本仓通用方法整理，不是原课程全文；引用外部原文需另行取得并核读。",
+    "source_kind": "original-method-synthesis"
+  },
+  {
+    "source_id": "METHOD-11",
+    "source_path": "11-acceptance-and-evolution.md",
+    "text_file": "references/library/texts/11-acceptance-and-evolution.md",
+    "text_sha256": "27de83f88afaec1707aeb89fc84612e5874e59927dffb1acf545a38985c3ec46",
+    "chars": 1623,
+    "reading_note": "本仓通用方法整理，不是原课程全文；引用外部原文需另行取得并核读。",
+    "source_kind": "original-method-synthesis"
+  }
+]

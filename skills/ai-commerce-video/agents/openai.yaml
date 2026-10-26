@@ -1,0 +1,6 @@
+interface:
+  display_name: "AI商品带货"
+  short_description: "为电商商品做市场与人群研究、案例归类、选品和多结构带货短视频策划，按授权制作AI、实拍或混剪视频，支持一品多条和效果复盘。适用于商品带货及既有样片优化，不用于无商品知识讲"
+  default_prompt: "使用 $ai-commerce-video 完成本品牌当前委托，读取已有上下文并保存可继续的结果。"
+policy:
+  allow_implicit_invocation: true

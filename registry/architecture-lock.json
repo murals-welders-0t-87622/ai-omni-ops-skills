@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "32f77a67641bb4fa830712d445cc8b88f0ef1caa",
+  "layers": [
+    "orchestration",
+    "domain-and-craft",
+    "professional-knowledge"
+  ],
+  "businessFlow": [
+    "business-model",
+    "strategy",
+    "tactics",
+    "execution",
+    "measurement-and-feedback"
+  ],
+  "skills": [
+    {
+      "id": "ai-commerce-video",
+      "path": "skills/ai-commerce-video",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "ai-sales-operations",
+      "path": "skills/ai-sales-operations",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "brand-content-growth",
+      "path": "skills/brand-content-growth",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "brand-creative-video",
+      "path": "skills/brand-creative-video",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "brand-omni-growth-expert",
+      "path": "skills/brand-omni-growth-expert",
+      "kind": "orchestrator",
+      "dependencies": []
+    },
+    {
+      "id": "content-decomposition",
+      "path": "skills/content-decomposition",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "content-distribution",
+      "path": "skills/content-distribution",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "creative-production-router",
+      "path": "skills/creative-production-router",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "douyin-operations",
+      "path": "skills/douyin-operations",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "dynamic-video-craft",
+      "path": "skills/dynamic-video-craft",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "ecommerce-detail-creative",
+      "path": "skills/ecommerce-detail-creative",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "geo-growth-operations",
+      "path": "skills/geo-growth-operations",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "influencer-cooperation",
+      "path": "skills/influencer-cooperation",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "ocean-ads-operations",
+      "path": "skills/ocean-ads-operations",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "omni-business-context",
+      "path": "skills/omni-business-context",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "omni-growth-review",
+      "path": "skills/omni-growth-review",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "omni-skill-maintenance",
+      "path": "skills/omni-skill-maintenance",
+      "kind": "governance",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "public-lead-operations",
+      "path": "skills/public-lead-operations",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "taobao-tmall-operations",
+      "path": "skills/taobao-tmall-operations",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "tencent-ads-operations",
+      "path": "skills/tencent-ads-operations",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "wechat-content-operations",
+      "path": "skills/wechat-content-operations",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "xiaohongshu-operations",
+      "path": "skills/xiaohongshu-operations",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
+      "id": "youzan-private-operations",
+      "path": "skills/youzan-private-operations",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    }
+  ],
+  "changeRule": "更改以上主结构前须用户确认具体差异；新资料、领域内工艺、验证和可靠性修正可以直接进行。"
+}

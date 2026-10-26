@@ -1,0 +1,32 @@
+{
+  "schema_version": "brand-content-local-1.0",
+  "project_key": null,
+  "brand": {"name": null, "authority_id": null},
+  "timezone": "Asia/Shanghai",
+  "request": {"original": null, "delivery_endpoint": null},
+  "authority": {"mode": "local_draft", "task_id": null, "revision_id": null},
+  "upstream": {"growth_report_ref": null, "report_status": "unknown", "reuse_check": null, "research_gaps": []},
+  "research": {"scope": null, "window": null, "sample_coverage": null, "live_collection_status": "not_executed"},
+  "evidence": [],
+  "value_cards": [],
+  "strategy": {
+    "business_bottleneck": null,
+    "priority_user": null,
+    "priority_scenario": null,
+    "value_proposition": null,
+    "primary_task": null,
+    "content_pillars": [],
+    "platform_roles": [],
+    "resource_constraints": [],
+    "handoff_path": null,
+    "measurement_plan": null,
+    "assumptions": []
+  },
+  "content_items": [],
+  "artifacts": [],
+  "supplier_jobs": [],
+  "metrics": [],
+  "permissions": {"paid_generation": {"authorized": false, "scope_ref": null}, "publication": {"authorized": false, "scope_ref": null}},
+  "handoff": {"archive_status": "not_archived", "authority_receipt": null, "next_action": null, "blockers": []},
+  "methods": {"planned": ["brand-content-growth@1.0.0"], "actually_used": [], "execution_evidence": []}
+}

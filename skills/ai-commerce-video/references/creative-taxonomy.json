@@ -1,0 +1,751 @@
+{
+
+  "version": "2.0.0",
+
+  "date": "2026-10-23",
+
+  "taxonomyOwner": "本技能自建；非即创官方分类",
+
+  "axes": [
+
+    "creative_form",
+
+    "sales_structure",
+
+    "production_mode"
+
+  ],
+
+  "forms": [
+
+    {
+
+      "id": "anthropomorphism",
+
+      "name": "拟人化",
+
+      "searchTerms": [
+
+        "拟人",
+
+        "开口说话",
+
+        "商品长手脚"
+
+      ],
+
+      "mechanism": "非人的商品、毛发、工具具有性格与欲望",
+
+      "firstFrameRule": "表情已经在抗议、抢占或拦路，短句配动作",
+
+      "hairCleaningConcept": "普通扫把被头发编成粗辫子，吼“我扫地的！不是编辫子的！”",
+
+      "productBridge": "甩辫子的方向接真实除尘套展开",
+
+      "caseRefs": [
+
+        "J01",
+
+        "J02",
+
+        "J03",
+
+        "J04"
+
+      ],
+
+      "evidenceStatus": "observed_sample",
+
+      "limits": "夸张角色不代表商品效果；J03松弛拟人不适合作强冲突开头"
+
+    },
+
+    {
+
+      "id": "time-travel",
+
+      "name": "穿越/古今错位",
+
+      "searchTerms": [
+
+        "穿越",
+
+        "古装",
+
+        "现代",
+
+        "宫廷"
+
+      ],
+
+      "mechanism": "时代与生活办法错位，现代商品回应同一种麻烦",
+
+      "firstFrameRule": "古装人被眼前家务困住，第一句就抛异常",
+
+      "hairCleaningConcept": "将军从卧室门冲进来：“谁在床上布了蛛网阵？！”镜头落到长发",
+
+      "productBridge": "抽象发阵接真实床面毛发与滚筒",
+
+      "caseRefs": [],
+
+      "evidenceStatus": "hypothesis",
+
+      "limits": "当代家庭需求是否匹配需测试；不借知名IP服装人物或编历史功效"
+
+    },
+
+    {
+
+      "id": "rebirth",
+
+      "name": "重生/时间循环",
+
+      "searchTerms": [
+
+        "重生",
+
+        "再来一次",
+
+        "循环"
+
+      ],
+
+      "mechanism": "同一麻烦反复发生，改选择打破循环",
+
+      "firstFrameRule": "一次失败立即复现，不铺大段世界观",
+
+      "hairCleaningConcept": "主人刚扫完毛团又弹出：“惊喜！我又回来了！”",
+
+      "productBridge": "同一位置接真实第二轮清理和用后处理",
+
+      "caseRefs": [],
+
+      "evidenceStatus": "hypothesis",
+
+      "limits": "“重生”不能变成产品改变人生或绝不复发承诺"
+
+    },
+
+    {
+
+      "id": "palace-court",
+
+      "name": "宫廷/朝堂争辩",
+
+      "searchTerms": [
+
+        "宫廷",
+
+        "皇上",
+
+        "判案",
+
+        "古装"
+
+      ],
+
+      "mechanism": "借角色地位冲突快速提出选择问题",
+
+      "firstFrameRule": "抓现行、判谁负责，单场景两角色内",
+
+      "hairCleaningConcept": "毛王坐床头：“这张龙床，朕包了！”",
+
+      "productBridge": "床面轮廓匹配真实家用滚筒",
+
+      "caseRefs": [],
+
+      "evidenceStatus": "hypothesis",
+
+      "limits": "不照搬影视演员/台词；古装只是形式，仍要商品需求"
+
+    },
+
+    {
+
+      "id": "reversal-drama",
+
+      "name": "身份反转/反差短剧",
+
+      "searchTerms": [
+
+        "反转",
+
+        "原来是",
+
+        "误会"
+
+      ],
+
+      "mechanism": "观众先认错角色或对象，迅速回收误会",
+
+      "firstFrameRule": "冲突结果先亮，再揭谁在说话",
+
+      "hairCleaningConcept": "黑西装披一身白毛：“我是西装！不是猫窝！”",
+
+      "productBridge": "衣领拉近接真实便携粘毛器",
+
+      "caseRefs": [
+
+        "J04"
+
+      ],
+
+      "evidenceStatus": "observed_partial",
+
+      "limits": "观察到剧情和拟人衔接不等于本例已生成；不要用人际羞辱制造购买压力"
+
+    },
+
+    {
+
+      "id": "domestic-comedy",
+
+      "name": "家庭/职场轻喜剧",
+
+      "searchTerms": [
+
+        "家庭",
+
+        "宿舍",
+
+        "办公室",
+
+        "上班迟到"
+
+      ],
+
+      "mechanism": "具体生活动作受阻，人物马上想解决",
+
+      "firstFrameRule": "拿衣出门却被毛发绊住当下动作",
+
+      "hairCleaningConcept": "通勤者抬袖子停住，衣服先喊：“别带我去见客户！”",
+
+      "productBridge": "袖口位置接真实衣物处理",
+
+      "caseRefs": [
+
+        "J06"
+
+      ],
+
+      "evidenceStatus": "observed_partial",
+
+      "limits": "J06是痛点/实拍结构对照，不确认AI；不用编造用户亲历/职场成功"
+
+    },
+
+    {
+
+      "id": "giant-scale",
+
+      "name": "巨物/尺度失衡",
+
+      "searchTerms": [
+
+        "巨物",
+
+        "巨大",
+
+        "城市",
+
+        "放大"
+
+      ],
+
+      "mechanism": "熟悉场景里一个物体被放大到不合理",
+
+      "firstFrameRule": "第一帧就让尺寸冲突可读",
+
+      "hairCleaningConcept": "巨型毛团横躺床上，把枕头当抱枕",
+
+      "productBridge": "枕头落点接真实床面清理",
+
+      "caseRefs": [
+
+        "L01"
+
+      ],
+
+      "evidenceStatus": "listing_only",
+
+      "limits": "本轮仅见巨物标题，未完成该条视听；巨大不暗示真实超强吸力"
+
+    },
+
+    {
+
+      "id": "miniature-world",
+
+      "name": "微缩/小人世界",
+
+      "searchTerms": [
+
+        "微缩",
+
+        "小人",
+
+        "微观",
+
+        "小镇"
+
+      ],
+
+      "mechanism": "把日常表面变成地形，小角色对抗具体麻烦",
+
+      "firstFrameRule": "纤维像森林、毛发像粗绳，单一动作",
+
+      "hairCleaningConcept": "小小毛王抓住地毯纤维打拔河",
+
+      "productBridge": "纤维匹配真实地毯接触近景",
+
+      "caseRefs": [],
+
+      "evidenceStatus": "hypothesis",
+
+      "limits": "微观创意不能伪装显微镜或科学检测"
+
+    },
+
+    {
+
+      "id": "transformation",
+
+      "name": "变形/材质魔法",
+
+      "searchTerms": [
+
+        "变形",
+
+        "冰晶",
+
+        "融化",
+
+        "变身"
+
+      ],
+
+      "mechanism": "商品或场景材质有一处明显变化",
+
+      "firstFrameRule": "保留商品识别，变化发生在画面中",
+
+      "hairCleaningConcept": "普通牙膏管渐变成冰晶的既有案例仅迁移“一处材质变化”",
+
+      "productBridge": "变化形态接相同外形真实商品",
+
+      "caseRefs": [
+
+        "J05"
+
+      ],
+
+      "evidenceStatus": "observed_sample",
+
+      "limits": "禁止迁移为真实制冷、祛污或身体功效证据"
+
+    },
+
+    {
+
+      "id": "object-life",
+
+      "name": "商品活过来/罢工",
+
+      "searchTerms": [
+
+        "活过来",
+
+        "罢工",
+
+        "逃跑"
+
+      ],
+
+      "mechanism": "工具抱怨自己的负担，欲望与购买理由相连",
+
+      "firstFrameRule": "工具已经在逃、跺脚或伸手拒绝",
+
+      "hairCleaningConcept": "扫把甩辫子；滤网入口毛王拒绝放行",
+
+      "productBridge": "动作方向接同SKU安装/用后清理",
+
+      "caseRefs": [
+
+        "J01",
+
+        "J02"
+
+      ],
+
+      "evidenceStatus": "observed_sample",
+
+      "limits": "是拟人的动作子类，可双标签；不把扫把当实际出售的除尘套"
+
+    },
+
+    {
+
+      "id": "creature-crossover",
+
+      "name": "萌宠/动物对白",
+
+      "searchTerms": [
+
+        "猫说话",
+
+        "动物",
+
+        "萌宠",
+
+        "第一人称"
+
+      ],
+
+      "mechanism": "动物或拟动物角色替目标家庭提出需求",
+
+      "firstFrameRule": "反应特写+一句强态度对白",
+
+      "hairCleaningConcept": "毛王猫形角色抢副驾：“这座我包了！”",
+
+      "productBridge": "安全停车后的真实座椅表面操作",
+
+      "caseRefs": [
+
+        "J04"
+
+      ],
+
+      "evidenceStatus": "observed_sample",
+
+      "limits": "不迁移医疗恐惧、诊断或宠物药食效果；汽车材质适配另核"
+
+    },
+
+    {
+
+      "id": "surreal-physics",
+
+      "name": "失重/反常物理",
+
+      "searchTerms": [
+
+        "失重",
+
+        "漂浮",
+
+        "倒流",
+
+        "跳跃"
+
+      ],
+
+      "mechanism": "一个物理规律暂时反常，直接可见",
+
+      "firstFrameRule": "角色或问题物体先失控，再一拍回落",
+
+      "hairCleaningConcept": "毛团穿小降落伞飘向衣袖",
+
+      "productBridge": "落点接真实衣袖近景",
+
+      "caseRefs": [
+
+        "J01"
+
+      ],
+
+      "evidenceStatus": "observed_sample",
+
+      "limits": "J01仅支持下坠旋转创意动作，不证明所有失重形式均有样本"
+
+    },
+
+    {
+
+      "id": "fantasy-portal",
+
+      "name": "奇幻传送/跨空间",
+
+      "searchTerms": [
+
+        "传送",
+
+        "虫洞",
+
+        "时空门",
+
+        "梦境"
+
+      ],
+
+      "mechanism": "门或动作把同一问题从异常世界带入现实",
+
+      "firstFrameRule": "一开门异常扑面而来，随即回到生活场景",
+
+      "hairCleaningConcept": "开洗衣篮门像推开毛发仓库",
+
+      "productBridge": "门框或开盖动作接真实清理",
+
+      "caseRefs": [],
+
+      "evidenceStatus": "hypothesis",
+
+      "limits": "不要超过商品相关性；不要用传送表现无接触清洁"
+
+    },
+
+    {
+
+      "id": "action-parody",
+
+      "name": "动作片/追逐救场",
+
+      "searchTerms": [
+
+        "追逐",
+
+        "特工",
+
+        "救场",
+
+        "警报"
+
+      ],
+
+      "mechanism": "把日常麻烦拟成可笑任务",
+
+      "firstFrameRule": "动作已经启动，简短任务句",
+
+      "hairCleaningConcept": "毛王踩着枕头逃跑，工具在门口堵路",
+
+      "productBridge": "阻挡动作接真实毛发截留过程",
+
+      "caseRefs": [],
+
+      "evidenceStatus": "hypothesis",
+
+      "limits": "不拍危险模仿或虚假应急功效；不要借警察/军医权威背书"
+
+    },
+
+    {
+
+      "id": "talk-show",
+
+      "name": "吐槽/采访/辩论",
+
+      "searchTerms": [
+
+        "吐槽",
+
+        "采访",
+
+        "辩论",
+
+        "开会"
+
+      ],
+
+      "mechanism": "拟人角色用一个争论提出选择疑问",
+
+      "firstFrameRule": "直接一句争议问题，紧跟实物证据",
+
+      "hairCleaningConcept": "旧纸芯穿大衣：“大哥！你给我买大了！”",
+
+      "productBridge": "角色轴芯接真实替换芯测量",
+
+      "caseRefs": [],
+
+      "evidenceStatus": "hypothesis",
+
+      "limits": "对白原创；不拼接伪造他人推荐，规格先核"
+
+    },
+
+    {
+
+      "id": "unboxing-display",
+
+      "name": "开箱/陈列/商业摄影",
+
+      "searchTerms": [
+
+        "开箱",
+
+        "购物车",
+
+        "商业摄影",
+
+        "展示"
+
+      ],
+
+      "mechanism": "强调外观、配置和触感，通常较低冲突",
+
+      "firstFrameRule": "拆封动作、结构亮相或配置差异先出现",
+
+      "hairCleaningConcept": "拿出真实套装并明确包含物",
+
+      "productBridge": "直接使用实物开封与安装",
+
+      "caseRefs": [
+
+        "L02"
+
+      ],
+
+      "evidenceStatus": "listing_only",
+
+      "limits": "本轮列表见防晒礼盒开箱等标题，未深看；普通慢转台不是强创意开头"
+
+    },
+
+    {
+
+      "id": "sensory-asmr",
+
+      "name": "声效沉浸/解压",
+
+      "searchTerms": [
+
+        "解压",
+
+        "ASMR",
+
+        "撕纸",
+
+        "摩擦"
+
+      ],
+
+      "mechanism": "可听动作与清晰过程本身抓注意",
+
+      "firstFrameRule": "可见接触和声音同一拍发生",
+
+      "hairCleaningConcept": "完整撕纸动作配真实可用撕纸声",
+
+      "productBridge": "下一镜继续使用/展示用后处理",
+
+      "caseRefs": [
+
+        "J07"
+
+      ],
+
+      "evidenceStatus": "observed_partial",
+
+      "limits": "J07支持操作视觉，声音未据此验证；补拟音不能说原声实录"
+
+    },
+
+    {
+
+      "id": "visual-puzzle",
+
+      "name": "视觉谜题/揭晓",
+
+      "searchTerms": [
+
+        "猜猜",
+
+        "原来",
+
+        "看错",
+
+        "揭晓"
+
+      ],
+
+      "mechanism": "先给可理解的局部异常，再迅速揭示商品关系",
+
+      "firstFrameRule": "谜底与买点有关，不纯猎奇拖时间",
+
+      "hairCleaningConcept": "一件黑衣像披白围脖，拉开才见猫毛",
+
+      "productBridge": "手势擦过接真实清理区域",
+
+      "caseRefs": [],
+
+      "evidenceStatus": "hypothesis",
+
+      "limits": "不用虚构前后对比；不要把猜谜当强迫用户等结尾"
+
+    },
+
+    {
+
+      "id": "festival-promo",
+
+      "name": "节点/促销舞台",
+
+      "searchTerms": [
+
+        "618",
+
+        "双11",
+
+        "促销",
+
+        "福利"
+
+      ],
+
+      "mechanism": "角色与有效优惠机制配合，适合真实活动",
+
+      "firstFrameRule": "一句明确利益配强动作",
+
+      "hairCleaningConcept": "拟人商品落台挥手的J02只迁移动作与语音早进入",
+
+      "productBridge": "核实套餐实物和当前活动",
+
+      "caseRefs": [
+
+        "J02"
+
+      ],
+
+      "evidenceStatus": "observed_sample",
+
+      "limits": "不抄原片优惠/倒计时；本品牌不采用满屏促销字牌"
+
+    },
+
+    {
+
+      "id": "process-explainer",
+
+      "name": "结构过程/剖面示意",
+
+      "searchTerms": [
+
+        "剖面",
+
+        "内部",
+
+        "原理",
+
+        "工艺"
+
+      ],
+
+      "mechanism": "可视化解释结构或使用逻辑",
+
+      "firstFrameRule": "先抛一个结构问题，再用资料支持",
+
+      "hairCleaningConcept": "滤网如何安装，用实物尺寸和开孔位置说明",
+
+      "productBridge": "回到同SKU完整过水与清理",
+
+      "caseRefs": [
+
+        "J04"
+
+      ],
+
+      "evidenceStatus": "observed_partial",
+
+      "limits": "J04含工艺/效果段但不能照搬其功效；AI示意不是实测或真实工厂"
+
+    }
+
+  ]
+
+}
