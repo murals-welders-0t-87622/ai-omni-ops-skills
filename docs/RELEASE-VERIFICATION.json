@@ -1,5 +1,5 @@
 {
-  "release": "1.1.0",
+  "release": "1.1.1",
   "date": "2026-10-26",
   "scope": "public package, architecture, installer and video helper/project checks; no live business acceptance",
   "entrySkills": 23,
@@ -29,12 +29,33 @@
     "failed": 0
   },
   "publicSourceCards": 211,
-  "learningSources": 11,
+  "learningSources": 12,
   "architecture": "unchanged",
   "markdownLinks": "all checked; no broken local Markdown links",
   "isolatedInstallation": {
     "installed": 23,
     "doctorCurrent": 23,
     "hostSkillsModified": false
+  },
+  "practiceVideos": {
+    "forms": [
+      "whiteboard",
+      "data",
+      "Three.js concept product",
+      "ink-inspired landscape"
+    ],
+    "count": 4,
+    "durationEach": 18,
+    "size": "1280x720",
+    "fps": 24,
+    "fullDecode": "passed",
+    "randomSeek": "4 groups matched",
+    "galleryMetadata": "5 videos loaded",
+    "notClaimed": [
+      "complete human listening",
+      "all tutorial forms",
+      "native Remotion render",
+      "brand growth"
+    ]
   }
 }

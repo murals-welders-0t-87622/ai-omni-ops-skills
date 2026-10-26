@@ -312,6 +312,18 @@
       "adoptions": [
         "skills/dynamic-video-craft/references/remotion-and-hybrid.md"
       ]
+    },
+    {
+      "id": "native-four-style-practice-20261026",
+      "kind": "runtime-feedback",
+      "readAt": "2026-10-26",
+      "coverage": "用户要求的四种非品牌样片真实制作；原生检查、4组乱序定位、媒体/播放器回读及抽帧，未人工完整听审。",
+      "status": "adapted-after-real-render",
+      "adoptions": [
+        "skills/dynamic-video-craft/references/sample-validation.md"
+      ],
+      "verification": "4×18秒 1280×720 24fps H.264/AAC；白板/数据/Three.js商品/国风水墨；完整解码通过，合集72.021333秒；不是品牌增长验收。",
+      "distribution": "只公开通用纠错方法；本地项目/字体/成片不并入技能Git。"
     }
   ]
 }

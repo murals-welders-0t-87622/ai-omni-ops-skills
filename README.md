@@ -49,7 +49,7 @@ python scripts/manage.py doctor
 
 主框架、总职责和业务阶段受架构锁约束；需要改变时先向用户展示差异并确认，不能为了吸收新方法自行重构。此机制在执行委托时生效，不创建后台监控或定时任务。详见 [持续学习机制](docs/CONTINUOUS-LEARNING.md) 与 [维护技能](skills/omni-skill-maintenance/SKILL.md)。
 
-本次视频教程补入按用途选视觉/绘制/引擎、Remotion与真实/生成媒体混合、统一声画时钟、稳定随机/投影、字体/解码/短段性能及Windows恢复。现有Remotion方法继续保留；新路线按验证状态使用，未把阅读教程当作全部成片已实测。见 [来源采用记录](registry/learning-sources.json)。
+本次视频教程补入按用途选视觉/绘制/引擎、Remotion与真实/生成媒体混合、统一声画时钟、稳定随机/投影、字体/解码/短段性能及Windows恢复。现有Remotion方法继续保留；新路线按验证状态使用，未把阅读教程当作全部成片已实测。 后续已真实完成白板、动态数据、3D概念商品和国风水墨四种工艺练习；具体已验/未验及可复用纠错见 [真实出样方法](skills/dynamic-video-craft/references/sample-validation.md)，不外推其他路线或经营效果。见 [来源采用记录](registry/learning-sources.json)。
 
 ## 更新、验证与回退
 

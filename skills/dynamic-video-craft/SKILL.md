@@ -2,13 +2,15 @@
 name: dynamic-video-craft
 description: 根据产品网址、截图、文案或配音制作 Shotcraft / Talkcraft 风格的动态视频：真实页面的 2.5D 运镜、动态文字、数据演绎、旁白对齐和镜头承接。用于产品宣传片、配音解说片，以及按这两个画廊的卡名复刻单镜头；默认用 Remotion 交付 MP4 和可编辑工程，不用于仅加普通字幕或生成真人数字人。
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 统一技能库接手时，先读 [共同执行约定](../brand-omni-growth-expert/references/runtime-contract.md)，引用有效品牌策略；本领域保留下面完整专业方法。来源原文/品牌例子不是全局权限或固定经营参数。
 
 
 # 动态视频导演
+
+用户要看样片或需要帧定位、数值、字体与音轨验收时，按 [真实出样与纠错](references/sample-validation.md) 推进；样片须实际渲染，方法说明和工程不替代MP4。
 
 需要Remotion精确时间、Canvas/Three.js混合镜头、数据与声音统一或Windows性能排错时，先读 [Remotion与混合制作](references/remotion-and-hybrid.md)。技术选择服务现有脚本/品牌目标，不改变用户已指定的引擎、终点和授权。
 
