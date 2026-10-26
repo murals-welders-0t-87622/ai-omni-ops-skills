@@ -424,6 +424,22 @@
       ],
       "verification": "方法覆盖不等于工具已授权或店铺写操作可用",
       "status": "analyzed-and-adapted"
+    },
+    {
+      "id": "user-commerce-view-feedback-399",
+      "kind": "user-feedback",
+      "readAt": "2026-10-26",
+      "status": "analyzed-and-adapted",
+      "coverage": "用户报告三层点击无变化；核代码和真实旧版计划形状，定位统一空卡与恒显数据区。公共方法只记录通用缺陷，不含品牌报告。",
+      "adoptions": [
+        "skills/taobao-tmall-operations/SKILL.md",
+        "skills/taobao-tmall-operations/references/mcp.md"
+      ],
+      "notAdopted": [
+        "为新版界面虚构数值目标或补造业务历史",
+        "旧方案缺新增字段就判定无方案"
+      ],
+      "verification": "旧/空/新方案多状态及方案/报表切换核验，详细证据留本地开发记录"
     }
   ]
 }
