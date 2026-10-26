@@ -476,6 +476,24 @@
         "查询成功视为日期和数据真实性已核验"
       ],
       "verification": "字段和方法验证，实际品牌规划、生成与经营效果分别核实；不改变23入口职责依赖。"
+    },
+    {
+      "id": "commerce-operator-revision-feedback-402",
+      "kind": "user-feedback-and-runtime-tool-metadata",
+      "readAt": "2026-10-27",
+      "status": "analyzed-and-adapted",
+      "coverage": "用户要求策略带参操作、逐指标周期及内容反馈修订；只读核千问当前工具目录和四个候选schema。官方连接器文档及实际授权隔离说明按范围采用。",
+      "adoptions": [
+        "skills/taobao-tmall-operations/references/operation-workbenches.md",
+        "skills/ecommerce-detail-creative/references/button-execution.md"
+      ],
+      "notAdopted": [
+        "把查询授权当直接改价/发布权限",
+        "提交广告诉求就称已改店铺",
+        "未选页面全部重跑",
+        "公开品牌或令牌"
+      ],
+      "verification": "方法与当前契约适配；真实收费媒体/店铺写入和增长另验。"
     }
   ]
 }

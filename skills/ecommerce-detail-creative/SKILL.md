@@ -2,7 +2,7 @@
 name: ecommerce-detail-creative
 description: 从当前品牌产品资料提炼卖点，制作电商详情页的逐页文案、画面及可选商品创意视频，并回写AI中台电商工作区。适用于“给这个商品做一套详情页，再做产品视频”等委托。
 metadata:
-  version: "1.2.0"
+  version: "1.3.0"
   display_name: 商品详情页与创意视频
 ---
 
@@ -10,6 +10,8 @@ metadata:
 
 
 # 商品详情页与创意视频
+
+用户修改时先确定范围：直接编辑保存新版本，或按[按钮与内容修订](references/button-execution.md)把意见及所选页交Codex。保持未选内容与历史媒体；图片按旧图编辑，视频先改创意再确认重做，不能把未生成的新画面当已完成。
 
 按 [按钮与制作任务](references/button-execution.md) 承接主图、详情页、商品视频三个制作面。用户已在页面选择产品并发起生成时沿用该项目、要求与范围，任务结果回写新版本；复制提示词不等于已调用Codex。
 

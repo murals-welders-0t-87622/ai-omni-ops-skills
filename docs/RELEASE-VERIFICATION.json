@@ -1,23 +1,25 @@
 {
-  "release": "1.5.0",
-  "date": "2026-10-26",
-  "scope": "Structured GMV operating methods and product creative task contracts; existing 23-skill framework retained.",
+  "release": "1.6.0",
+  "date": "2026-10-27",
+  "scope": "Operation workbenches, per-metric windows and versioned creative feedback; 23-skill architecture retained.",
   "entrySkills": 23,
   "architecture": "preserved",
   "checks": {
     "skillValidation": "passed",
     "unitTests": 32,
     "isolatedInstalledSkills": 23,
-    "pairedLabRuleChecks": 62,
-    "pairedLabHttpMcpChecks": 10,
-    "pairedLabBrowserChecks": 11
+    "pairedLabRuleChecks": 104,
+    "pairedLabHttpMcpChecks": 20,
+    "pairedLabBrowserChecks": 14,
+    "actualTextRevisionChecks": 10
   },
-  "liveEvidence": "Paired local middle platform performed actual serial Codex text tasks and wrote new product project revisions; no brand-specific records are distributed here.",
+  "liveEvidence": "A real selected-page Codex text revision returned SUCCESS and a new project revision; brand data stays in the private middle platform.",
   "notValidated": [
-    "Native discovery on a different computer",
-    "Paid image or video production in this change",
-    "Merchant publication, pricing, ad changes or customer outreach",
+    "Native skill discovery on another computer",
+    "Paid image or video revision in this change",
+    "Direct merchant ad, price or listing writes",
+    "Unattended external data collection",
     "Growth effect or causal attribution"
   ],
-  "status": "Local package checks and isolated installation passed; remote commit verification is recorded by the maintainer after push."
+  "status": "Local checks and isolated installation passed; remote SHA verification is recorded separately after push."
 }

@@ -44,3 +44,7 @@ workspace的plans[].growthReview给前后值、delta、targetMet、comparable/re
 ## 1.2 财务目标和数据跟踪
 
 读取[财务到每日经营](financial-scorecard.md)中的scorecard、tactics和checkpoints字段及plans[].tracking。保存同一planId/最新revision，旧scorecard/growth和行动key保留；完整窗口、最新纠错与未知值按实时schema核对。
+
+## 1.4 带参运营与指标周期
+
+initiative.operation及commerce_save_operation_draft/commerce_record_operation_receipt契约见[运营工作台](operation-workbenches.md)；指标monitoring与旧checkpoints并存，独立窗口以同口径快照核。缺写适配器的commerce_execute_operation必须失败并明示原因，不能制造成功记录。

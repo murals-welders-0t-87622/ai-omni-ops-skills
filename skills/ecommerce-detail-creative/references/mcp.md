@@ -32,3 +32,7 @@ body示意（具体以实时schema为准）：
 body可选mainImages（最多12，每项同pages的title/copy/prompt/evidence/mediaRef）、listing（title/keywords/description/identityLock/platformRulesEvidence/faq）；FAQ每项question/answer/evidence。主图必须有依据，媒体必须本品牌、真实图片类型和受控副本。旧项目省略新增字段兼容，已有字段更新时完整保留，不能丢掉原产物。
 
 运营方案的growth.experiments[].projectId可关联该制作项目；执行端在报告中记明确revision和实际上线回执，项目保存本身不会发布到商家端。
+
+## 1.3 内容修订
+
+修订任务与mediaStale规则见[按钮执行](button-execution.md)。原图读取按当前版本与所选页定位，不接受任意URL/跨品牌mediaRef。保存body时保留未修改字段；媒体更新与视频确认均对应当前版本。
