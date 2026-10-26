@@ -458,6 +458,24 @@
         "缺数造达标或归因"
       ],
       "verification": "领域方法及工程验证；实际经营与增长单独验收。"
+    },
+    {
+      "id": "commerce-gmv-operating-map-401",
+      "kind": "user-feedback-and-local-reference",
+      "readAt": "2026-10-26",
+      "status": "analyzed-and-adapted",
+      "coverage": "完整读取用户年度规划表的两工作表、非空单元、合并与公式；重读已安装WorkBuddy天猫/淘宝风格技能全文及天猫commerce-flow全文；参考已整合的两电商开源项目方法，未重读全部上游代码。",
+      "adoptions": [
+        "skills/taobao-tmall-operations/references/gmv-operating-map.md",
+        "skills/ecommerce-detail-creative/references/button-execution.md"
+      ],
+      "notAdopted": [
+        "公开私有原表及品牌经营数据",
+        "固定季度金额、张数和供应商权限规则",
+        "渠道触点归因金额相加当全店GMV",
+        "查询成功视为日期和数据真实性已核验"
+      ],
+      "verification": "字段和方法验证，实际品牌规划、生成与经营效果分别核实；不改变23入口职责依赖。"
     }
   ]
 }
