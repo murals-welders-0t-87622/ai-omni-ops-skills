@@ -440,6 +440,24 @@
         "旧方案缺新增字段就判定无方案"
       ],
       "verification": "旧/空/新方案多状态及方案/报表切换核验，详细证据留本地开发记录"
+    },
+    {
+      "id": "user-commerce-financial-loop-400",
+      "kind": "user-feedback",
+      "readAt": "2026-10-26",
+      "status": "analyzed-and-adapted",
+      "coverage": "用户要求战略财务指标拆解、策略资源与排期、执行持续数据跟踪、未达标建议及报告排版。核现有同源契约并补经营计分卡。",
+      "adoptions": [
+        "skills/taobao-tmall-operations/references/financial-scorecard.md",
+        "skills/taobao-tmall-operations/SKILL.md",
+        "skills/taobao-tmall-operations/references/mcp.md"
+      ],
+      "notAdopted": [
+        "机械照抄用户举例目标",
+        "复购重复相乘",
+        "缺数造达标或归因"
+      ],
+      "verification": "领域方法及工程验证；实际经营与增长单独验收。"
     }
   ]
 }

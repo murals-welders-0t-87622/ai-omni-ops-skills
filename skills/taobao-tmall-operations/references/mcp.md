@@ -40,3 +40,7 @@ workspace的plans[].growthReview给前后值、delta、targetMet、comparable/re
 旧report/actions直接保留经营价值：report展示战略判断与完整方案，actions按业务环节展示具体策略，执行显示所有actions并匹配实际回执，尚无回执时明确不能判断效果；sections和表格统一作为业务数据依据。没有growth不等没有方案，没有实验也不能隐藏全部行动。计划已关闭只代表记录状态，不是外部执行成功。
 
 界面选择运营方案后，复制委托保留其planId/revision和动作；选择另一数据快照不改变方案原基线。数据更新委托只保存快照，不顺便改方案。业务回读除了确认版本，还要核对旧数据/无数据状态及四个视图有明确差异。
+
+## 1.2 财务目标和数据跟踪
+
+读取[财务到每日经营](financial-scorecard.md)中的scorecard、tactics和checkpoints字段及plans[].tracking。保存同一planId/最新revision，旧scorecard/growth和行动key保留；完整窗口、最新纠错与未知值按实时schema核对。
