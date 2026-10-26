@@ -366,6 +366,64 @@
       ],
       "verification": "1920x1080 24fps local Canvas2.5D/H.264/AAC; science sources EPA/USGS; separate final media QA evidence locally",
       "distribution": "No fonts, account files, original template code or rendered media in public skills repo"
+    },
+    {
+      "id": "github-ecommerce-toolkit-398",
+      "kind": "github",
+      "url": "https://github.com/heqiangdiao-wq/AI-Cross-Border-Ecommerce-Agent-Toolkit",
+      "readAt": "2026-10-26",
+      "version": "tree cec98a9cab382d28dfe5b4ed0de444f33c455cb5",
+      "license": "MIT核查；未复制源代码",
+      "coverage": "README、7个SKILL、SOP差距；架构/结果检查/闭环/费率及选定脚本相关章节。38个文件取回；原38页PDF及所有示例未全量读取。",
+      "adoptions": [
+        "skills/taobao-tmall-operations/references/growth-loop.md",
+        "skills/ecommerce-detail-creative/references/main-image-listing.md"
+      ],
+      "notAdopted": [
+        "默认费率/价格/统一CTR/固定时长图数",
+        "自动接店和调度路线图当已实现",
+        "广告永不停和评论问题全靠文案修好"
+      ],
+      "verification": "自写显式贡献/漏斗与中台复测校验；不运行上游Agent栈，不代表真实增长",
+      "status": "analyzed-and-adapted"
+    },
+    {
+      "id": "github-merchant-agent-398",
+      "kind": "github",
+      "url": "https://github.com/yyf2002-oos/merchant-agent",
+      "readAt": "2026-10-26",
+      "version": "master tree f259791bff1e09db3f971d0e28eb555afab34c04",
+      "license": "本次树未见LICENSE；不复制代码/正文",
+      "coverage": "README全文，orchestrator/五agent/工具注册/计算器/淘宝建议函数相关源码；价格/供应商静态库按README和调用边界核查，未视实时数据。",
+      "adoptions": [
+        "skills/taobao-tmall-operations/references/growth-loop.md"
+      ],
+      "notAdopted": [
+        "成本乘倍数建议",
+        "默认费率或虚构缺失销量",
+        "新装Ollama/MySQL/Milvus/MinIO",
+        "搜索联想数值称真实热度"
+      ],
+      "verification": "共享上下文和决策轨迹采用独立当前契约；无第三方上架调用",
+      "status": "analyzed-and-adapted"
+    },
+    {
+      "id": "workbuddy-ecommerce-methods-398",
+      "kind": "installed-workbuddy",
+      "readAt": "2026-10-26",
+      "coverage": "核读market-researcher、product-main-image、cs-knowledge-base、youzan-item/supplychain/order/marketing/traffic；detail-page/smart-refine/video-generation核读用途/流程/参数/权限/错误章节。共11项；未声称再次咨询专家或全部市场技能。",
+      "distribution": "本仓独立消化的方法及来源标识，不分发原全文/品牌数据",
+      "adoptions": [
+        "skills/taobao-tmall-operations/references/capability-map.md",
+        "skills/ecommerce-detail-creative/references/main-image-listing.md"
+      ],
+      "notAdopted": [
+        "远端工具自身规则套到全部中台",
+        "一刀切参数反复确认",
+        "已安装文字当真实连接"
+      ],
+      "verification": "方法覆盖不等于工具已授权或店铺写操作可用",
+      "status": "analyzed-and-adapted"
     }
   ]
 }

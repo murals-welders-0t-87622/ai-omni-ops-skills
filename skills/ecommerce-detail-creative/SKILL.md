@@ -2,7 +2,7 @@
 name: ecommerce-detail-creative
 description: 从当前品牌产品资料提炼卖点，制作电商详情页的逐页文案、画面及可选商品创意视频，并回写AI中台电商工作区。适用于“给这个商品做一套详情页，再做产品视频”等委托。
 metadata:
-  version: "1.0.1"
+  version: "1.1.0"
   display_name: 商品详情页与创意视频
 ---
 
@@ -18,6 +18,10 @@ metadata:
 读取当前品牌身份，再读取 `manage_growth_reports` 的 `commerce_get_workspace`，`payload.commerce.area=detail`。该工作区的 `products` 是当前品牌完整产品字段，包含介绍、价格、定位、人群、痛点、场景、差异化与图片；`get_brand_products` 的清单摘要不能代替完整事实。用户只说产品简称时先匹配名称和上下文，多项确实无法区分才追问。
 
 已有项目继续其稳定 `projectId`，比较冻结的 `productSnapshot` 和当前产品资料，说明重要变化。新项目使用 `commerce_create_detail_project` 建立，一套默认十页，按产品与用户目标可调整；不得写入其他品牌或把历史例子当商品事实。
+
+## 主图与商品文案一同承接经营问题
+
+除原详情页/视频外，按 [主图与商品文案](references/main-image-listing.md) 完成图位规划、标题/关键词、介绍与有依据FAQ；保存mainImages/listing及产品身份约束。每个版本承接具体增长假设，不能把美观或生成成功当点击/成交提升。专项制作可直接开始，不强制先做全店策划。
 
 ## 按用户所需阶段交付
 

@@ -1,6 +1,6 @@
 # 电商中台读写与生成
 
-先调用当前连接 `tools/list`，读取 `manage_growth_reports.inputSchema.properties.payload.properties.commerce` 的完整schema。以下为1.0.0动作名，未知字段不要猜。当前连接必须是用户目标品牌，不能用宿主默认品牌替代。
+先调用当前连接 `tools/list`，读取 `manage_growth_reports.inputSchema.properties.payload.properties.commerce` 的完整schema。以下为兼容1.1.0动作名，未知字段不要猜。当前连接必须是用户目标品牌，不能用宿主默认品牌替代。
 
 工具：`manage_growth_reports`。参数形状：`{action:"commerce_get_workspace",payload:{commerce:{area:"detail"}}}`。HTTP页面调用 `/api/ai-control-center/brands/:brandId/commerce` 及 `/actions`，与MCP复用同一服务。
 
@@ -26,3 +26,9 @@ body示意（具体以实时schema为准）：
 图片使用当前品牌多元探索 `gpt-image-2`，读取 `create_design_work` 与图像服务实时schema、品牌凭据状态和参考图输入方式，再调用；保持brandId/productId/账号角色/每页目的与任务引用。已有素材应复用，不为“保存”再生成。视频使用 `manage_douyin_video_production` 的runninghub动作读取应用、上传、generate、查询和作品归档，必须采用实时schema，不照抄别的应用字段。
 
 幂等键每个逻辑写入固定一个，重试同一body沿用；改body用新键。所有成功写入随后回读并核对当前品牌、项目、revision和mediaRef。保存成功、真实模型生成、文件可播放、用户认可分别报告。
+
+## 1.1 主图和商品文案
+
+body可选mainImages（最多12，每项同pages的title/copy/prompt/evidence/mediaRef）、listing（title/keywords/description/identityLock/platformRulesEvidence/faq）；FAQ每项question/answer/evidence。主图必须有依据，媒体必须本品牌、真实图片类型和受控副本。旧项目省略新增字段兼容，已有字段更新时完整保留，不能丢掉原产物。
+
+运营方案的growth.experiments[].projectId可关联该制作项目；执行端在报告中记明确revision和实际上线回执，项目保存本身不会发布到商家端。

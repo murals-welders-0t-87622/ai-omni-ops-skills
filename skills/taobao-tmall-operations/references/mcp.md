@@ -25,3 +25,11 @@ sourceEvidence存安全的工具名/参数摘要/回执证据索引和核验说�
 每个action：stage（上述业务板块）、title、body、owner、dueDate（YYYY-MM-DD或空）、successMetric、status=proposed/in_progress/review/closed。状态是中台计划记录，不会在淘宝执行任何动作。未执行不写in_progress/closed；用户已执行的事实保留证据后再跟进。
 
 更新保留不可变版本，冲突先回读。重试同一请求沿用原幂等键；内容变更用新键。不要把一轮取数另造为业务执行历史。页面入口 `/tabs/ecommerce/operations` 与这些动作同源。
+
+## 1.1 增长链路扩展（兼容旧计划）
+
+当前schema含可选growth；actions增加可选稳定key，使用复测时必须提供且唯一。growth包含businessModel、phase、direction，sequence数组每步title/outcome/exitCondition，objectives数组每项stage/metricKey/label/unit/target（十进制字符串）/direction（increase或decrease）/rationale。拟议目标必须有来源推导，未知不填0。
+
+experiments每项actionKey/hypothesis/change/baselineSnapshotId/resultSnapshotId/stage/metricKey/executionEvidence/executedOn/comparability/review/decision（observe/continue/adjust/stop），可选同品牌内容projectId。未执行时结果快照、执行日期和证据填空串；有结果时必须先有真实执行日期YYYY-MM-DD与证据。基线/结果快照严格本品牌同店铺，项目严格同品牌。后端只保存调用者上报证据，不伪称独立审计。
+
+workspace的plans[].growthReview给前后值、delta、targetMet、comparable/reason与来源状态。周期等长、非重叠、执行位于其间、同定义/单位只是最基本比较条件；还要核范围、成熟窗与干扰。普通前后观察不能称因果归因。旧计划没有growth仍可读取；新客户端保存须保留已有growth及行动key，不能孤立删除关联动作。全量report和旧版本继续保留。
