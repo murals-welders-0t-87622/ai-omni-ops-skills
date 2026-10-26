@@ -494,6 +494,23 @@
         "公开品牌或令牌"
       ],
       "verification": "方法与当前契约适配；真实收费媒体/店铺写入和增长另验。"
+    },
+    {
+      "id": "commerce-metric-playbooks-dashboard-403",
+      "kind": "user-feedback-and-primary-source-review",
+      "readAt": "2026-10-27",
+      "status": "analyzed-and-adapted",
+      "coverage": "用户目标编辑/具体三档费用/分类策略要求；Toolkit README、广告诊断/metrics及评论模块，merchant README/analyst原文；千问原生已有看板只读布局观察。未重读全部PDF或运行原Agent。",
+      "adoptions": [
+        "skills/taobao-tmall-operations/references/metric-playbooks.md"
+      ],
+      "notAdopted": [
+        "固定行业CTR/ROI/利润率阈值",
+        "旧税费与定价倍数",
+        "未实现店铺操作的空白工作台",
+        "缓存来源数据冒充独立事实"
+      ],
+      "verification": "按当前中台契约及实际任务/看板验证，不改变23入口主结构，不公开品牌资料。"
     }
   ]
 }

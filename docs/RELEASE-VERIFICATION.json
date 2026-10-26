@@ -1,25 +1,25 @@
 {
-  "release": "1.6.0",
+  "release": "1.7.0",
   "date": "2026-10-27",
-  "scope": "Operation workbenches, per-metric windows and versioned creative feedback; 23-skill architecture retained.",
+  "scope": "Editable financial targets, classified actionable tactics, three cash tiers and operating dashboards; 23-skill architecture retained.",
   "entrySkills": 23,
   "architecture": "preserved",
   "checks": {
     "skillValidation": "passed",
     "unitTests": 32,
     "isolatedInstalledSkills": 23,
-    "pairedLabRuleChecks": 104,
-    "pairedLabHttpMcpChecks": 20,
-    "pairedLabBrowserChecks": 14,
-    "actualTextRevisionChecks": 10
+    "pairedLabRuleChecks": 140,
+    "pairedLabHttpMcpChecks": 28,
+    "realPlanReadbackChecks": 16
   },
-  "liveEvidence": "A real selected-page Codex text revision returned SUCCESS and a new project revision; brand data stays in the private middle platform.",
+  "liveEvidence": "Real Codex generated a full operating plan. Its failed structural output was retained, normalized and recovered into a new revision; original metric identities were checked and restored without changing targets or tactics. Brand facts stay in private runtime data.",
   "notValidated": [
     "Native skill discovery on another computer",
-    "Paid image or video revision in this change",
-    "Direct merchant ad, price or listing writes",
+    "Fresh post-fix model generation for every possible changed target",
+    "Paid image or video generation in this change",
+    "Direct merchant ad price or listing writes",
     "Unattended external data collection",
     "Growth effect or causal attribution"
   ],
-  "status": "Local checks and isolated installation passed; remote SHA verification is recorded separately after push."
+  "status": "Local validation and isolated installation passed; remote SHA verification is recorded after push."
 }

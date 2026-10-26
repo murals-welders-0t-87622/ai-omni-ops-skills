@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "1.6.0",
+  "version": "1.7.0",
   "repository": "https://github.com/murals-welders-0t-87622/ai-omni-ops-skills",
   "skills": [
     {
@@ -209,7 +209,7 @@
     {
       "id": "taobao-tmall-operations",
       "path": "skills/taobao-tmall-operations",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "dependencies": [
         "brand-omni-growth-expert"
       ],

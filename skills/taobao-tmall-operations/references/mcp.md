@@ -48,3 +48,12 @@ workspace的plans[].growthReview给前后值、delta、targetMet、comparable/re
 ## 1.4 带参运营与指标周期
 
 initiative.operation及commerce_save_operation_draft/commerce_record_operation_receipt契约见[运营工作台](operation-workbenches.md)；指标monitoring与旧checkpoints并存，独立窗口以同口径快照核。缺写适配器的commerce_execute_operation必须失败并明示原因，不能制造成功记录。
+
+
+## 1.5 目标重排
+
+commerce_request_plan_task：planId、expectedRevision、targetScenario（gmv/orders/averageOrderValue）、可选instructions。在线执行器支持operations_replan后创建持久任务；沿commerce_claim_detail_task/report租约串行执行，冻结源方案和新目标。新方案CAS写入并关联planTaskId，完整校验后才SUCCESS；失败保留旧版。用户只改业务目标，无需提供字段。operatingMap扩展investment、sequence、initiative.group/variants；36驱动指标上限兼容旧计划。独立运营页面取消，细节直接写策略；旧数据保留。
+
+策略group是七业务分类；scorecard.stage仍是六现有报表环节，不可混用。tactics.driverIds与指标actionKeys需双向对应；Codex生成后先校验，再保存新版本。失败不改原方案或补造完成记录。
+
+稳定指标ID延续时，stage/key/unit/definition与派生公式必须保持原回执身份，不能让AI改写口径说明后使已有数据变成未知。用户三个目标在目标卡及订单/每单驱动指标同时校验。失败草稿仅在同品牌、同源版本、同目标与同反馈时复用，保存前重验；不重放商家或收费动作。
