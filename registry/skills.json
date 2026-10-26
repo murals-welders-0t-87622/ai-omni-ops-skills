@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "1.1.1",
+  "version": "1.2.0",
   "repository": "https://github.com/murals-welders-0t-87622/ai-omni-ops-skills",
   "skills": [
     {
@@ -85,7 +85,7 @@
     {
       "id": "creative-production-router",
       "path": "skills/creative-production-router",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -107,7 +107,7 @@
     {
       "id": "dynamic-video-craft",
       "path": "skills/dynamic-video-craft",
-      "version": "1.1.1",
+      "version": "1.2.0",
       "dependencies": [
         "brand-omni-growth-expert"
       ],

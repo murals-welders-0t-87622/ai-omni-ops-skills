@@ -2,7 +2,7 @@
 name: creative-production-router
 description: 按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # 创意制作调度
@@ -12,6 +12,8 @@ metadata:
 ## 本环节专业工作
 
 开始选路先读 [代码与混合视频方法](references/code-video-methods.md)，再按 [运营用途与视觉选型](references/style-and-purpose.md) 选风格、绘制技术和时间轴引擎。它们是现有制作环节的工艺扩充，不改变战略、策略、创作与发布的职责。Remotion并非新缺失能力，现有dynamic-video-craft已有工程，应先查是否路由/使用不充分。
+
+用户指定MotionGit、Lemo或层叠纸雕时，先到dynamic-video-craft的 [风格与模板检索](../dynamic-video-craft/references/template-sources.md) 按用途、画幅、真实下载状态和许可选路，仅读本期所需STYLE；不另增一层业务流程或批量安装103个入口。
 
 先判断终点是脚本、预览、素材、完整成片还是修订。商品带货交 ai-commerce-video；品牌剧情/创意交 brand-creative-video；页面/数据/解说动效交 dynamic-video-craft；数字人按库内真实工艺并发现当前数字人能力，设计看design-creator。用户指定引擎/风格优先，缺插件不自动换路线。
 读取对应专业专家和工艺全文，选择适合本任务的少量方法。按项目需要交STORYBOARD、DESIGN、demo或等价工程，真实图片母版、输入映射、生成作业和可编辑工程；不把占位图/分镜稿当生成媒体。

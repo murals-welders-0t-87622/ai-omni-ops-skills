@@ -51,6 +51,8 @@ python scripts/manage.py doctor
 
 本次视频教程补入按用途选视觉/绘制/引擎、Remotion与真实/生成媒体混合、统一声画时钟、稳定随机/投影、字体/解码/短段性能及Windows恢复。现有Remotion方法继续保留；新路线按验证状态使用，未把阅读教程当作全部成片已实测。 后续已真实完成白板、动态数据、3D概念商品和国风水墨四种工艺练习；具体已验/未验及可复用纠错见 [真实出样方法](skills/dynamic-video-craft/references/sample-validation.md)，不外推其他路线或经营效果。见 [来源采用记录](registry/learning-sources.json)。
 
+新增 [MotionGit/Lemo风格与模板使用](skills/dynamic-video-craft/references/template-sources.md)：103项来源索引、官方.motion读取/许可分离、纸雕科普与中文旁白方法。已经真实制作原创纸雕样片，未把公开预览冒称模板已下载。
+
 ## 更新、验证与回退
 
 ```text

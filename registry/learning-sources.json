@@ -32,7 +32,7 @@
       "url": "https://github.com/lemomo-ai/lemo-opuscar",
       "readAt": "2026-10-26",
       "license": "MIT code/docs; demo films CC BY 4.0 with exclusions, third-party assets separate",
-      "coverage": "DIRECTOR/TECHNIQUE完整核读；README许可、当前59风格目录及三个STYLE文件摘要；未完整观看/重建其样片。",
+      "coverage": "保留前轮DIRECTOR/TECHNIQUE研读；本轮完整中文README24092字符、MY-STYLES16026字符、纸雕灯影/纸上立体书STYLE全文及MIT；59项仅名称/定位索引，不冒称全部STYLE全文或样片已看。",
       "status": "adapted-methods",
       "files": [
         {
@@ -87,7 +87,10 @@
       "adoptions": [
         "skills/creative-production-router/references/code-video-methods.md",
         "skills/creative-production-router/references/style-and-purpose.md",
-        "skills/dynamic-video-craft/references/remotion-and-hybrid.md"
+        "skills/dynamic-video-craft/references/remotion-and-hybrid.md",
+        "skills/dynamic-video-craft/references/template-sources.md",
+        "skills/dynamic-video-craft/references/layered-paper.md",
+        "skills/dynamic-video-craft/assets/style-sources.json"
       ],
       "execution": "not-installed-or-executed-this-turn"
     },
@@ -324,6 +327,45 @@
       ],
       "verification": "4×18秒 1280×720 24fps H.264/AAC；白板/数据/Three.js商品/国风水墨；完整解码通过，合集72.021333秒；不是品牌增长验收。",
       "distribution": "只公开通用纠错方法；本地项目/字体/成片不并入技能Git。"
+    },
+    {
+      "id": "motiontemplates-all-20261026",
+      "kind": "github-and-official-site",
+      "url": "https://github.com/motiontemplates/all",
+      "readAt": "2026-10-26",
+      "coverage": "README35971字符/catalog完整读取；29模板+14预览并含1画幅变体=44条；登录官网45模板目录、纸雕598和多屏拼贴2.6.4详情实读。598仍未开放下载。",
+      "status": "catalog-and-methods-adapted",
+      "adoptions": [
+        "skills/dynamic-video-craft/references/template-sources.md",
+        "skills/dynamic-video-craft/assets/style-sources.json"
+      ],
+      "license": "Root LICENSE not found; current individual page/package governs, no redistribution of template code",
+      "verification": "Read-only catalog tests; no claim all templates installed/rendered; paper film independently authored"
+    },
+    {
+      "id": "motiongit-official-skill-download-20261026",
+      "kind": "official-download",
+      "url": "https://motiongit.com/skill",
+      "readAt": "2026-10-26",
+      "coverage": "官方ZIP实际下载，SKILL与html-canvas/motion-coverage完整读，authoring按模板提炼相关部分读；BUILD/SHA大小核对。网页1.3.2、包元数据1.3.4、工具BUILD rc.50的差异保留。个人多屏模板准备成功，ZIP传输超时未取得，不称已安装。",
+      "status": "official-skill-read-and-adapted",
+      "adoptions": [
+        "skills/dynamic-video-craft/references/template-sources.md"
+      ],
+      "distribution": "Official code/tool license not established; keep archive local, publish own methods and links only",
+      "archiveSha256": "933ed1cf31649ad8c43a393c8432cd447ddbdf812f4afeb7f66f6c01d5d6e2cb"
+    },
+    {
+      "id": "native-paper-explainer-20261026",
+      "kind": "runtime-feedback",
+      "readAt": "2026-10-26",
+      "coverage": "原创58.276秒中文纸雕科普；实际测旁白、八场及转场抽帧/字体/乱序seek、原生检查与完整渲染；未人工全程听审，不代表原模板复刻或全部外部风格验收。",
+      "status": "adapted-after-real-render",
+      "adoptions": [
+        "skills/dynamic-video-craft/references/layered-paper.md"
+      ],
+      "verification": "1920x1080 24fps local Canvas2.5D/H.264/AAC; science sources EPA/USGS; separate final media QA evidence locally",
+      "distribution": "No fonts, account files, original template code or rendered media in public skills repo"
     }
   ]
 }

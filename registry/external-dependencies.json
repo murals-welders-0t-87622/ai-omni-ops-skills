@@ -115,6 +115,12 @@
       "name": "workctl",
       "kind": "existing-host-skill",
       "install": "按原官方发布来源/skill-installer发现；不从本机私有缓存直接分发可执行程序"
+    },
+    {
+      "name": "MotionGit official helper and individual .motion templates",
+      "kind": "optional-official-download",
+      "install": "Only when a chosen template requires it: obtain from https://motiongit.com/skill or the individual official page; inspect license and independently verify current tool metadata. Personal account packages remain local; helper not redistributed here.",
+      "status": "Public helper archive downloaded/read in 2026-10-26 practice; not globally installed or executed; paper598 preview only."
     }
   ],
   "required": [
