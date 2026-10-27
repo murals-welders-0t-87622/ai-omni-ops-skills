@@ -6,7 +6,7 @@ description: 为电商商品做市场与人群研究、案例归类、选品和�
 
 metadata:
 
-  version: "2.0.3"
+  version: "2.0.4"
 
 ---
 
@@ -99,3 +99,7 @@ metadata:
 ## 持续增长学习
 
 有作品指标或客户反馈时，结合商品和人群检查卖点、选题、脚本、场景、呈现及承接的不同解释，交 omni-growth-learning 提出待选择验证。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

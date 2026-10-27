@@ -2,7 +2,7 @@
 name: content-distribution
 description: 多平台草稿、封面标题适配、授权发布、回执和数据归档；制作完成不自动公开。
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # 内容分发与发布承接
@@ -25,3 +25,7 @@ metadata:
 ## 持续增长学习
 
 根据真实发布回执、渠道与受众表现识别可比问题，交 omni-growth-learning 提出待选择的渠道或承接验证，不擅自再次发布。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

@@ -2,7 +2,7 @@
 name: omni-growth-learning
 description: 基于品牌经营数据、实际任务和用户反馈主动发现增长问题，研究影响因素、提出可验证优化，汇报待用户选择的实验并跟踪结果、归档经验及改进对应技能；适用于内容、公域、电商、私域、销售及系统执行链。
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # 品牌增长持续学习与验证
@@ -21,3 +21,7 @@ metadata:
 - 结果分为支持、未观察到可检测效果、负面、证据不足/不可比；“未显著”或低样本不等于没有影响。证据不足保留、复测或暂缓；有负向证据可暂停并留触发重新检查条件。有效结论先限定品牌/人群/渠道/版本；仅把经验证的通用方法交 `omni-skill-maintenance`，先最小修改对应领域技能、版本、来源和回归再同步。项目级偏好和数据留品牌环境；框架或职责结构变更先展示差异并取得用户确认。
 
 按需阅读 [中台接力](references/system-integration.md) 查已核源码及当前限制。[归档和技能演进](references/knowledge-and-routing.md) 说明各文件的职责及证据等级；[演示案例](assets/video-example.md) 是虚构数据，仅用于理解。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

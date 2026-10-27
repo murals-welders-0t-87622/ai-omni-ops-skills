@@ -2,7 +2,7 @@
 name: geo-growth-operations
 description: 品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # GEO获客
@@ -27,3 +27,7 @@ metadata:
 ## 持续增长学习
 
 从真实问题词、收录/引用与询问反馈寻找可核问题；交 omni-growth-learning 区分可见性、证据质量和商业承接，用户选择后验证。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

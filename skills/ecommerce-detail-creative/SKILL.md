@@ -2,7 +2,7 @@
 name: ecommerce-detail-creative
 description: 从当前品牌产品资料提炼卖点，制作电商详情页的逐页文案、画面及可选商品创意视频，并回写AI中台电商工作区。适用于“给这个商品做一套详情页，再做产品视频”等委托。
 metadata:
-  version: "1.4.1"
+  version: "1.4.2"
   display_name: 商品详情页与创意视频
 ---
 
@@ -51,3 +51,7 @@ metadata:
 ## 持续增长学习
 
 根据真实商品页面、用户疑问与同口径表现检查卖点、主图、文案和承接的竞争解释；交 omni-growth-learning，用户选择后验证。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

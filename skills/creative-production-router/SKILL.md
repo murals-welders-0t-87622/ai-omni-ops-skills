@@ -2,7 +2,7 @@
 name: creative-production-router
 description: 按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。
 metadata:
-  version: "1.2.1"
+  version: "1.2.2"
 ---
 
 # 创意制作调度
@@ -34,3 +34,7 @@ chatcut/OpenChatCut历史路线只作参考，当前已停止的服务不因文�
 ## 持续增长学习
 
 根据实际作品反馈及制作缺陷检查形式选择、素材与成本是否适合品牌表达；将有证据的候选交 omni-growth-learning，不因工具热门而替换形式。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

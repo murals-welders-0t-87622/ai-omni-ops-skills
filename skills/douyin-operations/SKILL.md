@@ -2,7 +2,7 @@
 name: douyin-operations
 description: 抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # 抖音／视频号运营
@@ -26,3 +26,7 @@ metadata:
 ## 持续增长学习
 
 基于实际作品和采集反馈将有来源的异常交 omni-growth-learning；比较平台/账号/样本与受众，提出开头、选题、画面或承接的候选，用户选择后再执行验证。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

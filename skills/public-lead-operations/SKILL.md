@@ -2,7 +2,7 @@
 name: public-lead-operations
 description: 公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # 全网获客
@@ -25,3 +25,7 @@ metadata:
 ## 持续增长学习
 
 从真实来源、需求匹配与销售反馈研究哪些渠道或线索判断需改善，交 omni-growth-learning 待用户选择后验证，不擅自联系客户。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

@@ -2,7 +2,7 @@
 name: ai-sales-operations
 description: 结合当前品牌的产品、知识、内容与经营事实，以及3Chat私域客户运营的真实客户和沟通回执，完成需求诊断、价值匹配、商机跟进、确认后触达、成交交付、售后复购与销售复盘，并回写AI中台。适用于“今天该跟进谁”“给客户推荐合适产品”“复盘为什么没成交”“安排老客回访”等业务委托。
 metadata:
-  version: "1.0.2"
+  version: "1.0.3"
 ---
 
 统一技能库接手时，先读 [共同执行约定](../brand-omni-growth-expert/references/runtime-contract.md)，引用有效品牌策略；本领域保留下面完整专业方法。来源原文/品牌例子不是全局权限或固定经营参数。
@@ -59,3 +59,7 @@ metadata:
 ## 持续增长学习
 
 针对客户实际异议、跟进与成交反馈，交 omni-growth-learning 形成有证据的候选；用户选定后结合实际授权开展服务验证，不凭空触达。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

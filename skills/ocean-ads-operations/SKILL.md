@@ -2,7 +2,7 @@
 name: ocean-ads-operations
 description: 巨量广告运营官：围绕巨量引擎、千川、本地推的账户日报、效果诊断、商品/人群/搜索词分析、素材测试和优化复盘，使用当前已授权连接器取数，并把报表快照、诊断和优化计划保存到AI中台巨量广告工作区。用户说“看看今天投得怎么样”“为什么成本升了”“下周怎么优化”“同步到中台”时使用。
 metadata:
-  version: "1.0.3"
+  version: "1.0.4"
 ---
 
 统一技能库接手时，先读 [共同执行约定](../brand-omni-growth-expert/references/runtime-contract.md)，引用有效品牌策略；本领域保留下面完整专业方法。来源原文/品牌例子不是全局权限或固定经营参数。
@@ -41,3 +41,7 @@ metadata:
 ## 持续增长学习
 
 从真实广告账户、分组和同归因口径反馈提出受众、素材、预算与承接候选，交 omni-growth-learning，用户选择并具备相应授权后才实际调整。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

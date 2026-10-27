@@ -2,7 +2,7 @@
 name: xiaohongshu-operations
 description: 小红书品牌策略、搜索种草、账号矩阵、选题笔记、达人和效果复盘。
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # 小红书运营
@@ -24,3 +24,7 @@ metadata:
 ## 持续增长学习
 
 从真实笔记、搜索与评论反馈发现有依据的问题并交 omni-growth-learning；封面、主题、人群和承接是待验证的不同因素，用户选择后再试。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

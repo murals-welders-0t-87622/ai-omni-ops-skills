@@ -2,7 +2,7 @@
 name: brand-creative-video
 description: 为品牌制作有清楚剧情和服务价值的AI创意视频，覆盖研究、建项目、剧本、分镜、角色场景道具图片资产、图生视频提示词、生成任务、剪辑与验收。适用于品牌短剧、猫咪或古人等旅游反差创意及既有项目续做；也可只交脚本或提示词。按当前阶段取用通用方法与可核读原资料，以图片资产保持一致性，不把文字方案当成已生成的视频。
 metadata:
-  version: "1.1.1"
+  version: "1.1.2"
 ---
 
 统一技能库接手时，先读 [共同执行约定](../brand-omni-growth-expert/references/runtime-contract.md)，引用有效品牌策略；本领域保留下面完整专业方法。来源原文/品牌例子不是全局权限或固定经营参数。
@@ -86,3 +86,7 @@ Codex UI元数据在 `agents/openai.yaml`；WorkBuddy同样可加载标准 `SKIL
 ## 持续增长学习
 
 根据真实作品反馈检查故事、人物、产品关联、画面声音及承接的竞争解释，交 omni-growth-learning 提出待选择的创意验证。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

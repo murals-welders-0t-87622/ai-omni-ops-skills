@@ -2,7 +2,7 @@
 name: wechat-content-operations
 description: 公众号、品牌长文、内容排版及私域内容复用；发布需沿用当前账号与用户授权。
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # 公众号与信任内容
@@ -26,3 +26,7 @@ metadata:
 ## 持续增长学习
 
 根据真实内容阅读及客户反馈研究选题、标题、内容结构和承接的竞争因素；交 omni-growth-learning 待用户选择后验证。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

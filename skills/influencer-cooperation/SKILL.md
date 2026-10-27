@@ -2,7 +2,7 @@
 name: influencer-cooperation
 description: KOL、KOC、KOS筛选匹配、合作方案、共创排期与业务效果复盘。
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # 达人合作
@@ -25,3 +25,7 @@ metadata:
 ## 持续增长学习
 
 从实际达人匹配、作品回执和客群反应提出多种解释，交 omni-growth-learning 研究候选，用户选择后才开展新的合作试验。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

@@ -2,7 +2,7 @@
 name: brand-content-growth
 description: 为品牌建立和执行内容增长全流程，从全域增长报告、用户痛点与行业竞品研究，形成差异化方案、内容战略、策略组合、选题文案、制作交接及经营复盘。用于新品牌内容体系、阶段内容计划、按选题创作、续做修订或内容复盘；纯视频技术加工交给对应制作技能。
 metadata:
-  version: "1.0.3"
+  version: "1.0.4"
 ---
 
 统一技能库接手时，先读 [共同执行约定](../brand-omni-growth-expert/references/runtime-contract.md)，引用有效品牌策略；本领域保留下面完整专业方法。来源原文/品牌例子不是全局权限或固定经营参数。
@@ -51,7 +51,7 @@ metadata:
 
 - [模板](assets/project-template.json)：研究、策略、单条创作、制作、指标和交接的最小业务结构。是**本地交换格式**，不冒充现有MCP schema。
 - [资料检索](scripts/sources.py)：`python <技能>/scripts/sources.py search --query "陌生化" --limit 6`，再用 `read --id <来源ID> --start 1 --lines 100` 读原文。
-- [项目初始化与检查](scripts/project.py)：`init --root <新目录> --brand <品牌名>`；`check --root <目录> --stage strategy|script|release|review`。检查链接与关键条件，不代替专业、法律或商业效果判断。
+- [项目初始化与检查](scripts/project.py)：在建档标准创建的任务目录内，用 `init --root <任务目录/内容项目数据> --brand <品牌名>` 创建尚不存在的子目录；`check --root <同一目录> --stage strategy|script|release|review`。继续原任务时使用原目录。检查链接与关键条件，不代替专业、法律或商业效果判断。
 
 交付时说明：具体成果、依据、文件位置、需要继续解决的缺口、交付/批准/发布/归档各自状态、下一步。研究稿、脚本稿、制作计划、真实成片和效果验证不得混称完成。
 
@@ -59,3 +59,7 @@ metadata:
 ## 持续增长学习
 
 在选题、文案、呈现及效果任务中发现有来源的数据或用户反馈时，交 omni-growth-learning 结合品牌差异研究竞争因素；把待选实验关联原内容和用户选择，结果成熟后回传本领域方法。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

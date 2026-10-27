@@ -2,7 +2,7 @@
 name: tencent-ads-operations
 description: 腾讯广告账户诊断、素材与落地承接、优化计划及线索交接；不负责巨量账户。
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # 腾讯广告
@@ -25,3 +25,7 @@ metadata:
 ## 持续增长学习
 
 从真实广告投产与线索质量提出账户、受众、素材和承接候选，交 omni-growth-learning，用户选择并具备权限后才实际调整。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

@@ -2,7 +2,7 @@
 name: taobao-tmall-operations
 description: 结合当前品牌资料与千问办公淘宝天猫商家端的真实回执，完成店铺体检、市场货盘、商品内容、搜索推广、活动会员、履约服务和经营复盘，并把快照与运营方案回写AI中台。适用于淘宝/天猫店铺诊断、全流程策划、日周复盘。
 metadata:
-  version: "1.6.1"
+  version: "1.6.2"
   display_name: 淘宝天猫全流程运营
 ---
 
@@ -61,3 +61,7 @@ metadata:
 ## 持续增长学习
 
 针对有来源的流量、商品、转化、订单和广告反馈，交 omni-growth-learning 梳理竞争解释和验证候选，用户选定后与本店实际能力、回执和同口径数据闭环。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

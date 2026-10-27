@@ -2,7 +2,7 @@
 name: youzan-private-operations
 description: 从品牌整体生意模式、全域增长报告及有赞经营事实出发，明确私域承担的增长任务，形成整品牌战略、可执行经营策略、每日动作与数据复盘，并回写AI中台、衔接AI销售。适用于私域策划、公转私、首购、客单、会员、复购及老客经营。
 metadata:
-  version: "5.0.3"
+  version: "5.0.4"
 ---
 
 统一技能库接手时，先读 [共同执行约定](../brand-omni-growth-expert/references/runtime-contract.md)，引用有效品牌策略；本领域保留下面完整专业方法。来源原文/品牌例子不是全局权限或固定经营参数。
@@ -32,3 +32,7 @@ metadata:
 ## 持续增长学习
 
 针对有来源的会员、服务、复购与客户反馈，交 omni-growth-learning 梳理原因和验证候选，用户选定后由本领域结合客户需求与真实触达许可执行。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

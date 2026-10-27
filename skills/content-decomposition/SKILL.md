@@ -2,7 +2,7 @@
 name: content-decomposition
 description: 对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # 作品拆解与复用
@@ -25,3 +25,7 @@ metadata:
 ## 持续增长学习
 
 对真实采集的对标作品提出可迁移机制与条件，不把高播放当因果；候选因素交 omni-growth-learning 按当前品牌与用户选择验证。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。

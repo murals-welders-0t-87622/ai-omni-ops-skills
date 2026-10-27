@@ -2,7 +2,7 @@
 name: omni-growth-review
 description: 跨内容、获客、电商、私域与销售比较目标、执行和结果，生成老板能采取动作的日周复盘。
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # 品牌增长复盘与经营分析
@@ -26,3 +26,7 @@ metadata:
 ## 持续增长学习
 
 发现可追溯的异常或用户反馈时，交 omni-growth-learning 研究竞争解释、设计验证并准备待用户选择的候选；单次异常和相关性不直接升级为经营规律。
+
+## 本地文件建档
+
+任务产生文件时，开始前按[本地建档标准](../brand-omni-growth-expert/references/local-archive-standard.md)确定本品牌目录并接续已有任务；日期作品与各板块资料分开归档，不移动或覆盖旧资料。
