@@ -4,10 +4,10 @@
 
 **版本基准（2026-10-27，仅供核对，不是永久锁版）：**
 
-- 中台仓库：`https://github.com/murals-welders-0t-87622/ai-omni-ops-system-lab.git`，**私有**，安装分支 `feature/7tab-dashboard-and-brand-library`；本文件制定时已验证提交 `f355dde39d3a72ad0429c31c0cd27c95a66a7b46`。不是仓库默认的 main。
+- 中台公开发行仓库：`https://github.com/murals-welders-0t-87622/ai-omni-ops-system-public.git`，安装分支 `main`，首次发布提交 `7a65f923d1edcf1e525588fdbb8d067034f9493d`。该仓是独立清理后的快照，历史与原私有开发仓不同，安装时记录实际远端提交 SHA。
 - 技能仓库：`https://github.com/murals-welders-0t-87622/ai-omni-ops-skills.git`，**公开**，`main`；`a22ca2c9e8682652f1d5ee25fe137645e30abe5f` 是旧基准（23 项，不含本安装技能）；应使用包含本技能的更新提交，以当前 registry 为准。
 - 首装与升级按授权分支当前经过验证的最新提交，并记录实际 SHA；若取到的提交早于以上基准或无法证明来源，不得称安装了最新版。两个仓库不是同一个仓库，技能版本与中台版本分别记录。
-- 旧的 `品牌增长AI中台-Docker安装资料包-20261026-V2.zip` 及其快照是**历史备用**，不包含以上后续电商更新；不能把它当最新版。若私有仓无法访问，可将旧包用于经用户知情的离线旧版安装，并明确缺少更新；不能宣称已完成最新安装或后续联网更新。
+- 旧的 `品牌增长AI中台-Docker安装资料包-20261026-V2.zip` 及其快照是**历史备用**，不包含以上后续电商更新；不能把它当最新版。公开仓无法访问时先排查网络，不要将旧包称为最新安装或后续联网更新。
 
 ## 0. 执行边界和任务选择
 
@@ -21,7 +21,7 @@
 ## 1. 安装前检查与获取源码
 
 - 要求 Windows、Docker Desktop 使用 Linux 容器、PowerShell 7、Git、Python 3.10+、已安装并登录的 Codex；检查 Docker 引擎、可用内存和磁盘、网络、GitHub 登录及目录写权限。中台 Node/npm/Prisma 在镜像构建，不需要宿主机 Node 来启动中台；**电商按钮的宿主执行器另需 Node 和 Codex CLI**，见第 5 节。Docker 下载/本地媒体制作还依赖网络和按需组件。
-- 私有中台仓需用户在新电脑登录**有该仓库读取权限的 GitHub 账号**。必要的系统安装、账户登录、重启或验证由用户在自己的设备上完成；不要索取密码、粘贴旧机凭据或关闭安全校验。技能仓为公开仓，但其依赖和来源访问仍需验证。
+- 公开中台仓和技能仓不需要 GitHub 仓库授权；仍需检查网络。公开版不含模型服务凭据和其他品牌的数据，需在目标机配置品牌、模型和按需第三方连接。不要索取密码、粘贴旧机凭据或关闭安全校验。
 - 克隆中台指定分支；若已经取得当前技能仓，直接复用该仓作为 `$SkillsPath`，不要重复克隆或因该目录存在而中止。以下是**两仓都尚未克隆**时的示例，路径按实际调整：
 
 ```powershell
@@ -32,7 +32,7 @@ $RuntimePath = Join-Path $InstallRoot 'runtime'
 $ProjectName = 'ai-omni-ontology-lab'
 if ((Test-Path -LiteralPath $SystemPath) -or (Test-Path -LiteralPath $SkillsPath)) { throw '源码目录已有内容：先按已有安装检查，不能覆盖。' }
 New-Item -ItemType Directory -Force -Path $InstallRoot | Out-Null
-git clone --branch feature/7tab-dashboard-and-brand-library --single-branch https://github.com/murals-welders-0t-87622/ai-omni-ops-system-lab.git $SystemPath
+git clone --branch main --single-branch https://github.com/murals-welders-0t-87622/ai-omni-ops-system-public.git $SystemPath
 if ($LASTEXITCODE -ne 0) { throw '中台源码获取失败；核对授权和网络。' }
 git clone --branch main --single-branch https://github.com/murals-welders-0t-87622/ai-omni-ops-skills.git $SkillsPath
 if ($LASTEXITCODE -ne 0) { throw '技能源码获取失败；保留已取得的中台目录，不重复覆盖。' }
@@ -153,6 +153,8 @@ try {
 - 新建 Codex 对话或按客户端支持的方式重新加载，实际确认可以发现总统筹及电商等技能；未发现时单独排查，不能以 doctor 替代客户端加载验证。官方文档：[技能](https://learn.chatgpt.com/docs/build-skills)、[MCP](https://learn.chatgpt.com/docs/extend/mcp?surface=cli)。
 
 ## 4. B：已有系统的后续更新
+
+**原私有仓用户：**公开仓是独立清理快照，与原私有仓不具备连续 Git 历史；不可在原目录直接切换远端后强行拉取。先单独克隆公开仓，核对源码变更、Docker配置、数据库schema与备份恢复；确认兼容后复用原运行配置及数据卷执行受控迁移。不能验证兼容或恢复时停止更新并说明，保留原系统。
 
 1. **识别现有实例。** 找到原 Compose 项目名、源目录、当前 commit、运行环境文件、附加 override、数据库卷、素材卷、已安装技能及用户修改，记录正在使用的版本。确认没有进行中的生成或队列任务，不能只凭网页空闲判断；有执行器时检查对应任务状态、租约和进程身份。无可核实的停止/恢复路径则先停在更新前。
 2. **保护并备份。** 停止或暂停对该实例的业务写入；记录本项目原服务、镜像 ID、启动参数、源码 commit、数据库与素材卷。用该实例自己的 PostgreSQL 执行一致性 `pg_dump -Fc`，核对退出状态和 `pg_restore --list`；在同一静止窗口内备份素材持久卷及受限的运行配置/解密密钥。备份放到源码和仓库外，做文件大小与哈希校验，并确认备份可读取、恢复命令与权限。不可复制运行中的 PostgreSQL 数据目录作为一致性备份。已有环境的 `LAB_INSTALL_TOKEN_SECRET` 与其他密钥必须保留；不要重新生成。停止仅限本实例的指定服务或执行器，不能影响别的项目。

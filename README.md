@@ -6,7 +6,7 @@
 
 ## 第一步：安装和更新整套系统
 
-新电脑先取得本公开技能仓库，用 Codex 打开仓库后直接说：**“请读取 skills/00-omni-system-setup/SKILL.md，按它安装整套系统。”** 已在 Codex 中发现该技能时也可说：**“使用 $00-omni-system-setup 安装整套系统。”** 已安装的电脑说：**“使用 $00-omni-system-setup 更新整套系统。”** Codex 会按[安装更新技能](skills/00-omni-system-setup/SKILL.md)识别新装或更新、准备 Docker 中台和配套技能并逐项验证。中台源码仓是私有仓，需要具备权限的账号；Docker、Codex、网络和必要登录仍需在目标电脑具备。历史数据迁移和第三方业务授权分开核实。
+新电脑先取得本公开技能仓库，用 Codex 打开仓库后直接说：**“请读取 skills/00-omni-system-setup/SKILL.md，按它安装整套系统。”** 已在 Codex 中发现该技能时也可说：**“使用 $00-omni-system-setup 安装整套系统。”** 已安装的电脑说：**“使用 $00-omni-system-setup 更新整套系统。”** Codex 会按[安装更新技能](skills/00-omni-system-setup/SKILL.md)识别新装或更新、准备 Docker 中台和配套技能并逐项验证。中台发行源码公开，不需私有仓账号；Docker、Codex、网络和模型配置仍需在目标电脑具备。历史数据迁移和第三方业务授权分开核实。
 
 ## 结构化分工
 
