@@ -2,7 +2,7 @@
 name: public-lead-operations
 description: 公开需求、企业项目、本地商家、竞品评论和合作渠道线索研究、核验、分层及销售交接。
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # 全网获客
@@ -20,3 +20,8 @@ metadata:
 - [专业资料：project-experts/quanyu-huke-team](../brand-omni-growth-expert/references/knowledge/project-experts/quanyu-huke-team/README.md)
 - [专业资料：project-experts/hubei-tannen-huke-team](../brand-omni-growth-expert/references/knowledge/project-experts/hubei-tannen-huke-team/README.md)
 用 `python <总统筹技能>/scripts/knowledge.py search --package <包名> --query <问题>` 查来源导航卡；公开包不含原专家全文，需在授权WorkBuddy/原项目核读；目录见 [来源包索引](../brand-omni-growth-expert/references/package-index.md)。
+
+
+## 持续增长学习
+
+从真实来源、需求匹配与销售反馈研究哪些渠道或线索判断需改善，交 omni-growth-learning 待用户选择后验证，不擅自联系客户。

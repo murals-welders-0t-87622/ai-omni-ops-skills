@@ -2,7 +2,7 @@
 name: omni-growth-review
 description: 跨内容、获客、电商、私域与销售比较目标、执行和结果，生成老板能采取动作的日周复盘。
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # 品牌增长复盘与经营分析
@@ -21,3 +21,8 @@ metadata:
 - [专业资料：project-experts/brand-omni-growth-expert](../brand-omni-growth-expert/references/knowledge/project-experts/brand-omni-growth-expert/README.md)
 - [专业资料：expert-marketplace/data-analytics-reporter](../brand-omni-growth-expert/references/knowledge/expert-marketplace/data-analytics-reporter/README.md)
 用 `python <总统筹技能>/scripts/knowledge.py search --package <包名> --query <问题>` 查来源导航卡；公开包不含原专家全文，需在授权WorkBuddy/原项目核读；目录见 [来源包索引](../brand-omni-growth-expert/references/package-index.md)。
+
+
+## 持续增长学习
+
+发现可追溯的异常或用户反馈时，交 omni-growth-learning 研究竞争解释、设计验证并准备待用户选择的候选；单次异常和相关性不直接升级为经营规律。

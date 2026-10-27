@@ -2,7 +2,7 @@
 name: content-distribution
 description: 多平台草稿、封面标题适配、授权发布、回执和数据归档；制作完成不自动公开。
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # 内容分发与发布承接
@@ -20,3 +20,8 @@ metadata:
 - [专业资料：project-experts/yxer-publish-agent](../brand-omni-growth-expert/references/knowledge/project-experts/yxer-publish-agent/README.md)
 - [专业资料：expert-marketplace/content-distribution-team](../brand-omni-growth-expert/references/knowledge/expert-marketplace/content-distribution-team/README.md)
 用 `python <总统筹技能>/scripts/knowledge.py search --package <包名> --query <问题>` 查来源导航卡；公开包不含原专家全文，需在授权WorkBuddy/原项目核读；目录见 [来源包索引](../brand-omni-growth-expert/references/package-index.md)。
+
+
+## 持续增长学习
+
+根据真实发布回执、渠道与受众表现识别可比问题，交 omni-growth-learning 提出待选择的渠道或承接验证，不擅自再次发布。

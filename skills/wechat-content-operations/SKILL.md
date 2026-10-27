@@ -2,7 +2,7 @@
 name: wechat-content-operations
 description: 公众号、品牌长文、内容排版及私域内容复用；发布需沿用当前账号与用户授权。
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # 公众号与信任内容
@@ -21,3 +21,8 @@ metadata:
 - [专业资料：project-experts/tennant-wechat-ops](../brand-omni-growth-expert/references/knowledge/project-experts/tennant-wechat-ops/README.md)
 - [专业资料：workbuddy-skills/wechat-article-typeset](../brand-omni-growth-expert/references/knowledge/workbuddy-skills/wechat-article-typeset/README.md)
 用 `python <总统筹技能>/scripts/knowledge.py search --package <包名> --query <问题>` 查来源导航卡；公开包不含原专家全文，需在授权WorkBuddy/原项目核读；目录见 [来源包索引](../brand-omni-growth-expert/references/package-index.md)。
+
+
+## 持续增长学习
+
+根据真实内容阅读及客户反馈研究选题、标题、内容结构和承接的竞争因素；交 omni-growth-learning 待用户选择后验证。

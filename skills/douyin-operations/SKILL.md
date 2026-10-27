@@ -2,7 +2,7 @@
 name: douyin-operations
 description: 抖音和视频号的策略、采集研究、营销日历、选题、制作交接、账号运营及复盘；纯视频加工使用制作技能。
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # 抖音／视频号运营
@@ -21,3 +21,8 @@ metadata:
 - [专业资料：project-experts/douyin-fullflow-ops](../brand-omni-growth-expert/references/knowledge/project-experts/douyin-fullflow-ops/README.md)
 - [专业资料：expert-marketplace/douyin-strategist](../brand-omni-growth-expert/references/knowledge/expert-marketplace/douyin-strategist/README.md)
 用 `python <总统筹技能>/scripts/knowledge.py search --package <包名> --query <问题>` 查来源导航卡；公开包不含原专家全文，需在授权WorkBuddy/原项目核读；目录见 [来源包索引](../brand-omni-growth-expert/references/package-index.md)。
+
+
+## 持续增长学习
+
+基于实际作品和采集反馈将有来源的异常交 omni-growth-learning；比较平台/账号/样本与受众，提出开头、选题、画面或承接的候选，用户选择后再执行验证。

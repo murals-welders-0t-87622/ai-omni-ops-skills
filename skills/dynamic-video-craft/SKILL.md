@@ -2,7 +2,7 @@
 name: dynamic-video-craft
 description: 根据产品网址、截图、文案或配音制作 Shotcraft / Talkcraft 风格的动态视频：真实页面的 2.5D 运镜、动态文字、数据演绎、旁白对齐和镜头承接。用于产品宣传片、配音解说片，以及按这两个画廊的卡名复刻单镜头；默认用 Remotion 交付 MP4 和可编辑工程，不用于仅加普通字幕或生成真人数字人。
 metadata:
-  version: "1.2.0"
+  version: "1.2.1"
 ---
 
 统一技能库接手时，先读 [共同执行约定](../brand-omni-growth-expert/references/runtime-contract.md)，引用有效品牌策略；本领域保留下面完整专业方法。来源原文/品牌例子不是全局权限或固定经营参数。
@@ -81,3 +81,8 @@ npm run render
 用 [验收方法](references/quality.md) 核对可读性、时序、音画关系与真实成片。机器检查发现候选问题，不能替代观看；未实际试听不得声称声音已人工验收。缺配音时可以完成脚本、素材和静音预演，明确标为预演，不伪称已配音成片。
 
 镜头目录是版本化的链接索引，不是已安装的完整素材库。查找与复用方式见 [镜头库](references/recipe-library.md)，来源及许可见 [来源说明](references/sources.md)。商业项目默认使用本技能自写代码与用户可用素材；直接复用 Talkcraft 工具包时遵守其非商业许可或已有商业授权，不把“公开视频”当作可任意商用素材。
+
+
+## 持续增长学习
+
+根据实际视听检查及用户反馈区分技术问题和经营效果，交 omni-growth-learning 设计形式、节奏与可理解性的待选验证。

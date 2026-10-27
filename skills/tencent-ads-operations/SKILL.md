@@ -2,7 +2,7 @@
 name: tencent-ads-operations
 description: 腾讯广告账户诊断、素材与落地承接、优化计划及线索交接；不负责巨量账户。
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # 腾讯广告
@@ -20,3 +20,8 @@ metadata:
 - [专业资料：project-experts/tencent-ads](../brand-omni-growth-expert/references/knowledge/project-experts/tencent-ads/README.md)
 - [专业资料：project-experts/tencent-ads-delivery-expert](../brand-omni-growth-expert/references/knowledge/project-experts/tencent-ads-delivery-expert/README.md)
 用 `python <总统筹技能>/scripts/knowledge.py search --package <包名> --query <问题>` 查来源导航卡；公开包不含原专家全文，需在授权WorkBuddy/原项目核读；目录见 [来源包索引](../brand-omni-growth-expert/references/package-index.md)。
+
+
+## 持续增长学习
+
+从真实广告投产与线索质量提出账户、受众、素材和承接候选，交 omni-growth-learning，用户选择并具备权限后才实际调整。

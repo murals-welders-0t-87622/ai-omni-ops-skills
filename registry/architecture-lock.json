@@ -139,6 +139,14 @@
       ]
     },
     {
+      "id": "omni-growth-learning",
+      "path": "skills/omni-growth-learning",
+      "kind": "governance",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
       "id": "omni-growth-review",
       "path": "skills/omni-growth-review",
       "kind": "domain",
@@ -203,5 +211,5 @@
       ]
     }
   ],
-  "changeRule": "2026-10-27 用户明确要求新增首个系统安装更新技能；其他主结构、职责与业务流程变化前须用户确认。"
+  "changeRule": "2026-10-27 用户明确要求新增系统安装技能及增长持续学习技能；其余业务主结构、职责与交接变化前须确认。"
 }

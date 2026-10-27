@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "example-not-real",
+  "scope": {"brand": null, "object": null, "platform": null, "version": null},
+  "trigger": {"kind": null, "observation": null, "sources": [], "window": null, "metricDefinition": null, "sample": null},
+  "hypothesis": {"factor": null, "mechanism": null, "competingExplanations": [], "expectedDirection": null, "disconfirmingEvidence": null},
+  "proposal": {"action": null, "testDesign": null, "control": null, "primaryMetric": null, "guardrails": [], "duration": null, "resources": null},
+  "decision": {"status": "pending-user-choice", "selectedBy": null, "selectedAt": null},
+  "execution": {"status": "not-started", "receipts": []},
+  "result": {"status": "not-observed", "samples": null, "metrics": [], "limitations": [], "decision": null, "nextReview": null},
+  "routing": {"brandRecord": null, "domainSkill": null, "publicMethodCandidate": null}
+}

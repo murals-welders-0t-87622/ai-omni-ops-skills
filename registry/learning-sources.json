@@ -529,6 +529,42 @@
         "无需凭据或目标机验证即可宣称完整安装"
       ],
       "verification": "技能入口校验、模拟隔离预检与安装器测试；真实新电脑端到端待验。"
+    },
+    {
+      "id": "growth-learning-local-workbuddy-20261027",
+      "kind": "user-workspace",
+      "title": "WorkBuddy 小红书运营方法与现有内容测量",
+      "readAt": "2026-10-27",
+      "coverage": "读取本地小红书运营方法账号定位、封面标题、选题、互动；读取现有内容技能完整测量与学习章节。未调用 WorkBuddy 原生专家或任何品牌 MCP。",
+      "status": "adapted-methods",
+      "adoptions": [
+        "skills/omni-growth-learning/references/factors-and-research.md",
+        "skills/omni-growth-learning/references/knowledge-and-routing.md"
+      ],
+      "notAdopted": [
+        "平台旧固定流量优先或标题字数结论",
+        "公开互动推断留存或因果"
+      ],
+      "verification": "技能结构和合成记录测试；真实品牌执行待验证。"
+    },
+    {
+      "id": "growth-learning-experiment-primary-sources",
+      "kind": "web-primary",
+      "title": "留存指标与可重复实验方法",
+      "readAt": "2026-10-27",
+      "url": "https://www.microsoft.com/en-us/research/articles/diagnosing-sample-ratio-mismatch-in-a-b-testing/",
+      "coverage": "读取微软SRM诊断、微软GitHub实验目录过程和YouTube留存及展现说明相关部分；仅采用可比口径、实验质量、留存曲线多解释及记录复核原则。",
+      "status": "adapted-methods",
+      "adoptions": [
+        "skills/omni-growth-learning/references/experiments-and-decisions.md",
+        "skills/omni-growth-learning/references/factors-and-research.md"
+      ],
+      "notAdopted": [
+        "YouTube口径直接替代抖音/小红书",
+        "将自然流量顺序对照称随机AB",
+        "固定阈值保证效果"
+      ],
+      "verification": "文件与结构校验；未运行来源项目、未在真实品牌上测试效果。"
     }
   ]
 }

@@ -2,7 +2,7 @@
 name: content-decomposition
 description: 对标作品、视频或文章的结构、画面、声音、卖点和可复用机制分析；属于内容业务，不在素材中心重建专家流程。
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # 作品拆解与复用
@@ -20,3 +20,8 @@ metadata:
 - [专业资料：project-experts/content-work-decomposition-team](../brand-omni-growth-expert/references/knowledge/project-experts/content-work-decomposition-team/README.md)
 - [专业资料：project-experts/video-clone-team](../brand-omni-growth-expert/references/knowledge/project-experts/video-clone-team/README.md)
 用 `python <总统筹技能>/scripts/knowledge.py search --package <包名> --query <问题>` 查来源导航卡；公开包不含原专家全文，需在授权WorkBuddy/原项目核读；目录见 [来源包索引](../brand-omni-growth-expert/references/package-index.md)。
+
+
+## 持续增长学习
+
+对真实采集的对标作品提出可迁移机制与条件，不把高播放当因果；候选因素交 omni-growth-learning 按当前品牌与用户选择验证。

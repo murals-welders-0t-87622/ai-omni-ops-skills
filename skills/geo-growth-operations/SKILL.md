@@ -2,7 +2,7 @@
 name: geo-growth-operations
 description: 品牌GEO诊断、问题词库、可信知识与内容建设、AI可见性测试和咨询反馈。
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # GEO获客
@@ -22,3 +22,8 @@ metadata:
 - [专业资料：workbuddy-skills/geo-optimization-cn](../brand-omni-growth-expert/references/knowledge/workbuddy-skills/geo-optimization-cn/README.md)
 - [专业资料：workbuddy-skills/geo-content-engine__skillhub](../brand-omni-growth-expert/references/knowledge/workbuddy-skills/geo-content-engine__skillhub/README.md)
 用 `python <总统筹技能>/scripts/knowledge.py search --package <包名> --query <问题>` 查来源导航卡；公开包不含原专家全文，需在授权WorkBuddy/原项目核读；目录见 [来源包索引](../brand-omni-growth-expert/references/package-index.md)。
+
+
+## 持续增长学习
+
+从真实问题词、收录/引用与询问反馈寻找可核问题；交 omni-growth-learning 区分可见性、证据质量和商业承接，用户选择后验证。

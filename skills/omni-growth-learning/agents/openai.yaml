@@ -1,0 +1,6 @@
+interface:
+  display_name: "品牌增长持续学习"
+  short_description: "从真实反馈发现问题，提出实验并在用户选择后验证"
+  default_prompt: "使用 $omni-growth-learning 根据已有品牌反馈提出可验证的增长优化建议。"
+policy:
+  allow_implicit_invocation: true

@@ -2,7 +2,7 @@
 name: influencer-cooperation
 description: KOL、KOC、KOS筛选匹配、合作方案、共创排期与业务效果复盘。
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # 达人合作
@@ -20,3 +20,8 @@ metadata:
 - [专业资料：project-experts/kol-screening-team](../brand-omni-growth-expert/references/knowledge/project-experts/kol-screening-team/README.md)
 - [专业资料：project-experts/fengtian-kol-team](../brand-omni-growth-expert/references/knowledge/project-experts/fengtian-kol-team/README.md)
 用 `python <总统筹技能>/scripts/knowledge.py search --package <包名> --query <问题>` 查来源导航卡；公开包不含原专家全文，需在授权WorkBuddy/原项目核读；目录见 [来源包索引](../brand-omni-growth-expert/references/package-index.md)。
+
+
+## 持续增长学习
+
+从实际达人匹配、作品回执和客群反应提出多种解释，交 omni-growth-learning 研究候选，用户选择后才开展新的合作试验。

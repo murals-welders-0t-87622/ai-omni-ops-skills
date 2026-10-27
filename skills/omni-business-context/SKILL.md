@@ -2,7 +2,7 @@
 name: omni-business-context
 description: 整理品牌、产品、IP、知识与素材，核来源和冲突并经本品牌MCP归档；不自行改业务事实。
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # 品牌资料与业务上下文
@@ -20,3 +20,8 @@ metadata:
 
 - [专业资料：project-experts/brand-omni-growth-expert](../brand-omni-growth-expert/references/knowledge/project-experts/brand-omni-growth-expert/README.md)
 用 `python <总统筹技能>/scripts/knowledge.py search --package <包名> --query <问题>` 查来源导航卡；公开包不含原专家全文，需在授权WorkBuddy/原项目核读；目录见 [来源包索引](../brand-omni-growth-expert/references/package-index.md)。
+
+
+## 持续增长学习
+
+从资料冲突、实际客户/服务反馈和已核数据识别可追踪缺口；交 omni-growth-learning 形成候选，不把假设写成产品事实。

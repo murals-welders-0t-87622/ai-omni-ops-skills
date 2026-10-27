@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "1.9.0",
+  "version": "1.10.0",
   "repository": "https://github.com/murals-welders-0t-87622/ai-omni-ops-skills",
   "skills": [
     {
@@ -15,7 +15,7 @@
     {
       "id": "ai-commerce-video",
       "path": "skills/ai-commerce-video",
-      "version": "2.0.2",
+      "version": "2.0.3",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -27,7 +27,7 @@
     {
       "id": "ai-sales-operations",
       "path": "skills/ai-sales-operations",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -39,7 +39,7 @@
     {
       "id": "brand-content-growth",
       "path": "skills/brand-content-growth",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -51,7 +51,7 @@
     {
       "id": "brand-creative-video",
       "path": "skills/brand-creative-video",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -63,7 +63,7 @@
     {
       "id": "brand-omni-growth-expert",
       "path": "skills/brand-omni-growth-expert",
-      "version": "3.0.1",
+      "version": "3.0.2",
       "dependencies": [],
       "kind": "orchestrator",
       "description": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。",
@@ -72,7 +72,7 @@
     {
       "id": "content-decomposition",
       "path": "skills/content-decomposition",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -83,7 +83,7 @@
     {
       "id": "content-distribution",
       "path": "skills/content-distribution",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -94,7 +94,7 @@
     {
       "id": "creative-production-router",
       "path": "skills/creative-production-router",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -105,7 +105,7 @@
     {
       "id": "douyin-operations",
       "path": "skills/douyin-operations",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -116,7 +116,7 @@
     {
       "id": "dynamic-video-craft",
       "path": "skills/dynamic-video-craft",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -128,7 +128,7 @@
     {
       "id": "ecommerce-detail-creative",
       "path": "skills/ecommerce-detail-creative",
-      "version": "1.4.0",
+      "version": "1.4.1",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -140,7 +140,7 @@
     {
       "id": "geo-growth-operations",
       "path": "skills/geo-growth-operations",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -151,7 +151,7 @@
     {
       "id": "influencer-cooperation",
       "path": "skills/influencer-cooperation",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -162,7 +162,7 @@
     {
       "id": "ocean-ads-operations",
       "path": "skills/ocean-ads-operations",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -174,7 +174,7 @@
     {
       "id": "omni-business-context",
       "path": "skills/omni-business-context",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -183,9 +183,20 @@
       "status": "packaged-not-business-accepted"
     },
     {
+      "id": "omni-growth-learning",
+      "path": "skills/omni-growth-learning",
+      "version": "1.0.0",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "governance",
+      "description": "基于品牌经营数据、实际任务和用户反馈主动发现增长问题，研究影响因素、提出可验证优化，汇报待用户选择的实验并跟踪结果、归档经验及改进对应技能；适用于内容、公域、电商、私域、销售及系统执行链。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
       "id": "omni-growth-review",
       "path": "skills/omni-growth-review",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -196,7 +207,7 @@
     {
       "id": "omni-skill-maintenance",
       "path": "skills/omni-skill-maintenance",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -207,7 +218,7 @@
     {
       "id": "public-lead-operations",
       "path": "skills/public-lead-operations",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -218,7 +229,7 @@
     {
       "id": "taobao-tmall-operations",
       "path": "skills/taobao-tmall-operations",
-      "version": "1.6.0",
+      "version": "1.6.1",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -230,7 +241,7 @@
     {
       "id": "tencent-ads-operations",
       "path": "skills/tencent-ads-operations",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -241,7 +252,7 @@
     {
       "id": "wechat-content-operations",
       "path": "skills/wechat-content-operations",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -252,7 +263,7 @@
     {
       "id": "xiaohongshu-operations",
       "path": "skills/xiaohongshu-operations",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -263,7 +274,7 @@
     {
       "id": "youzan-private-operations",
       "path": "skills/youzan-private-operations",
-      "version": "5.0.2",
+      "version": "5.0.3",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -291,6 +302,7 @@
       "influencer-cooperation",
       "ocean-ads-operations",
       "omni-business-context",
+      "omni-growth-learning",
       "omni-growth-review",
       "omni-skill-maintenance",
       "public-lead-operations",
@@ -305,7 +317,8 @@
       "brand-omni-growth-expert",
       "omni-business-context",
       "omni-growth-review",
-      "omni-skill-maintenance"
+      "omni-skill-maintenance",
+      "omni-growth-learning"
     ]
   },
   "businessFramework": {

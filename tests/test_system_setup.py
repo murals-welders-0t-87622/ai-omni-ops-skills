@@ -10,7 +10,7 @@ class SystemSetupTests(unittest.TestCase):
         self.assertEqual(r['profiles']['all'][0], '00-omni-system-setup')
         rows=manage.selection(r,'all',None)
         self.assertEqual(rows[0]['id'], '00-omni-system-setup')
-        self.assertEqual(len(rows),24)
+        self.assertEqual(len(rows),len(r['skills']))
         self.assertEqual(rows[0]['dependencies'],[])
     def test_system_setup_is_self_contained_and_has_no_business_routing_changes(self):
         r=json.loads((ROOT/'registry/skills.json').read_text(encoding='utf-8'))

@@ -2,7 +2,7 @@
 name: creative-production-router
 description: 按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。
 metadata:
-  version: "1.2.0"
+  version: "1.2.1"
 ---
 
 # 创意制作调度
@@ -29,3 +29,8 @@ chatcut/OpenChatCut历史路线只作参考，当前已停止的服务不因文�
 - [专业资料：project-experts/flova-video-expert](../brand-omni-growth-expert/references/knowledge/project-experts/flova-video-expert/README.md)
 - [专业资料：project-experts/chatcut-video-editor](../brand-omni-growth-expert/references/knowledge/project-experts/chatcut-video-editor/README.md)
 用 `python <总统筹技能>/scripts/knowledge.py search --package <包名> --query <问题>` 查来源导航卡；公开包不含原专家全文，需在授权WorkBuddy/原项目核读；目录见 [来源包索引](../brand-omni-growth-expert/references/package-index.md)。
+
+
+## 持续增长学习
+
+根据实际作品反馈及制作缺陷检查形式选择、素材与成本是否适合品牌表达；将有证据的候选交 omni-growth-learning，不因工具热门而替换形式。
