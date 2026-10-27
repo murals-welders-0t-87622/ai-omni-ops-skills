@@ -1,8 +1,17 @@
 {
   "schemaVersion": 1,
-  "version": "1.8.0",
+  "version": "1.9.0",
   "repository": "https://github.com/murals-welders-0t-87622/ai-omni-ops-skills",
   "skills": [
+    {
+      "id": "00-omni-system-setup",
+      "path": "skills/00-omni-system-setup",
+      "version": "1.0.0",
+      "dependencies": [],
+      "kind": "governance",
+      "description": "在 Windows 电脑通过 Docker 安装或安全更新 AI 全域运营中台及配套 Codex 技能，支持首装识别、备份回退、品牌 MCP 和实际验收；用于整套系统安装或升级，不用于运营业务执行。",
+      "status": "packaged-not-machine-accepted"
+    },
     {
       "id": "ai-commerce-video",
       "path": "skills/ai-commerce-video",
@@ -266,6 +275,7 @@
   ],
   "profiles": {
     "all": [
+      "00-omni-system-setup",
       "ai-commerce-video",
       "ai-sales-operations",
       "brand-content-growth",
@@ -291,6 +301,7 @@
       "youzan-private-operations"
     ],
     "core": [
+      "00-omni-system-setup",
       "brand-omni-growth-expert",
       "omni-business-context",
       "omni-growth-review",

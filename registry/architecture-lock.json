@@ -15,6 +15,12 @@
   ],
   "skills": [
     {
+      "id": "00-omni-system-setup",
+      "path": "skills/00-omni-system-setup",
+      "kind": "governance",
+      "dependencies": []
+    },
+    {
       "id": "ai-commerce-video",
       "path": "skills/ai-commerce-video",
       "kind": "domain",
@@ -197,5 +203,5 @@
       ]
     }
   ],
-  "changeRule": "更改以上主结构前须用户确认具体差异；新资料、领域内工艺、验证和可靠性修正可以直接进行。"
+  "changeRule": "2026-10-27 用户明确要求新增首个系统安装更新技能；其他主结构、职责与业务流程变化前须用户确认。"
 }

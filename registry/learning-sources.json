@@ -511,6 +511,24 @@
         "缓存来源数据冒充独立事实"
       ],
       "verification": "按当前中台契约及实际任务/看板验证，不改变23入口主结构，不公开品牌资料。"
+    },
+    {
+      "id": "user-docker-install-update-20261027",
+      "kind": "user-material",
+      "title": "用户确认的 Docker 新机安装与更新流程",
+      "readAt": "2026-10-27",
+      "coverage": "核读用户指定安装文档、现行Compose/初始化、技能安装器及Git仓访问范围；明确首次安装、已有系统更新和历史迁移。",
+      "status": "adapted-methods",
+      "adoptions": [
+        "skills/00-omni-system-setup/SKILL.md",
+        "skills/00-omni-system-setup/references/windows-docker.md",
+        "skills/00-omni-system-setup/scripts/prepare-new-machine.ps1"
+      ],
+      "notAdopted": [
+        "旧源码快照作为最新版本",
+        "无需凭据或目标机验证即可宣称完整安装"
+      ],
+      "verification": "技能入口校验、模拟隔离预检与安装器测试；真实新电脑端到端待验。"
     }
   ]
 }

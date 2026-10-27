@@ -4,17 +4,21 @@
 
 **交流与中台合作：微信 `hbwangxiaodong`。** 本仓公开的是配套运营技能和方法；品牌数据、账号与中台服务需独立配置。
 
+## 第一步：安装和更新整套系统
+
+新电脑先取得本公开技能仓库，用 Codex 打开仓库后直接说：**“请读取 skills/00-omni-system-setup/SKILL.md，按它安装整套系统。”** 已在 Codex 中发现该技能时也可说：**“使用 $00-omni-system-setup 安装整套系统。”** 已安装的电脑说：**“使用 $00-omni-system-setup 更新整套系统。”** Codex 会按[安装更新技能](skills/00-omni-system-setup/SKILL.md)识别新装或更新、准备 Docker 中台和配套技能并逐项验证。中台源码仓是私有仓，需要具备权限的账号；Docker、Codex、网络和必要登录仍需在目标电脑具备。历史数据迁移和第三方业务授权分开核实。
+
 ## 结构化分工
 
 |层次|内容|负责什么|
 |---|---|---|
 |总统筹|品牌全域增长策略专家团 · brand-omni-growth-expert|从生意模式、客户需求和经营事实判断阶段、方向、优先级与跨板块协同|
-|业务与工艺|22个领域入口|内容/GEO/全网/广告/达人、电商、私域/AI销售、制作/分发、资料/复盘/维护|
+|业务与工艺|22个领域入口及安装维护入口|内容/GEO/全网/广告/达人、电商、私域/AI销售、制作/分发、资料/复盘/维护|
 |专业知识|通用方法、209个来源包导航、279个角色及687个原Skill目录|按当前业务环节取用必要专业知识；目录数量含镜像和历史，不代表独立已验能力|
 
 业务主线保持 **生意模式→战略→策略→执行→数据反馈**。战略说明先完成什么，策略说明通过哪些组合动作完成，执行落到产品、人群、内容、价格/库存、时间和负责人，反馈对照流量、转化、客单、复购等实际目标。
 
-详见 [架构](docs/ARCHITECTURE.md)、[业务路由](skills/brand-omni-growth-expert/references/business-routing.md)、[全部23项](registry/skills.json)、[来源导航](skills/brand-omni-growth-expert/references/package-index.md)。
+详见 [架构](docs/ARCHITECTURE.md)、[业务路由](skills/brand-omni-growth-expert/references/business-routing.md)、[全部24项](registry/skills.json)、[来源导航](skills/brand-omni-growth-expert/references/package-index.md)。
 
 ## 新电脑安装
 
@@ -31,7 +35,7 @@ python scripts/manage.py doctor
 
 也可以对Codex说：**“按照这个仓库的AGENTS和README，安装整套品牌增长技能，检查结果；连接器缺什么单独告诉我。”**
 
-默认23项安装到用户的 `~/.agents/skills`。旧电脑已在 `~/.codex/skills` 使用同名技能时显式指定 `--target` 选择原目录，避免重复。只装总统筹/资料/复盘/维护可用 `--profile core`；单项 `--skill youzan-private-operations` 会补齐依赖。
+默认24项安装到用户的 `~/.agents/skills`。旧电脑已在 `~/.codex/skills` 使用同名技能时显式指定 `--target` 选择原目录，避免重复。只装总统筹/资料/复盘/维护可用 `--profile core`；单项 `--skill youzan-private-operations` 会补齐依赖。
 
 已有同名未托管文件会阻止覆盖；审查后才用 `--adopt-existing` 纳管并备份。已受管但本地修改过的文件也不会被强覆盖。克隆本身不会执行安装。当前会话未发现新技能时开启新对话或重载客户端；安装和原生加载须分别核验。
 
@@ -68,6 +72,6 @@ python scripts/manage.py rollback --transaction <安装回执中的transaction>
 
 ## 公开范围
 
-本版完整提供23项通用技能、自有工程/模板和专业方法；来源目录是导航，**不包含旧版私有原文全集、真实品牌项目、客户资料、凭据或未核清再分发的第三方全文**。旧完整私有历史另行保留。需要专有资料时从用户已授权WorkBuddy/中台或可访问原项目读取，拿不到就明确缺项，不能声称目录卡就是专家全文。
+本版完整提供24项通用技能、自有工程/模板和专业方法；来源目录是导航，**不包含旧版私有原文全集、真实品牌项目、客户资料、凭据或未核清再分发的第三方全文**。旧完整私有历史另行保留。需要专有资料时从用户已授权WorkBuddy/中台或可访问原项目读取，拿不到就明确缺项，不能声称目录卡就是专家全文。
 
 第三方代码、样片、字体、音乐、人物、数据与云服务各自核使用条件；本仓公开可访问不替代第三方授权，也不承诺经营效果。详见 [公开范围与来源](docs/PUBLIC-DISTRIBUTION.md) 和 [验收边界](docs/VALIDATION.md)。曾克隆旧私有版的电脑应保留旧目录另克隆新版，避免把旧完整历史推到公开仓。

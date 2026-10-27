@@ -1,0 +1,6 @@
+interface:
+  display_name: "安装与更新整套系统"
+  short_description: "用 Docker 安装或更新中台与配套技能，验证连接和数据"
+  default_prompt: "使用 $00-omni-system-setup 在这台电脑安装或更新 AI 全域运营系统，并验证结果。"
+policy:
+  allow_implicit_invocation: true
