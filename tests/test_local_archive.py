@@ -61,6 +61,12 @@ class LocalArchiveTests(unittest.TestCase):
         init=subprocess.run([sys.executable,'-X','utf8',str(existing),'init','--root',str(task/'内容项目数据'),'--brand','品牌A'],capture_output=True,text=True,encoding='utf-8')
         self.assertEqual(init.returncode,0,init.stderr)
         self.assertTrue((task/'内容项目数据'/'project.json').is_file())
+    def test_content_sections_route_to_their_own_folder(self):
+        for section in archive.CONTENT_SECTIONS:
+            with self.subTest(section=section):
+                task,_=archive.build(self.root,'douyin','project','本次任务','20261027',section=section)
+                self.assertEqual(task.relative_to(self.root).parts,('公域获客','内容获客','抖音视频号',section,'项目','本次任务'))
+        with self.assertRaises(ValueError):archive.build(self.root,'douyin','work','作品','20261027',section='采集数据')
     def test_reject_unsafe_and_bad_dates(self):
         for name in ('../别的品牌','..','a/b','CON','a.','a\\b'):
             self.assertNotEqual(self.run_init('--area','douyin','--mode','work','--name',name).returncode,0)

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "1.11.0",
+  "version": "1.11.1",
   "repository": "https://github.com/murals-welders-0t-87622/ai-omni-ops-skills",
   "skills": [
     {
@@ -63,7 +63,7 @@
     {
       "id": "brand-omni-growth-expert",
       "path": "skills/brand-omni-growth-expert",
-      "version": "3.0.3",
+      "version": "3.0.4",
       "dependencies": [],
       "kind": "orchestrator",
       "description": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。",

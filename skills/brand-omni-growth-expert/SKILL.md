@@ -2,7 +2,7 @@
 name: brand-omni-growth-expert
 description: 统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。
 metadata:
-  version: "3.0.3"
+  version: "3.0.4"
 ---
 
 # 品牌全域增长策略专家团 · 总统筹

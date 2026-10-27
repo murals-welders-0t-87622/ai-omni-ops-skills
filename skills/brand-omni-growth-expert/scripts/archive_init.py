@@ -24,6 +24,7 @@ AREAS = {
     'taobao': (('电商板块', '淘宝天猫运营'), ('店铺数据', '战略目标', '经营策略', '商品内容', '执行记录', '经营复盘')),
 }
 CONTENT = {'douyin', 'xiaohongshu', 'wechat'}
+CONTENT_SECTIONS = ('采集数据', '营销策划方案', '营销日历', '创作素材', '每日计划', '每周复盘', '策略优化记录', '数字人', '自动化应用', '作品拆解')
 RESERVED = re.compile(r'^(CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9])(?:\..*)?$', re.I)
 
 def is_link_or_junction(path):
@@ -45,13 +46,17 @@ def day(value):
     dt.datetime.strptime(value, '%Y%m%d')
     return value
 
-def build(root, area, mode, name, date, end=None):
+def build(root, area, mode, name, date, end=None, section=None):
     root = Path(root).expanduser()
     if is_link_or_junction(root) or not root.is_dir():
         raise ValueError('品牌根目录必须是已存在的普通目录')
     root = root.resolve(strict=True)
     component(name)
     base, folders = AREAS[area]
+    if section:
+        if area not in CONTENT or section not in CONTENT_SECTIONS or mode == 'work':
+            raise ValueError('子栏目仅适用于渠道的专项或周期任务')
+        base = (*base, section)
     if mode == 'work':
         if area not in CONTENT:
             raise ValueError('作品模式仅用于抖音视频号、小红书或公众号')
@@ -84,10 +89,11 @@ def main():
     parser.add_argument('--name', required=True, help='作品或任务名称，不包含路径')
     parser.add_argument('--date', default=dt.date.today().strftime('%Y%m%d'), help='作品日期或周期开始，YYYYMMDD')
     parser.add_argument('--end', help='周期结束，YYYYMMDD')
+    parser.add_argument('--section', choices=CONTENT_SECTIONS, help='内容渠道的专项子栏目')
     parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args()
     try:
-        task, dirs = build(args.brand_root, args.area, args.mode, args.name, args.date, args.end)
+        task, dirs = build(args.brand_root, args.area, args.mode, args.name, args.date, args.end, args.section)
         new_dirs = [str(p) for p in dirs if not p.exists()]
         if not args.dry_run:
             for directory in dirs:
