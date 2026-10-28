@@ -61,7 +61,7 @@ python scripts/manage.py doctor
 
 本次视频教程补入按用途选视觉/绘制/引擎、Remotion与真实/生成媒体混合、统一声画时钟、稳定随机/投影、字体/解码/短段性能及Windows恢复。现有Remotion方法继续保留；新路线按验证状态使用，未把阅读教程当作全部成片已实测。 后续已真实完成白板、动态数据、3D概念商品和国风水墨四种工艺练习；具体已验/未验及可复用纠错见 [真实出样方法](skills/dynamic-video-craft/references/sample-validation.md)，不外推其他路线或经营效果。见 [来源采用记录](registry/learning-sources.json)。
 
-新增 [MotionGit/Lemo风格与模板使用](skills/dynamic-video-craft/references/template-sources.md)：103项来源索引、官方.motion读取/许可分离、纸雕科普与中文旁白方法。已经真实制作原创纸雕样片，未把公开预览冒称模板已下载。
+新增 [MotionGit/Lemo风格与模板使用](skills/dynamic-video-craft/references/template-sources.md)：MotionGit与Lemo来源索引、官方.motion读取/许可分离、纸雕科普与中文旁白方法。已经真实制作原创纸雕样片，未把公开预览冒称模板已下载。
 
 ## 更新、验证与回退
 
@@ -81,3 +81,5 @@ python scripts/manage.py rollback --transaction <安装回执中的transaction>
 本版完整提供25项通用技能、自有工程/模板和专业方法；来源目录是导航，**不包含旧版私有原文全集、真实品牌项目、客户资料、凭据或未核清再分发的第三方全文**。旧完整私有历史另行保留。需要专有资料时从用户已授权WorkBuddy/中台或可访问原项目读取，拿不到就明确缺项，不能声称目录卡就是专家全文。
 
 第三方代码、样片、字体、音乐、人物、数据与云服务各自核使用条件；本仓公开可访问不替代第三方授权，也不承诺经营效果。详见 [公开范围与来源](docs/PUBLIC-DISTRIBUTION.md) 和 [验收边界](docs/VALIDATION.md)。曾克隆旧私有版的电脑应保留旧目录另克隆新版，避免把旧完整历史推到公开仓。
+
+MotionGit 官方模板入口及可获取状态已更新至视频技能目录；官网个人包含账号 Key，应保留本机，各用户使用自己的账号获取。目录不代表模板已下载或可商用。

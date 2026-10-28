@@ -1,8 +1,8 @@
 ---
 name: dynamic-video-craft
-description: 根据产品网址、截图、文案或配音制作 Shotcraft / Talkcraft 风格的动态视频：真实页面的 2.5D 运镜、动态文字、数据演绎、旁白对齐和镜头承接。用于产品宣传片、配音解说片，以及按这两个画廊的卡名复刻单镜头；默认用 Remotion 交付 MP4 和可编辑工程，不用于仅加普通字幕或生成真人数字人。
+description: 制作品牌、产品宣传和知识讲解动态视频；按需求检索 MotionGit 模板、Lemo 风格及 Shotcraft / Talkcraft 镜头，核查模板获取和素材许可，制作预览与可编辑成片。
 metadata:
-  version: "1.2.2"
+  version: "1.2.3"
 ---
 
 统一技能库接手时，先读 [共同执行约定](../brand-omni-growth-expert/references/runtime-contract.md)，引用有效品牌策略；本领域保留下面完整专业方法。来源原文/品牌例子不是全局权限或固定经营参数。
@@ -10,7 +10,7 @@ metadata:
 
 # 动态视频导演
 
-需要MotionGit模板、Lemo风格或纸雕科普时，先查 [风格与模板来源](references/template-sources.md)；纸层材质、机制动画、中文旁白和实际验收看 [层叠纸雕科普](references/layered-paper.md)。103条为来源索引，非103项已安装能力；个人包和再分发受各自许可约束。
+需要MotionGit模板、Lemo风格或纸雕科普时，先查 [风格与模板来源](references/template-sources.md)；纸层材质、机制动画、中文旁白和实际验收看 [层叠纸雕科普](references/layered-paper.md)。目录是来源索引，不等于已安装能力；个人包和再分发受各自许可约束。
 
 用户要看样片或需要帧定位、数值、字体与音轨验收时，按 [真实出样与纠错](references/sample-validation.md) 推进；样片须实际渲染，方法说明和工程不替代MP4。
 

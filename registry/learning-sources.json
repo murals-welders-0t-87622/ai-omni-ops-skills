@@ -565,6 +565,25 @@
         "固定阈值保证效果"
       ],
       "verification": "文件与结构校验；未运行来源项目、未在真实品牌上测试效果。"
+    },
+    {
+      "id": "motiongit-catalog-20261028",
+      "kind": "official-catalog",
+      "title": "MotionGit 官方模板与作者公开合集",
+      "url": "https://github.com/motiontemplates/all",
+      "readAt": "2026-10-28",
+      "coverage": "机器读取作者 catalog.json 的72条模板、1个附加画幅和1条仅预览项目；官网目录当前44项，数量与合集不同。逐包许可及是否可以下载未全部核实。",
+      "status": "catalog-index",
+      "adoptions": [
+        "skills/dynamic-video-craft/assets/style-sources.json",
+        "skills/dynamic-video-craft/references/template-sources.md"
+      ],
+      "notAdopted": [
+        "个人包内账号 Key",
+        "未经逐项核清许可的模板代码、音乐及字体",
+        "将索引等同已下载或已商业授权"
+      ],
+      "verification": "目录结构、来源链接、单元测试；未将目录阅读当作模板执行或商业授权。"
     }
   ]
 }

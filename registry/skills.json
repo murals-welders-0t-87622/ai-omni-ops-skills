@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "1.12.1",
+  "version": "1.12.2",
   "repository": "https://github.com/murals-welders-0t-87622/ai-omni-ops-skills",
   "skills": [
     {
@@ -116,12 +116,12 @@
     {
       "id": "dynamic-video-craft",
       "path": "skills/dynamic-video-craft",
-      "version": "1.2.2",
+      "version": "1.2.3",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
       "kind": "domain",
-      "description": "根据产品网址、截图、文案或配音制作 Shotcraft / Talkcraft 风格的动态视频：真实页面的 2.5D 运镜、动态文字、数据演绎、旁白对齐和镜头承接。用于产品宣传片、配音解说片，以及按这两个画廊的卡名复刻单镜头；默认用 Remotion 交付 MP4 和可编辑工程，不用于仅加普通字幕或生成真人数字人。",
+      "description": "制作品牌、产品宣传和知识讲解动态视频；按需求检索 MotionGit 模板、Lemo 风格及 Shotcraft / Talkcraft 镜头，核查模板获取和素材许可，制作预览与可编辑成片。",
       "status": "packaged-not-business-accepted",
       "upstreamVersion": "1.0.0"
     },
