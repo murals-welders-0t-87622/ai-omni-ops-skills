@@ -24,10 +24,25 @@ class InstallTests(unittest.TestCase):
         result=self.install();self.assertEqual(result['changed'],2);self.assertTrue((self.target/'chief/SKILL.md').exists());self.assertEqual(self.install()['status'],'unchanged')
     def test_dry_run_writes_nothing(self):
         self.assertTrue(self.install(dry=True)['dryRun']);self.assertFalse(self.target.exists())
-    def test_local_change_blocks_whole_update(self):
-        self.install();(self.target/'domain/SKILL.md').write_text('local',encoding='utf-8');before=(self.target/manage.STATE).read_bytes()
-        with self.assertRaisesRegex(ValueError,'Local or unmanaged'):self.install()
-        self.assertEqual(before,(self.target/manage.STATE).read_bytes());self.assertEqual((self.target/'domain/SKILL.md').read_text(),'local')
+    def test_local_and_remote_disjoint_changes_merge_and_remain_on_next_update(self):
+        self.install(); (self.target/'domain/SKILL.md').write_text('local',encoding='utf-8')
+        (self.repo/'skills/domain/extra.md').write_text('upstream',encoding='utf-8'); self.refresh()
+        result=self.install(); self.assertEqual(result['status'],'installed')
+        self.assertEqual((self.target/'domain/SKILL.md').read_text(),'local')
+        self.assertEqual((self.target/'domain/extra.md').read_text(),'upstream')
+        (self.repo/'skills/domain/extra.md').write_text('upstream 2',encoding='utf-8'); self.refresh(); self.install()
+        self.assertEqual((self.target/'domain/SKILL.md').read_text(),'local')
+        self.assertEqual((self.target/'domain/extra.md').read_text(),'upstream 2')
+    def test_overlapping_changes_block_without_writes(self):
+        self.install(); (self.target/'domain/SKILL.md').write_text('local',encoding='utf-8')
+        (self.repo/'skills/domain/SKILL.md').write_text('remote',encoding='utf-8'); self.refresh()
+        before=(self.target/manage.STATE).read_bytes()
+        with self.assertRaisesRegex(ValueError,'Overlapping'): self.install()
+        self.assertEqual(before,(self.target/manage.STATE).read_bytes()); self.assertEqual((self.target/'domain/SKILL.md').read_text(),'local')
+    def test_local_deletion_preserved_and_upstream_deletion_conflict(self):
+        (self.repo/'skills/domain/extra.md').write_text('base',encoding='utf-8'); self.refresh(); self.install()
+        (self.target/'domain/extra.md').unlink(); (self.repo/'skills/domain/SKILL.md').write_text('remote',encoding='utf-8'); self.refresh(); self.install()
+        self.assertFalse((self.target/'domain/extra.md').exists()); self.assertEqual((self.target/'domain/SKILL.md').read_text(),'remote')
     def test_unmanaged_requires_review_and_keeps_backup(self):
         (self.target/'domain').mkdir(parents=True);(self.target/'domain/custom.txt').write_text('keep',encoding='utf-8')
         with self.assertRaises(ValueError):self.install()

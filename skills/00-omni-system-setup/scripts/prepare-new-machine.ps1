@@ -12,7 +12,7 @@ if (-not (Test-Path -LiteralPath (Join-Path $source 'docker/docker-compose.ontol
 if ($runtime -eq [IO.Path]::GetPathRoot($runtime) -or $runtime.TrimEnd('\') -eq $env:USERPROFILE.TrimEnd('\')) { throw 'Choose a dedicated runtime directory.' }
 if ($source.TrimEnd('\') -eq $runtime.TrimEnd('\') -or $runtime.StartsWith($source.TrimEnd('\')+'\',[StringComparison]::OrdinalIgnoreCase)) { throw 'Runtime must stay outside source.' }
 if (Test-Path -LiteralPath $runtime) { throw 'Runtime already exists. Inspect/reuse or choose a new directory; do not replace keys.' }
-foreach ($name in @('LAB_DATABASE_PASSWORD','LAB_AUTH_TOKEN_SECRET','LAB_INSTALL_TOKEN_SECRET','LAB_OPERATOR_PASSWORD','LAB_APP_RUNTIME_MODE','WORKBUDDY_EXPERT_SOURCE_HOST_PATH','EXPERT_CONFIG_WRITE_ENABLED','EXPERT_CONFIG_LOCAL_WRITEBACK_EXECUTOR_ENABLED')) {
+foreach ($name in @('LAB_DATABASE_PASSWORD','LAB_AUTH_TOKEN_SECRET','LAB_INSTALL_TOKEN_SECRET','LAB_OPERATOR_PASSWORD','LAB_APP_RUNTIME_MODE','INSTALL_LOCAL_ASR','LOCAL_ASR_PRELOAD_WHISPER_MODEL','WHISPER_MODEL_NAME','WORKBUDDY_EXPERT_SOURCE_HOST_PATH','EXPERT_CONFIG_WRITE_ENABLED','EXPERT_CONFIG_LOCAL_WRITEBACK_EXECUTOR_ENABLED')) {
   if ([Environment]::GetEnvironmentVariable($name,'Process')) { throw "Inherited $name would override the new env file. Inspect and isolate this installation process first; do not change global environment values." }
 }
 foreach ($name in @('docker')) { if (-not (Get-Command $name -ErrorAction SilentlyContinue)) { throw "Required tool missing: $name" } }
@@ -39,7 +39,7 @@ $lines=foreach($key in @('LAB_DATABASE_PASSWORD','LAB_AUTH_TOKEN_SECRET','LAB_IN
   $secret=[Convert]::ToHexString([Security.Cryptography.RandomNumberGenerator]::GetBytes(32)).ToLowerInvariant()
   "$key=$secret"
 }
-$lines+=@('LAB_APP_RUNTIME_MODE=standard','INSTALL_LOCAL_OCR=1','INSTALL_LOCAL_ASR=0','EXPERT_CONFIG_WRITE_ENABLED=0','EXPERT_CONFIG_LOCAL_WRITEBACK_EXECUTOR_ENABLED=0',('WORKBUDDY_EXPERT_SOURCE_HOST_PATH='+$empty.Replace('\','/')))
+$lines+=@('LAB_APP_RUNTIME_MODE=standard','INSTALL_LOCAL_OCR=1','INSTALL_LOCAL_ASR=1','EXPERT_CONFIG_WRITE_ENABLED=0','EXPERT_CONFIG_LOCAL_WRITEBACK_EXECUTOR_ENABLED=0',('WORKBUDDY_EXPERT_SOURCE_HOST_PATH='+$empty.Replace('\','/')))
 [IO.File]::WriteAllText((Join-Path $runtime 'lab.env'),($lines -join "`n")+"`n",[Text.UTF8Encoding]::new($false))
 $mount=$empty.Replace('\','/').Replace("'","''")
 $override=@"

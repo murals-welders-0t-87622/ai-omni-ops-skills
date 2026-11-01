@@ -56,9 +56,9 @@
         "prompt",
         "review"
       ],
-      "bytes": 3737,
-      "sha256": "49c2b702767aacfaf2a0e47cf0451370a540cde1522b0f9f3044a10d5bdcc3e1",
-      "lines": 41,
+      "bytes": 6624,
+      "sha256": "2ddf996f54a9947ef79c97987985efa8fcc7fe948456dccec1d8849b3b4c30ee",
+      "lines": 55,
       "headings": [
         {
           "line": 1,
@@ -70,18 +70,22 @@
         },
         {
           "line": 13,
-          "title": "短剧路线"
-        },
-        {
-          "line": 21,
-          "title": "旅游反差路线"
+          "title": "产品卖点驱动的创意广告"
         },
         {
           "line": 27,
+          "title": "短剧路线"
+        },
+        {
+          "line": 35,
+          "title": "旅游反差路线"
+        },
+        {
+          "line": 41,
           "title": "时长与声音一起写"
         },
         {
-          "line": 33,
+          "line": 47,
           "title": "自检"
         }
       ]
@@ -97,9 +101,9 @@
         "prompt",
         "review"
       ],
-      "bytes": 3191,
-      "sha256": "8d01ef758ac856957fd212a8c30f7850e2586818b7fef2414f13a1ee2198ac42",
-      "lines": 38,
+      "bytes": 4397,
+      "sha256": "d843eb95dd14c46676162a7038b3f7a28a4d5f673df59085459372d176fad7fe",
+      "lines": 44,
       "headings": [
         {
           "line": 1,
@@ -114,15 +118,15 @@
           "title": "原生声音优先检查"
         },
         {
-          "line": 19,
+          "line": 25,
           "title": "审核矩阵"
         },
         {
-          "line": 30,
+          "line": 36,
           "title": "问题如何返修"
         },
         {
-          "line": 34,
+          "line": 40,
           "title": "最终交付"
         }
       ]
@@ -138,9 +142,9 @@
         "prompt",
         "review"
       ],
-      "bytes": 4557,
-      "sha256": "248e02bc1852f3e45010f1a1321938f2eb2eb21508739c48fd4dfe1ae17ed7f3",
-      "lines": 55,
+      "bytes": 5079,
+      "sha256": "87f8018036e32a7e2cb00749a516e4d9ae2c95278cf55029ff6c8445266bea3c",
+      "lines": 57,
       "headings": [
         {
           "line": 1,
@@ -159,11 +163,11 @@
           "title": "从工程到真实调用"
         },
         {
-          "line": 37,
+          "line": 39,
           "title": "状态与重复费用"
         },
         {
-          "line": 49,
+          "line": 51,
           "title": "适配LocalMiniDrama"
         }
       ]
@@ -221,9 +225,9 @@
         "prompt",
         "review"
       ],
-      "bytes": 4998,
-      "sha256": "890f3323e903c81dd91da655885dddb55cafc0f423df3feb6deccd325bb242fe",
-      "lines": 64,
+      "bytes": 5356,
+      "sha256": "61638d16c653664a5e3ed84315ecafbfad4d05a1c22f1d183a2a97f1e7e76944",
+      "lines": 66,
       "headings": [
         {
           "line": 1,
@@ -242,15 +246,15 @@
           "title": "数据关系"
         },
         {
-          "line": 38,
+          "line": 40,
           "title": "状态与授权"
         },
         {
-          "line": 44,
+          "line": 46,
           "title": "关键命令"
         },
         {
-          "line": 60,
+          "line": 62,
           "title": "改动与恢复"
         }
       ]
@@ -266,9 +270,9 @@
         "prompt",
         "review"
       ],
-      "bytes": 4787,
-      "sha256": "97f7dde8a1f9b4b1ea8a70b2493f62802f595b8652608da9b184135737160a4f",
-      "lines": 58,
+      "bytes": 7344,
+      "sha256": "4d7a6f73c1844f8bf8ba122baa8288bcbad624818a7a50a657ebbcc49efc12c0",
+      "lines": 74,
       "headings": [
         {
           "line": 1,
@@ -292,11 +296,23 @@
         },
         {
           "line": 45,
+          "title": "创意变化与连续性"
+        },
+        {
+          "line": 51,
           "title": "短片与单次生成时长"
         },
         {
-          "line": 49,
+          "line": 55,
           "title": "常见失误"
+        },
+        {
+          "line": 66,
+          "title": "第一人称沉浸视角"
+        },
+        {
+          "line": 72,
+          "title": "情绪转折和克制表演"
         }
       ]
     },

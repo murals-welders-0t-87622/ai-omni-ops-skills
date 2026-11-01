@@ -37,7 +37,9 @@ python scripts/manage.py doctor
 
 默认25项安装到用户的 `~/.agents/skills`。旧电脑已在 `~/.codex/skills` 使用同名技能时显式指定 `--target` 选择原目录，避免重复。只装总统筹/资料/复盘/维护可用 `--profile core`；单项 `--skill youzan-private-operations` 会补齐依赖。
 
-已有同名未托管文件会阻止覆盖；审查后才用 `--adopt-existing` 纳管并备份。已受管但本地修改过的文件也不会被强覆盖。克隆本身不会执行安装。当前会话未发现新技能时开启新对话或重载客户端；安装和原生加载须分别核验。
+已有同名未托管文件会阻止覆盖；审查后才用 `--adopt-existing` 纳管并备份。受管技能按上次发布基准、本地和新版本逐文件比较：仅一方修改或双方相同的内容可安全合并，双方同时修改同一文件则保留本地并停止，让 Codex 比较、人工审读后处理；这不是自动理解语义的行级合并。本地新增技能不受影响。克隆本身不会执行安装。当前会话未发现新技能时开启新对话或重载客户端；安装和原生加载须分别核验。
+
+在用户实际开展品牌业务的工作区，Codex 可执行 `python skills/00-omni-system-setup/scripts/configure-workspace.py <业务工作区>`，仅追加技能路由指引并保留原 AGENTS.md；已有标记时不自动覆盖。工作区不明确时先定位实际项目，不修改无关目录。是否自动选择技能及各阶段结果仍需真实业务验证。
 
 中台MCP与所需有赞、3Chat、千问、豆包、生成或分发服务按本品牌独立连接，凭据不进Git。按 [连接说明](docs/CONNECTIONS.md) 和 [依赖清单](registry/external-dependencies.json) 核实真实工具，缺失能力不能靠技能文字补成已可用。安装位置与发现机制参见 [OpenAI官方技能文档](https://learn.chatgpt.com/docs/build-skills)。
 

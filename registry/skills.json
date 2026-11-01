@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "version": "1.12.2",
+  "version": "1.12.110",
   "repository": "https://github.com/murals-welders-0t-87622/ai-omni-ops-skills",
   "skills": [
     {
       "id": "00-omni-system-setup",
       "path": "skills/00-omni-system-setup",
-      "version": "1.1.1",
+      "version": "1.1.5",
       "dependencies": [],
       "kind": "governance",
       "description": "在 Windows 电脑通过 Docker 安装或安全更新 AI 全域运营中台及配套 Codex 技能，支持首装识别、备份回退、品牌 MCP 和实际验收；用于整套系统安装或升级，不用于运营业务执行。",
@@ -15,7 +15,7 @@
     {
       "id": "ai-commerce-video",
       "path": "skills/ai-commerce-video",
-      "version": "2.0.4",
+      "version": "2.0.7",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -27,7 +27,7 @@
     {
       "id": "ai-sales-operations",
       "path": "skills/ai-sales-operations",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -39,7 +39,7 @@
     {
       "id": "brand-content-growth",
       "path": "skills/brand-content-growth",
-      "version": "1.0.4",
+      "version": "1.0.10",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -51,7 +51,7 @@
     {
       "id": "brand-creative-video",
       "path": "skills/brand-creative-video",
-      "version": "1.1.2",
+      "version": "1.1.11",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -63,7 +63,7 @@
     {
       "id": "brand-omni-growth-expert",
       "path": "skills/brand-omni-growth-expert",
-      "version": "3.0.4",
+      "version": "3.0.28",
       "dependencies": [],
       "kind": "orchestrator",
       "description": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。",
@@ -72,7 +72,7 @@
     {
       "id": "content-decomposition",
       "path": "skills/content-decomposition",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -94,7 +94,7 @@
     {
       "id": "creative-production-router",
       "path": "skills/creative-production-router",
-      "version": "1.2.2",
+      "version": "1.2.11",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -105,7 +105,7 @@
     {
       "id": "douyin-operations",
       "path": "skills/douyin-operations",
-      "version": "1.0.2",
+      "version": "1.1.4",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -116,7 +116,7 @@
     {
       "id": "dynamic-video-craft",
       "path": "skills/dynamic-video-craft",
-      "version": "1.2.3",
+      "version": "1.2.60",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -128,7 +128,7 @@
     {
       "id": "ecommerce-detail-creative",
       "path": "skills/ecommerce-detail-creative",
-      "version": "1.4.2",
+      "version": "1.4.3",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -140,7 +140,7 @@
     {
       "id": "geo-growth-operations",
       "path": "skills/geo-growth-operations",
-      "version": "1.0.2",
+      "version": "1.0.4",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -151,7 +151,7 @@
     {
       "id": "influencer-cooperation",
       "path": "skills/influencer-cooperation",
-      "version": "1.0.2",
+      "version": "1.1.0",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -218,7 +218,7 @@
     {
       "id": "public-lead-operations",
       "path": "skills/public-lead-operations",
-      "version": "1.0.2",
+      "version": "1.1.0",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -241,7 +241,7 @@
     {
       "id": "tencent-ads-operations",
       "path": "skills/tencent-ads-operations",
-      "version": "1.0.2",
+      "version": "1.1.0",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -252,7 +252,7 @@
     {
       "id": "wechat-content-operations",
       "path": "skills/wechat-content-operations",
-      "version": "1.0.2",
+      "version": "1.1.1",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -263,7 +263,7 @@
     {
       "id": "xiaohongshu-operations",
       "path": "skills/xiaohongshu-operations",
-      "version": "1.0.2",
+      "version": "1.1.0",
       "dependencies": [
         "brand-omni-growth-expert"
       ],

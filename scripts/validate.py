@@ -8,6 +8,13 @@ def files(root=ROOT):
     return [p for p in root.rglob('*') if p.is_file() and not any(x in IGNORE for x in p.relative_to(root).parts) and p.suffix!='.pyc' and p.name!='release-manifest.json']
 def h(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def manifest(root=ROOT):return {'schemaVersion':1,'version':json.loads((root/'registry/skills.json').read_text(encoding='utf-8'))['version'],'files':{p.relative_to(root).as_posix():h(p) for p in sorted(files(root))}}
+def entry_version_errors(name,text,expected):
+    parts=text.split('---',2)
+    if len(parts)<3 or parts[0].strip():return ['Invalid frontmatter version: '+name]
+    matches=re.findall(r'^  version:\s*["\']?([^"\'\s]+)["\']?\s*$',parts[1],re.M)
+    if len(matches)!=1:return ['Missing or ambiguous entry version: '+name]
+    if matches[0]!=str(expected):return ['Entry version differs from registry: '+name]
+    return []
 def architecture_errors(reg,lock):
     errors=[]
     expected={'layers':lock['layers'],'businessFlow':lock['businessFlow']}
@@ -33,6 +40,7 @@ def validate(root=ROOT):
         if not d.is_relative_to((root/'skills').resolve()):errors.append('Path escape: '+n);continue
         f=d/'SKILL.md';s=f.read_text(encoding='utf-8') if f.exists() else '';visit(n)
         if not re.match(r'---\s*\nname:\s*'+re.escape(n)+r'\s*\n',s) or not re.search(r'^description:\s*\S',s,re.M):errors.append('Invalid frontmatter: '+n)
+        errors+=entry_version_errors(n,s,r['version'])
         if not (d/'agents/openai.yaml').exists():errors.append('Missing UI metadata: '+n)
         if 'allow_implicit_invocation: false' in (d/'agents/openai.yaml').read_text(encoding='utf-8'):errors.append('Implicit selection disabled: '+n)
         # Entry points must have usable local references. Source archives keep their original absent media links.

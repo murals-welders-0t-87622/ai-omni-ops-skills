@@ -18,4 +18,10 @@ class ArchitectureTests(unittest.TestCase):
         self.reg['businessFramework']['businessFlow'].reverse();self.assertTrue(v.architecture_errors(self.reg,self.lock))
     def test_moving_entrypoint_is_blocked(self):
         self.reg['skills'][0]['path']='skills/renamed';self.assertTrue(v.architecture_errors(self.reg,self.lock))
+    def test_entry_version_must_match_registry(self):
+        text='---\nname: demo\nmetadata:\n  version: "1.2.3"\n---\n'
+        self.assertEqual(v.entry_version_errors('demo',text,'1.2.3'),[])
+        self.assertTrue(v.entry_version_errors('demo',text,'1.2.4'))
+        self.assertTrue(v.entry_version_errors('demo',text.replace('  version: "1.2.3"',''),'1.2.3'))
+        self.assertTrue(v.entry_version_errors('demo',text.replace('  version: "1.2.3"','  version: "1.2.3"\n  version: "1.2.3"'),'1.2.3'))
 if __name__=='__main__':unittest.main()

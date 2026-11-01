@@ -49,6 +49,18 @@ def check_other_scopes(target,rows):
         for r in rows:
             if (c/r['id']/'SKILL.md').exists():warnings.append(str(c/r['id']))
     return warnings
+def merge_files(base,current,upstream):
+    """Three-way file-level merge; overlapping edits require review."""
+    result={}; conflicts=[]
+    for path in sorted(set(base)|set(current)|set(upstream)):
+        b=base.get(path); local=current.get(path); remote=upstream.get(path)
+        if local==b: chosen=remote
+        elif remote==b or local==remote: chosen=local
+        else:
+            conflicts.append(path); continue
+        if chosen is not None: result[path]=chosen
+    return result,conflicts
+
 def install(target,profile='all',names=None,dry=False,adopt=False,repo=REPO):
     release=release_check(repo);reg=read(repo/'registry/skills.json');rows=selection(reg,profile,names)
     target=target.expanduser().resolve()
@@ -58,12 +70,18 @@ def install(target,profile='all',names=None,dry=False,adopt=False,repo=REPO):
     for r in rows:
         if not (repo/r['path']).resolve().is_relative_to((repo/'skills').resolve()):raise ValueError('Source path escapes skills root')
         n=r['id'];dest=safe_child(target,n);current=digest(dest);expected=digest(repo/r['path']);prior=old['skills'].get(n)
+        result=expected; local_files=[]
         if current==expected:action='unchanged'
         elif current is None:action='install'
-        elif prior and current==prior['files']:action='update'
+        elif prior:
+            base=prior.get('baseFiles',prior['files'])
+            result,conflicts=merge_files(base,current,expected)
+            if conflicts:raise ValueError('Overlapping local and upstream changes; no files changed: '+n+' / '+', '.join(conflicts)+' (review and merge before updating)')
+            local_files=[p for p,h in result.items() if expected.get(p)!=h]
+            action='merge-local' if result!=expected else 'update'
         elif not prior and adopt:action='adopt-with-backup'
         else:raise ValueError('Local or unmanaged changes; no files changed: '+n+' (review first; --adopt-existing only for reviewed unmanaged copies)')
-        plans.append({'id':n,'action':action,'files':expected,'version':r['version'],'source':r['path']})
+        plans.append({'id':n,'action':action,'files':result,'baseFiles':expected,'localFiles':local_files,'version':r['version'],'source':r['path']})
     warnings=check_other_scopes(target,rows)
     if warnings and not dry:raise ValueError('Duplicate skills exist in another user scope; choose that existing scope with --target and review: '+', '.join(warnings))
     if dry:return {'dryRun':True,'target':str(target),'plan':[{k:v for k,v in p.items() if k not in {'files'}} for p in plans],'otherScopeDuplicates':warnings}
@@ -78,8 +96,14 @@ def install(target,profile='all',names=None,dry=False,adopt=False,repo=REPO):
         for p in changes:
             n=p['id'];stage=backup/'staged'/n;stage.parent.mkdir(exist_ok=True)
             shutil.copytree(repo/p['source'],stage,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
+            if p['action']=='merge-local':
+                local=safe_child(target,n)
+                for path in set(digest(stage))-set(p['files']): (stage/path).unlink()
+                for path in p['localFiles']:
+                    source=local/path; destination=stage/path
+                    destination.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(source,destination)
             if digest(stage)!=p['files']:raise ValueError('Staged copy mismatch: '+n)
-        for p in plans:journal['after']['skills'][p['id']]={'version':p['version'],'files':p['files'],'release':release['version']}
+        for p in plans:journal['after']['skills'][p['id']]={'version':p['version'],'files':p['files'],'baseFiles':p['baseFiles'],'release':release['version']}
         journal['status']='applying';write(backup/'transaction.json',journal)
         for p in changes:
             n=p['id'];dest=safe_child(target,n);had=dest.exists()
@@ -121,7 +145,8 @@ def doctor(target,repo=REPO):
     rows=[]
     for r in reg['skills']:
         current=digest(safe_child(target,r['id']));owned=state['skills'].get(r['id'])
-        rows.append({'id':r['id'],'status':'missing' if current is None else ('current' if current==digest(repo/r['path']) else ('managed-older' if owned and current==owned['files'] else 'local-changes'))})
+        status='missing' if current is None else ('current' if current==digest(repo/r['path']) else ('managed-with-local' if owned and current==owned['files'] and owned.get('baseFiles',owned['files'])!=owned['files'] else ('managed-older' if owned and current==owned['files'] else 'local-changes')))
+        rows.append({'id':r['id'],'status':status})
     return {'target':str(target),'skills':rows,'tools':{n:bool(shutil.which(n)) for n in ['python','git','gh','node','ffmpeg']},'businessConnections':'Not probed; install success is not MCP readiness or business acceptance.'}
 def main():
     p=argparse.ArgumentParser();p.add_argument('command',choices=['install','doctor','rollback']);p.add_argument('--target',type=Path,default=default_target());p.add_argument('--profile',default='all');p.add_argument('--skill',action='append');p.add_argument('--dry-run',action='store_true');p.add_argument('--adopt-existing',action='store_true');p.add_argument('--transaction')

@@ -2,7 +2,7 @@
 name: dynamic-video-craft
 description: 制作品牌、产品宣传和知识讲解动态视频；按需求检索 MotionGit 模板、Lemo 风格及 Shotcraft / Talkcraft 镜头，核查模板获取和素材许可，制作预览与可编辑成片。
 metadata:
-  version: "1.2.3"
+  version: "1.2.60"
 ---
 
 统一技能库接手时，先读 [共同执行约定](../brand-omni-growth-expert/references/runtime-contract.md)，引用有效品牌策略；本领域保留下面完整专业方法。来源原文/品牌例子不是全局权限或固定经营参数。
@@ -75,6 +75,8 @@ npm run render
 ```
 
 初始化参数 `--aspect portrait` 生成竖屏配置。模板含动态标题、数字、步骤和真实图片场景、相机、遮挡转场、字幕、旁白/BGM/SFX 声轨；它是工程骨架，不包含上游卡片实现。特殊镜头在此基础上编写。
+
+需要真人或数字人出镜时，此骨架不自带人物视频合成或人物字段校验；应按实际任务扩展工程或选择具备该能力的制作链路，不能仅添加 `host` 字段并把时间轴通过当成已出镜。生成数字人时通过[中台制作能力](../brand-omni-growth-expert/references/mcp-production-capabilities.md)发现当前可用应用与真实参数，按用户要求和授权使用。
 
 ## 验收与边界
 

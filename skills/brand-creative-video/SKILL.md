@@ -2,7 +2,7 @@
 name: brand-creative-video
 description: 为品牌制作有清楚剧情和服务价值的AI创意视频，覆盖研究、建项目、剧本、分镜、角色场景道具图片资产、图生视频提示词、生成任务、剪辑与验收。适用于品牌短剧、猫咪或古人等旅游反差创意及既有项目续做；也可只交脚本或提示词。按当前阶段取用通用方法与可核读原资料，以图片资产保持一致性，不把文字方案当成已生成的视频。
 metadata:
-  version: "1.1.2"
+  version: "1.1.11"
 ---
 
 统一技能库接手时，先读 [共同执行约定](../brand-omni-growth-expert/references/runtime-contract.md)，引用有效品牌策略；本领域保留下面完整专业方法。来源原文/品牌例子不是全局权限或固定经营参数。
@@ -61,6 +61,8 @@ python <技能>/scripts/library.py read --id <DOC-ID或案例ID> --start 1 --lin
 - 参考图、首帧、视频逐层检查；某一层变更，只标记依赖它的下游产物待复核。不要为修一个手势重做全片。
 
 当前附带的 RunningHub 应用 `2069739201603661825` 公开暴露单图片口、4—15秒时长。它不等同于官方手册中支持多模态的完整入口。当前参数快照见 [应用能力](references/provider-profiles/runninghub-seedance-mini.json)，制作时仍需刷新实际schema。
+
+调用中台制作能力时读取 [图像与视频能力接力](../brand-omni-growth-expert/references/mcp-production-capabilities.md)，以用户指定和实际应用节点为准。
 
 ## 执行与结果边界
 

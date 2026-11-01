@@ -20,7 +20,7 @@
 
 ## 1. 安装前检查与获取源码
 
-- 要求 Windows、Docker Desktop 使用 Linux 容器、PowerShell 7、Git、Python 3.10+、已安装并登录的 Codex；检查 Docker 引擎、可用内存和磁盘、网络、GitHub 登录及目录写权限。中台 Node/npm/Prisma 在镜像构建，不需要宿主机 Node 来启动中台；**电商按钮的宿主执行器另需 Node 和 Codex CLI**，见第 5 节。Docker 下载/本地媒体制作还依赖网络和按需组件。
+- 要求 Windows、Docker Desktop 使用 Linux 容器、PowerShell 7、Git、Python 3.10+、已安装并登录的 Codex；检查 Docker 引擎、可用内存和磁盘、网络、GitHub 登录及目录写权限。中台 Node/npm/Prisma 在镜像构建，不需要宿主机 Node 来启动中台；旧版如使用页面绑定执行器，再按第 5 节检查其依赖。Docker 下载/本地媒体制作还依赖网络和按需组件。
 - 公开中台仓和技能仓不需要 GitHub 仓库授权；仍需检查网络。公开版不含模型服务凭据和其他品牌的数据，需在目标机配置品牌、模型和按需第三方连接。不要索取密码、粘贴旧机凭据或关闭安全校验。
 - 克隆中台指定分支；若已经取得当前技能仓，直接复用该仓作为 `$SkillsPath`，不要重复克隆或因该目录存在而中止。以下是**两仓都尚未克隆**时的示例，路径按实际调整：
 
@@ -61,7 +61,7 @@ if (-not (Test-Path -LiteralPath (Join-Path $source 'docker/docker-compose.ontol
 if ($runtime -eq [IO.Path]::GetPathRoot($runtime) -or $runtime.TrimEnd('\') -eq $env:USERPROFILE.TrimEnd('\')) { throw 'Choose a dedicated runtime directory.' }
 if ($source.TrimEnd('\') -eq $runtime.TrimEnd('\') -or $runtime.StartsWith($source.TrimEnd('\')+'\',[StringComparison]::OrdinalIgnoreCase)) { throw 'Runtime must stay outside source.' }
 if (Test-Path -LiteralPath $runtime) { throw 'Runtime already exists. Inspect/reuse or choose a new directory; do not replace keys.' }
-foreach ($name in @('LAB_DATABASE_PASSWORD','LAB_AUTH_TOKEN_SECRET','LAB_INSTALL_TOKEN_SECRET','LAB_OPERATOR_PASSWORD','LAB_APP_RUNTIME_MODE','WORKBUDDY_EXPERT_SOURCE_HOST_PATH','EXPERT_CONFIG_WRITE_ENABLED','EXPERT_CONFIG_LOCAL_WRITEBACK_EXECUTOR_ENABLED')) {
+foreach ($name in @('LAB_DATABASE_PASSWORD','LAB_AUTH_TOKEN_SECRET','LAB_INSTALL_TOKEN_SECRET','LAB_OPERATOR_PASSWORD','LAB_APP_RUNTIME_MODE','INSTALL_LOCAL_ASR','LOCAL_ASR_PRELOAD_WHISPER_MODEL','WHISPER_MODEL_NAME','WORKBUDDY_EXPERT_SOURCE_HOST_PATH','EXPERT_CONFIG_WRITE_ENABLED','EXPERT_CONFIG_LOCAL_WRITEBACK_EXECUTOR_ENABLED')) {
   if ([Environment]::GetEnvironmentVariable($name,'Process')) { throw "Inherited $name would override the new env file. Inspect and isolate this installation process first; do not change global environment values." }
 }
 foreach ($name in @('docker')) { if (-not (Get-Command $name -ErrorAction SilentlyContinue)) { throw "Required tool missing: $name" } }
@@ -88,7 +88,7 @@ $lines=foreach($key in @('LAB_DATABASE_PASSWORD','LAB_AUTH_TOKEN_SECRET','LAB_IN
   $secret=[Convert]::ToHexString([Security.Cryptography.RandomNumberGenerator]::GetBytes(32)).ToLowerInvariant()
   "$key=$secret"
 }
-$lines+=@('LAB_APP_RUNTIME_MODE=standard','INSTALL_LOCAL_OCR=1','INSTALL_LOCAL_ASR=0','EXPERT_CONFIG_WRITE_ENABLED=0','EXPERT_CONFIG_LOCAL_WRITEBACK_EXECUTOR_ENABLED=0',('WORKBUDDY_EXPERT_SOURCE_HOST_PATH='+$empty.Replace('\','/')))
+$lines+=@('LAB_APP_RUNTIME_MODE=standard','INSTALL_LOCAL_OCR=1','INSTALL_LOCAL_ASR=1','EXPERT_CONFIG_WRITE_ENABLED=0','EXPERT_CONFIG_LOCAL_WRITEBACK_EXECUTOR_ENABLED=0',('WORKBUDDY_EXPERT_SOURCE_HOST_PATH='+$empty.Replace('\','/')))
 [IO.File]::WriteAllText((Join-Path $runtime 'lab.env'),($lines -join "`n")+"`n",[Text.UTF8Encoding]::new($false))
 $mount=$empty.Replace('\','/').Replace("'","''")
 $override=@"
@@ -117,6 +117,9 @@ $ComposeArgs = @('--project-name',$ProjectName,'--env-file',(Join-Path $RuntimeP
   '-f',(Join-Path $RuntimePath 'install.override.yml'))
 docker compose @ComposeArgs config --quiet
 if ($LASTEXITCODE -ne 0) { throw 'Compose 检查失败' }
+$AsrConfigCheck = Join-Path $SkillsPath 'skills/00-omni-system-setup/scripts/check-compose-asr.py'
+python $AsrConfigCheck -- @ComposeArgs
+if ($LASTEXITCODE -ne 0) { throw '本地转写的构建配置与运行配置不一致；先检查 ASR 配置' }
 foreach ($service in @('server','web','ingress')) {
   docker compose @ComposeArgs build $service
   if ($LASTEXITCODE -ne 0) { throw "构建失败：$service" }
@@ -132,9 +135,30 @@ docker compose @ComposeArgs ps -a
 - 确认 `db-init` 成功退出、数据库健康、server 健康、web/ingress 运行，打开本机网页并实测登录；检查 `http://127.0.0.1:23011/api/health`。有限等待后还不可用就查**本项目**日志并报告失败，不删除卷、不称成功。
 - 每次管理时重建同一组 `$ComposeArgs`。启动 `docker compose @ComposeArgs up -d`，停止 `docker compose @ComposeArgs stop`，查看 `docker compose @ComposeArgs ps -a`；不要操作其他 Docker 项目。默认只绑定本机回环地址，远程访问需另行设计授权。
 
+### 本地视频文案能力单独验收
+
+抖音/视频号采集的文案提取由 server 容器完成：需要视频可访问、容器内 FFmpeg、Python、`faster-whisper` 和与 `WHISPER_MODEL_NAME` 一致的模型。新机准备默认启用 `INSTALL_LOCAL_ASR=1`；首次构建须下载依赖和模型，会增加构建时间、镜像体积及识别时的 CPU/内存占用。构建模型名 `LOCAL_ASR_PRELOAD_WHISPER_MODEL` 必须与运行模型名一致，默认都是 `small`。应使用包含模型持久打包修复的中台源码；旧版仅把模型放在 Docker 构建缓存，构建成功不保证运行容器可离线读取。
+
+构建前使用同一组 `$ComposeArgs` 运行 `python $AsrConfigCheck -- @ComposeArgs`；脚本只输出相关模型配置及检查状态，不打印完整 Compose 配置或凭据。`asr_not_built` 表示构建参数未启用识别；`model_mismatch` 表示预装和运行模型不同；`configuration_unavailable` 表示配置解析失败或字段缺失，先核查目标实例与 Compose 版本。检查通过只代表配置一致，不代表模型已打包或实际转写通过。已有实例更新时，在备份、核实实例后，使用该实例的 Compose 参数做同样检查。
+
+实例启动后，对确认无误的 `$ComposeArgs` 执行只读检查，不输出环境文件或密钥：
+
+```powershell
+docker compose @ComposeArgs exec -T server node -e "const f=require('@ffmpeg-installer/ffmpeg');require('child_process').execFileSync(f.path,['-version'],{stdio:'ignore'});console.log('FFmpeg OK')"
+if ($LASTEXITCODE -ne 0) { throw '容器内 FFmpeg 未通过检查' }
+docker compose @ComposeArgs exec -T server python3 /app/scripts/check-local-asr.py
+if ($LASTEXITCODE -ne 0) { throw '本地识别组件或模型文件未就绪，请检查轻量诊断结果' }
+docker compose @ComposeArgs exec -T -e HF_HUB_OFFLINE=1 -e TRANSFORMERS_OFFLINE=1 server python3 -c "import os; from faster_whisper import WhisperModel; WhisperModel(os.getenv('WHISPER_MODEL_NAME','small'),device='cpu',compute_type='int8'); print('ASR offline model OK')"
+if ($LASTEXITCODE -ne 0) { throw '容器内本地识别依赖或离线模型未就绪；网页健康不能代替此检查' }
+```
+
+轻量诊断中 `runtime_unavailable` 表示识别组件无法加载，`model_unavailable_offline` 表示离线找不到配置模型，`model_files_incomplete` 表示必需文件缺失或为空；`model_files_present_not_loaded` 仅表示部分必要文件存在，不证明模型能够加载或识别。旧镜像可能还没有检查脚本，应先核对该实例版本，不能把脚本不存在当成模型不存在。以上离线加载仍不证明识别质量。再用已获使用授权的短视频样本，实际走采集或本地视频识别路径，核对识别文本并记录来源和结果；没有合适样本时标注未实测，不创建虚假业务记录。若下载受限、磁盘不足或模型加载失败，可先交付其他通过的功能，但必须明确视频文案功能未就绪和修复点，不把整套功能称为全部通过。
+
+已有安装不能重新执行新机初始化。先确认实际 Compose 项目、源码版本、环境文件、服务及在途任务，并备份数据库、素材和配置；用受控方式保留原镜像及配置，将本实例的 `INSTALL_LOCAL_ASR` 设为 `1`，确保构建使用已修复的 Dockerfile 且预装模型与运行模型一致，再只构建和更新该实例所需的 server 镜像/服务，避免运行数据库初始化或影响其他项目。完成依赖、离线模型、健康和真实样本检查；失败时保留日志并按事先验证的镜像、配置和数据库兼容方案回退。不要在运行容器里临时 `pip install` 后称修复完成：容器重建会丢失修改。
+
 ## 3. 安装或更新 Codex 技能
 
-- 在 `$SkillsPath` 使用当前仓库脚本。新机默认用户目录 `~/.agents/skills`；如果同一套已安装在 `~/.codex/skills`，使用安装器的 `--target` 指定原目录，避免两个作用域重复发现。先核是否存在用户自己的同名技能和本地修改；冲突时保留原文件，按安装器信息处理，**不能强制覆盖**。
+- 在 `$SkillsPath` 使用当前仓库脚本。新机默认用户目录 `~/.agents/skills`；如果同一套已安装在 `~/.codex/skills`，使用安装器的 `--target` 指定原目录，避免两个作用域重复发现。受管技能按上次发布基准、本地、新版本逐文件合并互不冲突的修改；同文件双向修改、未托管同名技能须保留并审查，不能强制覆盖。基准只有摘要时无法自动三方行级合并，由 Codex 读取旧来源及两份内容提出方案，不泄露用户资料。
 
 ```powershell
 Push-Location $SkillsPath
@@ -152,6 +176,7 @@ try {
 
 - 以上默认全部技能，安装器会按依赖安装；从预演和 doctor 实际结果确认数量及状态，以本次实际注册数量为准。安装器有事务备份；已有未托管技能仅在核对来源、备份和用户明确同意接管后使用 `--adopt-existing`。管理已有非默认目录时，以上各 `manage.py` 命令均加同一 `--target <已确认目录>`。
 - 记录安装回执中的 `transaction` 和目标目录。更新出错时先读目标目录 `.omni-skills-backups/<transaction>/transaction.json`；必要时依仓库 `README` 的 `python scripts/manage.py rollback --transaction <事务ID>` 回退，并保留本地修改。
+- 找到用户真正开展品牌业务的工作区后，以该目录作为参数运行 `python skills/00-omni-system-setup/scripts/configure-workspace.py <业务工作区>`，追加简短路由指引，保留已有 AGENTS.md。已有标记则检查内容是否适用，不擅自替换；不确定工作区时记录待配置。开启新对话后再分别验证工作区指引和技能发现；文件安装不等于自动调用成功。
 - 新建 Codex 对话或按客户端支持的方式重新加载，实际确认可以发现总统筹及电商等技能；未发现时单独排查，不能以 doctor 替代客户端加载验证。官方文档：[技能](https://learn.chatgpt.com/docs/build-skills)、[MCP](https://learn.chatgpt.com/docs/extend/mcp?surface=cli)。
 
 ## 4. B：已有系统的后续更新
@@ -169,7 +194,7 @@ try {
 
 - 由用户在新机中台创建或选择真实品牌，通过该品牌安装页面生成本机品牌 MCP 配置；默认本机地址 `http://127.0.0.1:23011/api/ai-control-center/mcp`。品牌 ID 和令牌必须来自**此机器此品牌**，按当前 Codex 官方支持方式增量配置；保留现有其他 MCP 服务。不要复制旧机 Token，不放进 Git、文档或聊天。按需重载后，真实验证身份、品牌资料、可用工具及一次只读调用。
 - 有赞、3Chat、豆包/巨量、千问淘宝/天猫、RunningHub 等需用户在新机分别授权或配置；逐项做只读验证，缺失列为待配置。仅技能安装不会赋予第三方接口权限。
-- 电商页面直接调用 Codex 的后台执行器运行在**宿主机**，不是技能文件，也不是 Docker Compose 服务。按当前中台仓 `integrations/commerce/executor/README.md`：检查宿主 Node、Codex CLI 登录、真实品牌 MCP、执行器可执行路径；为指定品牌使用本机安全的进程环境变量提供 Token，并以隐藏窗口启动该执行器、保存专属 PID。不要把 Token 放命令参数或输出日志。执行器目前不自动开机启动；需要用户明确要求才设置自启。检查心跳与一个用户授权、无额外费用的实际任务及版本回写；在线不等于图片/视频生成已验证。
+- 电商详情页按**实际安装版本**验收：对话交接版由用户在 Codex 对话中调用技能与品牌 MCP，不依赖页面绑定的宿主执行器；旧版若仍通过页面调用后台执行器，再根据该版本 `integrations/commerce/executor/README.md` 检查宿主 Node、Codex 登录、当前品牌授权和心跳。不得因旧说明为对话版额外安装或启动执行器。真实生成和版本回写需单独验收；在线不等于图片/视频生成成功。
 - 若用户只需要中台页面和技能，可在缺第三方授权或宿主执行器时先完成可用部分，并列出按钮不能执行的具体原因。图片、视频及商业发布以实际连接、费用和用户指定的操作为准。
 
 ## 6. 如用户需要迁移旧电脑的历史数据

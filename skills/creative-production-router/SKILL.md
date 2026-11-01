@@ -2,7 +2,7 @@
 name: creative-production-router
 description: 按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。
 metadata:
-  version: "1.2.2"
+  version: "1.2.11"
 ---
 
 # 创意制作调度
@@ -15,12 +15,28 @@ metadata:
 
 用户指定MotionGit、Lemo或层叠纸雕时，先到dynamic-video-craft的 [风格与模板检索](../dynamic-video-craft/references/template-sources.md) 按用途、画幅、真实下载状态和许可选路，仅读本期所需STYLE；不另增一层业务流程或批量安装103个入口。
 
+品牌海报、视觉系统、人像、社交画面或界面设计按 [品牌视觉与设计制作](references/visual-design-workflow.md) 接力。
+
+需要视频制作时按 [视频任务交接与恢复](references/production-handoff.md) 接收上游创作包、复用素材并记录作业。
+
+按需查阅 [纸艺、极简商品片、空间穿越与影视参考](references/visual-craft-patterns.md)，根据题材选择适用工艺。
+
+涉及中台生图、AI视频或数字人时读取 [中台制作能力](../brand-omni-growth-expert/references/mcp-production-capabilities.md)，按用户指定及实时工具选择。
+
+制作成果按[成果归档与回读](../brand-omni-growth-expert/references/archive-handoff.md)核对中台实际文件、归属和任务关联；先查已有记录，生成回执和外链不自动等于文件已入库。
+
 先判断终点是脚本、预览、素材、完整成片还是修订。商品带货交 ai-commerce-video；品牌剧情/创意交 brand-creative-video；页面/数据/解说动效交 dynamic-video-craft；数字人按库内真实工艺并发现当前数字人能力，设计看design-creator。用户指定引擎/风格优先，缺插件不自动换路线。
 读取对应专业专家和工艺全文，选择适合本任务的少量方法。按项目需要交STORYBOARD、DESIGN、demo或等价工程，真实图片母版、输入映射、生成作业和可编辑工程；不把占位图/分镜稿当生成媒体。
 先核现有素材、原始MIME、解码、声音、同SKU、水印/字幕和商用范围。旧版保留并标推荐状态，已用片段可追溯。超时先查作业，文件取回需完整解码/视听验收。
 chatcut/OpenChatCut历史路线只作参考，当前已停止的服务不因文档存在而唤醒。第三方引擎、CLI、ffmpeg等按依赖清单和当前可用能力安装，不捆绑密钥或强制付费。
 
 现有方法不足时调用omni-skill-maintenance，主动核查WorkBuddy、GitHub与用户材料，把适用工艺补入当前领域并验证；不把陌生安装命令直接执行。改变主业务阶段/交接语义先与用户确认。
+
+修订先核用户已指定的文案、音源、封面和版本，只改本次需要变化的部分；文案未审读时不要先生成配音。
+
+## 短视频封面设计
+
+接到封面或含封面的发布包时，先读[封面独立设计与验收](references/short-video-cover-design.md)：按本条内容独立组织主视觉与标题层级，核真实身份资产、所需画幅及缩略图可读性。视频截图可作素材，不能直接作为已完成的设计封面；修订后同步审片与分发用图，保留旧版和真实归档引用。
 
 ## 按需读取原始专业方法
 

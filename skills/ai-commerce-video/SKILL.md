@@ -6,7 +6,7 @@ description: 为电商商品做市场与人群研究、案例归类、选品和�
 
 metadata:
 
-  version: "2.0.4"
+  version: "2.0.7"
 
 ---
 
@@ -61,6 +61,8 @@ metadata:
 
 
 
+涉及中台生图、视频和数字人时读取 [图像与视频能力接力](../brand-omni-growth-expert/references/mcp-production-capabilities.md)，以用户指定和实时能力为准。
+
 ## 共同判断
 
 
@@ -80,6 +82,8 @@ metadata:
 7. 商品照片可帮助外观锚定，不能证明清洁/承重等性能。同品牌/同类不等于同SKU；无水印与商用范围分开核实。
 
 
+
+制作与修订先按[文案及指定音源检查](references/production.md#文案与指定音源的提交前检查)核稿、核音色，再调用生成。
 
 ## 最小可执行交付
 
