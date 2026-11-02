@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "1.12.114",
+  "version": "1.12.115",
   "repository": "https://github.com/murals-welders-0t-87622/ai-omni-ops-skills",
   "skills": [
     {
@@ -94,7 +94,7 @@
     {
       "id": "creative-production-router",
       "path": "skills/creative-production-router",
-      "version": "1.2.12",
+      "version": "1.2.13",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -105,7 +105,7 @@
     {
       "id": "douyin-operations",
       "path": "skills/douyin-operations",
-      "version": "1.1.4",
+      "version": "1.1.6",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -116,7 +116,7 @@
     {
       "id": "dynamic-video-craft",
       "path": "skills/dynamic-video-craft",
-      "version": "1.2.60",
+      "version": "1.2.62",
       "dependencies": [
         "brand-omni-growth-expert"
       ],

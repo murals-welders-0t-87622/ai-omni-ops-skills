@@ -29,7 +29,7 @@ def safe_child(base,name):
     return p
 def release_check(repo=REPO):
     m=read(repo/'release-manifest.json')
-    actual={f.relative_to(repo).as_posix():hashlib.sha256(f.read_bytes()).hexdigest() for f in repo.rglob('*') if f.is_file() and not any(x in {'.git','__pycache__','.omni-skills-backups','.local'} for x in f.relative_to(repo).parts) and f.name not in {'release-manifest.json'} and f.suffix!='.pyc'}
+    actual={f.relative_to(repo).as_posix():hashlib.sha256(f.read_bytes()).hexdigest() for f in repo.rglob('*') if f.is_file() and not any(x in {'.git','__pycache__','.omni-skills-backups','.local','五个完整技能包-20261103'} for x in f.relative_to(repo).parts) and f.name not in {'release-manifest.json'} and f.suffix!='.pyc'}
     if actual!=m['files']:raise ValueError('Release hash mismatch; validate and rebuild manifest before install')
     return m
 def selection(reg,profile,names):

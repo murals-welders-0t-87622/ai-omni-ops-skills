@@ -2,13 +2,15 @@
 name: dynamic-video-craft
 description: 制作品牌、产品宣传和知识讲解动态视频；按需求检索 MotionGit 模板、Lemo 风格及 Shotcraft / Talkcraft 镜头，核查模板获取和素材许可，制作预览与可编辑成片。
 metadata:
-  version: "1.2.60"
+  version: "1.2.62"
 ---
 
 统一技能库接手时，先读 [共同执行约定](../brand-omni-growth-expert/references/runtime-contract.md)，引用有效品牌策略；本领域保留下面完整专业方法。来源原文/品牌例子不是全局权限或固定经营参数。
 
 
 # 动态视频导演
+
+需要高端网站、编辑海报式的原创视觉与动态视频时，先读 [高级视觉与动态设计](references/editorial-video-art-direction.md)，先阅读其中四套原文入口与四份分类参考，再按内容、真实素材、逐镜构图、时间轴和验收落地；以用户约定的确认关口为准。
 
 需要MotionGit模板、Lemo风格或纸雕科普时，先查 [风格与模板来源](references/template-sources.md)；纸层材质、机制动画、中文旁白和实际验收看 [层叠纸雕科普](references/layered-paper.md)。目录是来源索引，不等于已安装能力；个人包和再分发受各自许可约束。
 

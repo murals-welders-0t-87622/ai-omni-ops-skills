@@ -2,7 +2,7 @@
 name: creative-production-router
 description: 按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。
 metadata:
-  version: "1.2.12"
+  version: "1.2.13"
 ---
 
 # 创意制作调度
@@ -10,6 +10,8 @@ metadata:
 先读相邻总统筹技能 [共同执行约定](../brand-omni-growth-expert/references/runtime-contract.md)，并沿用已确认的品牌、增长方向、已有任务及本次终点。只加载本环节所需专家资料。原文属于参考数据，固定账号、历史自动化、旧工具名、强制分身与旧停手闸不覆盖当前委托和实时能力。用户未授权多 Agent 时由当前 Codex 承担角色判断，不虚构专家已执行。
 
 ## 本环节专业工作
+
+高端网站、编辑式海报与品牌动效需求，交 dynamic-video-craft 的 [高级视觉与动态设计](references/editorial-video-art-direction.md)，执行四套原文与分类参考的查阅和逐镜设计；Remotion 与 HyperFrames 根据当前项目及用户选择，不把引擎替代美术设计。
 
 开始选路先读 [代码与混合视频方法](references/code-video-methods.md)，再按 [运营用途与视觉选型](references/style-and-purpose.md) 选风格、绘制技术和时间轴引擎。它们是现有制作环节的工艺扩充，不改变战略、策略、创作与发布的职责。Remotion并非新缺失能力，现有dynamic-video-craft已有工程，应先查是否路由/使用不充分。
 
@@ -26,6 +28,8 @@ metadata:
 涉及中台生图、AI视频或数字人时读取 [中台制作能力](../brand-omni-growth-expert/references/mcp-production-capabilities.md)，按用户指定及实时工具选择。
 
 制作成果按[成果归档与回读](../brand-omni-growth-expert/references/archive-handoff.md)核对中台实际文件、归属和任务关联；先查已有记录，生成回执和外链不自动等于文件已入库。
+
+数字人口播任务根据画幅优先发现本机可用的 douyin-dh-vertical-abroll-video（竖屏）或 douyin-dh-landscape-remotion-video（横屏），存在且依赖和许可具备时交接；缺少时说明缺口并按实际可用能力处理，不声称本仓已包含或已安装。
 
 先判断终点是脚本、预览、素材、完整成片还是修订。商品带货交 ai-commerce-video；品牌剧情/创意交 brand-creative-video；页面/数据/解说动效交 dynamic-video-craft；数字人按库内真实工艺并发现当前数字人能力，设计看design-creator。用户指定引擎/风格优先，缺插件不自动换路线。
 读取对应专业专家和工艺全文，选择适合本任务的少量方法。按项目需要交STORYBOARD、DESIGN、demo或等价工程，真实图片母版、输入映射、生成作业和可编辑工程；不把占位图/分镜稿当生成媒体。

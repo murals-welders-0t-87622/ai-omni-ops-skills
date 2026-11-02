@@ -11,8 +11,17 @@
       "coverage": "核读 gnipbao/minimax-h3-video-reverse-skill 的 README、SKILL、观察、证据、声音、输出及 H3 适配文档，版本 2fd1cc182606b81b69e0a9dca31c6cc7c2e973af；未运行其代码或生成视频。",
       "distribution": "MIT 许可；仅独立编写通用方法并链接来源，不分发其代码或原文。",
       "status": "partially-reviewed",
-      "adoptions": ["skills/video-recreation/SKILL.md", "skills/video-recreation/references/analysis-and-storyboard.md", "skills/video-recreation/references/mcp-handoff.md", "skills/video-recreation/references/recreation-guide.md"],
-      "notAdopted": ["把静态抽帧、元数据或转写当成连续画面和声音的实际观察", "把逆向提示词当成原提示词或生成完毕的视频", "将某模型字段和参数限制推广到其他模型"],
+      "adoptions": [
+        "skills/video-recreation/SKILL.md",
+        "skills/video-recreation/references/analysis-and-storyboard.md",
+        "skills/video-recreation/references/mcp-handoff.md",
+        "skills/video-recreation/references/recreation-guide.md"
+      ],
+      "notAdopted": [
+        "把静态抽帧、元数据或转写当成连续画面和声音的实际观察",
+        "把逆向提示词当成原提示词或生成完毕的视频",
+        "将某模型字段和参数限制推广到其他模型"
+      ],
       "verification": "本轮只读实测中台作品拆解请求、结果与平台字典；未新建拆解请求、未付费生成或回写业务数据。"
     },
     {
@@ -4709,6 +4718,26 @@
         "硬编码假设平台入口与通用技能的一一对应"
       ],
       "verification": "同连接工具目录及12个只读推荐返回；个别推荐板块与表述不符；脚本增加可选预期入口对照及负例测试。未验证实际任务执行或自动语义判断。"
+    },
+    {
+      "id": "user-five-skills-20261103",
+      "kind": "user-provided-package",
+      "title": "五个完整技能包：视觉方向与口播制作",
+      "readAt": "2026-11-03",
+      "coverage": "核对5个技能入口、3个既有入口的差异、新增参考文件、两套数字人技能及依赖、全包425份哈希；未逐项审验全部脚本或验证商业授权。",
+      "distribution": "仅纳入三项既有技能的通用增补和来源索引；包含上游源码或权利未明确的数字人口播包保留本机。",
+      "status": "partially-reviewed",
+      "adoptions": [
+        "skills/creative-production-router/SKILL.md",
+        "skills/douyin-operations/SKILL.md",
+        "skills/dynamic-video-craft/SKILL.md"
+      ],
+      "notAdopted": [
+        "不将特定账号规则应用于其他品牌",
+        "不将未经核权的上游源码和样片作为公开技能仓内容",
+        "不删除原视频复刻路由"
+      ],
+      "verification": "来源包哈希通过；隔离安装及doctor通过；数字人包存在包外依赖且尚未完成真实制片验收。"
     }
   ]
 }

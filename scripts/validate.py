@@ -3,7 +3,7 @@ import argparse, ast, hashlib, json, re, sys
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-IGNORE={'.git','__pycache__','.local','.omni-skills-backups'}
+IGNORE={'.git','__pycache__','.local','.omni-skills-backups','五个完整技能包-20261103'}
 def files(root=ROOT):
     return [p for p in root.rglob('*') if p.is_file() and not any(x in IGNORE for x in p.relative_to(root).parts) and p.suffix!='.pyc' and p.name!='release-manifest.json']
 def h(p):return hashlib.sha256(p.read_bytes()).hexdigest()
