@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Audio, Easing, Img, interpolate, Sequence, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Audio, Easing, Img, OffthreadVideo, interpolate, Sequence, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import raw from './video.json';
 import type {CameraState, SceneSpec, Timeline} from './types';
 
@@ -105,6 +105,15 @@ export const Video: React.FC<{music: boolean}> = ({music = true}) => {
       <Scene scene={scene} />
     </Sequence>)}
     <Wipes />
+    {(data.hosts ?? []).map((host) => {
+      const full = host.placement === 'full';
+      const hostStyle: React.CSSProperties = full
+        ? {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain'}
+        : {position: 'absolute', bottom: '15%', [host.placement === 'lower-left' ? 'left' : 'right']: '5%', width: '27%', height: '34%', objectFit: 'contain'};
+      return <Sequence key={host.id} from={Math.round(host.start * fps)} durationInFrames={Math.round(host.end * fps) - Math.round(host.start * fps)} name={host.id}>
+        <OffthreadVideo src={staticFile(host.src)} muted style={hostStyle} />
+      </Sequence>;
+    })}
     {caption && <div style={{position: 'absolute', bottom: height > width ? height * 0.19 : height * 0.085, left: '10%', right: '10%', textAlign: 'center'}}>
       <span style={{display: 'inline-block', color: '#fff', background: 'rgba(0,0,0,0.76)', padding: '10px 22px', borderRadius: 12, fontSize: (height > width ? 44 : 42) * width / (height > width ? 1080 : 1920), lineHeight: 1.5, whiteSpace: 'pre-line'}}>{caption.text}</span>
     </div>}

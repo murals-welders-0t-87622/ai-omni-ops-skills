@@ -147,6 +147,23 @@ def validate(data, public_dir, require_voiceover=False):
         if 'volume' in event and (not finite(event['volume']) or event['volume'] < 0):
             errors.append(f'event {key}: invalid volume')
     previous_end = 0
+    hosts = data.get('hosts', [])
+    if not isinstance(hosts, list) or any(not isinstance(host, dict) for host in hosts):
+        errors.append('hosts must be an array of objects')
+        hosts = []
+    keyed(hosts, 'hosts')
+    last_host_end = 0
+    for host in hosts:
+        label = f'host {host.get("id", "?")}'
+        if interval(host, label):
+            if host['start'] < last_host_end:
+                errors.append(f'{label}: overlap or unsorted hosts')
+            if frame(host['start'], fps) == frame(host['end'], fps):
+                errors.append(f'{label}: shorter than one frame')
+            last_host_end = host['end']
+        if host.get('placement') not in ['full', 'lower-left', 'lower-right']:
+            errors.append(f'{label}: unsupported placement')
+        media(host.get('src'), label)
     for index, caption in enumerate(arrays['captions']):
         if interval(caption, f'caption {index}'):
             if caption['start'] < previous_end:

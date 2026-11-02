@@ -26,5 +26,6 @@ export type Timeline = {
   events: {id: string; sceneId: string; at: number; label: string; anchorId?: string; sfx?: string; volume?: number}[];
   anchors: {id: string; text: string; start: number; end: number; source: string}[];
   captions: {text: string; start: number; end: number}[];
+  hosts?: {id: string; src: string; start: number; end: number; placement: 'full' | 'lower-left' | 'lower-right'}[];
   audio: {voiceover?: {src: string; volume: number}; music?: {src: string; volume: number}};
 };

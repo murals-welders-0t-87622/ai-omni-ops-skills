@@ -18,7 +18,7 @@
 
 业务主线保持 **生意模式→战略→策略→执行→数据反馈**。战略说明先完成什么，策略说明通过哪些组合动作完成，执行落到产品、人群、内容、价格/库存、时间和负责人，反馈对照流量、转化、客单、复购等实际目标。
 
-详见 [架构](docs/ARCHITECTURE.md)、[业务路由](skills/brand-omni-growth-expert/references/business-routing.md)、[全部26项](registry/skills.json)、[来源导航](skills/brand-omni-growth-expert/references/package-index.md)。
+详见 [架构](docs/ARCHITECTURE.md)、[业务路由](skills/brand-omni-growth-expert/references/business-routing.md)、[全部28项](registry/skills.json)、[来源导航](skills/brand-omni-growth-expert/references/package-index.md)。
 
 ## 新电脑安装
 
@@ -35,7 +35,7 @@ python scripts/manage.py doctor
 
 也可以对Codex说：**“按照这个仓库的AGENTS和README，安装整套品牌增长技能，检查结果；连接器缺什么单独告诉我。”**
 
-默认26项安装到用户的 `~/.agents/skills`。旧电脑已在 `~/.codex/skills` 使用同名技能时显式指定 `--target` 选择原目录，避免重复。只装总统筹/资料/复盘/维护可用 `--profile core`；单项 `--skill youzan-private-operations` 会补齐依赖。
+默认28项安装到用户的 `~/.agents/skills`。旧电脑已在 `~/.codex/skills` 使用同名技能时显式指定 `--target` 选择原目录，避免重复。只装总统筹/资料/复盘/维护可用 `--profile core`；单项 `--skill youzan-private-operations` 会补齐依赖。
 
 已有同名未托管文件会阻止覆盖；审查后才用 `--adopt-existing` 纳管并备份。受管技能按上次发布基准、本地和新版本逐文件比较：仅一方修改或双方相同的内容可安全合并，双方同时修改同一文件则保留本地并停止，让 Codex 比较、人工审读后处理；这不是自动理解语义的行级合并。本地新增技能不受影响。克隆本身不会执行安装。当前会话未发现新技能时开启新对话或重载客户端；安装和原生加载须分别核验。
 
@@ -80,7 +80,7 @@ python scripts/manage.py rollback --transaction <安装回执中的transaction>
 
 ## 公开范围
 
-本版完整提供26项通用技能、自有工程/模板和专业方法；来源目录是导航，**不包含旧版私有原文全集、真实品牌项目、客户资料、凭据或未核清再分发的第三方全文**。旧完整私有历史另行保留。需要专有资料时从用户已授权WorkBuddy/中台或可访问原项目读取，拿不到就明确缺项，不能声称目录卡就是专家全文。
+本版完整提供28项通用技能、自有工程/模板和专业方法；来源目录是导航，**不包含旧版私有原文全集、真实品牌项目、客户资料、凭据或未核清再分发的第三方全文**。旧完整私有历史另行保留。需要专有资料时从用户已授权WorkBuddy/中台或可访问原项目读取，拿不到就明确缺项，不能声称目录卡就是专家全文。
 
 第三方代码、样片、字体、音乐、人物、数据与云服务各自核使用条件；本仓公开可访问不替代第三方授权，也不承诺经营效果。详见 [公开范围与来源](docs/PUBLIC-DISTRIBUTION.md) 和 [验收边界](docs/VALIDATION.md)。曾克隆旧私有版的电脑应保留旧目录另克隆新版，避免把旧完整历史推到公开仓。
 

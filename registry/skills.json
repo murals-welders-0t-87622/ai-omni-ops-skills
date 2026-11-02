@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "1.12.115",
+  "version": "1.12.116",
   "repository": "https://github.com/murals-welders-0t-87622/ai-omni-ops-skills",
   "skills": [
     {
@@ -94,12 +94,36 @@
     {
       "id": "creative-production-router",
       "path": "skills/creative-production-router",
-      "version": "1.2.13",
+      "version": "1.2.14",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
       "kind": "domain",
       "description": "按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
+      "id": "douyin-dh-landscape-remotion-video",
+      "path": "skills/douyin-dh-landscape-remotion-video",
+      "version": "1.0.0",
+      "dependencies": [
+        "brand-omni-growth-expert",
+        "dynamic-video-craft"
+      ],
+      "kind": "domain",
+      "description": "为已成型口播或讲解内容制作横屏数字人视频：设计人物与动态信息画面、对齐音画、预览、制作与归档；不负责把数字人生成能力当作已配置。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
+      "id": "douyin-dh-vertical-abroll-video",
+      "path": "skills/douyin-dh-vertical-abroll-video",
+      "version": "1.0.0",
+      "dependencies": [
+        "brand-omni-growth-expert",
+        "dynamic-video-craft"
+      ],
+      "kind": "domain",
+      "description": "为抖音、视频号等制作竖屏数字人口播与辅助画面视频，组织人物 A-roll、图表证据 B-roll、字幕、音画同步及验收。",
       "status": "packaged-not-business-accepted"
     },
     {
@@ -116,7 +140,7 @@
     {
       "id": "dynamic-video-craft",
       "path": "skills/dynamic-video-craft",
-      "version": "1.2.62",
+      "version": "1.2.63",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -306,6 +330,8 @@
       "content-decomposition",
       "content-distribution",
       "creative-production-router",
+      "douyin-dh-landscape-remotion-video",
+      "douyin-dh-vertical-abroll-video",
       "douyin-operations",
       "dynamic-video-craft",
       "ecommerce-detail-creative",
