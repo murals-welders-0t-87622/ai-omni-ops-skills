@@ -187,6 +187,14 @@
       ]
     },
     {
+      "id": "video-recreation",
+      "path": "skills/video-recreation",
+      "kind": "domain",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ]
+    },
+    {
       "id": "wechat-content-operations",
       "path": "skills/wechat-content-operations",
       "kind": "domain",
@@ -211,5 +219,5 @@
       ]
     }
   ],
-  "changeRule": "2026-10-27 用户明确要求新增系统安装技能及增长持续学习技能；其余业务主结构、职责与交接变化前须确认。"
+  "changeRule": "2026-10-27 用户明确要求新增系统安装技能及增长持续学习技能；其余业务主结构、职责与交接变化前须确认；2026-11-02 用户明确要求新增视频复刻技能，作为既有制作工艺入口，不改变主流程及既有职责。"
 }

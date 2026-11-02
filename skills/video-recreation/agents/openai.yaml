@@ -1,0 +1,6 @@
+interface:
+  display_name: "视频复刻与品牌改编"
+  short_description: "参考视频逐镜拆解、品牌改编、制作及对照验收"
+  default_prompt: "使用 $video-recreation 根据参考视频和当前品牌制作或续做，按实际结果对照验收并归档。"
+policy:
+  allow_implicit_invocation: true

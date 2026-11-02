@@ -2,7 +2,7 @@
 name: creative-production-router
 description: 按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。
 metadata:
-  version: "1.2.11"
+  version: "1.2.12"
 ---
 
 # 创意制作调度
@@ -18,6 +18,8 @@ metadata:
 品牌海报、视觉系统、人像、社交画面或界面设计按 [品牌视觉与设计制作](references/visual-design-workflow.md) 接力。
 
 需要视频制作时按 [视频任务交接与恢复](references/production-handoff.md) 接收上游创作包、复用素材并记录作业。
+
+用户提供参考视频并要求复刻、替换品牌或改编成新片时，接续 [视频复刻与品牌改编](../video-recreation/SKILL.md)，由其负责原片与成片逐段对照；仅需分析时交作品拆解。商品、剧情或动效方法按需配合，不改变用户指定的交付终点。
 
 按需查阅 [纸艺、极简商品片、空间穿越与影视参考](references/visual-craft-patterns.md)，根据题材选择适用工艺。
 

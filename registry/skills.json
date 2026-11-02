@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "1.12.110",
+  "version": "1.12.111",
   "repository": "https://github.com/murals-welders-0t-87622/ai-omni-ops-skills",
   "skills": [
     {
@@ -63,7 +63,7 @@
     {
       "id": "brand-omni-growth-expert",
       "path": "skills/brand-omni-growth-expert",
-      "version": "3.0.28",
+      "version": "3.0.29",
       "dependencies": [],
       "kind": "orchestrator",
       "description": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。",
@@ -94,7 +94,7 @@
     {
       "id": "creative-production-router",
       "path": "skills/creative-production-router",
-      "version": "1.2.11",
+      "version": "1.2.12",
       "dependencies": [
         "brand-omni-growth-expert"
       ],
@@ -250,6 +250,17 @@
       "status": "packaged-not-business-accepted"
     },
     {
+      "id": "video-recreation",
+      "path": "skills/video-recreation",
+      "version": "1.0.0",
+      "dependencies": [
+        "brand-omni-growth-expert"
+      ],
+      "kind": "domain",
+      "description": "根据参考视频复刻叙事结构、镜头节奏、字幕或视觉形式，替换品牌、产品和文案，完成拆解、制作、逐段对照与归档；适用于参考视频制作新片或重做自己的视频，不用于只分析作品。",
+      "status": "packaged-not-business-accepted"
+    },
+    {
       "id": "wechat-content-operations",
       "path": "skills/wechat-content-operations",
       "version": "1.1.1",
@@ -308,6 +319,7 @@
       "public-lead-operations",
       "taobao-tmall-operations",
       "tencent-ads-operations",
+      "video-recreation",
       "wechat-content-operations",
       "xiaohongshu-operations",
       "youzan-private-operations"

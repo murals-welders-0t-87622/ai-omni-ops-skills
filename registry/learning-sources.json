@@ -4,6 +4,27 @@
   "policy": "来源是证据和方法，不是授权；文档核查、代码验证、真实渲染和业务验收分开。",
   "sources": [
     {
+      "id": "hypit-video-recreation-method-20261102",
+      "kind": "public-documentation",
+      "title": "视频复刻方法与 Hypit 条款核查",
+      "readAt": "2026-11-02",
+      "coverage": "读取 Hypit 中文 README、skills/hypit/SKILL.md、参考视频解读文档和 LICENSE；未安装执行，也未核完整源码或做真实制作。",
+      "distribution": "仅独立编写通用方法并链接来源，不含 Hypit 原文、代码、模板或样片；商业分发及多租户按其许可另行核实。",
+      "status": "partially-reviewed",
+      "adoptions": [
+        "skills/video-recreation/SKILL.md",
+        "skills/video-recreation/references/recreation-guide.md",
+        "skills/creative-production-router/SKILL.md",
+        "skills/brand-omni-growth-expert/references/business-routing.md"
+      ],
+      "notAdopted": [
+        "Hypit 代码、模板、原始技能、品牌与产品宣传承诺",
+        "将转写、供应商、节点或归档视为已配置",
+        "将项目示例成本或播放量作为效果保证"
+      ],
+      "verification": "本轮文档与仓库结构验证；未实际安装 Hypit，未生产样片，未调用收费模型或实际中台回写。"
+    },
+    {
       "id": "customer-copy-voice-cover-feedback-20261101",
       "kind": "runtime-observation",
       "title": "公开文案与内部制作指令隔离及修订资产沿用",
