@@ -25,3 +25,5 @@
 ## 参考资料与许可
 
 参考 [Hypit 中文介绍](https://github.com/hypit-ai/hypit/blob/main/README.zh-CN.md)、[制作技能说明](https://github.com/hypit-ai/hypit/blob/main/skills/hypit/SKILL.md) 和 [参考视频阅读方法](https://github.com/hypit-ai/hypit/blob/main/skills/hypit/references/creation/reference-video.md)，仅归纳视频观察、语义对齐与工程可编辑等通用方法。未复制其文本、代码、样片、模型或格式，未验证其工具或兼容性。其[许可证](https://github.com/hypit-ai/hypit/blob/main/LICENSE)对多租户及商业再分发设有条件；本独立方法不将对 Hypit 的使用判断为已获许可。
+
+参考 [MiniMax H3 视频逆向项目](https://github.com/gnipbao/minimax-h3-video-reverse-skill)，核读版本 `2fd1cc182606b81b69e0a9dca31c6cc7c2e973af` 的 README、技能和观察、证据、声音与输出约定；吸收连续动作观察、镜头切分、首帧和动态提示分开、证据缺口标注。该项目采用 MIT 许可；本库仅独立归纳方法，不附带其代码或原文。该项目描述的是视频逆向提示词，不代表已生成视频，也不能恢复原生成提示词。实际模型字段、时长、声音处理与能否上传参考素材，以当前品牌实际工具为准。

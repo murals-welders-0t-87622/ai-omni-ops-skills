@@ -4,6 +4,18 @@
   "policy": "来源是证据和方法，不是授权；文档核查、代码验证、真实渲染和业务验收分开。",
   "sources": [
     {
+      "id": "minimax-h3-video-reverse-method-20261102",
+      "kind": "public-documentation",
+      "title": "视频逆向观察与品牌复刻方案",
+      "readAt": "2026-11-02",
+      "coverage": "核读 gnipbao/minimax-h3-video-reverse-skill 的 README、SKILL、观察、证据、声音、输出及 H3 适配文档，版本 2fd1cc182606b81b69e0a9dca31c6cc7c2e973af；未运行其代码或生成视频。",
+      "distribution": "MIT 许可；仅独立编写通用方法并链接来源，不分发其代码或原文。",
+      "status": "partially-reviewed",
+      "adoptions": ["skills/video-recreation/SKILL.md", "skills/video-recreation/references/analysis-and-storyboard.md", "skills/video-recreation/references/mcp-handoff.md", "skills/video-recreation/references/recreation-guide.md"],
+      "notAdopted": ["把静态抽帧、元数据或转写当成连续画面和声音的实际观察", "把逆向提示词当成原提示词或生成完毕的视频", "将某模型字段和参数限制推广到其他模型"],
+      "verification": "本轮只读实测中台作品拆解请求、结果与平台字典；未新建拆解请求、未付费生成或回写业务数据。"
+    },
+    {
       "id": "hypit-video-recreation-method-20261102",
       "kind": "public-documentation",
       "title": "视频复刻方法与 Hypit 条款核查",
