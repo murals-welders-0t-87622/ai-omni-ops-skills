@@ -2,7 +2,7 @@
 name: creative-production-router
 description: 按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。
 metadata:
-  version: "1.2.14"
+  version: "1.2.15"
 ---
 
 # 创意制作调度
@@ -29,7 +29,7 @@ metadata:
 
 制作成果按[成果归档与回读](../brand-omni-growth-expert/references/archive-handoff.md)核对中台实际文件、归属和任务关联；先查已有记录，生成回执和外链不自动等于文件已入库。
 
-数字人口播任务根据画幅优先发现本机可用的 douyin-dh-vertical-abroll-video（竖屏）或 douyin-dh-landscape-remotion-video（横屏），按实际素材和用户选择交接；运行依赖、生成应用和商用许可仍需实际核验。
+数字人口播任务交给 dynamic-video-craft：横屏读取其横屏 Remotion 完整流程，竖屏读取其 A/B 轨完整流程；复用用户提供的相应资产与已确认材料，运行工具按实际能力核验。
 
 先判断终点是脚本、预览、素材、完整成片还是修订。商品带货交 ai-commerce-video；品牌剧情/创意交 brand-creative-video；页面/数据/解说动效交 dynamic-video-craft；数字人按库内真实工艺并发现当前数字人能力，设计看design-creator。用户指定引擎/风格优先，缺插件不自动换路线。
 读取对应专业专家和工艺全文，选择适合本任务的少量方法。按项目需要交STORYBOARD、DESIGN、demo或等价工程，真实图片母版、输入映射、生成作业和可编辑工程；不把占位图/分镜稿当生成媒体。

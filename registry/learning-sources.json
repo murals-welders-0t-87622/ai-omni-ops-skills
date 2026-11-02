@@ -4746,10 +4746,8 @@
       "readAt": "2026-11-03",
       "coverage": "核读两份技能入口、用户包说明、缺失的包外路径、已有中台生成能力记录及 Remotion 起步工程；未逐行审计原包代码。",
       "distribution": "自行编写共享流程与人物视频叠加基础功能，不分发原包的上游源码、卡片和示例素材。",
-      "status": "partially-reviewed",
+      "status": "superseded",
       "adoptions": [
-        "skills/douyin-dh-landscape-remotion-video/SKILL.md",
-        "skills/douyin-dh-vertical-abroll-video/SKILL.md",
         "skills/dynamic-video-craft/references/digital-human-production.md",
         "skills/dynamic-video-craft/assets/remotion-starter/src/Video.tsx"
       ],
@@ -4758,7 +4756,27 @@
         "不声称原创基础版与原始完整技能包功能等同",
         "不假设固定模型、并发限制或服务费用适用于所有账号"
       ],
-      "verification": "合成素材横竖屏小样实际渲染；未生成真实数字人、调用中台付费应用或完成真实口型验收。"
+      "verification": "合成素材横竖屏小样实际渲染；未生成真实数字人、调用中台付费应用或完成真实口型验收。",
+      "supersededBy": "digital-human-original-packages-20261103"
+    },
+    {
+      "id": "digital-human-original-packages-20261103",
+      "kind": "user-provided-package",
+      "title": "用户指定的横竖屏数字人口播完整包",
+      "readAt": "2026-11-03",
+      "coverage": "校验用户来源包425项哈希；将两套数字人口播包365个文件按原目录整体收录，主入口重命名并修正旧专家团路径；具体所有代码未逐条审计。",
+      "distribution": "按用户明确要求纳入现有动态视频技能，保留原文件和第三方来源说明。",
+      "status": "partially-reviewed",
+      "adoptions": [
+        "skills/dynamic-video-craft/SKILL.md",
+        "skills/dynamic-video-craft/references/digital-human/landscape/WORKFLOW.md",
+        "skills/dynamic-video-craft/references/digital-human/portrait/WORKFLOW.md"
+      ],
+      "notAdopted": [
+        "原包旧固定账号和历史平台参数不视为当前真实配置",
+        "原包中未附带的竖屏示例成片不得标为已存在"
+      ],
+      "verification": "校验原包文件数量和对应关系；技能安装、真实调用及成片需要另行测试。"
     }
   ]
 }

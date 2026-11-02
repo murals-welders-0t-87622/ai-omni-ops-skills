@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>动态预览总入口 · 5 个镜型</title>
+<style>
+:root { --bg:#171412; --panel:#221d19; --line:#3d342b; --ink:#f0e4d2; --dim:#a39684; }
+* { box-sizing: border-box; }
+html,body { margin:0; height:100%; background:var(--bg); color:var(--ink);
+  font-family:"Noto Sans SC","Microsoft YaHei",sans-serif; }
+.wrap { max-width:1180px; margin:0 auto; padding:38px 28px 60px; }
+h1 { font-size:26px; margin:0 0 6px; letter-spacing:.01em; }
+.sub { color:var(--dim); font-size:14px; line-height:1.7; margin:0 0 26px; }
+.sub b { color:#e0b06a; }
+
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:18px; }
+.card { background:var(--panel); border:1px solid var(--line); border-radius:10px;
+  overflow:hidden; display:flex; flex-direction:column; }
+.card__top { padding:16px 18px 14px; border-bottom:1px solid var(--line); }
+.card__id { font-size:11px; color:#e0b06a; letter-spacing:.1em; font-weight:700; }
+.card__t { font-size:19px; font-weight:800; margin:5px 0 8px; }
+.card__m { font-size:12px; color:var(--dim); line-height:1.65; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:11px; }
+.chip { font-size:11px; padding:2px 8px; border-radius:999px;
+  border:1px solid var(--line); color:var(--dim); }
+.chip--hot { border-color:#7a4a1e; color:#e09a5a; }
+.card__act { padding:13px 18px; margin-top:auto; display:flex; gap:9px; align-items:center; }
+.card__act a { flex:1; text-align:center; text-decoration:none; font-size:13px; font-weight:700;
+  color:#1b1714; background:#e0b06a; border-radius:6px; padding:9px 0; }
+.card__act a:hover { background:#eec489; }
+.card__act .file { font-size:11px; color:#6f6459; }
+
+.note { margin-top:30px; background:var(--panel); border:1px solid var(--line);
+  border-radius:10px; padding:20px 22px; font-size:13px; color:var(--dim); line-height:1.85; }
+.note b { color:var(--ink); }
+.note code { background:#2c2521; padding:1px 6px; border-radius:4px; color:#e0b06a;
+  font-family:ui-monospace,Consolas,monospace; font-size:12px; }
+table { width:100%; border-collapse:collapse; margin-top:12px; font-size:12.5px; }
+th,td { text-align:left; padding:7px 10px; border-bottom:1px solid var(--line); }
+th { color:#e0b06a; font-weight:700; }
+td.n { text-align:right; font-family:ui-monospace,Consolas,monospace; color:var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>动态 HTML 预览 · 5 个代表镜型</h1>
+  <p class="sub">
+    全部沿用 <code>design-tokens.css</code> 实测令牌：中缝 <b>39px</b>、绝对像素几何、四边不等阴影、字幕 38px。<br>
+    每页右下角可 <b>重播 / 循环 / 开辅助线</b>；辅助线打开后能直接看到 A-roll 与 B-roll 之间的 39px 空隙。<br>
+    文案只取自口播 SRT，数字（1000 亿 / 140 万亿 / 1000 倍）均来自原文，未编造。
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="card__top">
+        <div class="card__id">S02 · 3.56–8.60s</div>
+        <div class="card__t">三方诉求</div>
+        <div class="card__m">SPLIT 分栏。三行诉求卡逐行入场，结论条延后落下。<br>最直观的中缝验证页。</div>
+        <div class="chips"><span class="chip chip--hot">SPLIT</span>
+          <span class="chip">卡片错开 4f</span><span class="chip">芥末黄</span></div>
+      </div>
+      <div class="card__act"><a href="p1-s02-three-voices.html">打开</a>
+        <span class="file">p1</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card__top">
+        <div class="card__id">S07 · 22.28–26.16s</div>
+        <div class="card__t">1000×</div>
+        <div class="card__m">FULL 全宽。巨数 0→1000 滚动 27f，面积图 clip 生长 24f，末端弹出「140 万亿」。</div>
+        <div class="chips"><span class="chip">FULL</span>
+          <span class="chip chip--hot">数字滚动</span><span class="chip">SVG 图表</span></div>
+      </div>
+      <div class="card__act"><a href="p2-s07-thousand-x.html">打开</a>
+        <span class="file">p2</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card__top">
+        <div class="card__id">S19 · 63.64–68.64s</div>
+        <div class="card__t">插上插座</div>
+        <div class="card__m">全片最重要类比。插头滑入 snap 落位 → 火花 → 三条电流线 dash 流动 → 计量走表。</div>
+        <div class="chips"><span class="chip chip--hot">SPLIT</span>
+          <span class="chip">SVG 电流</span><span class="chip">snap 落位</span></div>
+      </div>
+      <div class="card__act"><a href="p3-s19-socket.html">打开</a>
+        <span class="file">p3</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card__top">
+        <div class="card__id">S42 · 150.28–153.96s</div>
+        <div class="card__t">自动路由</div>
+        <div class="card__m">两条分支各高亮 12f 交替，连线 dash 同步流动 —— 用节奏表现「自动切」而非文字说明。</div>
+        <div class="chips"><span class="chip chip--hot">SPLIT</span>
+          <span class="chip">交替高亮</span><span class="chip">青蓝</span></div>
+      </div>
+      <div class="card__act"><a href="p4-s42-auto-route.html">打开</a>
+        <span class="file">p4</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card__top">
+        <div class="card__id">S01 · 0.00–3.56s</div>
+        <div class="card__t">开场 · 三次会</div>
+        <div class="card__m">竖向 HERO 布局。0f 起画面即满（要求 #2），打字机每字 3f，三卡 spring 入场，计次徽标点亮。</div>
+        <div class="chips"><span class="chip">HERO 竖向</span>
+          <span class="chip chip--hot">打字机</span><span class="chip">竖向 39px</span></div>
+      </div>
+      <div class="card__act"><a href="p5-s01-opening.html">打开</a>
+        <span class="file">p5</span></div>
+    </div>
+
+  </div>
+
+  <div class="note">
+    <b>这 5 个页面为什么选它们</b><br>
+    不是随机挑的，而是覆盖了全片全部 4 类布局与 5 类 B-roll 形式，任何一处几何或节奏出问题都会在这里暴露：
+
+    <table>
+      <tr><th>页</th><th>布局</th><th>B-roll 形式</th><th>要验证什么</th></tr>
+      <tr><td>p1</td><td>SPLIT</td><td>卡片逐行入场</td><td>中缝 39px 是否真的分开</td></tr>
+      <tr><td>p2</td><td>FULL</td><td>数字滚动 + 图表生长</td><td>全宽下留白与数据可读性</td></tr>
+      <tr><td>p3</td><td>SPLIT</td><td>SVG 动效 + snap</td><td>复杂图形在窄栏里是否挤</td></tr>
+      <tr><td>p4</td><td>SPLIT</td><td>状态交替（节奏）</td><td>循环动效会不会抢字幕注意力</td></tr>
+      <tr><td>p5</td><td>HERO 竖向</td><td>打字机 + spring</td><td>竖向间距（另一类叠压）</td></tr>
+    </table>
+
+    <br><b>几何令牌对照（1080p，全部来自 7 帧零离散实测）</b>
+    <table>
+      <tr><th>项</th><th>值</th><th>项</th><th>值</th></tr>
+      <tr><td>A 框 left</td><td class="n">24px</td><td>B 框 left</td><td class="n">651px</td></tr>
+      <tr><td>A 框宽</td><td class="n">588px</td><td>B 框宽</td><td class="n">1218px</td></tr>
+      <tr><td>中缝 gutter</td><td class="n">39px</td><td>B 框右留白</td><td class="n">51px</td></tr>
+      <tr><td>A 顶 / 底</td><td class="n">46 / 144px</td><td>B 顶 / 底</td><td class="n">58 / 156px</td></tr>
+    </table>
+    A 与 B 的顶底<b>刻意错位 12px</b>——这是实测结果，不是失误。参考视频"松弛不呆板"的观感就来自这里，改成对齐反而死板。
+
+    <br><br><b>说明</b>：数字人位置是占位帧（<code>dh_p1a_frame_mid.jpg</code> 等），正式渲染时替换为
+    Remotion 的 <code>OffthreadVideo</code>。这里只看构图、节奏和动效手法。
+  </div>
+</div>
+</body>
+</html>

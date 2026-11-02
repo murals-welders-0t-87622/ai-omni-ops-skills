@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>production.example · 口播数字人 + 竖屏 + ABroll</title>
+  <style>
+    :root{
+      --bg-cream:#F5F3EA;
+      --panel:#FFFFFF;
+      --ink:#181818;
+      --muted:#767676;
+      --lime:#C8FF37;
+      --coral:#FF6E4A;
+      --sky:#84D8FF;
+      --violet:#B59BFF;
+      --butter:#F4DE74;
+      --radius:28px;
+      --border:6px solid var(--ink);
+      --shadow-lime:8px 8px 0 var(--lime);
+      --shadow-coral:8px 8px 0 var(--coral);
+      --shadow-sky:8px 8px 0 var(--sky);
+      --shadow-violet:8px 8px 0 var(--violet);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:#202020;
+      color:#efefef;
+      font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;
+      padding:24px;
+    }
+
+    .page{
+      width:min(1180px, 100%);
+      margin:0 auto;
+    }
+
+    .page-head{
+      margin-bottom:18px;
+    }
+
+    .page-head h1{
+      margin:0 0 10px;
+      font-size:24px;
+      line-height:1.2;
+    }
+
+    .page-head p{
+      margin:0;
+      color:#b9b9b9;
+      font-size:14px;
+      line-height:1.6;
+      max-width:980px;
+    }
+
+    .stack{
+      display:grid;
+      gap:28px;
+    }
+
+    .scene-wrap{
+      display:grid;
+      grid-template-columns:180px 540px 1fr;
+      gap:18px;
+      align-items:start;
+    }
+
+    .meta{
+      color:#d9d9d9;
+      font-size:13px;
+      line-height:1.6;
+      position:sticky;
+      top:16px;
+    }
+
+    .meta h2{
+      margin:0 0 8px;
+      font-size:18px;
+      line-height:1.2;
+    }
+
+    .meta .tag{
+      display:inline-block;
+      margin:4px 6px 0 0;
+      padding:4px 8px;
+      border:1px solid #5d5d5d;
+      border-radius:999px;
+      color:#cfd4db;
+      font-size:11px;
+      font-weight:700;
+    }
+
+    .frame{
+      position:relative;
+      width:540px;
+      height:960px;
+      overflow:hidden;
+      border-radius:20px;
+      box-shadow:0 20px 60px rgba(0,0,0,.28);
+      background:
+        linear-gradient(rgba(24,24,24,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(24,24,24,.04) 1px, transparent 1px),
+        var(--bg-cream);
+      background-size:24px 24px, 24px 24px, auto;
+    }
+
+    .notes{
+      color:#dedede;
+      font-size:13px;
+      line-height:1.7;
+      padding-top:6px;
+    }
+
+    .notes h3{
+      margin:0 0 8px;
+      font-size:16px;
+    }
+
+    .notes ul{
+      margin:0;
+      padding-left:18px;
+    }
+
+    .notes li{
+      margin:5px 0;
+    }
+
+    .chapter{
+      position:absolute;
+      left:20px;
+      top:22px;
+      width:500px;
+      height:56px;
+      background:var(--panel);
+      border:var(--border);
+      border-radius:22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 18px;
+    }
+
+    .chapter-left{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-size:18px;
+      font-weight:900;
+    }
+
+    .dot{
+      width:18px;
+      height:18px;
+      border-radius:50%;
+      border:3px solid var(--ink);
+      background:var(--lime);
+    }
+
+    .time{
+      font-size:16px;
+      font-weight:900;
+      color:var(--ink);
+    }
+
+    .hero{
+      position:absolute;
+      left:20px;
+      top:98px;
+      width:500px;
+      height:380px;
+      background:var(--panel);
+      border:var(--border);
+      border-radius:var(--radius);
+      padding:24px 24px 18px;
+      color:var(--ink);
+      overflow:hidden;
+    }
+
+    .hero.coral{box-shadow:var(--shadow-coral)}
+    .hero.sky{box-shadow:var(--shadow-sky)}
+    .hero.violet{box-shadow:var(--shadow-violet)}
+    .hero.lime{box-shadow:var(--shadow-lime)}
+
+    .eyebrow{
+      font-size:14px;
+      font-weight:800;
+      color:var(--muted);
+      letter-spacing:1px;
+    }
+
+    .hero h3{
+      margin:8px 0 10px;
+      font-size:44px;
+      line-height:1.02;
+      letter-spacing:-1px;
+    }
+
+    .subcopy{
+      font-size:16px;
+      color:#4d4d4d;
+      line-height:1.45;
+    }
+
+    .hl{
+      background:linear-gradient(transparent 60%, var(--lime) 60%);
+      padding:0 4px;
+    }
+
+    .subtitle{
+      position:absolute;
+      left:20px;
+      top:510px;
+      width:500px;
+      min-height:86px;
+      background:var(--panel);
+      border:var(--border);
+      border-radius:22px;
+      padding:18px 20px;
+      color:var(--ink);
+      font-size:24px;
+      line-height:1.45;
+      font-weight:900;
+    }
+
+    .bottom{
+      position:absolute;
+      left:20px;
+      top:622px;
+      width:500px;
+      height:262px;
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:14px;
+    }
+
+    .note{
+      background:var(--panel);
+      border:var(--border);
+      border-radius:24px;
+      padding:18px 18px 16px;
+      color:var(--ink);
+      position:relative;
+      box-shadow:var(--shadow-lime);
+    }
+
+    .note-mark{
+      position:absolute;
+      top:14px;
+      right:16px;
+      color:#a6c82c;
+      font-size:14px;
+      font-weight:900;
+      letter-spacing:1px;
+    }
+
+    .note h4{
+      margin:0 0 10px;
+      font-size:26px;
+      line-height:1.1;
+    }
+
+    .chips{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-bottom:12px;
+    }
+
+    .chip{
+      padding:5px 10px;
+      border:3px solid var(--ink);
+      border-radius:999px;
+      font-size:13px;
+      font-weight:900;
+      background:var(--lime);
+      color:var(--ink);
+    }
+
+    .chip.sky{background:var(--sky)}
+    .chip.butter{background:var(--butter)}
+
+    .scribble{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:8px;
+      font-size:22px;
+      font-weight:700;
+    }
+
+    .line{
+      height:16px;
+      border-radius:6px;
+      background:linear-gradient(90deg, var(--lime), rgba(200,255,55,.45));
+    }
+
+    .line.two{
+      width:78%;
+      background:linear-gradient(90deg, var(--butter), rgba(244,222,116,.45));
+    }
+
+    .line.one{width:92%;}
+
+    .avatar{
+      background:#0f0f10;
+      border:var(--border);
+      border-radius:24px;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .avatar::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 50% 28%, rgba(255,255,255,.12), transparent 18%),
+        linear-gradient(180deg, rgba(255,255,255,.06), transparent 35%);
+    }
+
+    .portrait{
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 54% 32%, #f4d3c0 0 9%, transparent 9.5%),
+        radial-gradient(circle at 54% 48%, #2f2c2d 0 18%, transparent 18.5%),
+        radial-gradient(circle at 54% 52%, #18181a 0 30%, transparent 30.5%),
+        linear-gradient(180deg, #1a1a1d 0%, #090909 100%);
+    }
+
+    .portrait::after{
+      content:"";
+      position:absolute;
+      right:20px;
+      top:24px;
+      width:8px;
+      height:120px;
+      border-radius:999px;
+      background:rgba(255,255,255,.82);
+      box-shadow:0 0 20px rgba(255,255,255,.3);
+    }
+
+    .footer{
+      position:absolute;
+      left:24px;
+      right:24px;
+      bottom:14px;
+      display:flex;
+      justify-content:space-between;
+      color:#6f6f6f;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .image-panel{
+      margin-top:14px;
+      height:172px;
+      border:var(--border);
+      border-radius:24px;
+      overflow:hidden;
+      position:relative;
+      background:
+        radial-gradient(circle at 22% 28%, #ffd7c6 0 10%, transparent 11%),
+        radial-gradient(circle at 70% 48%, #d2f56a 0 18%, transparent 19%),
+        linear-gradient(135deg, #f8f2d8 0%, #f1ecd8 44%, #f7fbff 100%);
+      box-shadow:6px 6px 0 var(--sky);
+    }
+
+    .image-panel::before{
+      content:"GPT-IMAGE 2.0";
+      position:absolute;
+      top:12px;
+      right:12px;
+      padding:4px 8px;
+      border:3px solid var(--ink);
+      border-radius:999px;
+      background:var(--panel);
+      font-size:11px;
+      font-weight:900;
+    }
+
+    .image-panel::after{
+      content:"";
+      position:absolute;
+      left:28px;
+      right:28px;
+      bottom:24px;
+      height:58px;
+      border:var(--border);
+      border-radius:18px;
+      background:rgba(255,255,255,.85);
+      box-shadow:6px 6px 0 var(--coral);
+    }
+
+    .image-caption{
+      position:absolute;
+      left:48px;
+      bottom:38px;
+      z-index:2;
+      color:var(--ink);
+      font-size:20px;
+      font-weight:900;
+    }
+
+    .cards{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:12px;
+    }
+
+    .mini-card{
+      background:#fbfbfb;
+      border:var(--border);
+      border-radius:22px;
+      min-height:152px;
+      padding:14px 12px;
+      color:var(--ink);
+    }
+
+    .mini-card:nth-child(1){box-shadow:6px 6px 0 var(--coral);}
+    .mini-card:nth-child(2){box-shadow:6px 6px 0 var(--lime);}
+    .mini-card:nth-child(3){box-shadow:6px 6px 0 var(--sky);}
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:28px;
+      height:28px;
+      border-radius:999px;
+      background:var(--ink);
+      color:#fff;
+      font-size:14px;
+      font-weight:900;
+      margin-bottom:10px;
+    }
+
+    .mini-card h4{
+      margin:0 0 8px;
+      font-size:22px;
+      line-height:1.1;
+    }
+
+    .mini-card p{
+      margin:0;
+      font-size:13px;
+      line-height:1.45;
+      color:#4f4f4f;
+    }
+
+    .summary{
+      position:absolute;
+      left:24px;
+      right:24px;
+      bottom:18px;
+      height:44px;
+      border:var(--border);
+      border-radius:16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--ink);
+      font-size:20px;
+      font-weight:900;
+    }
+
+    .summary.sky{background:var(--sky)}
+    .summary.lime{background:var(--lime)}
+
+    .nav-panel{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .nav-item{
+      min-height:48px;
+      padding:12px 14px;
+      background:var(--panel);
+      border:var(--border);
+      border-radius:16px;
+      color:var(--ink);
+      font-size:14px;
+      font-weight:900;
+      display:flex;
+      align-items:center;
+    }
+
+    .nav-item.active{
+      background:var(--lime);
+      box-shadow:6px 6px 0 rgba(24,24,24,.12);
+    }
+
+    .flow-row{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:12px;
+      margin-top:16px;
+    }
+
+    .flow-card{
+      background:#fbfbfb;
+      border:var(--border);
+      border-radius:22px;
+      min-height:138px;
+      padding:16px 14px;
+      color:var(--ink);
+    }
+
+    .flow-card:nth-child(1){box-shadow:6px 6px 0 var(--coral);}
+    .flow-card:nth-child(2){box-shadow:6px 6px 0 var(--lime);}
+    .flow-card:nth-child(3){box-shadow:6px 6px 0 var(--sky);}
+
+    .flow-card h4{
+      margin:0 0 10px;
+      font-size:20px;
+      line-height:1.1;
+    }
+
+    .flow-card p{
+      margin:0;
+      font-size:13px;
+      line-height:1.45;
+      color:#4f4f4f;
+    }
+
+    .metric-stack{
+      display:grid;
+      gap:12px;
+      margin-top:12px;
+    }
+
+    .metric{
+      background:#fbfbfb;
+      border:var(--border);
+      border-radius:22px;
+      padding:16px 16px 14px;
+      color:var(--ink);
+    }
+
+    .metric:nth-child(1){box-shadow:6px 6px 0 var(--sky);}
+    .metric:nth-child(2){box-shadow:6px 6px 0 var(--lime);}
+    .metric:nth-child(3){box-shadow:6px 6px 0 var(--coral);}
+
+    .metric-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      margin-bottom:10px;
+    }
+
+    .metric-head strong{
+      font-size:18px;
+    }
+
+    .metric-head span{
+      font-size:26px;
+      font-weight:900;
+    }
+
+    .metric-bar{
+      height:16px;
+      border-radius:999px;
+      border:4px solid var(--ink);
+      background:#fff;
+      overflow:hidden;
+    }
+
+    .metric-bar i{
+      display:block;
+      height:100%;
+      background:var(--lime);
+    }
+
+    .metric:nth-child(1) .metric-bar i{width:91%;}
+    .metric:nth-child(2) .metric-bar i{background:var(--sky); width:68%;}
+    .metric:nth-child(3) .metric-bar i{background:var(--coral); width:82%;}
+
+    .single-hero{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:214px;
+      margin-top:18px;
+      border:var(--border);
+      border-radius:28px;
+      background:var(--sky);
+      box-shadow:var(--shadow-sky);
+      color:var(--ink);
+      font-size:40px;
+      font-weight:900;
+      text-align:center;
+      padding:0 28px;
+    }
+
+    .prod-note{
+      margin-top:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      background:#2a2a2a;
+      border:1px solid #4b4b4b;
+      color:#cdcdcd;
+      font-size:12px;
+      line-height:1.6;
+    }
+
+    @media (max-width: 1200px){
+      .scene-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .meta{
+        position:static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="page-head">
+      <h1>production.example · 四镜头生产骨架</h1>
+      <p>这个文件是给 `douyin-dh-vertical-abroll-video` 用的接近生产页的 HTML 基底。它不再只是单页视觉样机，而是按镜头拆成四个完整场景块，方便后续直接替换文案、图片、数字人素材和字幕，继续往可渲染版本推进。</p>
+    </div>
+
+    <div class="stack">
+      <section class="scene-wrap">
+        <aside class="meta">
+          <h2>镜 01 · 钩子镜</h2>
+          <div class="tag">A+B</div>
+          <div class="tag">4-6 秒</div>
+          <div class="tag">标题钩子</div>
+          <div class="prod-note">替换项：章节名、主标题、钩子句、主视觉图、NOTE 卡文案、数字人视频源。</div>
+        </aside>
+        <div class="frame">
+          <div class="chapter">
+            <div class="chapter-left">
+              <span class="dot"></span>
+              <span>CH 01 开场钩子</span>
+            </div>
+            <div class="time">00:06</div>
+          </div>
+
+          <section class="hero coral">
+            <div class="eyebrow">拾光 · AI 工程化</div>
+            <h3>豆包往侧边栏塞了<br><span class="hl">200 个技能</span></h3>
+            <div class="subcopy">你以后干活，不是自己干了，而是带一队 AI 当你的队员。</div>
+            <div class="image-panel">
+              <div class="image-caption">把工作流接进侧边栏</div>
+            </div>
+            <div class="summary sky">这事最有发言权，因为我天天带东哥跑公众号工作流。</div>
+          </section>
+
+          <div class="subtitle">你以后干活，不是自己干了，而是<span class="hl">带一队 AI</span></div>
+
+          <section class="bottom">
+            <article class="note">
+              <div class="note-mark">NOTE 01</div>
+              <h4>工作变了</h4>
+              <div class="chips">
+                <span class="chip">带一队 AI</span>
+                <span class="chip sky">200 个技能</span>
+                <span class="chip butter">侧边栏</span>
+              </div>
+              <div class="scribble">
+                <div class="line one"></div>
+                <div class="line two"></div>
+                <div>以前自己干，现在是派活、盯节奏、收结果。</div>
+              </div>
+            </article>
+
+            <aside class="avatar">
+              <div class="portrait"></div>
+            </aside>
+          </section>
+
+          <div class="footer">
+            <span>拾光 · AI 大事件 抖音 / 竖版 1080×1920</span>
+            <span>PROD 01</span>
+          </div>
+        </div>
+        <div class="notes">
+          <h3>生产提示</h3>
+          <ul>
+            <li>标题和关键词高亮必须是第一波进入动作。</li>
+            <li>主视觉图默认走 MCP `gpt-image-2.0`，不要随意混用来源不明图片。</li>
+            <li>数字人固定右下，不要做成全屏大头。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="scene-wrap">
+        <aside class="meta">
+          <h2>镜 02 · 三列能力镜</h2>
+          <div class="tag">B-only</div>
+          <div class="tag">6-8 秒</div>
+          <div class="tag">三卡 stagger</div>
+          <div class="prod-note">替换项：能力标题、3 列内容、字幕条、NOTE 卡、导航激活项。</div>
+        </aside>
+        <div class="frame">
+          <div class="chapter">
+            <div class="chapter-left">
+              <span class="dot"></span>
+              <span>CH 02 技能与连接器</span>
+            </div>
+            <div class="time">01:49</div>
+          </div>
+
+          <section class="hero sky">
+            <div class="eyebrow">连接器 · MCP</div>
+            <h3>AI 的<span class="hl">万能插座</span></h3>
+            <div class="subcopy">像给 AI 配了个万能插头，插进你的办公系统，它能直接查、直接写、直接发。</div>
+
+            <div class="cards">
+              <article class="mini-card">
+                <div class="badge">查</div>
+                <h4>直接查</h4>
+                <p>数据库<br>表格<br>知识库</p>
+              </article>
+              <article class="mini-card">
+                <div class="badge">写</div>
+                <h4>直接写</h4>
+                <p>文档<br>纪要<br>日报</p>
+              </article>
+              <article class="mini-card">
+                <div class="badge">发</div>
+                <h4>直接发</h4>
+                <p>群消息<br>审批结果<br>任务回传</p>
+              </article>
+            </div>
+
+            <div class="summary sky">插进办公系统，直接查，直接干。</div>
+          </section>
+
+          <div class="subtitle">像给 AI 配了个万能插头，插进你的办公系统，它能<span class="hl">直接查、直接干</span></div>
+
+          <section class="bottom">
+            <article class="note">
+              <div class="note-mark">NOTE 03</div>
+              <h4>万能插座</h4>
+              <div class="chips">
+                <span class="chip">直接查</span>
+                <span class="chip sky">直接干</span>
+                <span class="chip butter">万能插座</span>
+              </div>
+              <div class="scribble">
+                <div class="line one"></div>
+                <div class="line two"></div>
+                <div>插进工位，AI 才能真正变成执行层。</div>
+              </div>
+            </article>
+
+            <div class="nav-panel">
+              <div class="nav-item">钩子 · 开场</div>
+              <div class="nav-item active">RAG · 文档流</div>
+              <div class="nav-item">案例 · 适合谁</div>
+              <div class="nav-item">收尾 · 一句话</div>
+            </div>
+          </section>
+
+          <div class="footer">
+            <span>拾光 · AI 大事件 抖音 / 竖版 1080×1920</span>
+            <span>PROD 02</span>
+          </div>
+        </div>
+        <div class="notes">
+          <h3>生产提示</h3>
+          <ul>
+            <li>这类镜头适合做卡片 stagger，不适合所有元素同时进。</li>
+            <li>导航卡只点亮当前项，不能全部高亮。</li>
+            <li>字幕要独立，不要压回主卡内部。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="scene-wrap">
+        <aside class="meta">
+          <h2>镜 03 · 流程镜</h2>
+          <div class="tag">B-only</div>
+          <div class="tag">6-9 秒</div>
+          <div class="tag">流程连接</div>
+          <div class="prod-note">替换项：步骤标题、步骤说明、字幕条、NOTE 卡、数字人或导航区。</div>
+        </aside>
+        <div class="frame">
+          <div class="chapter">
+            <div class="chapter-left">
+              <span class="dot"></span>
+              <span>CH 03 文档一键进 Wiki</span>
+            </div>
+            <div class="time">03:02</div>
+          </div>
+
+          <section class="hero violet">
+            <div class="eyebrow">FRAME · 全格式</div>
+            <h3>一套流程，<span class="hl">全格式进</span></h3>
+            <div class="subcopy">从 EPUB、PDF、TXT 到字幕文件，先统一接入，再统一输出到语音、字幕和章节。</div>
+
+            <div class="flow-row">
+              <article class="flow-card">
+                <h4>输入全格式</h4>
+                <p>EPUB · PDF · TXT · MD · SRT 统一接收。</p>
+              </article>
+              <article class="flow-card">
+                <h4>统一输出</h4>
+                <p>语音、字幕、章节一起生成，不分裂。</p>
+              </article>
+              <article class="flow-card">
+                <h4>可商用</h4>
+                <p>本地部署、私有化、团队流程都能接。</p>
+              </article>
+            </div>
+
+            <div class="summary lime">一套框架，全格式进，统一出。</div>
+          </section>
+
+          <div class="subtitle">从自己干，变成带队伍。你派活，AIF 干，还能<span class="hl">带队</span></div>
+
+          <section class="bottom">
+            <article class="note">
+              <div class="note-mark">NOTE 06</div>
+              <h4>派活</h4>
+              <div class="chips">
+                <span class="chip">派活</span>
+                <span class="chip sky">AIF</span>
+                <span class="chip butter">带队伍</span>
+              </div>
+              <div class="scribble">
+                <div class="line one"></div>
+                <div class="line two"></div>
+                <div>你不再被格式拖住，而是统一管理输入和输出。</div>
+              </div>
+            </article>
+
+            <aside class="avatar">
+              <div class="portrait"></div>
+            </aside>
+          </section>
+
+          <div class="footer">
+            <span>拾光 · AI 大事件 抖音 / 竖版 1080×1920</span>
+            <span>PROD 03</span>
+          </div>
+        </div>
+        <div class="notes">
+          <h3>生产提示</h3>
+          <ul>
+            <li>真正生产时可以把 3 张流程卡替换成 4 步结构，再加箭头绘制。</li>
+            <li>这类镜头允许数字人出镜，也允许纯导航区承接。</li>
+            <li>文字多时要拆句，不要把一屏做成大段说明书。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="scene-wrap">
+        <aside class="meta">
+          <h2>镜 04 · 数据镜</h2>
+          <div class="tag">B-only</div>
+          <div class="tag">5-8 秒</div>
+          <div class="tag">数据增长</div>
+          <div class="prod-note">替换项：数据项名称、数值、结论条、收束文案、底部大结论卡。</div>
+        </aside>
+        <div class="frame">
+          <div class="chapter">
+            <div class="chapter-left">
+              <span class="dot"></span>
+              <span>CH 04 数据收束</span>
+            </div>
+            <div class="time">04:33</div>
+          </div>
+
+          <section class="hero lime">
+            <div class="eyebrow">DATA · 收益判断</div>
+            <h3>先接进来，再看<span class="hl">增长</span></h3>
+            <div class="subcopy">不是做一个花架子，而是让流程真的省时、省脑力、省重复劳动。</div>
+
+            <div class="metric-stack">
+              <article class="metric">
+                <div class="metric-head"><strong>信息接入效率</strong><span>91%</span></div>
+                <div class="metric-bar"><i></i></div>
+              </article>
+              <article class="metric">
+                <div class="metric-head"><strong>重复劳动减少</strong><span>68%</span></div>
+                <div class="metric-bar"><i></i></div>
+              </article>
+              <article class="metric">
+                <div class="metric-head"><strong>团队协同稳定性</strong><span>82%</span></div>
+                <div class="metric-bar"><i></i></div>
+              </article>
+            </div>
+          </section>
+
+          <div class="subtitle">改的不是某个功能，是你每天都要过的<span class="hl">工作流</span></div>
+
+          <section class="bottom">
+            <article class="note">
+              <div class="note-mark">NOTE 08</div>
+              <h4>最后一句</h4>
+              <div class="chips">
+                <span class="chip">接进来</span>
+                <span class="chip sky">自动跑</span>
+                <span class="chip butter">收结果</span>
+              </div>
+              <div class="scribble">
+                <div class="line one"></div>
+                <div class="line two"></div>
+                <div>真正的价值不是炫，而是让团队每天都能更快推进。</div>
+              </div>
+            </article>
+
+            <div class="single-hero">你每天会省出真正能做判断的时间</div>
+          </section>
+
+          <div class="footer">
+            <span>拾光 · AI 大事件 抖音 / 竖版 1080×1920</span>
+            <span>PROD 04</span>
+          </div>
+        </div>
+        <div class="notes">
+          <h3>生产提示</h3>
+          <ul>
+            <li>数据镜的重点是数值增长和结论收束，不要加太多无关装饰。</li>
+            <li>如果后续接 CTA，可以把右侧大结论卡改成导航收尾或数字人口播收尾。</li>
+            <li>这类镜头很适合做 B-only，保持信息板强度。</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

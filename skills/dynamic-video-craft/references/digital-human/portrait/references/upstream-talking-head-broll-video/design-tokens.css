@@ -1,0 +1,285 @@
+/* ============================================================
+   design-tokens.css · 《模型超市》视觉令牌
+   全部数值来自 下载.mp4 逐像素实测，基准 1920×1080
+   溯源：_m3.log / _sub.log / _ref_measure/*.json
+   ⚠️ 禁止在此文件外硬编码颜色、阴影、字号
+   ============================================================ */
+
+:root {
+  /* ---------- 画幅 ---------- */
+  --stage-w: 1920px;
+  --stage-h: 1080px;
+  --fps: 30;
+  --scale-from-native: 1.5;      /* 1280 → 1920 */
+
+  /* ---------- 颜色：画布与纸面（实测） ---------- */
+  --c-canvas:      #E7D5B7;      /* 主背景，85% 采样帧一致 */
+  --c-paper-light: #F4E7D6;      /* 卡片纸面 浅 */
+  --c-paper:       #EADCC5;      /* 卡片纸面 中 */
+  --c-paper-deep:  #DFCDB4;      /* 卡片纸面 深 */
+  --c-ink:         #2B2A26;      /* 暖黑正文，非纯黑 */
+  --c-ink-soft:    #5A5348;      /* 次级文字 */
+  --c-hairline:    #000000;      /* B-roll 框 2px 黑描边（实测值 4–10） */
+  --c-keyline:     #FFF6E6;      /* 纸片暖奶油细描边 */
+  --c-frame-white: #FFFFFF;      /* 数字人框白边（实测 248–255） */
+
+  /* ---------- 强调色：按语义选，每帧 ≤2 处 ---------- */
+  --a-orange: #D2601A;   /* 时间消耗 / 成本 / 紧迫 */
+  --a-mustard:#D9A425;   /* 工具 / 警示 / 经验流失 */
+  --a-green:  #2F6B4F;   /* 认知 / 判断 / 系统复位 */
+  --a-purple: #5B3E7A;   /* 标准 / 知识沉淀 */
+  --a-teal:   #2E6E7E;   /* 协作 / 自动执行 */
+
+  /* ---------- 字幕（151 帧实测 p10=p90=26px 原生） ---------- */
+  --sub-size:       38px;   /* 原生 26px × 1.5 ≈ 39，取 38 */
+  --sub-weight:     700;
+  --sub-stroke:     3px;    /* 原生 2px */
+  --sub-bottom-gap: 74px;   /* 原生 49px */
+  --sub-color:      #FFFFFF;
+  --sub-stroke-color:#000000;
+
+  /* ---------- B-roll 文字层级 ---------- */
+  --fs-hero:      108px;  --fw-hero: 900;
+  --fs-hero-num:  160px;
+  --fs-card-title: 44px;  --fw-card-title: 700;
+  --fs-body:       28px;  --fw-body: 400;
+  --fs-label:      21px;  --fw-label: 500;
+  --ls-label:      0.08em;
+
+  /* ---------- 画框系统 A：数字人（白边 + 非对称阴影） ---------- */
+  --frame-a-border: 9px;         /* 原生 6px 白边 */
+  --frame-a-radius: 9px;         /* 原生 ~6px */
+
+  /* ---------- 画框系统 B：B-roll（细黑边，无白边） ---------- */
+  --frame-b-border: 3px;         /* 原生 2px */
+  --frame-b-radius: 6px;
+
+  /* ---------- SPLIT 几何：全部绝对像素，禁止用百分比 ----------
+     溯源 _geom2.log，7 帧零离散（t=14/16/32/62/104/120/205s）
+     原生 A[16,31]-[407,623]  B[434,39]-[1245,615]
+     ⚠️ 曾用 left:0 + right:0 + 百分比宽度，导致 A/B 两框叠压（中缝被吃光）
+        百分比相对 stage 算，而 padding/border 在 box 外额外撑开 → 必须写死像素 */
+  --split-a-left:    24px;   /* 原生  16 · A 框不贴边 */
+  --split-a-top:     46px;   /* 原生  31 */
+  --split-a-width:  588px;   /* 原生 392 = 30.63% */
+  --split-a-bottom: 144px;   /* 原生  96 */
+
+  --split-gutter:    39px;   /* 原生  26 · 中缝，8 帧众数零离散 ★ */
+
+  --split-b-left:   651px;   /* 原生 434 = a-left + a-width + gutter */
+  --split-b-top:     58px;   /* 原生  39 · 比 A 框低 12px（非对齐，实测） */
+  --split-b-width: 1218px;   /* 原生 812 = 63.44% */
+  --split-b-right:   51px;   /* 原生  34 */
+  --split-b-bottom: 156px;   /* 原生 104 · 比 A 框高 12px（非对齐，实测） */
+
+  /* FULL 布局（B 框独占，左右对称留白） */
+  --full-b-left:     36px;
+  --full-b-right:    36px;
+  --full-b-top:      46px;
+  --full-b-bottom:  144px;
+
+
+  /* ---------- 阴影：左上光源，四边不等（实测核心） ----------
+     左 16px/-17 · 右 34px/-39 · 下 32px/-49 · 上 0px/≈0  (原生)
+     ⚠️ 绝不可用对称阴影
+     ⚠️ SPLIT 中缝 39px 是"两框分离"的唯一视觉证据，必须保留干净背景。
+        两次实测教训：
+        · 右阴影 36px → 中缝被填成 138–158（背景 209），肉眼仍粘在一起
+        · 右阴影 18px + B 左阴影 10px → 153–193，两侧阴影在缝中相遇叠加，
+          仍无一个像素回到背景值
+        → 定稿：A 右阴影 10px、B 左阴影 6px，中缝中段 ≥12px 为纯背景。
+        FULL 布局无相邻框，用 --shadow-frame-a-full 恢复实测的厚重右阴影。 */
+  --shadow-frame-a:
+      -24px  0    24px -8px  rgba(60,44,24,.16),
+       10px  0    10px -8px  rgba(60,44,24,.26),
+       0    48px  44px -10px rgba(60,44,24,.42);
+
+  /* A 框在 FULL / 无右邻框场景使用：恢复实测 51px 厚重右阴影 */
+  --shadow-frame-a-full:
+      -24px  0    24px -8px  rgba(60,44,24,.16),
+       51px  0    40px -6px  rgba(60,44,24,.34),
+       0    48px  44px -10px rgba(60,44,24,.42);
+
+  --shadow-frame-b:
+       -6px  0     8px -8px  rgba(60,44,24,.14),   /* 左：极窄，避免侵入中缝 */
+       51px  0    40px -6px  rgba(60,44,24,.34),
+       0    48px  44px -10px rgba(60,44,24,.42);
+
+  --shadow-card:
+       -8px  0    12px -6px  rgba(60,44,24,.10),
+       22px  0    22px -8px  rgba(60,44,24,.24),
+       0    22px  24px -10px rgba(60,44,24,.30);
+
+  /* ---------- 留白 ---------- */
+  --pad-card:     36px;
+  --gap-card:     24px;
+  --safe-inset:   72px;
+
+  /* ---------- 动效时长（帧 @30fps） ---------- */
+  --d-enter:   12;   /* 0.40s 卡片入场 */
+  --d-stagger:  4;   /* 0.13s 逐行错开 */
+  --d-chart:   24;   /* 0.80s 图表生长 */
+  --d-number:  27;   /* 0.90s 数字滚动 */
+  --d-type:     3;   /* 打字机每字 2–3f */
+  --ease-out:  cubic-bezier(.22, 1, .36, 1);
+}
+
+/* ============================================================
+   基础层
+   ============================================================ */
+.stage {
+  position: relative;
+  width: var(--stage-w);
+  height: var(--stage-h);
+  background: var(--c-canvas);
+  overflow: hidden;
+  font-family: "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+  color: var(--c-ink);
+}
+
+/* 纸质材质：未涂布纸纤维 + 半调网点（叠在色场之上，极轻） */
+.paper-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .055;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(60,44,24,.9) .5px, transparent .5px);
+  background-size: 3px 3px;   /* 半调网点 */
+}
+
+/* ============================================================
+   画框 A · 数字人（9px 白边 + 非对称阴影）
+   实测参考视频右侧白边不可见，但那是因为右方紧邻中缝阴影。
+   本片保留 4px 右白边：既贴近实测观感，又让深色画面不直接
+   撞上中缝，避免"两框糊成一片"。
+   ============================================================ */
+.frame-a {
+  position: absolute;
+  box-sizing: border-box;        /* ★ 白边计入 width，防止向外撑破中缝 */
+  background: var(--c-frame-white);
+  border-radius: var(--frame-a-radius);
+  box-shadow: var(--shadow-frame-a);
+  overflow: hidden;
+  padding: var(--frame-a-border);
+  padding-right: 4px;            /* 实测近乎无边，留 4px 分隔深色画面 */
+}
+.frame-a > video,
+.frame-a > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* ★ 数字人水平居中锚点 = 68%（不是 center！）
+     源帧 1280x704 并未预裁；A 框内容区 575x872 为竖构图，
+     cover 按高铺满 (scale 1.2386) 后横向裁掉约 64%，
+     默认 center 取的是源图正中 50%，而人物头肩中心实测在 0.612~0.615（偏右），
+     故必须把取景窗右移。68% 由两条互相独立的证据反解得出：
+       · _dh_diff.py 帧间差分背景减除（运动维度）：6 片段头肩 objX 中位 68.0%，极差 3.2
+       · _dh_skin.py Kovac RGB 肤色检测（色度维度）：18 帧 objX 中位 68.7%，极差 5.6
+     判定图见 _dh_verdict.png。早期 _dh_anchor2.py 给出的 42.3% 已被证伪
+     （其 head bbox 左边界 18 帧恒为 243px，抓到的是背景固定灯架而非人体）。
+     纵向：scaled_h 恰为 872，溢出 0 ⇒ 纵向分量无效，头顶留白 0.034 属素材固有，
+     如需加大须在 ffmpeg 出帧阶段 pad，不在 CSS 层处理。 */
+  object-position: 68% center;
+  border-radius: calc(var(--frame-a-radius) - 2px);
+}
+
+/* ============================================================
+   画框 B · B-roll（3px 黑细边，无白边）
+   ============================================================ */
+.frame-b {
+  position: absolute;
+  box-sizing: border-box;        /* ★ 黑描边计入 width，防止向外撑破中缝 */
+  background: var(--c-paper-light);
+  border: var(--frame-b-border) solid var(--c-hairline);
+  border-radius: var(--frame-b-radius);
+  box-shadow: var(--shadow-frame-b);
+  overflow: hidden;
+}
+
+/* ============================================================
+   布局：SPLIT（A 左 / 中缝 39px / B 右）· FULL
+   全部绝对像素定位。box-sizing:border-box 保证 padding/border
+   计入 width，否则 A 的白边与 B 的黑边会向外撑破中缝。
+   ============================================================ */
+.layout-split .frame-a {
+  left:   var(--split-a-left);
+  top:    var(--split-a-top);
+  bottom: var(--split-a-bottom);
+  width:  var(--split-a-width);
+  right:  auto;
+}
+.layout-split .frame-b {
+  left:   var(--split-b-left);
+  top:    var(--split-b-top);
+  bottom: var(--split-b-bottom);
+  width:  var(--split-b-width);
+  right:  auto;
+}
+.layout-full .frame-b {
+  left:   var(--full-b-left);
+  right:  var(--full-b-right);
+  top:    var(--full-b-top);
+  bottom: var(--full-b-bottom);
+  width:  auto;
+}
+
+/* ============================================================
+   纸质卡片
+   ============================================================ */
+.card {
+  background: var(--c-paper-light);
+  border: 1px solid var(--c-keyline);
+  border-radius: 6px;
+  box-shadow: var(--shadow-card);
+  padding: var(--pad-card);
+}
+.card--deep  { background: var(--c-paper-deep); }
+.card--paper { background: var(--c-paper); }
+
+/* ============================================================
+   字幕（实测 38px / 距底 74px / 严格居中）
+   ============================================================ */
+.subtitle {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: var(--sub-bottom-gap);
+  text-align: center;
+  font-size: var(--sub-size);
+  font-weight: var(--sub-weight);
+  line-height: 1.15;
+  color: var(--sub-color);
+  white-space: nowrap;
+  -webkit-text-stroke: var(--sub-stroke) var(--sub-stroke-color);
+  paint-order: stroke fill;      /* 描边在填充下，字形不被吃掉 */
+}
+
+/* ============================================================
+   文字层级
+   ============================================================ */
+.t-hero   { font-size: var(--fs-hero);      font-weight: var(--fw-hero); line-height: 1.05; }
+.t-num    { font-size: var(--fs-hero-num);  font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums; }
+.t-title  { font-size: var(--fs-card-title);font-weight: var(--fw-card-title); line-height: 1.25; }
+.t-body   { font-size: var(--fs-body);      font-weight: var(--fw-body); line-height: 1.55; color: var(--c-ink-soft); }
+.t-label  { font-size: var(--fs-label);     font-weight: var(--fw-label);
+            letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--c-ink-soft); }
+
+/* 强调色工具类（每帧 ≤2 处） */
+.x-orange { color: var(--a-orange); }
+.x-mustard{ color: var(--a-mustard); }
+.x-green  { color: var(--a-green); }
+.x-purple { color: var(--a-purple); }
+.x-teal   { color: var(--a-teal); }
+
+/* ============================================================
+   无障碍
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

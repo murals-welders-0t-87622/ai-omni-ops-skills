@@ -1,0 +1,75 @@
+/* ============================================================
+   _shell.css · 动态预览外壳（仅用于浏览器观看，不进入渲染管线）
+   职责：把 1920×1080 的 stage 等比缩放到视口 + 播放控制条
+   ⚠️ 不在此文件覆盖任何 design-tokens 的几何/颜色/阴影
+   ============================================================ */
+html, body {
+  margin: 0; padding: 0; height: 100%;
+  background: #171412;
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+}
+.viewport {
+  width: 100%; height: 100%;
+  display: grid; place-items: center;
+  overflow: hidden;
+}
+.scaler {
+  transform: scale(var(--k, .5));
+  transform-origin: center center;
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,.7);
+}
+
+/* ---------- 播放控制条 ---------- */
+.hud {
+  position: fixed; left: 16px; bottom: 14px; z-index: 99;
+  display: flex; align-items: center; gap: 10px;
+  font-size: 12px; color: #cbbfae;
+  background: rgba(24,20,17,.86);
+  border: 1px solid #443a30;
+  border-radius: 999px;
+  padding: 7px 14px;
+  backdrop-filter: blur(6px);
+}
+.hud b { color: #f0e4d2; font-weight: 700; }
+.hud button {
+  font: inherit; cursor: pointer;
+  color: #f0e4d2; background: #3a3128;
+  border: 1px solid #5c4e3f; border-radius: 999px;
+  padding: 4px 12px;
+}
+.hud button:hover { background: #4b4034; }
+.hud label { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+.hud .sep { width: 1px; height: 14px; background: #4a3f34; }
+.hud .tag {
+  font-size: 11px; color: #9c8f7e;
+  border: 1px solid #4a3f34; border-radius: 4px; padding: 1px 6px;
+}
+
+/* ---------- 几何辅助线（勾选后显示中缝 / 边距实测值） ---------- */
+.guide {
+  position: absolute; z-index: 60;
+  pointer-events: none; opacity: 0;
+  transition: opacity .18s;
+}
+.stage.show-guide .guide { opacity: 1; }
+.guide--gutter {
+  top: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    -45deg, rgba(210,96,26,.30) 0 6px, rgba(210,96,26,0) 6px 12px);
+  border-left: 1px dashed rgba(210,96,26,.9);
+  border-right: 1px dashed rgba(210,96,26,.9);
+}
+.guide__num {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%) rotate(-90deg);
+  font-size: 20px; font-weight: 800; color: #8f3d0c;
+  white-space: nowrap;
+}
+.guide--hgutter {
+  left: 0; right: 0;
+  background: repeating-linear-gradient(
+    -45deg, rgba(210,96,26,.30) 0 6px, rgba(210,96,26,0) 6px 12px);
+  border-top: 1px dashed rgba(210,96,26,.9);
+  border-bottom: 1px dashed rgba(210,96,26,.9);
+}
+.guide--hgutter .guide__num { transform: translate(-50%,-50%); }

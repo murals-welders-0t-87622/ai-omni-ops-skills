@@ -25,8 +25,6 @@
 |制作路线与设计|creative-production-router|按表达任务选专业专家/工艺；产物及视听验收|
 |商品带货制作|ai-commerce-video|三轴创意/结构/制作；一品多条与素材复用|
 |品牌剧情/创意制作|brand-creative-video|故事→项目/资产→镜头→生成/剪辑/成片|
-|横屏数字人口播|douyin-dh-landscape-remotion-video|口播→横屏人物与信息画面→预览→成片与归档|
-|竖屏数字人口播|douyin-dh-vertical-abroll-video|口播→竖屏人物与辅助画面→预览→成片与归档|
 |动效/网页/图解制作|dynamic-video-craft|页面或解说→镜头/声音/动效→可编辑工程与MP4|
 |发布分发|content-distribution|版本/账号/授权→草稿或发布→真实回执→客户承接|
 |全局复盘|omni-growth-review|同口径目标/实际→原因与实验→调整整体优先级|

@@ -2,7 +2,7 @@
 name: dynamic-video-craft
 description: 制作品牌、产品宣传和知识讲解动态视频；按需求检索 MotionGit 模板、Lemo 风格及 Shotcraft / Talkcraft 镜头，核查模板获取和素材许可，制作预览与可编辑成片。
 metadata:
-  version: "1.2.63"
+  version: "1.2.64"
 ---
 
 统一技能库接手时，先读 [共同执行约定](../brand-omni-growth-expert/references/runtime-contract.md)，引用有效品牌策略；本领域保留下面完整专业方法。来源原文/品牌例子不是全局权限或固定经营参数。
@@ -19,6 +19,8 @@ metadata:
 需要Remotion精确时间、Canvas/Three.js混合镜头、数据与声音统一或Windows性能排错时，先读 [Remotion与混合制作](references/remotion-and-hybrid.md)。技术选择服务现有脚本/品牌目标，不改变用户已指定的引擎、终点和授权。
 
 把素材组织成有镜头、节奏和声音的动态视频。默认使用本技能的原创 Remotion 工程骨架；镜头词汇参考 video-shotcraft 与 video-talkcraft。它是独立的中文制作入口，不要求先安装这两个上游技能。
+
+数字人口播仍属于本技能的制作工艺：需要横屏 Remotion 时读取[用户提供的横屏完整流程与卡片](references/digital-human/landscape/WORKFLOW.md)；需要竖屏 A/B 轨时读取[用户提供的竖屏完整流程与配置](references/digital-human/portrait/WORKFLOW.md)。随包保留相应参考资料、组件和脚本；按当前品牌和真实 MCP 能力执行，旧专家团文件及历史参数仅供参考。
 
 ## 先确定制作路线
 

@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Demo · 拾光抖音 B-roll 视觉规范预览 v8（每帧左下随手记 + .bot flex 自适应不超界 + vs 防溢出）</title>
+<style>
+/* ============ 设计变量 ============ */
+:root{
+  --bg:#F6F5EC; --grid:rgba(26,26,26,.04);
+  --ink:#1A1A1A; --gray:#8A94A6; --white:#FFFFFF;
+  --green:#C7FF2F; --blue:#76D5FE; --coral:#FE6449;
+  --purple:#A588FD; --yellow:#FDE676; --pink:#F8B4D9;
+  --skyblue:#A8DADC; --yellowdeep:#FDE68A;
+}
+/* ============ 页面外壳 ============ */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#2a2a2a;color:#eee;font-family:"Source Han Sans CN","Noto Sans SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+.page{padding:28px 36px 60px;max-width:1860px;margin:0 auto}
+.page-head h1{font-size:24px;font-weight:800;color:#fff;margin-bottom:6px}
+.page-head p{font-size:13px;color:#aaa;letter-spacing:1px;margin-bottom:14px}
+.page-head .legend{display:flex;flex-wrap:wrap;gap:8px;font-size:11px;color:#bbb;margin-top:8px}
+.page-head .legend span{padding:3px 8px;border:1px solid #555;border-radius:4px;background:#1a1a1a}
+.section-title{font-size:13px;font-weight:700;color:#C7FF2F;letter-spacing:2px;margin:30px 0 14px;text-transform:uppercase;border-left:3px solid #C7FF2F;padding-left:8px}
+.grid{display:flex;flex-wrap:wrap;gap:22px}
+.grid .info{display:flex;flex-direction:column;align-items:center;flex-shrink:0}
+.grid .info .lab{font-size:11px;color:#888;margin-top:6px;letter-spacing:1px;font-weight:700;text-align:center}
+.grid .info .size{font-size:10px;color:#666;margin-top:2px;letter-spacing:0.5px;font-family:Consolas,monospace}
+
+/* ============ 场景容器 ============ */
+/* 竖版原始 1080×1920，缩放 0.5 → 540×960 */
+.scene-wrap{width:540px;height:960px;background:#1a1a1a;border:2px solid #444;border-radius:10px;overflow:hidden;position:relative;flex-shrink:0;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.scene-wrap.horiz{width:720px;height:418px}            /* 横版 1280×720 缩放到 720×418 ≈ 0.5625 */
+.scene-label{position:absolute;top:6px;left:8px;background:rgba(0,0,0,.85);color:#C7FF2F;font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px;letter-spacing:1px;z-index:99}
+.scene-size-tag{position:absolute;top:6px;right:8px;background:rgba(0,0,0,.85);color:#aaa;font-size:10px;font-weight:600;padding:3px 7px;border-radius:4px;font-family:Consolas,monospace;z-index:99}
+
+.scene{width:1080px;height:1920px;transform:scale(.5);transform-origin:top left;background:var(--bg);position:relative;overflow:hidden}
+.scene.horiz{width:1280px;height:720px;transform:scale(.5625);transform-origin:top left}
+
+/* ============ 通用组件 ============ */
+.bg-grid{position:absolute;inset:0;background-image:
+  linear-gradient(to right,var(--grid) 1px,transparent 1px),
+  linear-gradient(to bottom,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px;pointer-events:none}
+
+.plate{background:var(--white);border:8px solid var(--ink);border-radius:28px;box-shadow:6px 6px 0 #C7FF2F;position:absolute}
+.plate-coral{box-shadow:6px 6px 0 #FE6449}
+.plate-blue{box-shadow:6px 6px 0 #76D5FE}
+.plate-purple{box-shadow:6px 6px 0 #A588FD}
+.plate-yellow{box-shadow:6px 6px 0 #FDE676}
+.plate-down{box-shadow:0 4px 0 #1A1A1A}
+
+.pill{display:inline-block;background:var(--white);border:4px solid var(--ink);border-radius:999px;padding:6px 22px;font-size:32px;font-weight:800;color:var(--ink);letter-spacing:2px}
+.pill-green{background:var(--green)}
+.pill-coral{background:var(--coral);color:#fff}
+.pill-blue{background:var(--blue)}
+.pill-yellow{background:var(--yellow)}
+.pill-purple{background:var(--purple);color:#fff}
+
+.hl{display:inline-block;background:var(--green);padding:0 14px;margin:0 4px;font-weight:900;border:2px solid var(--ink);transform:rotate(-1deg)}
+.hl-coral{background:var(--coral);color:#fff}
+.hl-blue{background:var(--blue)}
+.hl-yellow{background:var(--yellow)}
+
+/* ============ 5 区通用坐标 ============ */
+/*  ① 顶部章节条 */
+.top{position:absolute;left:40px;top:130px;width:1000px;height:110px}
+.top .plate{width:1000px;height:110px;display:flex;align-items:center;justify-content:space-between;padding:0 36px}
+.top .left{display:flex;align-items:center;gap:18px}
+.top .right{font-size:30px;font-weight:800;letter-spacing:3px}
+.dot{width:30px;height:30px;border-radius:50%;background:var(--green);border:3px solid var(--ink);flex-shrink:0}
+.dot-coral{background:var(--coral)}
+.dot-blue{background:var(--blue)}
+.dot-yellow{background:var(--yellow)}
+.dot-purple{background:var(--purple)}
+.divider{width:3px;height:38px;background:var(--ink)}
+.top .ch{font-size:34px;font-weight:900;letter-spacing:3px}
+.top .name{font-size:34px;font-weight:900}
+
+/* ② 上部主画面卡（800 高度）*/
+.main{position:absolute;left:40px;top:280px;width:1000px;height:800px}
+.main .plate{width:1000px;height:800px;padding:48px 56px;display:flex;flex-direction:column}
+.card-tag{display:flex;justify-content:space-between;align-items:center;font-size:22px;font-weight:700;color:var(--gray);letter-spacing:2px;margin-bottom:18px}
+.card-tag .left{display:flex;align-items:center;gap:12px}
+.card-title{font-size:78px;font-weight:900;line-height:1.1;color:var(--ink);letter-spacing:-1px;margin-bottom:18px}
+.card-subtitle{font-size:24px;font-weight:500;color:#5a5a5a;line-height:1.5;margin-bottom:22px}
+
+/* ③ 中部字幕条（170 高度）*/
+.sub{position:absolute;left:40px;top:1110px;width:1000px;height:160px}
+.sub .plate{width:1000px;height:160px;display:flex;align-items:center;justify-content:center;padding:22px 40px;box-shadow:0 4px 0 #1A1A1A}
+.sub-text{font-size:40px;font-weight:700;line-height:1.4;color:var(--ink);text-align:left;width:100%}
+.kw{background:var(--green);padding:0 10px;margin:0 2px;font-weight:900;border:2px solid var(--ink)}
+.kw-coral{background:var(--coral);color:#fff}
+.kw-blue{background:var(--blue)}
+.kw-yellow{background:var(--yellow)}
+
+/* ④ 下半区（430 高度）· flex 容器，绝不超界 */
+.bot{position:absolute;left:40px;top:1310px;width:1000px;height:430px;display:flex;gap:18px;align-items:stretch}
+
+/* 左下"随手记"卡片 · 占 .bot 左 2/3 ≈ 654.67px · 右侧主题卡/dh/note 占右 1/3 ≈ 327.33px */
+.sticky{flex:0 0 calc((1000px - 18px) * 2 / 3);width:calc((1000px - 18px) * 2 / 3);height:100%;background:var(--white);border:8px solid var(--ink);border-radius:28px;padding:30px 40px;box-shadow:8px 8px 0 #C7FF2F;display:flex;flex-direction:column;overflow:hidden;position:relative}
+.sticky .st-corner{position:absolute;top:16px;right:24px;font-size:18px;font-weight:900;color:var(--green);letter-spacing:3px}
+.sticky .st-title{display:flex;align-items:center;gap:12px;font-size:42px;font-weight:900;color:var(--ink);margin-bottom:18px;letter-spacing:2px}
+.sticky .st-title .diamond{color:var(--green);font-size:46px}
+.sticky .st-tag-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.sticky .st-tag{display:inline-block;border:4px solid var(--ink);border-radius:999px;padding:8px 24px;font-size:24px;font-weight:900;line-height:1.2;color:var(--ink);background:var(--white)}
+.sticky .st-tag.t-y{background:var(--yellow)}
+.sticky .st-tag.t-g{background:var(--green)}
+.sticky .st-tag.t-c{background:var(--coral);color:#fff;border-color:#1A1A1A}
+.sticky .st-tag.t-p{background:var(--pink)}
+.sticky .st-tag.t-b{background:var(--skyblue)}
+.sticky .st-hand{flex:1;font-family:"STXingkai","华文行楷","KaiTi",cursive;font-size:54px;line-height:1.55;color:var(--ink);overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.sticky .st-hand .mark-y{background:var(--yellow);padding:0 10px;display:inline-block;line-height:1.15}
+.sticky .st-hand .mark-g{background:var(--green);padding:0 10px;display:inline-block;line-height:1.15}
+.sticky .st-hand .strike{text-decoration:line-through;color:var(--purple);text-decoration-thickness:4px}
+.sticky .st-hand .mark-c{background:var(--coral);color:#fff;padding:0 10px;display:inline-block;line-height:1.15}
+
+/* 完整版式大笔记（仅完整竖版使用） */
+.note{flex:1;min-width:0;height:100%;background:var(--white);border:8px solid var(--ink);border-radius:28px;padding:28px 32px;box-shadow:6px 6px 0 #FDE676;display:flex;flex-direction:column;overflow:hidden}
+.note .title{font-size:32px;font-weight:900;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.note .title .star{color:var(--green);font-size:38px}
+.note .hand{flex:1;font-family:"STXingkai","华文行楷","KaiTi",cursive;font-size:48px;line-height:1.55;color:var(--ink);overflow:hidden}
+.note .hand .mark-y{background:var(--yellow);padding:0 6px;display:inline-block}
+.note .hand .strike{text-decoration:line-through;color:var(--purple);text-decoration-thickness:3px}
+
+/* 右下 5 主题卡 · flex 自适应 */
+.topics{flex:1;min-width:0;height:100%;display:flex;flex-direction:column;gap:11px;justify-content:space-between}
+.topic-card{flex:1;background:var(--white);border:3px solid #b8c0cc;border-radius:14px;display:flex;align-items:center;padding:0 22px;font-size:26px;font-weight:800;color:var(--ink);position:relative;min-height:0;overflow:hidden}
+.topic-card.active{border:5px solid var(--ink);background:var(--green);box-shadow:0 5px 0 #1A1A1A;font-weight:900}
+.topic-card .arrow{position:absolute;left:-18px;top:50%;transform:translateY(-50%);width:0;height:0;border-top:12px solid transparent;border-bottom:12px solid transparent;border-right:14px solid var(--ink);display:none}
+.topic-card.active .arrow{display:block}
+
+/* 数字人右下角 · flex 自适应 · 间距恒 ≥ 30px */
+.dh{flex:1;min-width:0;height:100%;background:linear-gradient(135deg,#5a5a5a 0%,#1a1a1a 100%);border:10px solid var(--white);border-radius:28px;display:flex;align-items:center;justify-content:center;color:#888;font-size:26px;font-weight:700;text-align:center;box-shadow:6px 6px 0 rgba(0,0,0,.5);overflow:hidden}
+.dh .inner{background:rgba(0,0,0,.4);padding:24px 32px;border-radius:14px;line-height:1.6}
+
+/* ⑤ 底部页脚 */
+.foot{position:absolute;left:40px;top:1770px;width:1000px;height:40px;display:flex;justify-content:space-between;align-items:center;font-size:20px;font-weight:700;color:var(--ink);letter-spacing:2px;border-top:2px solid var(--ink);padding-top:8px}
+.foot .left .sub{color:#5a5a5a;margin-left:12px;font-size:16px}
+.foot .right{color:var(--gray)}
+
+/* ============ 5 套组件模板 ============ */
+.ctitle .card-title{font-size:96px;margin-bottom:24px;line-height:1.05}
+
+/* items3 */
+.items3{display:flex;gap:18px;flex:1;align-items:stretch;margin-top:auto}
+.items3 .it{flex:1;border:8px solid var(--ink);border-radius:24px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;min-height:0}
+.items3 .it.it-pink{background:var(--pink);box-shadow:6px 6px 0 #d97cb6}
+.items3 .it.it-blue{background:var(--skyblue);box-shadow:6px 6px 0 #76b9bb}
+.items3 .it.it-yellow{background:var(--yellow);box-shadow:6px 6px 0 #d6c14a}
+.items3 .it .lab{display:inline-block;background:#fff;border:3px solid var(--ink);border-radius:999px;padding:6px 18px;font-size:24px;font-weight:900;width:fit-content;margin-bottom:18px}
+.items3 .it .body{font-size:36px;font-weight:900;line-height:1.15;color:var(--ink)}
+.items3 .it .tag-list{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
+.items3 .it .tag{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:4px 14px;font-size:18px;font-weight:700}
+
+/* items4 */
+.items4{display:flex;gap:14px;flex:1;align-items:stretch;margin-top:auto}
+.items4 .it{flex:1;background:var(--white);border:7px solid var(--ink);border-radius:22px;padding:22px 18px;display:flex;flex-direction:column}
+.items4 .it .num{width:52px;height:52px;border-radius:50%;background:var(--ink);color:#fff;font-size:26px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.items4 .it .title{font-size:28px;font-weight:900;margin-bottom:8px;padding-bottom:6px;border-bottom:3px solid var(--coral)}
+.items4 .it.i1 .title{border-bottom-color:var(--coral)}
+.items4 .it.i2 .title{border-bottom-color:var(--blue)}
+.items4 .it.i3 .title{border-bottom-color:var(--green)}
+.items4 .it.i4 .title{border-bottom-color:var(--purple)}
+.items4 .it.i1{box-shadow:6px 6px 0 var(--coral)}
+.items4 .it.i2{box-shadow:6px 6px 0 var(--blue)}
+.items4 .it.i3{box-shadow:6px 6px 0 var(--green)}
+.items4 .it.i4{box-shadow:6px 6px 0 var(--purple)}
+.items4 .it ul{list-style:none;font-size:18px;line-height:1.55;color:var(--ink)}
+.items4 .it ul li::before{content:"•  ";font-weight:900}
+
+/* versus · 双栏对比 · 主卡防溢出 */
+.versus{display:flex;align-items:stretch;gap:22px;flex:1;margin-top:auto;min-height:0;max-height:100%;overflow:hidden}
+.versus .col{flex:1;min-width:0;border:8px solid var(--ink);border-radius:24px;padding:20px 22px;display:flex;flex-direction:column;min-height:0;overflow:hidden}
+.versus .col.c-pink{background:var(--pink);box-shadow:6px 6px 0 #d97cb6}
+.versus .col.c-blue{background:var(--skyblue);box-shadow:6px 6px 0 #76b9bb}
+.versus .arrow{align-self:center;font-size:80px;font-weight:900;color:var(--ink);flex-shrink:0;line-height:1}
+.versus .col h4{font-size:22px;font-weight:800;color:var(--coral);margin-bottom:12px;flex-shrink:0}
+.versus .col h4.blue{color:#0c6cb1}
+.versus .col .box{display:inline-block;background:#fff;border:3px solid var(--ink);border-radius:12px;padding:5px 12px;font-size:18px;font-weight:700;margin:3px 6px 3px 0;line-height:1.2}
+.versus .col .row{display:flex;flex-wrap:wrap;margin-top:6px}
+
+/* bstat */
+.bstat{display:flex;gap:18px;flex:1;align-items:stretch;margin-top:auto}
+.bstat .it{flex:1;background:var(--white);border:8px solid var(--ink);border-radius:22px;padding:30px;display:flex;flex-direction:column;justify-content:flex-end}
+.bstat .it.i1{background:var(--green);box-shadow:6px 6px 0 #8fbc1c}
+.bstat .it.i2{background:var(--skyblue);box-shadow:6px 6px 0 #76b9bb}
+.bstat .it.i3{background:var(--pink);box-shadow:6px 6px 0 #d97cb6}
+.bstat .it .num{font-size:84px;font-weight:900;line-height:1;color:var(--ink);letter-spacing:-2px}
+.bstat .it .num .unit{font-size:38px;font-weight:900}
+.bstat .it .lab{font-size:24px;font-weight:800;color:var(--ink);margin-top:12px}
+
+/* ============ 主卡带图模板（mc-imgleft / mc-imgtop） ============ */
+/* 图片占位：正式渲染由 gpt-image-2 出真图，此处仅占位保证布局饱满 */
+.img-ph{position:relative;background:#e9e6da;border:7px solid var(--ink);border-radius:20px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:5px 5px 0 #A588FD}
+.img-ph .ph-corner{position:absolute;top:10px;left:12px;font-size:15px;font-weight:900;color:var(--ink);background:var(--green);padding:3px 10px;border:3px solid var(--ink);border-radius:8px}
+.img-ph .ph-text{font-size:23px;font-weight:900;color:#8a8270;text-align:center;line-height:1.45;padding:10px}
+.img-ph .ph-text small{font-size:14px;font-weight:700;color:#a89e88}
+.img-ph .ph-barcode{position:absolute;bottom:10px;right:12px;font-size:13px;font-weight:800;color:#8a8270;background:#fff;border:2px solid var(--ink);border-radius:6px;padding:2px 8px}
+
+/* imgleft：左图(42%) + 右文(58%)，右栏含 kicker/主标题/3要点/2数据卡 */
+.mc-imgleft{display:flex;gap:24px;flex:1;margin-top:auto;min-height:0;max-height:100%;overflow:hidden}
+.mc-imgleft .img-side{flex:0 0 42%;min-height:0;display:flex}
+.mc-imgleft .img-side .img-ph{flex:1}
+.mc-imgleft .txt-side{flex:1;display:flex;flex-direction:column;min-height:0;overflow:hidden}
+.mc-imgleft .txt-side .kicker{font-size:21px;font-weight:900;color:var(--purple);margin-bottom:8px;letter-spacing:1px}
+.mc-imgleft .txt-side .h{font-size:44px;font-weight:900;line-height:1.12;color:var(--ink);margin-bottom:12px}
+.mc-imgleft .txt-side .h .hl{background:var(--coral);color:#fff;padding:0 8px}
+.mc-imgleft .txt-side .h .hl.hl-g{background:var(--green)}
+.mc-imgleft .txt-side .pts{flex:1;display:flex;flex-direction:column;gap:9px;min-height:0;overflow:hidden}
+.mc-imgleft .txt-side .pt{display:flex;align-items:flex-start;gap:10px;font-size:23px;font-weight:800;color:var(--ink);line-height:1.25}
+.mc-imgleft .txt-side .pt .num{background:var(--yellow);border:3px solid var(--ink);border-radius:8px;padding:0 8px;font-size:20px;font-weight:900;flex-shrink:0}
+.mc-imgleft .txt-side .mini{display:flex;gap:12px;margin-top:8px}
+.mc-imgleft .txt-side .mini .mi{flex:1;background:var(--skyblue);border:4px solid var(--ink);border-radius:12px;padding:8px 6px;text-align:center;font-size:19px;font-weight:900;color:var(--ink);box-shadow:4px 4px 0 #76b9bb}
+
+/* imgtop：上图(34%) + 下 3 卡 + 标签，饱满无空隙 */
+.mc-imgtop{display:flex;flex-direction:column;gap:16px;flex:1;margin-top:auto;min-height:0;max-height:100%;overflow:hidden}
+.mc-imgtop .img-ph{height:34%;flex-shrink:0}
+.mc-imgtop .row3{display:flex;gap:16px;flex:1;min-height:0}
+.mc-imgtop .row3 .c{flex:1;background:var(--white);border:6px solid var(--ink);border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;justify-content:flex-start;min-height:0;overflow:hidden}
+.mc-imgtop .row3 .c.k1{background:var(--pink);box-shadow:5px 5px 0 #d97cb6}
+.mc-imgtop .row3 .c.k2{background:var(--green);box-shadow:5px 5px 0 #8fbc1c}
+.mc-imgtop .row3 .c.k3{background:var(--skyblue);box-shadow:5px 5px 0 #76b9bb}
+.mc-imgtop .row3 .c .ic{font-size:30px;font-weight:900;color:var(--ink);margin-bottom:6px;line-height:1}
+.mc-imgtop .row3 .c .t{font-size:23px;font-weight:900;color:var(--ink);margin-bottom:5px}
+.mc-imgtop .row3 .c .d{font-size:17px;font-weight:700;color:var(--ink);line-height:1.35}
+
+/* 总结条 */
+.summary{margin-top:18px;background:var(--yellow);border:7px solid var(--ink);border-radius:18px;padding:14px 24px;font-size:26px;font-weight:800;color:var(--ink);text-align:center;box-shadow:0 4px 0 #1A1A1A;line-height:1.4}
+.summary.coral{background:var(--coral);color:#fff}
+.summary.green{background:var(--green)}
+.summary.purple{background:var(--purple);color:#fff}
+.summary.blue{background:var(--blue)}
+
+/* ============ 横版真源样式（1280×720） ============ */
+.horiz-frame{padding:40px 60px 28px;width:1280px;height:720px;display:flex;flex-direction:column;position:relative}
+.horiz-frame .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.horiz-frame .top .l{display:flex;align-items:center;gap:14px}
+.horiz-frame .top .label{font-size:22px;font-weight:800;letter-spacing:2px}
+.horiz-frame .top .pg{font-size:20px;font-weight:800;color:var(--ink)}
+.horiz-frame .plate{margin-bottom:20px}
+.horiz-frame h1{font-size:64px;font-weight:900;line-height:1.05;margin-bottom:14px;color:var(--ink)}
+.horiz-frame .sub{font-size:22px;color:#5a5a5a;margin-bottom:24px;line-height:1.45}
+.horiz-frame .body{flex:1;display:flex;flex-direction:column}
+.horiz-frame .body .items4{flex:1}
+.horiz-frame .body .items4 .it{padding:18px 16px}
+.horiz-frame .body .items4 .it .title{font-size:22px}
+.horiz-frame .body .items4 .it ul{font-size:15px;line-height:1.5}
+.horiz-frame .summary{font-size:22px;padding:14px 22px}
+.horiz-foot{position:absolute;bottom:14px;left:0;width:100%;padding:0 60px;display:flex;justify-content:space-between;font-size:15px;font-weight:800;color:var(--ink);letter-spacing:1.5px;border-top:1px solid var(--ink);padding-top:8px}
+.horiz-sticky{position:absolute;left:60px;bottom:54px;width:260px;height:140px;background:var(--white);border:5px solid var(--ink);border-radius:20px;padding:14px 18px;box-shadow:5px 5px 0 #C7FF2F;display:flex;flex-direction:column;z-index:5}
+.horiz-sticky .st-title{display:flex;align-items:center;gap:8px;font-size:20px;font-weight:900;color:var(--ink);margin-bottom:6px}
+.horiz-sticky .st-title .diamond{color:var(--green);font-size:22px}
+.horiz-sticky .st-hand{flex:1;font-family:"STXingkai","华文行楷","KaiTi",cursive;font-size:24px;line-height:1.4;color:var(--ink);overflow:hidden}
+.horiz-sticky .st-hand .mark-y{background:var(--yellow);padding:0 4px}
+
+/* 调试脚标 */
+.debug-foot{margin-top:36px;padding:18px;background:#0f0f0f;border-left:4px solid #C7FF2F;border-radius:6px;color:#bbb;font-size:12px;line-height:1.7}
+.debug-foot strong{color:#C7FF2F;font-size:13px;display:block;margin-bottom:8px}
+.debug-foot code{background:#222;padding:2px 6px;border-radius:3px;color:#FE6449;font-size:11px}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="page-head">
+    <h1>拾光抖音 B-roll 视觉规范预览（DESIGN.md v6 + demo v10·新增主卡带图模板 mc-imgleft/mc-imgtop）</h1>
+    <p>暖米底 #F6F5EC + 24px 网格 + 8px 黑粗边框 + 28px 圆角 + 彩色偏移硬阴影 + 荧光跳色 · 竖版 1080×1920 / 横版 1280×720</p>
+    <div class="legend">
+      <span>#F6F5EC 暖米底</span><span>#C7FF2F 荧光绿</span><span>#FE6449 珊瑚</span><span>#76D5FE 蓝</span><span>#A588FD 紫</span><span>#FDE676 黄</span><span>#F8B4D9 粉</span><span>#A8DADC 浅蓝</span><span>边框 #1A1A1A 8px</span><span>圆角 28px</span><span>偏移硬阴影 (禁模糊)</span>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- 一：5 套主卡组件模板 · 每帧都填满 5 区 -->
+  <!-- ============================================= -->
+  <div class="section-title">① 5 套主卡组件模板（ctitle / items3 / items4 / versus / bstat）</div>
+  <div class="grid">
+
+    <!-- 1. ctitle（标题页 + 字幕条 + 5主题卡） -->
+    <div class="info">
+    <div class="scene-wrap">
+      <div class="scene-label">1 · ctitle 标题页</div>
+      <div class="scene-size-tag">1080×1920</div>
+      <div class="scene">
+        <div class="bg-grid"></div>
+        <div class="top"><div class="plate plate-down"><div class="left"><div class="dot"></div><div class="divider"></div><span class="ch">CH 01</span><span class="name">项目定位</span></div><div class="right">AI AGENT · 00:02</div></div></div>
+        <div class="main"><div class="plate plate-green ctitle">
+          <div class="card-tag"><div class="left"><span>● 主题 · 项目定位</span></div><span>PAGE 01 / 07</span></div>
+          <span class="pill pill-blue" style="margin-bottom:24px">WHAT IT IS</span>
+          <div class="card-title">不是 Demo，<br>是<span class="hl">完整框架</span></div>
+          <div class="card-subtitle">它把文档理解、语义检索、Agent 推理和自动 Wiki，<br>放进一套完整框架里。</div>
+          <div style="margin-top:auto">
+            <span class="pill pill-coral">可落企业现场</span>
+            <span class="pill pill-yellow">开源可改造</span>
+          </div>
+        </div></div>
+        <div class="sub"><div class="plate plate-down"><div class="sub-text">今天聊一个<span class="kw">完整框架</span>，不是 Demo。<span class="kw kw-blue">从文档</span>到 Wiki 全打通。</div></div></div>
+        <div class="bot">
+          <div class="sticky">
+            <div class="st-corner">NOTE 01</div>
+            <div class="st-title"><span class="diamond">✦</span>随手记</div>
+            <div class="st-tag-row">
+              <span class="st-tag t-c">可落企业现场</span>
+              <span class="st-tag t-y">开源可改造</span>
+              <span class="st-tag t-g">完整框架</span>
+            </div>
+            <div class="st-hand">
+              <span class="mark-y">完整框架</span><br>
+              <span class="strike">Demo</span><br>
+              真能落地
+            </div>
+          </div>
+          <div class="topics">
+            <div class="topic-card active"><span class="arrow"></span>钩子 · 不是 Demo</div>
+            <div class="topic-card">RAG · 检索</div>
+            <div class="topic-card">框架 · 全貌</div>
+            <div class="topic-card">实操 · 接入</div>
+            <div class="topic-card">收尾 · 一句话</div>
+          </div>
+        </div>
+        <div class="foot"><div class="left">AI PROJECT REVIEW<span class="sub">拾光·AI大事件</span></div><div class="right">DENIZSAFAK / ABOGEN</div></div>
+      </div>
+    </div>
+    <div class="lab">① ctitle 标题页</div><div class="size">main: items4-fill · sub: kw ×2</div>
+    </div>
+
+    <!-- 2. items3（三色大卡） -->
+    <div class="info">
+    <div class="scene-wrap">
+      <div class="scene-label">2 · items3 三色大卡</div>
+      <div class="scene-size-tag">1080×1920</div>
+      <div class="scene">
+        <div class="bg-grid"></div>
+        <div class="top"><div class="plate plate-down"><div class="left"><div class="dot dot-coral"></div><div class="divider"></div><span class="ch">CH 07</span><span class="name">适合谁</span></div><div class="right">VALUE · 00:55</div></div></div>
+        <div class="main"><div class="plate plate-coral">
+          <div class="card-tag"><div class="left"><span>VALUE · 适合谁</span></div><span>PAGE 07 / 08</span></div>
+          <div class="card-title">三类<span class="hl hl-coral">人</span>适合收藏</div>
+          <div class="card-subtitle">资料整理、口播素材、本地 TTS 自动化，都用得上。</div>
+          <div class="items3">
+            <div class="it it-pink"><span class="lab">资料党</span><div class="body">电子书 / PDF<br>长文档</div><div class="tag-list"><span class="tag">电子书</span><span class="tag">PDF</span><span class="tag">长文档</span></div></div>
+            <div class="it it-blue"><span class="lab">创作者</span><div class="body">口播 / 旁白<br>字幕素材</div><div class="tag-list"><span class="tag">口播</span><span class="tag">旁白</span><span class="tag">字幕</span></div></div>
+            <div class="it it-yellow"><span class="lab">开发者</span><div class="body">本地 TTS<br>工作流</div><div class="tag-list"><span class="tag">TTS</span><span class="tag">自动化</span></div></div>
+          </div>
+          <div class="summary coral">从阅资料，到做内容，再到搭流程，都用得上。</div>
+        </div></div>
+        <div class="sub"><div class="plate plate-down"><div class="sub-text">三类人<span class="kw kw-coral">收藏</span>：<span class="kw">资料党</span>、<span class="kw kw-blue">创作者</span>、<span class="kw kw-yellow">开发者</span>。</div></div></div>
+        <div class="bot">
+          <div class="sticky">
+            <div class="st-corner">NOTE 02</div>
+            <div class="st-title"><span class="diamond">✦</span>随手记</div>
+            <div class="st-tag-row">
+              <span class="st-tag t-p">资料党</span>
+              <span class="st-tag t-b">创作者</span>
+              <span class="st-tag t-y">开发者</span>
+            </div>
+            <div class="st-hand">
+              <span class="mark-y">三类人</span><br>
+              <span class="strike">只一种</span><br>
+              全能用上
+            </div>
+          </div>
+          <div class="topics">
+            <div class="topic-card">钩子 · 三类人</div>
+            <div class="topic-card">RAG · 文档流</div>
+            <div class="topic-card active"><span class="arrow"></span>案例 · 适合谁</div>
+            <div class="topic-card">实操 · 5 步走</div>
+            <div class="topic-card">收尾 · 三句话</div>
+          </div>
+        </div>
+        <div class="foot"><div class="left">CREATORS + WORKFLOW<span class="sub">从内容到工具链</span></div><div class="right">DENIZSAFAK / ABOGEN</div></div>
+      </div>
+    </div>
+    <div class="lab">② items3 三色大卡</div><div class="size">粉/浅蓝/黄 · 固定三色</div>
+    </div>
+
+    <!-- 3. items4（4 卡 + 数字圆） -->
+    <div class="info">
+    <div class="scene-wrap">
+      <div class="scene-label">3 · items4 四卡+数字圆</div>
+      <div class="scene-size-tag">1080×1920</div>
+      <div class="scene">
+        <div class="bg-grid"></div>
+        <div class="top"><div class="plate plate-down"><div class="left"><div class="dot dot-coral"></div><div class="divider"></div><span class="ch">CH 06</span><span class="name">企业落地</span></div><div class="right">ENTERPRISE · 00:45</div></div></div>
+        <div class="main"><div class="plate plate-coral">
+          <div class="card-tag"><div class="left"><span>ENTERPRISE · 企业落地</span></div><span>PAGE 06 / 07</span></div>
+          <div class="card-title">企业落地，<br><span class="hl hl-coral">能力完整</span></div>
+          <div class="card-subtitle">权限、审计、多工作区、API Key、IM 接入、可观测性全打通。</div>
+          <div class="items4">
+            <div class="it i1"><div class="num">01</div><div class="title">权限审计</div><ul><li>角色控制</li><li>操作留痕</li><li>权限边界</li><li>适合多人协作</li></ul></div>
+            <div class="it i2"><div class="num">02</div><div class="title">多工作区</div><ul><li>资料分区</li><li>空间隔离</li><li>团队协作</li><li>不同业务独立管理</li></ul></div>
+            <div class="it i3"><div class="num">03</div><div class="title">IM / 网站嵌入</div><ul><li>企业微信</li><li>飞书</li><li>业务站点</li><li>问答进工作流</li></ul></div>
+            <div class="it i4"><div class="num">04</div><div class="title">模型与向量替换</div><ul><li>模型供应商可换</li><li>向量库可切</li><li>适配现有栈</li></ul></div>
+          </div>
+          <div class="summary">从权限到接入，再到可观测性，WeKnora 是一套能进现场的底座。</div>
+        </div></div>
+        <div class="sub"><div class="plate plate-down"><div class="sub-text">企业落地看<span class="kw kw-coral">四件事</span>：权限、空间、<span class="kw">接入</span>、可替换。</div></div></div>
+        <div class="bot">
+          <div class="sticky">
+            <div class="st-corner">NOTE 03</div>
+            <div class="st-title"><span class="diamond">✦</span>随手记</div>
+            <div class="st-tag-row">
+              <span class="st-tag t-g">权限空间</span>
+              <span class="st-tag t-c">可嵌入</span>
+              <span class="st-tag t-b">可改造</span>
+            </div>
+            <div class="st-hand">
+              <span class="mark-y">四件事</span><br>
+              <span class="strike">只一个点</span><br>
+              整套底座
+            </div>
+          </div>
+          <div class="topics">
+            <div class="topic-card">钩子 · 企业现场</div>
+            <div class="topic-card">RAG · 协作</div>
+            <div class="topic-card active"><span class="arrow"></span>案例 · 落地图谱</div>
+            <div class="topic-card">实操 · 模型替换</div>
+            <div class="topic-card">收尾 · 选型</div>
+          </div>
+        </div>
+        <div class="foot"><div class="left">AI PROJECT REVIEW<span class="sub">拾光·AI大事件</span></div><div class="right">TENCENT / WEKNORA</div></div>
+      </div>
+    </div>
+    <div class="lab">③ items4 四卡+数字圆</div><div class="size">珊瑚/蓝/绿/紫 强调色轮换</div>
+    </div>
+
+    <!-- 4. versus（双栏对比） -->
+    <div class="info">
+    <div class="scene-wrap">
+      <div class="scene-label">4 · versus 双栏对比</div>
+      <div class="scene-size-tag">1080×1920</div>
+      <div class="scene">
+        <div class="bg-grid"></div>
+        <div class="top"><div class="plate plate-down"><div class="left"><div class="dot dot-yellow"></div><div class="divider"></div><span class="ch">CH 02</span><span class="name">项目定义</span></div><div class="right">WHAT IT IS · 00:18</div></div></div>
+        <div class="main"><div class="plate plate-coral">
+          <div class="card-tag"><div class="left"><span>WHAT IT IS · 项目定义</span></div><span>PAGE 02 / 08</span></div>
+          <div class="card-title">不是朗读器，<br>是<span class="hl hl-yellow">工作流</span></div>
+          <div class="card-subtitle">它把"文档变音频"的整套流程，打包成一个工具。</div>
+          <div class="versus">
+            <div class="col c-pink"><h4>输入格式</h4><div class="row"><span class="box">EPUB</span><span class="box">PDF</span><span class="box">TXT</span></div><div class="row"><span class="box">Markdown</span><span class="box">SRT</span><span class="box">ASS</span></div><div class="row"><span class="box">VTT</span></div></div>
+            <div class="arrow">→</div>
+            <div class="col c-blue"><h4 class="blue">统一输出</h4><div class="row"><span class="box">高质量语音</span></div><div class="row"><span class="box">同步字幕</span></div><div class="row"><span class="box">章节结构</span></div></div>
+          </div>
+          <div class="summary coral">一条链路处理完 · 从文件解析、语音生成，到字幕和章节输出。</div>
+        </div></div>
+        <div class="sub"><div class="plate plate-down"><div class="sub-text">不是朗读器，<span class="kw kw-yellow">是工作流</span>，<span class="kw">一条链路</span>搞定。</div></div></div>
+        <div class="bot">
+          <div class="sticky">
+            <div class="st-corner">NOTE 04</div>
+            <div class="st-title"><span class="diamond">✦</span>随手记</div>
+            <div class="st-tag-row">
+              <span class="st-tag t-p">全格式</span>
+              <span class="st-tag t-y">高质量</span>
+              <span class="st-tag t-g">可商用</span>
+            </div>
+            <div class="st-hand">
+              <span class="mark-y">工作流</span><br>
+              <span class="strike">朗读器</span><br>
+              一条链路
+            </div>
+          </div>
+          <div class="topics">
+            <div class="topic-card">钩子 · 工作流</div>
+            <div class="topic-card active"><span class="arrow"></span>RAG · 项目定义</div>
+            <div class="topic-card">案例 · 链路</div>
+            <div class="topic-card">实操 · 全格式</div>
+            <div class="topic-card">收尾 · 一句话</div>
+          </div>
+        </div>
+        <div class="foot"><div class="left">DOCUMENTS + SUBTITLES<span class="sub">格式覆盖很广</span></div><div class="right">DENIZSAFAK / ABOGEN</div></div>
+      </div>
+    </div>
+    <div class="lab">④ versus 双栏对比</div><div class="size">粉↔蓝 + 中间箭头</div>
+    </div>
+
+    <!-- 5. bstat（数据大卡） -->
+    <div class="info">
+    <div class="scene-wrap">
+      <div class="scene-label">5 · bstat 数据大卡</div>
+      <div class="scene-size-tag">1080×1920</div>
+      <div class="scene">
+        <div class="bg-grid"></div>
+        <div class="top"><div class="plate plate-down"><div class="left"><div class="dot"></div><div class="divider"></div><span class="ch">CH 03</span><span class="name">增长数据</span></div><div class="right">MARKET · 00:24</div></div></div>
+        <div class="main"><div class="plate plate-green">
+          <div class="card-tag"><div class="left"><span>MARKET · 增长数据</span></div><span>PAGE 03 / 07</span></div>
+          <div class="card-title">市场<span class="hl">翻倍涨</span></div>
+          <div class="card-subtitle">需求侧已经有人买单，十年长成一片海。</div>
+          <div class="bstat">
+            <div class="it i1"><div class="num">212<span class="unit">亿</span></div><div class="lab">去年规模</div></div>
+            <div class="it i2"><div class="num">449<span class="unit">亿</span></div><div class="lab">今年预计 · 翻倍</div></div>
+            <div class="it i3"><div class="num">3000<span class="unit">亿</span></div><div class="lab">2029 IDC</div></div>
+          </div>
+          <div class="summary green">从 212 → 449 → 3000 亿，工作代理市场十年长成一片海。</div>
+        </div></div>
+        <div class="sub"><div class="plate plate-down"><div class="sub-text">市场<span class="kw">翻倍涨</span>：212 → 449 → 3000 亿，<span class="kw kw-blue">十年长成海</span>。</div></div></div>
+        <div class="bot">
+          <div class="sticky">
+            <div class="st-corner">NOTE 05</div>
+            <div class="st-title"><span class="diamond">✦</span>随手记</div>
+            <div class="st-tag-row">
+              <span class="st-tag t-c">增速快</span>
+              <span class="st-tag t-g">渗透高</span>
+              <span class="st-tag t-y">值得做</span>
+            </div>
+            <div class="st-hand">
+              <span class="mark-y">翻倍涨</span><br>
+              <span class="strike">线性涨</span><br>
+              十年一片海
+            </div>
+          </div>
+          <div class="topics">
+            <div class="topic-card active"><span class="arrow"></span>钩子 · 三组数</div>
+            <div class="topic-card">RAG · 工作代理</div>
+            <div class="topic-card">案例 · IDC</div>
+            <div class="topic-card">实操 · 渗透率</div>
+            <div class="topic-card">收尾 · 投资</div>
+          </div>
+        </div>
+        <div class="foot"><div class="left">AI PROJECT REVIEW<span class="sub">拾光·AI大事件</span></div><div class="right">TENCENT / WEKNORA</div></div>
+      </div>
+    </div>
+    <div class="lab">⑤ bstat 数据大卡</div><div class="size">绿/浅蓝/粉 · 80px 数字</div>
+    </div>
+
+  <!-- ===== 6. mc-imgleft（左图右文 · 饱满带图） ===== -->
+  <div class="info">
+  <div class="scene-wrap">
+    <div class="scene-label">6 · mc-imgleft 左图右文</div>
+    <div class="scene-size-tag">1080×1920</div>
+    <div class="scene">
+      <div class="bg-grid"></div>
+      <div class="top"><div class="plate plate-down"><div class="left"><div class="dot dot-purple"></div><div class="divider"></div><span class="ch">CH 06</span><span class="name">落地图谱</span></div><div class="right">CASE · 01:10</div></div></div>
+      <div class="main"><div class="plate plate-purple mc-imgleft">
+        <div class="card-tag"><div class="left"><span>CASE · 落地图谱</span></div><span>PAGE 06 / 08</span></div>
+        <div class="img-side"><div class="img-ph">
+          <div class="ph-corner">AI 图</div>
+          <div class="ph-text">主卡配图占位<br><small>正式渲染 → gpt-image-2 出真图</small></div>
+          <div class="ph-barcode">IMG · 1024×1024</div>
+        </div></div>
+        <div class="txt-side">
+          <div class="kicker">CASE · 真实场景</div>
+          <div class="h">从<span class="hl">文档</span>到<br><span class="hl hl-g">自动 Wiki</span></div>
+          <div class="pts">
+            <div class="pt"><span class="num">1</span>上传几百页 PDF，自动切分建索引</div>
+            <div class="pt"><span class="num">2</span>语义检索直达相关段落</div>
+            <div class="pt"><span class="num">3</span>Agent 推理生成结构化 Wiki</div>
+          </div>
+          <div class="mini"><div class="mi">省 80% 整理</div><div class="mi">0 手工</div></div>
+        </div>
+      </div></div>
+      <div class="sub"><div class="plate plate-down"><div class="sub-text">从<span class="kw">文档</span>到<span class="kw kw-blue">自动 Wiki</span>，三步落地。</div></div></div>
+      <div class="bot">
+        <div class="sticky">
+          <div class="st-corner">NOTE 06</div>
+          <div class="st-title"><span class="diamond">✦</span>随手记</div>
+          <div class="st-tag-row">
+            <span class="st-tag t-p">切分建索引</span>
+            <span class="st-tag t-g">语义检索</span>
+            <span class="st-tag t-b">自动 Wiki</span>
+          </div>
+          <div class="st-hand">
+            <span class="mark-y">三步落地</span><br>
+            <span class="strike">手工整理</span><br>
+            自动 Wiki
+          </div>
+        </div>
+        <div class="topics">
+          <div class="topic-card">钩子 · 业务流</div>
+          <div class="topic-card active"><span class="arrow"></span>RAG · 节点化</div>
+          <div class="topic-card">案例 · 三件套</div>
+          <div class="topic-card">实操 · 串起来</div>
+          <div class="topic-card">收尾 · 循环</div>
+        </div>
+      </div>
+      <div class="foot"><div class="left">AI PROJECT REVIEW<span class="sub">拾光·AI大事件</span></div><div class="right">DENIZSAFAK / ABOGEN</div></div>
+    </div>
+  </div>
+  <div class="lab">⑥ mc-imgleft 左图右文</div><div class="size">左图 42% + 右文 kicker/标题/3点/2数据卡</div>
+  </div>
+
+  <!-- ===== 7. mc-imgtop（上图下卡 · 饱满带图） ===== -->
+  <div class="info">
+  <div class="scene-wrap">
+    <div class="scene-label">7 · mc-imgtop 上图下卡</div>
+    <div class="scene-size-tag">1080×1920</div>
+    <div class="scene">
+      <div class="bg-grid"></div>
+      <div class="top"><div class="plate plate-down"><div class="left"><div class="dot dot-blue"></div><div class="divider"></div><span class="ch">CH 04</span><span class="name">全格式</span></div><div class="right">FRAME · 00:38</div></div></div>
+      <div class="main"><div class="plate plate-blue mc-imgtop">
+        <div class="card-tag"><div class="left"><span>FRAME · 全格式</span></div><span>PAGE 07 / 08</span></div>
+        <div class="img-ph">
+          <div class="ph-corner">AI 图</div>
+          <div class="ph-text">主卡配图占位（宽幅）<br><small>正式渲染 → gpt-image-2 出真图</small></div>
+          <div class="ph-barcode">IMG · 1280×720</div>
+        </div>
+        <div class="row3">
+          <div class="c k1"><div class="ic">▣</div><div class="t">输入全格式</div><div class="d">EPUB·PDF·TXT·MD·SRT</div></div>
+          <div class="c k2"><div class="ic">⇄</div><div class="t">统一输出</div><div class="d">语音 + 字幕 + 章节</div></div>
+          <div class="c k3"><div class="ic">⚡</div><div class="t">可商用</div><div class="d">本地部署 · 私有</div></div>
+        </div>
+      </div></div>
+      <div class="sub"><div class="plate plate-down"><div class="sub-text">一套框架<span class="kw">全格式</span>进，<span class="kw kw-coral">语音字幕章节</span>出。</div></div></div>
+      <div class="bot">
+        <div class="sticky">
+          <div class="st-corner">NOTE 07</div>
+          <div class="st-title"><span class="diamond">✦</span>随手记</div>
+          <div class="st-tag-row">
+            <span class="st-tag t-y">全格式进</span>
+            <span class="st-tag t-c">语音字幕</span>
+            <span class="st-tag t-g">可商用</span>
+          </div>
+          <div class="st-hand">
+            <span class="mark-y">一套框架</span><br>
+            <span class="strike">分段做</span><br>
+            统一出
+          </div>
+        </div>
+        <div class="topics">
+          <div class="topic-card">钩子 · 工作流</div>
+          <div class="topic-card">RAG · 项目定义</div>
+          <div class="topic-card active"><span class="arrow"></span>案例 · 链路</div>
+          <div class="topic-card">实操 · 全格式</div>
+          <div class="topic-card">收尾 · 一句话</div>
+        </div>
+      </div>
+      <div class="foot"><div class="left">AI PROJECT REVIEW<span class="sub">拾光·AI大事件</span></div><div class="right">DENIZSAFAK / ABOGEN</div></div>
+    </div>
+  </div>
+  <div class="lab">⑦ mc-imgtop 上图下卡</div><div class="size">上图 34% + 下 3 卡（粉/绿/蓝）+ 标签</div>
+  </div>
+
+  </div>
+
+  <!-- ============================================= -->
+  <!-- 二：完整竖版版式 -->
+  <!-- ============================================= -->
+  <div class="section-title">② 竖版完整版式（左笔记 + 右 5 主题卡 / 右下数字人）</div>
+  <div class="grid">
+
+    <!-- 6. 无 DH 版完整版式 -->
+    <div class="info">
+    <div class="scene-wrap">
+      <div class="scene-label">8 · 无DH · 左随手记 + 右5主题卡</div>
+      <div class="scene-size-tag">1080×1920</div>
+      <div class="scene">
+        <div class="bg-grid"></div>
+        <div class="top"><div class="plate plate-down"><div class="left"><div class="dot"></div><div class="divider"></div><span class="ch">CH 02</span><span class="name">RAG · 节点化</span></div><div class="right">拾光·AI大事件 · 00:33</div></div></div>
+        <div class="main"><div class="plate plate-blue">
+          <div class="card-tag"><div class="left"><span>RAG · 节点化</span></div><span>PAGE 02 / 08</span></div>
+          <div class="card-title" style="font-size:64px">AI 业务流<br>= <span class="hl hl-blue">三样东西</span>串成循环</div>
+          <div class="card-subtitle">三件套：知识库 → 模型 → 动作。</div>
+          <div style="display:flex;gap:16px;margin-top:auto">
+            <div style="flex:1;background:var(--yellow);border:6px solid var(--ink);border-radius:18px;padding:22px;box-shadow:5px 5px 0 #d6c14a;text-align:center"><div style="font-size:54px;font-weight:900">📚</div><div style="font-size:26px;font-weight:900;margin-top:6px">知识库</div><div style="font-size:15px;color:#444;margin-top:6px;line-height:1.4">沉淀领域知识<br>提供可靠问答</div></div>
+            <div style="flex:1;background:var(--skyblue);border:6px solid var(--ink);border-radius:18px;padding:22px;box-shadow:5px 5px 0 #76b9bb;text-align:center"><div style="font-size:54px;font-weight:900">🧠</div><div style="font-size:26px;font-weight:900;margin-top:6px">模型</div><div style="font-size:15px;color:#444;margin-top:6px;line-height:1.4">理解与推理<br>转化知识为答案</div></div>
+            <div style="flex:1;background:var(--pink);border:6px solid var(--ink);border-radius:18px;padding:22px;box-shadow:5px 5px 0 #d97cb6;text-align:center"><div style="font-size:54px;font-weight:900">⚙️</div><div style="font-size:26px;font-weight:900;margin-top:6px">动作</div><div style="font-size:15px;color:#444;margin-top:6px;line-height:1.4">执行与反馈<br>驱动世界迭代</div></div>
+          </div>
+          <div class="summary blue">知识 → 模型 → 动作，一套循环代替一个问答机器人。</div>
+        </div></div>
+        <div class="sub"><div class="plate plate-down"><div class="sub-text"><span class="kw">先说人话</span>，所谓 AI 业务流，就是<span class="kw kw-coral">三样东西</span>串起来。</div></div></div>
+        <div class="bot">
+          <div class="sticky">
+            <div class="st-corner">NOTE 06</div>
+            <div class="st-title"><span class="diamond">✦</span>随手记</div>
+            <div class="st-tag-row">
+              <span class="st-tag t-b">业务流</span>
+              <span class="st-tag t-p">节点化</span>
+              <span class="st-tag t-g">可落地</span>
+            </div>
+            <div class="st-hand">
+              <span class="mark-y">三样东西</span><br>
+              <span class="strike">只是聊天</span><br>
+              串起来
+            </div>
+          </div>
+          <div class="topics">
+            <div class="topic-card">钩子 · 业务流</div>
+            <div class="topic-card active"><span class="arrow"></span>RAG · 节点化</div>
+            <div class="topic-card">案例 · 三件套</div>
+            <div class="topic-card">实操 · 串起来</div>
+            <div class="topic-card">收尾 · 循环</div>
+          </div>
+        </div>
+        <div class="foot"><div class="left">AI PROJECT REVIEW<span class="sub">拾光 / 抖音日报</span></div><div class="right">DENIZSAFAK / ABOGEN</div></div>
+      </div>
+    </div>
+    <div class="lab">⑧ 无DH完整版式</div><div class="size">左 560 笔记 + 右 400 主题卡</div>
+    </div>
+
+    <!-- 7. 有 DH 版完整版式 -->
+    <div class="info">
+    <div class="scene-wrap">
+      <div class="scene-label">9 · 有DH · 数字人在右下 · 间距≥30px</div>
+      <div class="scene-size-tag">1080×1920</div>
+      <div class="scene">
+        <div class="bg-grid"></div>
+        <div class="top"><div class="plate plate-down"><div class="left"><div class="dot dot-coral"></div><div class="divider"></div><span class="ch">CH 03</span><span class="name">工作小队</span></div><div class="right">拾光·AI大事件 · 00:42</div></div></div>
+        <div class="main"><div class="plate plate-green">
+          <div class="card-tag"><div class="left"><span>AGENT · 工作小队</span></div><span>PAGE 03 / 07</span></div>
+          <div class="card-title">单个 AI 干不动，<br><span class="hl">拉几个组队</span></div>
+          <div class="card-subtitle">拉几个不同专业的 Agent 协同干完复杂活。</div>
+          <div style="display:flex;gap:18px;margin-top:auto">
+            <div style="flex:1;background:var(--white);border:7px solid var(--ink);border-radius:22px;padding:24px;box-shadow:6px 6px 0 var(--coral)">
+              <div style="font-size:52px;font-weight:900;color:var(--ink);line-height:1">+10×</div>
+              <div style="font-size:20px;font-weight:800;margin-top:8px;color:var(--ink)">效率提升</div>
+              <div style="font-size:15px;color:#555;margin-top:6px;line-height:1.4">找钢网实战</div>
+            </div>
+            <div style="flex:1;background:var(--white);border:7px solid var(--ink);border-radius:22px;padding:24px;box-shadow:6px 6px 0 var(--blue)">
+              <div style="font-size:52px;font-weight:900;color:var(--ink);line-height:1">4</div>
+              <div style="font-size:20px;font-weight:800;margin-top:8px;color:var(--ink)">协作角色</div>
+              <div style="font-size:15px;color:#555;margin-top:6px;line-height:1.4">客/库/合/调</div>
+            </div>
+            <div style="flex:1;background:var(--white);border:7px solid var(--ink);border-radius:22px;padding:24px;box-shadow:6px 6px 0 var(--purple)">
+              <div style="font-size:52px;font-weight:900;color:var(--ink);line-height:1">1</div>
+              <div style="font-size:20px;font-weight:800;margin-top:8px;color:var(--ink)">天完成</div>
+              <div style="font-size:15px;color:#555;margin-top:6px;line-height:1.4">过去大半天</div>
+            </div>
+          </div>
+          <div class="summary green">从自己干，到带队伍：你派活、AI 干、还能组队。</div>
+        </div></div>
+        <div class="sub"><div class="plate plate-down"><div class="sub-text">单个 AI 干不动，你拉几个<span class="kw kw-coral">不同专业</span>的 Agent，<span class="kw">组队干完</span>。</div></div></div>
+        <div class="bot">
+          <div class="sticky">
+            <div class="st-corner">NOTE 07</div>
+            <div class="st-title"><span class="diamond">✦</span>随手记</div>
+            <div class="st-tag-row">
+              <span class="st-tag t-c">派活 AI</span>
+              <span class="st-tag t-y">可嵌入</span>
+              <span class="st-tag t-g">接管出活</span>
+            </div>
+            <div class="st-hand">
+              <span class="mark-c">+10×</span><br>
+              <span class="strike">单打独斗</span><br>
+              派活 AI 干
+            </div>
+          </div>
+          <div class="dh">
+            <div class="inner">[ 拾光数字人<br>RunningHub LTX2.3<br>× 间距 ≥30px ]</div>
+          </div>
+        </div>
+        <div class="foot"><div class="left">AI PROJECT REVIEW<span class="sub">拾光 / 抖音日报</span></div><div class="right">DENIZSAFAK / ABOGEN</div></div>
+      </div>
+    </div>
+    <div class="lab">⑨ 有DH完整版式</div><div class="size">左 560 笔记 + 右 400 DH</div>
+    </div>
+
+  </div>
+
+  <!-- ============================================= -->
+  <!-- 三：横版真源参考（1.mp4 / 2.mp4 · 1280×720 · 16:9） -->
+  <!-- ============================================= -->
+  <div class="section-title">③ 横版真源参考（1.mp4 / 2.mp4 · 1280×720 16:9 · 仅作对照）</div>
+  <div class="grid">
+
+    <!-- 8. 横版 - _1.mp4 (WeKnora) -->
+    <div class="info">
+    <div class="scene-wrap horiz">
+      <div class="scene-label">参考 · _1.mp4 (WeKnora)</div>
+      <div class="scene-size-tag">1280×720</div>
+      <div class="scene horiz">
+        <div class="bg-grid"></div>
+        <div class="horiz-frame">
+          <div class="top"><div class="l"><div class="dot dot-coral" style="width:22px;height:22px"></div><span class="label">ENTERPRISE · 企业落地</span></div><span class="pg">06 / 07</span></div>
+          <div style="display:inline-block;background:var(--coral);border:4px solid var(--ink);border-radius:999px;padding:6px 22px;font-size:22px;font-weight:800;color:#fff;margin-bottom:14px">企业落地</div>
+          <h1>企业落地，<span class="hl hl-coral">能力完整</span></h1>
+          <div class="sub">权限、审计、多工作区、API Key、IM 接入、可观测性全打通。</div>
+          <div class="body">
+            <div class="items4" style="margin-top:14px">
+              <div class="it i1"><div class="num" style="width:38px;height:38px;font-size:18px">01</div><div class="title">权限审计</div><ul><li>角色控制</li><li>操作留痕</li><li>权限边界</li></ul></div>
+              <div class="it i2"><div class="num" style="width:38px;height:38px;font-size:18px">02</div><div class="title">多工作区</div><ul><li>资料分区</li><li>空间隔离</li><li>团队协作</li></ul></div>
+              <div class="it i3"><div class="num" style="width:38px;height:38px;font-size:18px">03</div><div class="title">IM / 网站嵌入</div><ul><li>企业微信</li><li>飞书</li><li>业务站点</li></ul></div>
+              <div class="it i4"><div class="num" style="width:38px;height:38px;font-size:18px">04</div><div class="title">模型与向量替换</div><ul><li>模型供应商可换</li><li>向量库可切</li><li>适配现有栈</li></ul></div>
+            </div>
+            <div class="summary" style="margin-top:14px">从权限到接入，再到可观测性，WeKnora 是一套能进现场的底座。</div>
+          </div>
+          <div class="horiz-sticky">
+            <div class="st-title"><span class="diamond">✦</span>随手记</div>
+            <div class="st-hand"><span class="mark-y">能力完整</span><br>从权限到接入</div>
+          </div>
+          <div class="horiz-foot"><span>AI PROJECT REVIEW · 拾光·AI大事件</span><span>TENCENT / WEKNORA</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="lab">⑩ 参考 · _1.mp4</div><div class="size">1280×720 · 16:9 · WeKnora</div>
+    </div>
+
+    <!-- 9. 横版 - _2.mp4 (Abogen) -->
+    <div class="info">
+    <div class="scene-wrap horiz">
+      <div class="scene-label">参考 · _2.mp4 (Abogen)</div>
+      <div class="scene-size-tag">1280×720</div>
+      <div class="scene horiz">
+        <div class="bg-grid"></div>
+        <div class="horiz-frame">
+          <div class="top"><div class="l"><div class="dot" style="width:22px;height:22px"></div><span class="label">HOOK · 开场钩子</span></div><span class="pg">01 / 08</span></div>
+          <div style="display:inline-block;background:var(--green);border:4px solid var(--ink);border-radius:999px;padding:6px 22px;font-size:22px;font-weight:800;margin-bottom:14px">开源项目 · Abogen</div>
+          <h1>长文档直接变<span class="hl">有声书</span></h1>
+          <div class="sub">电子书、长文档、字幕稿，都可以变成能听的音频内容。</div>
+          <div class="body">
+            <div style="display:flex;gap:18px;margin-top:auto;margin-bottom:14px">
+              <div style="flex:1;background:var(--pink);border:6px solid var(--ink);border-radius:22px;padding:18px;box-shadow:5px 5px 0 #d97cb6"><span class="lab" style="display:inline-block;background:#fff;border:3px solid var(--ink);border-radius:999px;padding:4px 14px;font-size:18px;font-weight:900;margin-bottom:10px">输入</span><div style="font-size:24px;font-weight:900;line-height:1.2;color:var(--ink)">电子书/长文档<br>字幕稿</div></div>
+              <div style="flex:1;background:var(--skyblue);border:6px solid var(--ink);border-radius:22px;padding:18px;box-shadow:5px 5px 0 #76b9bb"><span class="lab" style="display:inline-block;background:#fff;border:3px solid var(--ink);border-radius:999px;padding:4px 14px;font-size:18px;font-weight:900;margin-bottom:10px">输出</span><div style="font-size:24px;font-weight:900;line-height:1.2;color:var(--ink)">可收听的<br>音频</div></div>
+              <div style="flex:1;background:var(--yellow);border:6px solid var(--ink);border-radius:22px;padding:18px;box-shadow:5px 5px 0 #d6c14a"><span class="lab" style="display:inline-block;background:#fff;border:3px solid var(--ink);border-radius:999px;padding:4px 14px;font-size:18px;font-weight:900;margin-bottom:10px">附带</span><div style="font-size:24px;font-weight:900;line-height:1.2;color:var(--ink)">字幕 +<br>章节一起</div></div>
+            </div>
+            <div class="summary green">电子书 / 长文档 / 字幕稿，一键变带字幕的有声书。</div>
+          </div>
+          <div class="horiz-sticky">
+            <div class="st-title"><span class="diamond">✦</span>随手记</div>
+            <div class="st-hand"><span class="mark-y">有声书</span><br>一键生成</div>
+          </div>
+          <div class="horiz-foot"><span>TEXT TO AUDIO · 文档变音频的完整工具</span><span>DENIZSAFAK / ABOGEN</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="lab">⑪ 参考 · _2.mp4</div><div class="size">1280×720 · 16:9 · Abogen</div>
+    </div>
+
+  </div>
+
+  <!-- ============================================= -->
+  <!-- 调试规范脚标 -->
+  <!-- ============================================= -->
+  <div class="debug-foot">
+    <strong>【v9 规范要点 · 下半区 2:1】</strong>
+    ① 底色 <code>#F6F5EC</code> 暖米底，<strong style="color:#FE6449">不是</strong> #E9EDF3 浅蓝灰。<br>
+    ② 所有卡片必须 <code>8px solid #1A1A1A</code> 黑粗边框 + <code>border-radius:28px</code> + <strong style="color:#FE6449">彩色偏移硬阴影</strong>（<code>box-shadow: 6px 6px 0 #C7FF2F</code>），<strong style="color:#FE6449">禁止使用模糊阴影</strong>。<br>
+    ③ 主卡内部必须信息丰满（ctitle / items3 / items4 / versus / bstat 五选一），<strong style="color:#76D5FE">vs 列加 max-height:100% + overflow:hidden 防止撑爆主卡下方</strong>。<br>
+    ④ <strong style="color:#FE6449">每帧 5 区完整</strong>：① 顶部章节条 (y130–240) · ② 主卡 (y280–1080) · ③ 字幕条 (y1110–1270) · ④ 下半区 (y1310–1740) · ⑤ 页脚 (y1770–1810)。<br>
+    ⑤ 字幕条最多 2 行；超过 2 行 → 字幕按句滚动，其余画面静止。<br>
+    ⑥ 关键词用荧光色块（<code>#C7FF2F</code> / <code>#FE6449</code> / <code>#76D5FE</code> / <code>#FDE676</code>）+ 加粗下划线包裹。<br>
+    ⑦ <strong style="color:#C7FF2F">【v9 强化】每个画面左下"随手记" .sticky 占 2/3</strong>：flex:0 0 calc((1000-18)*2/3)≈654px，3 胶囊标签 (NOTE 0X) + 3 行手写，黑粗边框+圆角+荧光绿偏移阴影。<br>
+    ⑧ <strong style="color:#C7FF2F">【v9 新增】右下 5 主题卡/dh/note 占 1/3</strong>：flex:1 ≈ 327px，<strong style="color:#FE6449">与左 sticky 精准 2:1</strong>，gap=18。<br>
+    ⑨ 无数字人段：右下放 5 个主题卡，<strong style="color:#FE6449">当前正在播的高亮荧光绿+下沉阴影</strong>。<br>
+    ⑩ 有数字人段：数字人占右下 flex 1，<strong style="color:#FE6449">间距由 flex gap 18 + flex 容器 100% 内部 ≥30px 不碰其它元素</strong>。<br>
+    ⑪ 顶部章节条 / 主卡 / 字幕条 / 页脚 左右统一 <code>left:40 / width:1000</code> 对齐。<br>
+    ⑫ <strong style="color:#FE6449">竖版 1080×1920</strong>（缩 0.5 → 540×960），<strong style="color:#FE6449">横版 1280×720</strong> 16:9（缩 0.5625 → 720×418）。<br>
+    ⑬ 出图：仅 <code>create_design_work + gpt-image-2 + 信息图海报 + injectBrandProfile=false</code>，通道故障期用 <code>.ai-pending</code> 占位（绝不降级 PIL）。<br>
+    ⑭ <strong style="color:#FE6449">v9 量化验收</strong>：Playwright + boundingClientRect 实测 <code>sticky.w ≈ right.w × 2</code>，杜绝肉眼漏检。<br>
+    ⑮ <strong style="color:#C7FF2F">【v10 新增】主卡带图模板</strong>：<code>mc-imgleft</code>（左图 42% + 右文 kicker/标题/3要点/2数据卡）与 <code>mc-imgtop</code>（上图 34% + 下 3 卡 + 标签）。图内用 <code>.img-ph</code> 占位，<strong style="color:#FE6449">正式渲染由 gpt-image-2 出真图</strong>，绝不降级 PIL。
+  </div>
+
+</div>
+</body>
+</html>

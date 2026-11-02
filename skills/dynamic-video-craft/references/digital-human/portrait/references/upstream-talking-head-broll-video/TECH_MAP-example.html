@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>TECH_MAP · 技术使用地图</title>
+<style>
+  :root{
+    --bg:#26221b; --panel:#2f2a22; --line:#4a4238;
+    --paper:#F4E7D6; --canvas:#E7D5B7; --dim:#a89d87;
+    --o:#D2601A; --y:#D9A425; --g:#2F6B4F; --p:#5B3E7A; --t:#2E6E7E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--paper);
+       font-family:"Noto Sans SC","Microsoft YaHei",sans-serif;line-height:1.7;}
+  .wrap{max-width:1180px;margin:0 auto;padding:48px 34px 90px;}
+  h1{font-size:32px;margin:0 0 8px;font-weight:800;}
+  .lead{color:var(--dim);font-size:14.5px;margin-bottom:40px;}
+  h2{font-size:21px;margin:52px 0 6px;padding-left:13px;
+     border-left:4px solid var(--o);font-weight:700;}
+  .h2note{color:var(--dim);font-size:13.5px;margin:0 0 18px;padding-left:17px;}
+  h3{font-size:16.5px;margin:30px 0 10px;color:var(--y);font-weight:700;}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin:14px 0 8px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:#3a342b;font-weight:700;}
+  td code,.mono{font-family:ui-monospace,"Cascadia Code",monospace;color:var(--y);font-size:12.5px;}
+  pre{background:#1d1a15;border:1px solid var(--line);border-radius:6px;
+      padding:15px 17px;overflow-x:auto;font-size:12.5px;
+      font-family:ui-monospace,monospace;color:#d8ceb8;margin:12px 0;}
+  .cm{color:#82796a;}
+  .k{color:var(--o);} .s{color:#9ec49b;} .n{color:var(--y);}
+  .pipe{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:16px 0 6px;}
+  .node{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+        padding:9px 14px;font-size:13px;}
+  .node b{display:block;font-size:11.5px;color:var(--dim);font-weight:500;
+          letter-spacing:.06em;text-transform:uppercase;}
+  .arw{color:#6d6455;font-size:17px;}
+  .tag{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11.5px;
+       margin-right:5px;font-weight:600;}
+  .t-rem{background:rgba(46,110,126,.22);color:#8fc4d2;border:1px solid #2E6E7E;}
+  .t-img{background:rgba(210,96,26,.2);color:#e8a173;border:1px solid var(--o);}
+  .t-vid{background:rgba(91,62,122,.25);color:#b79dd4;border:1px solid var(--p);}
+  .t-css{background:rgba(217,164,37,.18);color:#e0be6e;border:1px solid var(--y);}
+  .t-ff{background:rgba(47,107,79,.22);color:#8cc4a4;border:1px solid var(--g);}
+  .t-py{background:rgba(160,160,160,.16);color:#c2c2c2;border:1px solid #7a7a7a;}
+  .t-js{background:rgba(70,110,150,.22);color:#8fb4d8;border:1px solid #4e7ba6;}
+  .ok{color:#7fc49b;font-weight:600;} .no{color:#e2836a;font-weight:600;}
+  .box{background:var(--panel);border:1px solid var(--line);
+       border-left:4px solid var(--y);border-radius:5px;padding:14px 18px;margin:16px 0;font-size:13.5px;}
+  ul{padding-left:22px;} li{margin:5px 0;font-size:13.5px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>技术使用地图 · TECH MAP</h1>
+<p class="lead">
+  回答一个问题：<b>整条生产线里，每一段具体用了什么技术，为什么是它。</b><br>
+  路由原则取自《教程.txt》——"一镜一判断，不是谁更强，而是谁更适合这一镜"。
+</p>
+
+<div class="pipe">
+  <div class="node"><b>输入</b>SCRIPT.srt · 271 cue · 240.88s</div><span class="arw">→</span>
+  <div class="node"><b>裁判 / 路由</b>Agent 逐镜判断</div><span class="arw">→</span>
+  <div class="node"><b>故事画面</b>gpt-image-2.0 → 图生视频</div><span class="arw">→</span>
+  <div class="node"><b>信息动效</b>Remotion / HTML+CSS</div><span class="arw">→</span>
+  <div class="node"><b>合成交付</b>FFmpeg</div>
+</div>
+
+<!-- ================= 1 ================= -->
+<h2>1 · 测量层：先量，再设计</h2>
+<p class="h2note">"像素级模仿"的前提是先有像素级数据。这一层不产出画面，只产出数字。</p>
+
+<table>
+<tr><th>技术</th><th>用在哪</th><th>产出</th></tr>
+<tr><td><span class="tag t-py">Python + NumPy</span></td>
+    <td>把参考视频每帧解成 <code>H×W×3</code> 数组，做行/列亮度剖面扫描</td>
+    <td>边框宽度、白边像素、黑描边位置</td></tr>
+<tr><td><span class="tag t-ff">FFmpeg rawvideo 管道</span></td>
+    <td><code>-f rawvideo -pix_fmt rgb24 -</code> 抽单帧直入内存，不落盘</td>
+    <td>460+ 帧采样，无中间文件</td></tr>
+<tr><td><span class="tag t-py">连通块 + 双条件掩码</span></td>
+    <td>字幕检测：<code>白&gt;232</code> <b>且</b> <code>描边&lt;105</code>，取最下连续块</td>
+    <td>字幕 26px（p10=p90，151 帧）</td></tr>
+<tr><td><span class="tag t-py">列投影布局聚类</span></td>
+    <td>与背景差分 → 列掩码 → 连续块宽占比分类 FULL/SPLIT/WIDE</td>
+    <td>71 段布局，SPLIT 50% / FULL 45%</td></tr>
+</table>
+
+<div class="box">
+<b>为什么必须自己写扫描而不是目测？</b><br>
+前一版靠目测把字幕做到 138px，实测应为 39px，<span class="no">超标 3.54 倍</span>。
+两套画框差异（左框 9px 白边 vs 右框 3px 黑边）目测同样看不出来 —— 只有逐像素打印数值才能发现。
+</div>
+
+<pre><span class="cm"># 关键手法：一维亮度剖面，1px 精度定位边框</span>
+row = img[y].mean(axis=<span class="n">1</span>)          <span class="cm"># RGB 均值 → 灰度行</span>
+<span class="cm"># 实测输出：190 189 191 ... 203 | 77  4 | 163 238 | 229 ...</span>
+<span class="cm">#           ↑背景+阴影          ↑2px黑描边  ↑过渡   ↑卡片内容</span>
+<span class="cm"># 值 4 ≈ 纯黑 → 判定 B-roll 框为 2px 黑边，且无白色内边框</span></pre>
+
+<!-- ================= 1b ================= -->
+<h2>1b · 几何测量层：中缝 26px 的取证 <span class="no">（本项曾出错）</span></h2>
+<p class="h2note">用户指出 A-roll 与 B-roll 叠在一起。第一版靠"31.1% + 64% + left:0 + right:0"分栏，
+实测 DOM 间距为 <span class="no">−9px</span>（真实重叠）。这一层专门把 SPLIT 的四条边全部量成绝对像素。</p>
+
+<table>
+<tr><th>技术</th><th>用在哪</th><th>产出</th></tr>
+<tr><td><span class="tag t-py">横向剖面双边界定位</span></td>
+    <td>同一行同时找 A 框白边右缘（<code>&gt;=240</code>）与 B 框黑线左缘（<code>&lt;=40</code>），差值即中缝</td>
+    <td><b>中缝 26px</b>（原生）</td></tr>
+<tr><td><span class="tag t-py">限定扫描窗抗污染</span></td>
+    <td><code>r[380:420]</code> 找 A 白边、<code>r[420:450]</code> 找 B 黑线，并加 <code>bv&lt;40</code> 确认黑线有效</td>
+    <td>排除 B 框内白卡（值 226–238）误判</td></tr>
+<tr><td><span class="tag t-py">多帧众数交叉验证</span></td>
+    <td>取 t=14/16/32/62/104/120/205s 共 7 个 SPLIT 时点重复测量</td>
+    <td>取值集合仅 <code>[26]</code>，<span class="ok">零离散</span></td></tr>
+<tr><td><span class="tag t-js">Playwright DOM 几何</span></td>
+    <td><code>getBoundingClientRect()</code> 返回<b>原语数组</b>（避免序列化循环引用崩溃）</td>
+    <td>渲染侧间距 −9px → <span class="ok">+39px</span></td></tr>
+<tr><td><span class="tag t-py">中缝洁净度 + 背景自校准</span></td>
+    <td>从 stage 空白区取中位数作背景基准（<b>非</b>硬编码），6% 容差判断阴影是否填缝</td>
+    <td>实测背景 208（含 paper-grain 网点）</td></tr>
+</table>
+
+<table>
+<tr><th>项</th><th>原生 1280×720</th><th>1080p 令牌</th><th>此前的错误</th></tr>
+<tr><td>A 框 left</td><td>16</td><td><code>24px</code></td><td class="no">写成 left:0 贴边</td></tr>
+<tr><td>A 框 width</td><td>392</td><td><code>588px</code></td><td class="no">写成 31.1%（实为 30.63%）</td></tr>
+<tr><td><b>中缝 gutter</b></td><td><b>26</b></td><td><b><code>39px</code></b></td><td class="no">被百分比与 padding 吃光</td></tr>
+<tr><td>B 框 left</td><td>434</td><td><code>651px</code></td><td>= 24 + 588 + 39</td></tr>
+<tr><td>B 框 width</td><td>812</td><td><code>1218px</code></td><td class="no">写成 64%（实为 63.44%）</td></tr>
+<tr><td>B 框右留白</td><td>34</td><td><code>51px</code></td><td class="no">写成 right:0 贴边</td></tr>
+<tr><td>A 顶 / B 顶</td><td>31 / 39</td><td><code>46 / 58px</code></td><td class="no">误以为顶底对齐，实差 12px</td></tr>
+</table>
+
+<div class="box">
+<b>叠压的三层根因 —— 只改一层都不够</b><br>
+<b>① 百分比分栏</b>：31.1% + 64% = 95.1%，剩 4.9% 给中缝，但百分比相对 stage 计算，
+配上 <code>left:0</code> + <code>right:0</code> 两侧贴边，中缝被两边同时挤压。<br>
+<b>② <code>box-sizing: content-box</code>（默认值）</b>：<code>.frame-a</code> 的 padding 与
+<code>.frame-b</code> 的 border 都在 box <b>外</b>额外撑开，把仅剩的缝隙吃光。<br>
+<b>③ 阴影跨缝</b>：即使 DOM 间距正确，A 框 51px 右阴影会把中缝染成 138–158（背景 209），
+<span class="no">肉眼仍然像粘在一起</span>。<br>
+→ 修复：<b>全部改绝对像素</b> + <code>box-sizing: border-box</code> + <code>right: auto</code> + 阴影收窄。
+</div>
+
+<pre><span class="cm"># 中缝取证：同行双边界，7 帧零离散</span>
+seg = r[<span class="n">380</span>:<span class="n">420</span>]; w = np.where(seg &gt;= <span class="n">240</span>)[<span class="n">0</span>]
+aR  = <span class="n">380</span> + w.max() <span class="cm"># A 框白边右缘</span>
+seg2 = r[<span class="n">420</span>:<span class="n">450</span>]; bL = <span class="n">420</span> + int(np.argmin(seg2)); bv = int(seg2.min())
+<span class="k">if</span> aR <span class="k">and</span> bv &lt; <span class="n">40</span>:        <span class="cm"># bv&lt;40 确认命中黑线而非白卡</span>
+    gap = bL - aR - <span class="n">1</span>     <span class="cm"># → 26，7 帧全部一致</span></pre>
+
+<div class="box">
+<b>阴影三轮迭代：为什么"只改窄一点"救不了中缝</b><br>
+· 右阴影 <b>36px</b> → 中缝像素 138–158，肉眼仍粘连；<br>
+· 右阴影 <b>18px</b> + B 左阴影 10px → 153–193，但<span class="no">纯背景像素 0/37</span> —— 两侧阴影在缝中相遇叠加；<br>
+· 定稿 <b>A 右 10px + B 左 6px + A 框 padding-right:4px</b> → 163→197，白边显现（254），
+<span class="ok">中缝中段回归纯背景</span>。<br>
+同时新增 <code>--shadow-frame-a-full</code>，让 FULL 场景保留实测那道 51px 厚重右阴影 ——
+<b>收窄只是 SPLIT 的局部妥协，不是推翻实测。</b>
+</div>
+
+<table>
+<tr><th>脚本</th><th>职责</th><th>结论</th></tr>
+<tr><td><code>_gap.py</code></td><td>中缝初测，打印 x=300..470 原始像素</td><td>8 帧众数 26px</td></tr>
+<tr><td><code>_geom.py</code> / <code>_geom2.py</code></td><td>SPLIT 四边完整几何 + 多帧验证</td><td>7 帧零离散</td></tr>
+<tr><td><code>_shot.py</code> / <code>_shot2.py</code></td><td>Playwright 渲染 + 修复前后对照</td><td>−9px → +39px</td></tr>
+<tr><td><code>_gapcheck.py</code></td><td>中缝洁净度，判定阈值自校准</td><td>PASS</td></tr>
+<tr><td><code>_geom_regress.py</code></td><td>几何回归 28 项（含"禁百分比"反悔检查）</td><td><span class="ok">28 / 0</span></td></tr>
+</table>
+
+<!-- ================= 2 ================= -->
+<h2>2 · 路由层：谁画这一镜</h2>
+<p class="h2note">《教程.txt》的核心：生成之前先过一道判断门，能程序化就不抽卡。</p>
+
+<table>
+<tr><th>镜头特征</th><th>路由到</th><th>理由</th></tr>
+<tr><td>字幕、数字、卡片、图表、流程图、转场</td>
+    <td><span class="tag t-rem">Remotion</span></td>
+    <td>按帧精准、稳定、可局部编辑。慢两帧、字大了都能直接改</td></tr>
+<tr><td>人物表演、空间变化、连续叙事</td>
+    <td><span class="tag t-img">gpt-image-2.0</span><span class="tag t-vid">图生视频</span></td>
+    <td>叙事与空间感是程序化的短板，只有这类才值得花视频生成额度</td></tr>
+<tr><td>纸质拼贴质感（网点/机切边/纤维）</td>
+    <td><span class="tag t-img">gpt-image-2.0</span></td>
+    <td>物理材质细节手写 CSS 做不出来</td></tr>
+<tr><td>产品录屏、功能演示</td>
+    <td><span class="tag t-py">skip-generation</span></td>
+    <td>由原始素材承载，生成 UI mock 反而是编造</td></tr>
+<tr><td>复杂 CSS 动效（clip-path/滤镜）</td>
+    <td><span class="tag t-css">HTML+CSS</span><span class="tag t-ff">Puppeteer 录制</span></td>
+    <td>CSS 能力比 Remotion 内联样式更强的场合</td></tr>
+</table>
+
+<div class="box">
+<b>省钱门（来自《教程.txt》）：</b>
+生成动画前先判断是否<i>必须</i>调用视频模型；出了问题<b>先判断能不能用 Remotion 后期修</b>，
+能修就不重抽。构图/主体错了才重新生成，排版裁切问题一律本地修。
+</div>
+
+<!-- ================= 3 ================= -->
+<h2>3 · 图像层：先出图，再出视频</h2>
+<p class="h2note">用户要求 #7。图片阶段可以反复筛选，比直接文生视频稳定得多、便宜得多。</p>
+
+<div class="pipe">
+  <div class="node"><b>step 1</b>gpt-image-2.0 出静帧</div><span class="arw">→</span>
+  <div class="node"><b>step 2</b>人工/程序筛选定稿</div><span class="arw">→</span>
+  <div class="node"><b>step 3</b>图生视频（首帧锁定）</div><span class="arw">→</span>
+  <div class="node"><b>step 4</b>质检：黑帧/主体/构图</div>
+</div>
+
+<h3>拼贴提示词的固定骨架（来自 collage-video 规则）</h3>
+<pre><span class="s">premium editorial stop-motion paper-collage</span>,
+flat <span class="k">{语义色}</span> paper field,            <span class="cm">// 按语义选色，不随机</span>
+black-and-white halftone photographic cut-outs,  <span class="cm">// 半调网点</span>
+selective colored cardstock accents,
+visible halftone dots, crisp machine-cut edges,  <span class="cm">// 机切硬边</span>
+thin warm-cream keylines, uncoated paper fiber,  <span class="cm">// 暖奶油描边+纸纤维</span>
+soft physical shadows,                           <span class="cm">// 真实物理阴影</span>
+3-5 separable paper groups, generous negative space,
+subject within middle 70%,                       <span class="cm">// 保证裁切安全</span>
+<span class="k">--no</span> typography, letters, numerals, logos, UI, gradients,
+     glossy 3D, photoreal, clutter</pre>
+
+<table>
+<tr><th>语义</th><th>指定色</th><th>色值</th></tr>
+<tr><td>时间消耗 / 成本 / 紧迫</td><td>焦橙</td><td><code>#D2601A</code></td></tr>
+<tr><td>工具 / 警示 / 经验流失</td><td>芥末黄</td><td><code>#D9A425</code></td></tr>
+<tr><td>认知 / 判断 / 系统复位</td><td>墨绿</td><td><code>#2F6B4F</code></td></tr>
+<tr><td>标准 / 知识沉淀</td><td>深紫</td><td><code>#5B3E7A</code></td></tr>
+<tr><td>协作 / 自动执行</td><td>青蓝</td><td><code>#2E6E7E</code></td></tr>
+</table>
+
+<h3>动态化规则</h3>
+<ul>
+  <li>从空的纯色纸场开始，<b>先结构 → 后主体 → 再连接线 → 动作 → 结果</b></li>
+  <li>slide-in + snap-into-place 定格节拍，末尾<b>稳定停在已定稿的静帧上</b></li>
+  <li><span class="no">锁定机位</span>：禁止推拉摇移、渐隐、morph、warp</li>
+</ul>
+
+<!-- ================= 4 ================= -->
+<h2>4 · 动效层：Remotion 精准控制</h2>
+<p class="h2note">按帧可控是它唯一不可替代的价值。所有时间都换算成帧。</p>
+
+<table>
+<tr><th>API</th><th>用途</th><th>本片参数</th></tr>
+<tr><td><code>&lt;Composition&gt;</code></td><td>注册可渲染视频</td>
+    <td><code>1920×1080 / 30fps / 7226 帧</code></td></tr>
+<tr><td><code>&lt;Sequence from= durationInFrames=&gt;</code></td>
+    <td>把每个 Scene 钉在时间轴上</td><td>由 SRT 时间码换算</td></tr>
+<tr><td><code>useCurrentFrame()</code></td><td>驱动一切动画</td><td>—</td></tr>
+<tr><td><code>interpolate()</code></td><td>位移/透明度/图表生长</td>
+    <td>必带 <code>extrapolate:'clamp'</code></td></tr>
+<tr><td><code>spring()</code></td><td>卡片入场、数字滚动</td>
+    <td><code>damping:100</code>（去弹跳）</td></tr>
+<tr><td><code>Easing.bezier()</code></td><td>收尾克制的 ease-out</td>
+    <td><code>(.22, 1, .36, 1)</code></td></tr>
+<tr><td><code>&lt;OffthreadVideo&gt;</code></td><td>嵌入数字人素材</td><td>渲染更稳</td></tr>
+<tr><td><code>&lt;Audio&gt;</code></td><td>口播音轨</td><td>与 SRT 对齐</td></tr>
+</table>
+
+<pre><span class="cm">// 标准入场：稳重、无弹跳（damping 拉到 100）</span>
+<span class="k">const</span> enter = spring({
+  frame, fps,
+  config: { damping: <span class="n">100</span>, mass: <span class="n">1</span>, stiffness: <span class="n">100</span> },
+  durationInFrames: <span class="n">12</span>,          <span class="cm">// 0.40s</span>
+});
+
+<span class="cm">// 逐行错开 4 帧（0.13s），一次只让眼睛读一行</span>
+<span class="k">const</span> rowOpacity = (i) => interpolate(
+  frame, [i * <span class="n">4</span>, i * <span class="n">4</span> + <span class="n">10</span>], [<span class="n">0</span>, <span class="n">1</span>],
+  { easing: Easing.out(Easing.cubic),
+    extrapolateLeft: <span class="s">'clamp'</span>, extrapolateRight: <span class="s">'clamp'</span> }
+);
+
+<span class="cm">// 打字机：每字 3 帧</span>
+<span class="k">const</span> shown = text.slice(<span class="n">0</span>, Math.floor(frame / <span class="n">3</span>));
+<span class="k">const</span> caret = Math.floor(frame / <span class="n">15</span>) % <span class="n">2</span>;   <span class="cm">// 光标 0.5s 闪烁</span></pre>
+
+<h3>为什么不用对称阴影</h3>
+<pre><span class="cm">/* ✗ 大模型默认写法 —— 违背光照物理，一眼假 */</span>
+box-shadow: <span class="n">0 4px 12px</span> rgba(0,0,0,.1);
+
+<span class="cm">/* ✓ 本片写法 —— 左上光源，四边不等（实测 左16 右34 下32 上0）*/</span>
+box-shadow:
+  <span class="n">-24px</span>  0    <span class="n">24px</span> -8px  rgba(60,44,24,.16),   <span class="cm">/* 左 浅 */</span>
+   <span class="n">51px</span>  0    <span class="n">40px</span> -6px  rgba(60,44,24,.34),   <span class="cm">/* 右 重 */</span>
+   0    <span class="n">48px</span> <span class="n">44px</span> -10px rgba(60,44,24,.42);  <span class="cm">/* 下 最重 */</span></pre>
+
+<!-- ================= 5 ================= -->
+<h2>5 · 数字人层：质心居中裁剪</h2>
+<p class="h2note">用户要求 #1。关键在于<b>按前景质心裁，不是按画面中心裁</b>。</p>
+
+<table>
+<tr><th>步骤</th><th>技术</th><th>判据</th></tr>
+<tr><td>1 前景分离</td><td><span class="tag t-py">背景差分 / 人脸检测</span></td><td>得到主体掩码</td></tr>
+<tr><td>2 质心计算</td><td><span class="tag t-py">掩码一阶矩</span></td><td>横向质心 cx</td></tr>
+<tr><td>3 居中裁剪</td><td><span class="tag t-ff">FFmpeg crop</span></td>
+    <td>令 cx 落在框宽 <b>49.6%–53.5%</b></td></tr>
+<tr><td>4 复核</td><td><span class="tag t-py">重测质心</span></td><td>偏差 ≤ ±3.5% 才通过</td></tr>
+</table>
+<pre><span class="cm"># 按质心裁剪，而非 (iw-ow)/2</span>
+ffmpeg -i dh.mp4 -vf <span class="s">"crop=<span class="n">597</span>:<span class="n">912</span>:<span class="n">{cx-298}</span>:<span class="n">{cy-456}</span>,scale=<span class="n">597</span>:<span class="n">912</span>"</span> out.mp4</pre>
+
+<!-- ================= 6 ================= -->
+<h2>6 · 合成层：FFmpeg</h2>
+<table>
+<tr><th>任务</th><th>手段</th></tr>
+<tr><td>Remotion 渲染</td><td><code>npx remotion render MainVideo out/v5.mp4 --concurrency=4</code></td></tr>
+<tr><td>HTML 动效录制</td><td>Puppeteer 逐帧截图 → <code>-framerate 30 -i %05d.png</code></td></tr>
+<tr><td>音画对齐</td><td><code>-map 0:v -map 1:a -c:v libx264 -crf 18 -c:a aac</code></td></tr>
+<tr><td>黑帧质检</td><td><code>blackdetect=d=0.1</code> + 逐帧亮度均值扫描</td></tr>
+<tr><td>成品复测</td><td>用同一套测量脚本回测成品，与参考视频比对</td></tr>
+</table>
+
+<div class="box">
+<b>闭环质检（《教程.txt》第三点）：</b>
+Agent 不只分工，还要把质检和返修接起来。
+主体/空间错误 → 重新生成；<b>排版裁切问题 → 本地修，不推倒重来</b>。
+成品必须用<span class="ok">同一套测量脚本回测</span>：字幕是否 38±2px、阴影是否非对称、背景是否 <code>#E7D5B7</code>。
+</div>
+
+<!-- ================= 7 ================= -->
+<h2>7 · 方法论来源对照</h2>
+<table>
+<tr><th>来源</th><th>本片采纳了什么</th></tr>
+<tr><td><b>教程.txt</b></td><td>一镜一判断路由 · 省钱门 · 质检返修闭环 · Remotion/视频模型分工</td></tr>
+<tr><td><b>审美.txt</b></td><td>design 文件必含 9 项 · "审美=章法" · 取舍比堆砌重要 · 试镜迭代</td></tr>
+<tr><td><b>Remotion</b></td><td>Composition/Sequence/interpolate/spring/Easing/OffthreadVideo</td></tr>
+<tr><td><b>touge-spoken-storyboard</b></td><td>75 组件词汇表 · SRT 拆镜 7 步 · visual_track 0-4 · 节奏区间 2-6s</td></tr>
+<tr><td><b>touge-collage-video</b></td><td>纸质拼贴材质配方 · 语义配色 · 物件预算 3-5 · 锁定机位</td></tr>
+<tr><td><b>taste-skill</b></td><td>三旋钮（6/4/3）· 反默认纪律 · 交付前 pre-flight</td></tr>
+<tr><td><b>gsap-skills</b></td><td>时间轴编排思维 · 错开入场 · 性能优先 transform/opacity</td></tr>
+<tr><td><b>ui-ux-pro-max</b></td><td>设计系统卡结构化表达 · 反模式清单</td></tr>
+<tr><td><b>personal-homepage-skill</b></td><td>运动服务层级而非炫技 · 一页一主运动系统 · reduced-motion</td></tr>
+</table>
+
+<h2>8 · 一句话总结</h2>
+<div class="box" style="border-left-color:var(--o);">
+测量层<b>定标准</b>（39px 字幕、非对称阴影、两套画框），
+几何层<b>定骨架</b>（绝对像素、39px 中缝、两框绝不叠压），
+路由层<b>定分工</b>（能程序化就不抽卡），
+图像层<b>定质感</b>（先出图再出片），
+动效层<b>定节奏</b>（3.2s 中位镜长、SPLIT↔FULL 交替），
+合成层<b>定收口</b>（同一套脚本回测成品）。<br>
+<span class="ok">审美不是加法，是章法。</span><br>
+<span class="no">而章法的第一条是：凡肉眼判断的，一律不可信 —— 量到零离散为止。</span>
+</div>
+
+</div>
+</body>
+</html>

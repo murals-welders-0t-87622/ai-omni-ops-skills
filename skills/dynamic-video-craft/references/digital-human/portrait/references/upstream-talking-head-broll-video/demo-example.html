@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>demo.html · 视觉试镜（像素级对照）</title>
+<link rel="stylesheet" href="design-tokens.css">
+<style>
+  body{margin:0;background:#3a352c;color:#E7D5B7;
+       font-family:"Noto Sans SC","Microsoft YaHei",sans-serif;}
+  .wrap{padding:40px;max-width:2040px;margin:0 auto;}
+  h1{font-size:28px;margin:0 0 6px;color:#F4E7D6;font-weight:800;}
+  .sub{font-size:14px;color:#b8ad97;margin-bottom:34px;line-height:1.7;}
+  .sec{margin:56px 0 18px;font-size:19px;font-weight:700;color:#F4E7D6;
+       border-left:4px solid #D2601A;padding-left:12px;}
+  .note{font-size:13px;color:#a89d87;margin:8px 0 18px;line-height:1.75;}
+  .shot{transform:scale(.5);transform-origin:top left;}
+  .shot-box{height:548px;overflow:hidden;margin-bottom:14px;
+            border:1px solid #554d40;border-radius:6px;background:#2c281f;}
+  .cap{font-size:13px;color:#c9bda6;margin:0 0 30px;font-family:ui-monospace,monospace;}
+  .cap b{color:#D9A425;}
+  table{border-collapse:collapse;font-size:13px;margin:12px 0 26px;}
+  th,td{border:1px solid #554d40;padding:7px 12px;text-align:left;}
+  th{background:#463f34;color:#F4E7D6;}
+  td code{color:#D9A425;}
+  .ok{color:#7fc49b;} .no{color:#e2836a;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>demo.html · 视觉试镜（Design Casting）</h1>
+<p class="sub">
+  按《审美.txt》第三步"给 design 做一次试镜"制作。所有样式引用 <code>design-tokens.css</code>，
+  数值全部来自 <code>下载.mp4</code> 逐像素实测（<code>_m3.log</code> / <code>_sub.log</code>）。<br>
+  画面按 1920×1080 构建，此页缩放至 50% 预览。
+</p>
+
+<!-- ============ 1. SPLIT ============ -->
+<div class="sec">镜型 1 · SPLIT（A 588px + 中缝 39px + B 1218px）— 实测占比 50%，中位镜长 3.5s</div>
+<p class="note">
+  组件：<code>aroll-composite.left-anchor-dashboard</code> + <code>broll-flows.complex</code><br>
+  注意两套画框差异：左框 <b>9px 白边（右侧无边）</b>；右框 <b>3px 黑细边、无白边</b>。<br>
+  <b class="ok">★ 中缝 39px</b>（原生 26px，7 帧零离散）— 两框之间必须留出可见间距，
+  <b class="no">绝不可相接或叠压</b>。A 框右阴影已收窄至 36px 以免糊过中缝。
+</p>
+<div class="shot-box"><div class="shot">
+  <div class="stage layout-split paper-grain">
+    <!-- A-roll：数字人（质心居中） -->
+    <div class="frame-a">
+      <div style="width:100%;height:100%;background:
+           linear-gradient(180deg,#8a8474,#6d6759);display:flex;
+           align-items:center;justify-content:center;">
+        <div style="text-align:center;color:#E7D5B7;">
+          <div style="width:150px;height:150px;border-radius:50%;
+                      background:#a39a86;margin:0 auto 18px;"></div>
+          <div class="t-label" style="color:#E7D5B7;">A-ROLL · 质心居中 49.6–53.5%</div>
+        </div>
+      </div>
+    </div>
+    <!-- B-roll：信息看板 -->
+    <div class="frame-b" style="padding:44px;">
+      <div class="t-label">流程 · PROCESS</div>
+      <div class="t-title" style="margin:10px 0 34px;">
+        选型这件事，<span class="x-orange">卡在三个环节</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:18px;">
+        <div class="card" style="flex:1;text-align:center;">
+          <div class="t-title" style="font-size:34px;">试用</div>
+          <div class="t-label" style="margin-top:8px;">TRIAL</div>
+        </div>
+        <div style="font-size:38px;color:#8a7f6a;">→</div>
+        <div class="card card--deep" style="flex:1;text-align:center;
+             border:2px solid var(--a-orange);">
+          <div class="t-title" style="font-size:34px;" class="x-orange">对比</div>
+          <div class="t-label" style="margin-top:8px;color:var(--a-orange);">COMPARE</div>
+        </div>
+        <div style="font-size:38px;color:#8a7f6a;">→</div>
+        <div class="card" style="flex:1;text-align:center;">
+          <div class="t-title" style="font-size:34px;">落地</div>
+          <div class="t-label" style="margin-top:8px;">DEPLOY</div>
+        </div>
+      </div>
+      <div class="card card--paper" style="margin-top:30px;">
+        <div class="t-body">中间那步最花钱：<b>反复试、反复比</b>，时间全耗在这。</div>
+      </div>
+    </div>
+    <div class="subtitle">他为了用哪个模型，来回折腾了两个月</div>
+  </div>
+</div></div>
+<p class="cap">A框 x=24..611(588px) · <b>中缝 x=612..650（39px 空隙）</b> · B框 x=651..1868(1218px) · 字幕 <b>38px</b> 距底 <b>74px</b> 居中 x=960</p>
+
+<table>
+  <tr><th>SPLIT 几何</th><th>原生实测</th><th>1080p 令牌</th><th>说明</th></tr>
+  <tr><td>A 框 left</td><td>16</td><td><code>24px</code></td><td>不贴边（原写 <code>left:0</code> 是错的）</td></tr>
+  <tr><td>A 框 width</td><td>392</td><td><code>588px</code></td><td>30.63%</td></tr>
+  <tr><td><b>中缝 gutter</b></td><td><b>26</b></td><td><code><b>39px</b></code></td><td class="ok">7 帧零离散，本次修复核心</td></tr>
+  <tr><td>B 框 left</td><td>434</td><td><code>651px</code></td><td>= 24 + 588 + 39</td></tr>
+  <tr><td>B 框 width</td><td>812</td><td><code>1218px</code></td><td>63.44%</td></tr>
+  <tr><td>B 框 right 留白</td><td>34</td><td><code>51px</code></td><td>右侧不贴边</td></tr>
+  <tr><td>A 框 top / bottom</td><td>31 / 96</td><td><code>46 / 144px</code></td><td rowspan="2">A、B 顶部与底部各错位 12px，<b class="no">不是对齐的</b></td></tr>
+  <tr><td>B 框 top / bottom</td><td>39 / 104</td><td><code>58 / 156px</code></td></tr>
+</table>
+
+<!-- ============ 2. FULL 打字机 ============ -->
+<div class="sec">镜型 2 · FULL 全宽 + 打字机文字 — 实测占比 45%，中位镜长 3.0s</div>
+<p class="note">
+  组件：<code>broll-hero.big-type</code>。呈现形式 = <b>打字机</b>（每字 2–3 帧 + 光标闪烁）。
+</p>
+<div class="shot-box"><div class="shot">
+  <div class="stage layout-full paper-grain">
+    <div class="frame-b" style="display:flex;flex-direction:column;
+         justify-content:center;padding:0 120px;background:var(--c-paper);">
+      <div class="t-label">第 02 章</div>
+      <div class="t-hero" style="margin:20px 0 0;">
+        不是找<span class="x-green">万能工具</span><br>
+        而是组建一支<span class="x-orange">小团队</span><span
+          style="display:inline-block;width:8px;height:96px;
+                 background:var(--c-ink);vertical-align:-14px;margin-left:10px;"></span>
+      </div>
+      <div class="t-body" style="margin-top:30px;max-width:1100px;">
+        一个负责理解全文，一个负责生成故事画面，一个负责控制细节和后期修复。
+      </div>
+    </div>
+    <div class="subtitle">真正的技能不是找万能工具</div>
+  </div>
+</div></div>
+<p class="cap">Hero 108px/900 · 光标块 8×96px · 强调色 <b>2 处</b>（墨绿 + 焦橙），符合"每帧≤2处"</p>
+
+<!-- ============ 3. 大数字 ============ -->
+<div class="sec">镜型 3 · FULL 大数字 — spring 计数滚动</div>
+<p class="note">组件：<code>broll-hero.big-number</code>。数字必须来自 SRT，禁止编造。</p>
+<div class="shot-box"><div class="shot">
+  <div class="stage layout-full paper-grain">
+    <div class="frame-b" style="display:flex;align-items:center;
+         justify-content:center;gap:90px;background:var(--c-paper-deep);">
+      <div style="text-align:right;">
+        <div class="t-num x-orange">2</div>
+        <div class="t-label" style="margin-top:-14px;">个月 · MONTHS</div>
+      </div>
+      <div style="width:2px;height:260px;background:#8a7f6a;opacity:.4;"></div>
+      <div style="max-width:620px;">
+        <div class="t-title">全花在"到底用哪个"上</div>
+        <div class="t-body" style="margin-top:18px;">
+          没有判断标准的时候，试用本身就变成了最大的成本。
+        </div>
+        <div class="t-label" style="margin-top:26px;">来源 · 用户访谈</div>
+      </div>
+    </div>
+    <div class="subtitle">来回折腾了两个月，最后还是没定下来</div>
+  </div>
+</div></div>
+<p class="cap">数字 160px/900 tabular-nums · <code>spring damping:120</code> 0.9s 滚动</p>
+
+<!-- ============ 4. versus ============ -->
+<div class="sec">镜型 4 · FULL 对照 — 纸质卡片拼贴</div>
+<p class="note">组件：<code>broll-abstract.versus</code>。左右等宽 + 中间 vs。</p>
+<div class="shot-box"><div class="shot">
+  <div class="stage layout-full paper-grain">
+    <div class="frame-b" style="padding:56px 70px;background:var(--c-paper-light);">
+      <div class="t-label">对照 · VERSUS</div>
+      <div class="t-title" style="margin:10px 0 34px;">两种做法，成本差在哪</div>
+      <div style="display:flex;align-items:stretch;gap:34px;">
+        <div class="card card--deep" style="flex:1;">
+          <div class="t-title" style="font-size:38px;">自己逐个试</div>
+          <div class="t-body" style="margin-top:16px;">
+            反复上传 · 复制 · 下载 · 改名<br>机械重复，镜头还接不上
+          </div>
+          <div class="t-label" style="margin-top:22px;color:var(--a-orange);">高成本</div>
+        </div>
+        <div style="display:flex;align-items:center;">
+          <div class="t-label" style="font-size:34px;letter-spacing:0;">vs</div>
+        </div>
+        <div class="card" style="flex:1;border:2px solid var(--a-green);">
+          <div class="t-title" style="font-size:38px;">交给 Agent 调度</div>
+          <div class="t-body" style="margin-top:16px;">
+            同一份上下文贯穿 · 一镜一判断<br>能后期修就不重抽
+          </div>
+          <div class="t-label" style="margin-top:22px;color:var(--a-green);">省钱 · 可返修</div>
+        </div>
+      </div>
+    </div>
+    <div class="subtitle">这就需要有一个 Agent 看着全片</div>
+  </div>
+</div></div>
+<p class="cap">卡片纸面 <code>#DFCDB4</code> / <code>#F4E7D6</code> — <b class="ok">无任何纯白</b></p>
+
+<!-- ============ 5. 开场 ============ -->
+<div class="sec">镜型 5 · 开场（t=0s）— 满足要求 #2：开场即有 B-roll</div>
+<p class="note">
+  组件：<code>aroll-composite.bottom-hero-board</code>。实测参考视频 t=3s 已是完整版式，
+  <b class="no">不存在"只有数字人"的开场</b>。
+</p>
+<div class="shot-box"><div class="shot">
+  <div class="stage paper-grain">
+    <div class="frame-b" style="position:absolute;left:36px;right:36px;top:46px;
+         height:560px;padding:52px 70px;background:var(--c-paper);">
+      <div class="t-label">开场 · HOOK</div>
+      <div class="t-hero" style="margin:18px 0 0;font-size:96px;">
+        一个模型选型，<br>能耗掉<span class="x-orange">两个月</span>
+      </div>
+      <div style="display:flex;gap:22px;margin-top:40px;">
+        <div class="card" style="flex:1;"><div class="t-label">试用</div>
+          <div class="t-title" style="font-size:30px;margin-top:8px;">数不清的账号</div></div>
+        <div class="card" style="flex:1;"><div class="t-label">对比</div>
+          <div class="t-title" style="font-size:30px;margin-top:8px;">没有统一标准</div></div>
+        <div class="card" style="flex:1;"><div class="t-label">结果</div>
+          <div class="t-title" style="font-size:30px;margin-top:8px;">还是没定下来</div></div>
+      </div>
+    </div>
+    <!-- 数字人：底部中央。B框底=606，A框顶=645 → 竖向间距 39px（= 中缝同一间距节奏） -->
+    <div class="frame-a" style="left:50%;transform:translateX(-50%);
+         top:645px;bottom:156px;width:28%;">
+      <div style="width:100%;height:100%;background:linear-gradient(180deg,#8a8474,#6d6759);
+           display:flex;align-items:center;justify-content:center;">
+        <div class="t-label" style="color:#E7D5B7;">A-ROLL</div>
+      </div>
+    </div>
+    <div class="subtitle">一家电气设备老板跟我吐槽</div>
+  </div>
+</div></div>
+<p class="cap">画面<b class="ok">无一处空白</b> · 数字人底部居中 28% · B框底 606 → A框顶 645，竖向间距 <b>39px</b>（与中缝同节奏）</p>
+
+<!-- ============ 阴影对照 ============ -->
+<div class="sec">关键验证 · 阴影非对称性（左上光源）</div>
+<p class="note">这是"为什么参考视频看起来高级"最容易被忽略、也最致命的一项。</p>
+<table>
+  <tr><th>方向</th><th>实测宽度(原生)</th><th>最深值</th><th>1920 等效</th><th>说明</th></tr>
+  <tr><td>左</td><td>16px</td><td>−17</td><td>24px</td><td>浅</td></tr>
+  <tr><td>右</td><td>34px</td><td><b>−39</b></td><td>51px</td><td>重</td></tr>
+  <tr><td>下</td><td>32px</td><td><b>−49</b></td><td>48px</td><td><b>最重</b></td></tr>
+  <tr><td>上</td><td><b>0px</b></td><td>≈0</td><td>0</td><td>几乎无</td></tr>
+</table>
+<table>
+  <tr><th>写法</th><th>代码</th><th>判定</th></tr>
+  <tr><td>常规 AI 写法</td><td><code>box-shadow:0 4px 12px rgba(0,0,0,.1)</code></td>
+      <td class="no">✗ 对称，违背光照物理</td></tr>
+  <tr><td>本片写法</td><td><code>var(--shadow-frame-a)</code> 三层不等</td>
+      <td class="ok">✓ 左浅 / 右重 / 下最重 / 上无</td></tr>
+</table>
+
+<!-- ============ 字幕对照 ============ -->
+<div class="sec">关键验证 · 字幕字号（151 帧实测 p10 = p90 = 26px）</div>
+<table>
+  <tr><th>版本</th><th>1920 下字高</th><th>倍数</th><th>判定</th></tr>
+  <tr><td>参考视频实测</td><td><b>39px</b>（原生 26px）</td><td>1.0×</td><td class="ok">✓ 基准</td></tr>
+  <tr><td>本次 tokens</td><td>38px</td><td>0.97×</td><td class="ok">✓ 符合</td></tr>
+  <tr><td>前一版 final_v4</td><td>138px</td><td><b>3.54×</b></td><td class="no">✗ 用户反馈"字体太大"根因</td></tr>
+</table>
+
+</div>
+</body>
+</html>

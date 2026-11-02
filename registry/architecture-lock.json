@@ -83,24 +83,6 @@
       ]
     },
     {
-      "id": "douyin-dh-landscape-remotion-video",
-      "path": "skills/douyin-dh-landscape-remotion-video",
-      "kind": "domain",
-      "dependencies": [
-        "brand-omni-growth-expert",
-        "dynamic-video-craft"
-      ]
-    },
-    {
-      "id": "douyin-dh-vertical-abroll-video",
-      "path": "skills/douyin-dh-vertical-abroll-video",
-      "kind": "domain",
-      "dependencies": [
-        "brand-omni-growth-expert",
-        "dynamic-video-craft"
-      ]
-    },
-    {
       "id": "douyin-operations",
       "path": "skills/douyin-operations",
       "kind": "domain",
@@ -237,5 +219,5 @@
       ]
     }
   ],
-  "changeRule": "2026-10-27 用户明确要求新增系统安装技能及增长持续学习技能；其余业务主结构、职责与交接变化前须确认；2026-11-02 用户明确要求新增视频复刻技能，作为既有制作工艺入口，不改变主流程及既有职责。 2026-11-03 用户要求两项数字人口播技能解决依赖并进入技能库；新增横屏与竖屏制作工艺入口，不改变主流程及其他职责。"
+  "changeRule": "2026-10-27 用户明确要求新增系统安装技能及增长持续学习技能；其余业务主结构、职责与交接变化前须确认；2026-11-02 用户明确要求新增视频复刻技能，作为既有制作工艺入口，不改变主流程及既有职责。 2026-11-03 用户要求两项数字人口播技能解决依赖并进入技能库；新增横屏与竖屏制作工艺入口，不改变主流程及其他职责。 2026-11-03 用户纠正两项数字人口播不应作为独立技能，恢复26项，完整工艺包归入既有动态视频技能。"
 }
