@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "version": "1.12.117",
+  "version": "1.12.118",
   "repository": "https://github.com/murals-welders-0t-87622/ai-omni-ops-skills",
   "skills": [
     {
       "id": "00-omni-system-setup",
       "path": "skills/00-omni-system-setup",
-      "version": "1.1.5",
+      "version": "1.1.6",
       "dependencies": [],
       "kind": "governance",
-      "description": "在 Windows 电脑通过 Docker 安装或安全更新 AI 全域运营中台及配套 Codex 技能，支持首装识别、备份回退、品牌 MCP 和实际验收；用于整套系统安装或升级，不用于运营业务执行。",
+      "description": "在 Windows 电脑识别 Docker 中台或原生安装包，安装更新配套技能并检查 WorkBuddy/Codex 与品牌 MCP 接入；按实际版本维护中台，不用于日常业务执行。",
       "status": "packaged-not-machine-accepted"
     },
     {

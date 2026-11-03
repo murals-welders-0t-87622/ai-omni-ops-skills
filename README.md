@@ -6,7 +6,9 @@
 
 ## 第一步：安装和更新整套系统
 
-新电脑先取得本公开技能仓库，用 Codex 打开仓库后直接说：**“请读取 skills/00-omni-system-setup/SKILL.md，按它安装整套系统。”** 已在 Codex 中发现该技能时也可说：**“使用 $00-omni-system-setup 安装整套系统。”** 已安装的电脑说：**“使用 $00-omni-system-setup 更新整套系统。”** Codex 会按[安装更新技能](skills/00-omni-system-setup/SKILL.md)识别新装或更新、准备 Docker 中台和配套技能并逐项验证。中台发行源码公开，不需私有仓账号；Docker、Codex、网络和模型配置仍需在目标电脑具备。历史数据迁移和第三方业务授权分开核实。
+**已有安装包或 Docker 中台：**安装技能和连接现有中台无需重装系统，也无需因原生安装包缺少 Docker 而安装 Docker。先按 [双版本与客户端接入](skills/00-omni-system-setup/references/deployment-and-agents.md) 识别实际实例及客户端，再分别验证技能发现和品牌 MCP；原生安装包的正式更新入口以实际发行版本为准。
+
+新电脑先取得本公开技能仓库，用 Codex 打开仓库后直接说：**“请读取 skills/00-omni-system-setup/SKILL.md，按它安装整套系统。”** 已在 Codex 中发现该技能时也可说：**“使用 $00-omni-system-setup 安装整套系统。”** 已安装的电脑说：**“使用 $00-omni-system-setup 更新整套系统。”** Codex 会按[安装更新技能](skills/00-omni-system-setup/SKILL.md)识别当前版本和操作范围，再按对应流程检查。中台发行源码公开，不需私有仓账号；Docker 仅在 Docker 部署时需要，具体客户端、网络和模型配置按目标环境核验。历史数据迁移和第三方业务授权分开核实。
 
 ## 结构化分工
 
