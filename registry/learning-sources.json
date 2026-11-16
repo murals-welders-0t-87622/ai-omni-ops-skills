@@ -4,6 +4,26 @@
   "policy": "来源是证据和方法，不是授权；文档核查、代码验证、真实渲染和业务验收分开。",
   "sources": [
     {
+      "id": "canvas-external-video-workflow-observation-20261116",
+      "kind": "runtime-observation",
+      "title": "外部 Agent 视频任务的画布可见性和预览验收",
+      "readAt": "2026-11-16",
+      "coverage": "核读本地受管任务、画布桥接和用户授权的单条视频预览回执；后续可见性版本仅有构建、合成检查与工具发现，未做浏览器并发及新付费任务验证。",
+      "distribution": "仅归纳通用方法，不公开品牌数据、人物图片、声音、项目标识或生成文件。",
+      "status": "partially-reviewed",
+      "adoptions": [
+        "skills/brand-omni-growth-expert/references/mcp-production-capabilities.md",
+        "skills/brand-omni-growth-expert/scripts/check_local_media.py",
+        "skills/creative-production-router/references/production-handoff.md"
+      ],
+      "notAdopted": [
+        "把参考时间线渲染视为新版剪辑工程已接通",
+        "把识别文字、静态帧或技术解码当成完整音画审核",
+        "把单一供应商支持扩展为所有任务均支持或断线自动恢复"
+      ],
+      "verification": "单条业务预览曾生成归档；新节点与页面同步仅有源码、构建、合成和工具发现证据，真实用户操作仍待验。素材检查按文件头选择 ISO BMFF 解复用后，仍需实际流类型与抽样解码。"
+    },
+    {
       "id": "minimax-h3-video-reverse-method-20261102",
       "kind": "public-documentation",
       "title": "视频逆向观察与品牌复刻方案",

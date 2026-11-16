@@ -35,7 +35,13 @@ def check(request):
     ffprobe, ffmpeg = shutil.which('ffprobe'), shutil.which('ffmpeg')
     if not ffprobe or not ffmpeg:
         raise ValueError('ffmpeg and ffprobe are required for media inspection')
-    output = run([ffprobe, '-v', 'error', '-protocol_whitelist', 'file,pipe', '-show_entries',
+    # image2 may win solely from a misleading image extension even when the
+    # bytes are an ISO BMFF video. Choose its demuxer from the ftyp box; actual
+    # stream and sampled decode checks still determine whether it is valid.
+    with path.open('rb') as file:
+        prefix = file.read(12)
+    input_format = ['-f', 'mov'] if len(prefix) >= 12 and prefix[4:8] == b'ftyp' else []
+    output = run([ffprobe, '-v', 'error', '-protocol_whitelist', 'file,pipe', *input_format, '-show_entries',
                   'format=format_name:stream=codec_type', '-of', 'json', str(path)])
     try:
         probe = json.loads(output.decode('utf-8'))
@@ -51,7 +57,7 @@ def check(request):
         raise ValueError('file is not a supported video')
     if kind == 'audio' and ('audio' not in streams or 'video' in streams):
         raise ValueError('file is not a supported audio-only file')
-    cmd = [ffmpeg, '-nostdin', '-v', 'error', '-xerror', '-protocol_whitelist', 'file,pipe', '-i', str(path)]
+    cmd = [ffmpeg, '-nostdin', '-v', 'error', '-xerror', '-protocol_whitelist', 'file,pipe', *input_format, '-i', str(path)]
     cmd += ['-map', '0:a:0', '-t', '1'] if kind == 'audio' else ['-map', '0:v:0', '-frames:v', '1']
     frame_hash = run(cmd + ['-f', 'framehash', '-'])
     if not any(line.strip() and not line.lstrip().startswith(b'#') for line in frame_hash.splitlines()):
