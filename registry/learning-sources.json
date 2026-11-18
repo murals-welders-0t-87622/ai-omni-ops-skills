@@ -766,17 +766,27 @@
       "title": "用户确认的 Docker 新机安装与更新流程",
       "readAt": "2026-10-27",
       "coverage": "核读用户指定安装文档、现行Compose/初始化、技能安装器及Git仓访问范围；明确首次安装、已有系统更新和历史迁移。",
-      "status": "adapted-methods",
-      "adoptions": [
-        "skills/00-omni-system-setup/SKILL.md",
-        "skills/00-omni-system-setup/references/windows-docker.md",
-        "skills/00-omni-system-setup/scripts/prepare-new-machine.ps1"
-      ],
+      "status": "historical",
+      "adoptions": [],
       "notAdopted": [
         "旧源码快照作为最新版本",
         "无需凭据或目标机验证即可宣称完整安装"
       ],
-      "verification": "技能入口校验、模拟隔离预检与安装器测试；真实新电脑端到端待验。"
+      "verification": "旧发布提交中保留当时的预检与安装流程，自 1.12.120 起由官网 Windows 原生首装指引替代。"
+    },
+    {
+      "id": "user-native-windows-setup-20261119",
+      "kind": "user-material",
+      "title": "官网下载和现有 Windows 原生安装版的使用范围",
+      "readAt": "2026-11-19",
+      "coverage": "核读官网公开发布目录与下载页，核对 1.0.13 原生试装、SHA-256、独立初始化和更新提醒范围。",
+      "status": "adapted-methods",
+      "adoptions": [
+        "skills/00-omni-system-setup/SKILL.md",
+        "skills/00-omni-system-setup/references/windows-native.md"
+      ],
+      "notAdopted": ["将全新安装测试包用于原位升级或覆盖已有数据"],
+      "verification": "公开下载安装元数据已回读，已在本机隔离试装；独立设备真实激活和应用内升级待验证。"
     },
     {
       "id": "growth-learning-local-workbuddy-20261027",
