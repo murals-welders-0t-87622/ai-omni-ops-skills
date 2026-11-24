@@ -4807,6 +4807,26 @@
         "原包中未附带的竖屏示例成片不得标为已存在"
       ],
       "verification": "校验原包文件数量和对应关系；技能安装、真实调用及成片需要另行测试。"
+    },
+    {
+      "id": "brand-knowledge-and-differentiation-20261124",
+      "kind": "user-directed-research",
+      "title": "品牌差异化访谈与分板块知识管理",
+      "readAt": "2026-11-24",
+      "coverage": "核读用户指定主作品与其余八条已采集转写、已有增长及学习方法，并核查 SAG-Wiki 上游中文说明和本机既有评测。原作有语音识别误差，案例业绩未经核验。",
+      "distribution": "通用库只含原创总结、问题和脚本。品牌侧索引与证据单独保存。",
+      "status": "reviewed",
+      "adoptions": [
+        "skills/brand-omni-growth-expert/references/brand-differentiation.md",
+        "skills/brand-omni-growth-expert/references/operating-principles.md",
+        "skills/brand-omni-growth-expert/scripts/brand_workspace.py",
+        "skills/omni-business-context/references/brand-knowledge.md"
+      ],
+      "notAdopted": [
+        "行业必胜、固定时长、播放量等于经营成效及强制锁客",
+        "SAG 默认全量安装或默认把资料发给云模型"
+      ],
+      "verification": "可工程核验目录、归档、检索和隔离；跨品牌经营效果需实际业务验证。"
     }
   ]
 }

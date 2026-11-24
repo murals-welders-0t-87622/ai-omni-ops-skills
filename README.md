@@ -47,7 +47,7 @@ python scripts/manage.py doctor
 
 ## 怎么使用
 
-产生本地文件的品牌任务，在开始前按[品牌业务本地建档标准](skills/brand-omni-growth-expert/references/local-archive-standard.md)确定品牌和板块目录；内容作品按日期与作品分别归档。目录初始化工具按当前任务创建，旧资料不会自动移动或覆盖。
+产生本地文件的品牌任务，在开始前按[品牌业务本地建档标准](skills/brand-omni-growth-expert/references/local-archive-standard.md)确定品牌和板块目录；内容作品按日期与作品分别归档。首次进入已确认的品牌工作空间，总统筹按全业务树建立本地目录与知识库。可以逐级上传、从任务留存经验、按原文查证，并由[品牌资料技能](skills/omni-business-context/references/brand-knowledge.md)管理。已有文件保留，具体作品仍按任务建档。
 
 直接说业务需求：“给这个品牌安排本周增长重点”“按今天选题做条视频先给我看”“本周私域先做什么”“复盘为什么转化下降”“继续昨天那项工作”。
 

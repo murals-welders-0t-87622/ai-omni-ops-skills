@@ -6,7 +6,7 @@
 |---|---|---|
 |安装或更新系统|00-omni-system-setup|新机安装或现有实例安全更新→安装与连接验收；不代替业务运营|
 |总方向、品牌阶段、跨业务取舍|brand-omni-growth-expert|生意模式→阶段目标→领域组合→经营回看|
-|基础资料与产品/IP/素材|omni-business-context|可追溯事实、资料缺口与品牌入库|
+|基础资料、分层知识库与产品/IP/素材|omni-business-context|可追溯事实、资料缺口与品牌入库|
 |公域·内容全链路|brand-content-growth|内容战略→研究/策略→选题/脚本→制作→承接|
 |抖音/视频号日常业务|douyin-operations|采集、日历、账号/直播、选题与复盘|
 |小红书|xiaohongshu-operations|搜索种草、图文/视频、账号和达人衔接|
