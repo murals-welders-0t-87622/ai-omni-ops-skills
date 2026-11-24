@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-26",
+  "date": "2026-11-25",
   "policy": "来源是证据和方法，不是授权；文档核查、代码验证、真实渲染和业务验收分开。",
   "sources": [
     {
@@ -4927,6 +4927,22 @@
       "adoptions": ["skills/brand-omni-growth-expert/SKILL.md", "skills/brand-omni-growth-expert/agents/openai.yaml", "registry/skills.json"],
       "notAdopted": ["将专项执行一律改为整品牌诊断", "把职责示例作为已完成的业务调用"],
       "verification": "对照原业务地图、目录描述及既有交接规则核查。实际业务验收另计。"
+    },
+    {
+      "id": "knowledge-native-workspace-20261125",
+      "kind": "runtime-feedback",
+      "title": "安装版品牌原文、经验与原理版本的真实操作路径",
+      "readAt": "2026-11-25",
+      "coverage": "核读原生 MCP 动作及网页入口，在隔离安装的合成品牌验证升级前后原件、网页登录审核、工作区复用和重启。",
+      "distribution": "仅收录通用操作方法。",
+      "status": "reviewed",
+      "adoptions": [
+        "skills/omni-business-context/references/brand-knowledge.md"
+      ],
+      "notAdopted": [
+        "把单机验收推广为对所有客户环境的保证"
+      ],
+      "verification": "网页导入与外部 MCP 读回同一文件，审核、同步及重启通过。上线状态以客户安装版本和实时连接为准。"
     }
   ]
 }

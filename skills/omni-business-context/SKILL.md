@@ -2,7 +2,7 @@
 name: omni-business-context
 description: 整理品牌、产品、IP、知识与素材，核来源和冲突并经本品牌MCP归档；不自行改业务事实。
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # 品牌资料与业务上下文
