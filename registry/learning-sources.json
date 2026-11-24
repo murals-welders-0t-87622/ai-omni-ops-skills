@@ -4827,6 +4827,106 @@
         "SAG 默认全量安装或默认把资料发给云模型"
       ],
       "verification": "可工程核验目录、归档、检索和隔离；跨品牌经营效果需实际业务验证。"
+    },
+    {
+      "id": "brand-growth-choice-interview-20261124",
+      "kind": "user-directed-research",
+      "title": "品牌增长第一性原理、客户选择与产品决策",
+      "readAt": "2026-11-24",
+      "coverage": "按用户指定顺序回读一条主作品与八条补充作品的采集转写。主作品提供场景、人群、方案、标签、口碑、退出成本与传播七维，补充作品提供需求空白、市场位置、同款交易设计及复述方法。",
+      "distribution": "发布范围为通用研读结论、原创访谈与虚构示例。逐条作品索引保留在授权品牌工作区。",
+      "status": "reviewed",
+      "adoptions": [
+        "skills/brand-omni-growth-expert/SKILL.md",
+        "skills/brand-omni-growth-expert/references/brand-differentiation.md",
+        "skills/brand-omni-growth-expert/references/brand-growth-first-principles.md"
+      ],
+      "notAdopted": ["用行业公式预测利润或增长", "根据一次转述确定购买动机"],
+      "verification": "转写已核读，作者案例业绩未独立核验。原单笔选择访谈在审阅中被否决，已由品牌共识经营方法替换。"
+    },
+    {
+      "id": "brand-growth-consensus-20261124",
+      "kind": "user-directed-research",
+      "title": "品牌共识、产品差异化与增长经营",
+      "readAt": "2026-11-24",
+      "coverage": "按主作再八条补充作品的次序回读品牌授权的采集转写。主作明确提出集体共识、组织和营销的任务、七个维度及溢价和品类条件。补充作品涉及低成本传播、市场位置、需求空白、四层差异化、解决问题的能力、口语标签、场景设计和同款增值。",
+      "distribution": "技能仅归纳通用方法和原创示例，授权资料与逐条来源记录留在品牌工作空间。",
+      "status": "reviewed",
+      "adoptions": [
+        "skills/brand-omni-growth-expert/SKILL.md",
+        "skills/brand-omni-growth-expert/references/brand-growth-first-principles.md",
+        "skills/brand-omni-growth-expert/references/brand-differentiation.md",
+        "skills/brand-omni-growth-expert/references/report-orchestration.md",
+        "skills/brand-omni-growth-expert/references/business-routing.md"
+      ],
+      "notAdopted": ["将单笔交易分析作为原作中心论题", "用未经验证的品类系数测算溢价"],
+      "verification": "回读转写并核对技能各业务入口。用户尚未审定本稿，未开展品牌业务试跑。"
+    },
+    {
+      "id": "brand-growth-report-case-evidence-20261124",
+      "kind": "primary-documents",
+      "title": "从产品原理到各板块增长路径的案例与完整报告",
+      "readAt": "2026-11-24",
+      "coverage": "核读瑞幸 2024 Form 20-F 自营店型表、宜家全球价值链和包装说明、喜利得美国 Fleet 权益和支持页，结合既有授权作品研读、增长报告底稿和营收分析方法。",
+      "distribution": "随技能保存原创分析、出处及独立虚构的完整报告。原始公开文档以链接引用；品牌私有材料引用留在授权品牌范围。",
+      "status": "reviewed",
+      "adoptions": [
+        "skills/brand-omni-growth-expert/SKILL.md",
+        "skills/brand-omni-growth-expert/references/report-orchestration.md",
+        "skills/brand-omni-growth-expert/references/growth-cases-and-sources.md",
+        "skills/brand-omni-growth-expert/references/growth-report-worked-example.md"
+      ],
+      "notAdopted": ["把企业自述当作客户共识或增长因果证据", "将示例目标写为本品牌实际业绩"],
+      "verification": "公开经营事实可按案例旁一手文档复核。教学示例采用假设数字，未开展真实品牌业务试跑。"
+    },
+    {
+      "id": "brand-growth-documented-cases-20261124",
+      "kind": "primary-documents",
+      "title": "用真实企业的产品、履约与经营数据推导品牌增长",
+      "readAt": "2026-11-24",
+      "coverage": "从授权采集作品提取可追溯的线索，核读瑞幸 2024 Form 20-F 与全年业绩公告、小仙炖官网产品说明、宜家博物馆 BANG 杯档案及宜家设计与包装说明、喜利得美国 Fleet 服务与支持条款。原始网址随案例列出。",
+      "distribution": "企业公开事实及原创分析随技能分发。授权品牌的作品检索、原文与内部材料各留在其原有范围。",
+      "status": "reviewed",
+      "adoptions": [
+        "skills/brand-omni-growth-expert/SKILL.md",
+        "skills/brand-omni-growth-expert/references/brand-differentiation.md",
+        "skills/brand-omni-growth-expert/references/report-orchestration.md",
+        "skills/brand-omni-growth-expert/references/growth-cases-and-sources.md",
+        "skills/brand-omni-growth-expert/references/growth-report-worked-example.md"
+      ],
+      "notAdopted": ["虚构品牌访谈及业绩", "以作品作者的解读代替企业记录", "从累计销量推定顾客共识或单品利润"],
+      "verification": "校对案例事实与引用口径。五章报告为历史公开资料研读，各板块提议为分析建议，尚未开展品牌经营测试。"
+    },
+    {
+      "id": "brand-growth-customer-decisions-20261124",
+      "kind": "primary-documents",
+      "title": "从消费者原有行为、可感知的改进与采购决定判断品牌差异化",
+      "readAt": "2026-11-24",
+      "coverage": "公开关键词检索。核读成美项目档案与销售附录、2004 年同期报道、贝恩与凯度 2014 中国购物者研究、云南白药产品回顾与年表、达美乐新品与盲测公告、营销负责人演讲纪要及 2010 Form 10-K、罗尔斯·罗伊斯服务条款和 2009、2010 年报及 2021 DHL 签约公告。",
+      "distribution": "公开资料的原创摘要、证据范围和出处随案例保存。",
+      "status": "reviewed",
+      "adoptions": [
+        "skills/brand-omni-growth-expert/SKILL.md",
+        "skills/brand-omni-growth-expert/references/brand-growth-first-principles.md",
+        "skills/brand-omni-growth-expert/references/brand-differentiation.md",
+        "skills/brand-omni-growth-expert/references/growth-cases-and-sources.md",
+        "skills/brand-omni-growth-expert/references/red-can-wanglaoji-growth-report.md",
+        "skills/brand-omni-growth-expert/references/report-orchestration.md"
+      ],
+      "notAdopted": ["将含盒装的后期数据接成红罐单品增长曲线", "把市场份额或盲测偏好写成功效与复购", "将服务覆盖写为合同利润"],
+      "verification": "核对各源时期、产品及比较对象；经营试跑后置。"
+    },
+    {
+      "id": "brand-orchestrator-entry-20261124",
+      "kind": "user-feedback",
+      "title": "将现有总统筹职责落实到技能主入口",
+      "readAt": "2026-11-24",
+      "coverage": "核读注册表、品牌增长第一性原理、业务地图、共同执行约定及既有五章报告交付范围，依据入口审阅反馈补全主文件。",
+      "distribution": "复用公共技能方法及业务指令示例。",
+      "status": "reviewed",
+      "adoptions": ["skills/brand-omni-growth-expert/SKILL.md", "skills/brand-omni-growth-expert/agents/openai.yaml", "registry/skills.json"],
+      "notAdopted": ["将专项执行一律改为整品牌诊断", "把职责示例作为已完成的业务调用"],
+      "verification": "对照原业务地图、目录描述及既有交接规则核查。实际业务验收另计。"
     }
   ]
 }

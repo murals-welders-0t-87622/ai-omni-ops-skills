@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "1.13.0",
+  "version": "1.13.7",
   "repository": "https://github.com/murals-welders-0t-87622/ai-omni-ops-skills",
   "skills": [
     {
@@ -63,10 +63,10 @@
     {
       "id": "brand-omni-growth-expert",
       "path": "skills/brand-omni-growth-expert",
-      "version": "3.1.0",
+      "version": "3.5.1",
       "dependencies": [],
       "kind": "orchestrator",
-      "description": "统筹品牌增长、跨业务运营、阶段规划和继续任务；从生意模式与真实数据安排公域、电商、私域、销售和复盘，调用对应领域技能。",
+      "description": "统筹品牌全域经营任务。用户用一句话提出目标、安排专项、跨板块协作或续做时，依据品牌增长第一性原理识别任务，补齐品牌上下文，选择并衔接领域技能，核对交付与经营反馈。需要确定增长方向时，引导经营者找到产品差异化并形成品牌增长报告。",
       "status": "packaged-not-business-accepted"
     },
     {

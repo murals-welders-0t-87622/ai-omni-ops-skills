@@ -98,6 +98,7 @@ def initialize(root):
         if section == '品牌增长':
             for library in BRAND_LIBRARIES:
                 checked(root, *group, library).mkdir(parents=True, exist_ok=True)
+            docs['经营原理'] = (REFS / 'brand-growth-first-principles.md').read_text(encoding='utf-8')
             docs['品牌差异化访谈'] = (REFS / 'brand-differentiation.md').read_text(encoding='utf-8')
         for title, content in docs.items():
             data = content.encode()
