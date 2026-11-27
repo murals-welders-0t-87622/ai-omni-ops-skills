@@ -13,6 +13,22 @@ class WorkspaceRoutingTests(unittest.TestCase):
             status,_=module.configure(directory); self.assertEqual(status,'added'); result=path.read_text(encoding='utf-8')
             self.assertTrue(result.startswith(original)); self.assertIn('视频',result)
             self.assertEqual(module.configure(directory)[0],'existing'); self.assertEqual(path.read_text(encoding='utf-8'),result)
+    def test_upgrade_legacy_preserves_bytes_and_customizations(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path=Path(directory)/'AGENTS.md'
+            prefix=b'\xef\xbb\xbf# Existing\r\n'; suffix=b'\r\nCustom tail'
+            path.write_bytes(prefix+module.LEGACY.replace('\n','\r\n').encode()+suffix)
+            self.assertEqual(module.configure(directory,check=True)[0],'outdated')
+            self.assertEqual(module.configure(directory)[0],'updated')
+            self.assertEqual(path.read_bytes(),prefix+module.BLOCK.replace('\n','\r\n').encode()+suffix)
+            self.assertEqual(module.configure(directory,check=True)[0],'existing')
+            self.assertIn('brand-omni-growth-expert',module.BLOCK)
+            self.assertIn('Computer Use',module.BLOCK)
+            changed=path.read_bytes().replace(b'Computer Use',b'custom rule')
+            path.write_bytes(changed)
+            with self.assertRaises(ValueError):module.configure(directory)
+            self.assertEqual(path.read_bytes(),changed)
+
     def test_partial_markers_not_overwritten(self):
         parent=ROOT/'.local/test-tmp'; parent.mkdir(parents=True,exist_ok=True)
         with tempfile.TemporaryDirectory(dir=parent) as directory:

@@ -4,6 +4,19 @@
   "policy": "来源是证据和方法，不是授权；文档核查、代码验证、真实渲染和业务验收分开。",
   "sources": [
     {
+      "id": "brand-workspace-canvas-routing-20261127",
+      "kind": "runtime-observation",
+      "title": "工作区入口、画布动作与品牌制作应用偏好",
+      "readAt": "2026-11-27",
+      "coverage": "核读工作区安装脚本、画布说明书、品牌配置与运营技能。用户反馈外部 Agent 曾采用图形界面；未复演该客户的制作。",
+      "distribution": "仅发布通用路由和调用规则。",
+      "status": "partially-reviewed",
+      "adoptions": [
+        "skills/brand-omni-growth-expert/references/mcp-production-capabilities.md",
+        "skills/creative-production-router/references/production-handoff.md"
+      ]
+    },
+    {
       "id": "canvas-external-video-workflow-observation-20261116",
       "kind": "runtime-observation",
       "title": "外部 Agent 视频任务的画布可见性和预览验收",
@@ -785,7 +798,9 @@
         "skills/00-omni-system-setup/SKILL.md",
         "skills/00-omni-system-setup/references/windows-native.md"
       ],
-      "notAdopted": ["将全新安装测试包用于原位升级或覆盖已有数据"],
+      "notAdopted": [
+        "将全新安装测试包用于原位升级或覆盖已有数据"
+      ],
       "verification": "公开下载安装元数据已回读，已在本机隔离试装；独立设备真实激活和应用内升级待验证。"
     },
     {
@@ -4841,7 +4856,10 @@
         "skills/brand-omni-growth-expert/references/brand-differentiation.md",
         "skills/brand-omni-growth-expert/references/brand-growth-first-principles.md"
       ],
-      "notAdopted": ["用行业公式预测利润或增长", "根据一次转述确定购买动机"],
+      "notAdopted": [
+        "用行业公式预测利润或增长",
+        "根据一次转述确定购买动机"
+      ],
       "verification": "转写已核读，作者案例业绩未独立核验。原单笔选择访谈在审阅中被否决，已由品牌共识经营方法替换。"
     },
     {
@@ -4859,7 +4877,10 @@
         "skills/brand-omni-growth-expert/references/report-orchestration.md",
         "skills/brand-omni-growth-expert/references/business-routing.md"
       ],
-      "notAdopted": ["将单笔交易分析作为原作中心论题", "用未经验证的品类系数测算溢价"],
+      "notAdopted": [
+        "将单笔交易分析作为原作中心论题",
+        "用未经验证的品类系数测算溢价"
+      ],
       "verification": "回读转写并核对技能各业务入口。用户尚未审定本稿，未开展品牌业务试跑。"
     },
     {
@@ -4876,7 +4897,10 @@
         "skills/brand-omni-growth-expert/references/growth-cases-and-sources.md",
         "skills/brand-omni-growth-expert/references/growth-report-worked-example.md"
       ],
-      "notAdopted": ["把企业自述当作客户共识或增长因果证据", "将示例目标写为本品牌实际业绩"],
+      "notAdopted": [
+        "把企业自述当作客户共识或增长因果证据",
+        "将示例目标写为本品牌实际业绩"
+      ],
       "verification": "公开经营事实可按案例旁一手文档复核。教学示例采用假设数字，未开展真实品牌业务试跑。"
     },
     {
@@ -4894,7 +4918,11 @@
         "skills/brand-omni-growth-expert/references/growth-cases-and-sources.md",
         "skills/brand-omni-growth-expert/references/growth-report-worked-example.md"
       ],
-      "notAdopted": ["虚构品牌访谈及业绩", "以作品作者的解读代替企业记录", "从累计销量推定顾客共识或单品利润"],
+      "notAdopted": [
+        "虚构品牌访谈及业绩",
+        "以作品作者的解读代替企业记录",
+        "从累计销量推定顾客共识或单品利润"
+      ],
       "verification": "校对案例事实与引用口径。五章报告为历史公开资料研读，各板块提议为分析建议，尚未开展品牌经营测试。"
     },
     {
@@ -4913,7 +4941,11 @@
         "skills/brand-omni-growth-expert/references/red-can-wanglaoji-growth-report.md",
         "skills/brand-omni-growth-expert/references/report-orchestration.md"
       ],
-      "notAdopted": ["将含盒装的后期数据接成红罐单品增长曲线", "把市场份额或盲测偏好写成功效与复购", "将服务覆盖写为合同利润"],
+      "notAdopted": [
+        "将含盒装的后期数据接成红罐单品增长曲线",
+        "把市场份额或盲测偏好写成功效与复购",
+        "将服务覆盖写为合同利润"
+      ],
       "verification": "核对各源时期、产品及比较对象；经营试跑后置。"
     },
     {
@@ -4924,8 +4956,15 @@
       "coverage": "核读注册表、品牌增长第一性原理、业务地图、共同执行约定及既有五章报告交付范围，依据入口审阅反馈补全主文件。",
       "distribution": "复用公共技能方法及业务指令示例。",
       "status": "reviewed",
-      "adoptions": ["skills/brand-omni-growth-expert/SKILL.md", "skills/brand-omni-growth-expert/agents/openai.yaml", "registry/skills.json"],
-      "notAdopted": ["将专项执行一律改为整品牌诊断", "把职责示例作为已完成的业务调用"],
+      "adoptions": [
+        "skills/brand-omni-growth-expert/SKILL.md",
+        "skills/brand-omni-growth-expert/agents/openai.yaml",
+        "registry/skills.json"
+      ],
+      "notAdopted": [
+        "将专项执行一律改为整品牌诊断",
+        "把职责示例作为已完成的业务调用"
+      ],
       "verification": "对照原业务地图、目录描述及既有交接规则核查。实际业务验收另计。"
     },
     {

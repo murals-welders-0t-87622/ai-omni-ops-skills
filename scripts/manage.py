@@ -150,14 +150,25 @@ def doctor(target,repo=REPO):
     return {'target':str(target),'skills':rows,'tools':{n:bool(shutil.which(n)) for n in ['python','git','gh','node','ffmpeg']},'businessConnections':'Not probed; install success is not MCP readiness or business acceptance.'}
 def main():
     p=argparse.ArgumentParser();p.add_argument('command',choices=['install','doctor','rollback']);p.add_argument('--target',type=Path,default=default_target());p.add_argument('--profile',default='all');p.add_argument('--skill',action='append');p.add_argument('--dry-run',action='store_true');p.add_argument('--adopt-existing',action='store_true');p.add_argument('--transaction')
+    p.add_argument('--workspace',type=Path,help='实际品牌业务工作区；安装或检查 AGENTS.md 路由')
     a=p.parse_args()
     try:
+        routing=None
+        if a.workspace:
+            if a.command=='rollback': p.error('--workspace 适用于安装与检查')
+            import runpy
+            routing=runpy.run_path(str(REPO/'skills/00-omni-system-setup/scripts/configure-workspace.py'))['configure']
+            routing(a.workspace,check=True)
         if a.command=='install':out=install(a.target,a.profile,a.skill,a.dry_run,a.adopt_existing)
         elif a.command=='doctor':out=doctor(a.target)
         else:
             if not a.transaction:p.error('--transaction required')
             out=rollback(a.target,a.transaction)
+        if routing:
+            status,path=routing(a.workspace,check=a.command=='doctor' or a.dry_run)
+            out['workspaceRouting']={'status':status,'path':str(path)}
         print(json.dumps(out,ensure_ascii=False,indent=2))
+        if routing and a.command=='doctor' and status!='existing':return 2
     except (ValueError,KeyError,OSError) as e:print(str(e),file=sys.stderr);return 1
     return 0
 if __name__=='__main__':raise SystemExit(main())

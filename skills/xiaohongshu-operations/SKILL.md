@@ -2,7 +2,7 @@
 name: xiaohongshu-operations
 description: 小红书品牌策略、搜索种草、账号矩阵、选题笔记、达人和效果复盘。
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # 小红书运营

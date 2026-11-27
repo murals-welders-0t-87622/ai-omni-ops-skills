@@ -2,7 +2,7 @@
 name: creative-production-router
 description: 按脚本、目标和素材选择设计、商品视频、品牌剧情、数字人、图解或动态视频制作；不替代内容战略。
 metadata:
-  version: "1.2.16"
+  version: "1.2.17"
 ---
 
 # 创意制作调度
@@ -25,7 +25,7 @@ metadata:
 
 按需查阅 [纸艺、极简商品片、空间穿越与影视参考](references/visual-craft-patterns.md)，根据题材选择适用工艺。
 
-涉及中台生图、AI视频或数字人时读取 [中台制作能力](../brand-omni-growth-expert/references/mcp-production-capabilities.md)，按用户指定及实时工具选择。
+画布任务通过当前品牌 MCP 执行并回读工程，缺少动作时报告具体缺口，禁止使用 Computer Use 或浏览器点击替代。涉及中台生图、AI视频或数字人时读取 [中台制作能力](../brand-omni-growth-expert/references/mcp-production-capabilities.md)，按用户指定及实时工具选择。
 
 制作成果按[成果归档与回读](../brand-omni-growth-expert/references/archive-handoff.md)核对中台实际文件、归属和任务关联；先查已有记录，生成回执和外链不自动等于文件已入库。
 
